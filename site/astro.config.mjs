@@ -7,8 +7,6 @@ import vue from '@astrojs/vue';
 import remarkDirective from 'remark-directive';
 import remarkCallouts from './src/plugins/remark-callouts.mjs';
 
-const hasClerkKeys = Boolean(process.env.CLERK_SECRET_KEY && process.env.PUBLIC_CLERK_PUBLISHABLE_KEY);
-
 /**
  * Astro Configuration for Claiire Website
  *
@@ -45,16 +43,12 @@ export default defineConfig({
   }),
 
   integrations: [
-    ...(hasClerkKeys
-      ? [
-          clerk({
-            signInUrl: '/connexion/',
-            signUpUrl: '/connexion/',
-            afterSignOutUrl: '/',
-            enableEnvSchema: false,
-          }),
-        ]
-      : []),
+    clerk({
+      signInUrl: '/connexion/',
+      signUpUrl: '/connexion/',
+      afterSignOutUrl: '/',
+      enableEnvSchema: false,
+    }),
     // Sitemap generation for SEO - helps search engines discover and index pages
     sitemap({
       // Exclude error pages and member-only content from sitemap

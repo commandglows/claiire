@@ -163,7 +163,7 @@ If starting from scratch, follow this sequence:
    - Recommends next steps
 
 2. **Create Product Brief** (`*create-product-brief`)
-   - Or use the existing `shipflow_data/business/site/`, `shipflow_data/editorial/site/`, or `shipflow_data/technical/site/` docs
+   - Or use the existing `shipflow_data/business/`, `shipflow_data/editorial/site/`, or `shipflow_data/technical/site/` docs
 
 3. **Design Architecture** (`*create-architecture`)
    - System design
@@ -202,7 +202,7 @@ This validates:
 
 ### For Understanding the Project
 1. `README.md` - Overview
-2. `shipflow_data/business/site/` - Complete specifications and positioning
+2. `shipflow_data/business/` - Complete shared business and product positioning
 3. `shipflow_data/technical/site/` - Technical details
 
 ### For Using BMAD

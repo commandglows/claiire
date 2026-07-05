@@ -18,7 +18,7 @@ Le ton, la posture et les regles de copywriting des pages formation ne doivent p
 La source de verite est :
 
 - [guidelines.md](/home/claude/claiire/shipflow_data/editorial/site/guidelines.md)
-- [billing-strategy.md](/home/claude/claiire/shipflow_data/business/site/billing-strategy.md)
+- [billing-strategy.md](/home/claude/claiire/shipflow_data/business/billing-strategy.md)
 
 Regles non negociables pour les formations :
 
@@ -47,7 +47,7 @@ Ils servent de base de rendu pour les futures pages Astro publiques et privees.
 
 La resolution reelle de l'acces membre et du premium est documentee dans :
 
-- [billing-strategy.md](/home/claude/claiire/shipflow_data/business/site/billing-strategy.md)
+- [billing-strategy.md](/home/claude/claiire/shipflow_data/business/billing-strategy.md)
 
 ## Modele d'URL recommande
 

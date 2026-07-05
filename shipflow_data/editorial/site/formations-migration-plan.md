@@ -20,7 +20,7 @@ Le but est de **recomposer** chaque module dans un nouveau systeme :
 Toute la migration doit etre alignee sur :
 
 - [guidelines.md](/home/claude/claiire/shipflow_data/editorial/site/guidelines.md)
-- [billing-strategy.md](/home/claude/claiire/shipflow_data/business/site/billing-strategy.md)
+- [billing-strategy.md](/home/claude/claiire/shipflow_data/business/billing-strategy.md)
 
 Regles transversales :
 

@@ -121,7 +121,7 @@
 - [x] Harmoniser les hubs formation sur la logique `public d'abord, version complète ensuite`
 - [x] Harmoniser la fermeture des `16` modules publics avec un CTA final explicite vers la page membre
 - [x] Nettoyer le vocabulaire placeholder dans les layouts formation pour stabiliser le système éditorial
-- [x] Documenter la stratégie billing / gating web + mobile dans [billing-strategy.md](/home/claude/claiire/shipflow_data/business/site/billing-strategy.md)
+- [x] Documenter la stratégie billing / gating web + mobile dans [billing-strategy.md](/home/claude/claiire/shipflow_data/business/billing-strategy.md)
 - [x] Poser la décision produit cible : `RevenueCat` pour mobile, `Polar` pour le web, backend Claiire pour l'unification des droits
 - [x] Rédiger le plan d'implémentation du gating dans [gating-implementation-plan.md](/home/claude/claiire/shipflow_data/technical/site/gating-implementation-plan.md)
 - [x] Basculer Astro en mode `server` pour rendre possible l'auth, la protection des routes membres et les webhooks billing

@@ -26,7 +26,7 @@ et ce projet respecte le [Semantic Versioning](https://semver.org/).
 ## [Unreleased] — 2026-03-18 (auth)
 
 ### Ajouté
-- Architecture auth premium : `shipflow_data/business/site/billing-strategy.md`, `shipflow_data/technical/site/gating-implementation-plan.md`
+- Architecture auth premium : `shipflow_data/business/billing-strategy.md`, `shipflow_data/technical/site/gating-implementation-plan.md`
 - Intégration Clerk progressive : middleware `/membres/**`, pages `/connexion/`, `/compte/`, `/sso-callback/`
 - 16 pages membres premium sous `/membres/formations/` (socle/1-4, victimes/1-6, auteurs/1-6)
 - Layouts Astro réutilisables pour modules publics et privés avec contrôle `robots`
@@ -36,7 +36,7 @@ et ce projet respecte le [Semantic Versioning](https://semver.org/).
 - Script manuel `member-access:set` pour accorder ou retirer l'acces premium dans Clerk
 - Endpoints webhook `RevenueCat` et `Polar` pour synchroniser automatiquement l'acces premium
 - Plugin remark-callouts pour callouts custom dans le contenu
-- Docs strategie : `shipflow_data/branding/branding.md`, `shipflow_data/business/site/project-competitors-and-inspirations.md`, `shipflow_data/research/site/source.md`, `shipflow_data/editorial/site/formations-public-private-template.md`
+- Docs strategie : `shipflow_data/branding/branding.md`, `shipflow_data/business/project-competitors-and-inspirations.md`, `shipflow_data/research/site/source.md`, `shipflow_data/editorial/site/formations-public-private-template.md`
 
 ### Modifié
 - Astro basculé en mode `server` pour auth, gating premium et webhooks billing
