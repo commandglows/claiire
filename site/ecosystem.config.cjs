@@ -1,7 +1,7 @@
 module.exports = {
   apps: [{
-    name: "claiire",
-    cwd: "/home/claude/claiire",
+    name: "claiire_site",
+    cwd: "/home/claude/claiire/site",
     script: "bash",
     args: ["-lc", "export PORT=3019 && flox activate -- bash -lc 'pnpm dev --port 3019'"],
     env: {
