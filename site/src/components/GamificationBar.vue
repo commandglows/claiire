@@ -289,7 +289,7 @@ watch(
   border: 1px solid var(--sl-color-gray-5);
   border-radius: 9999px;
   background: var(--sl-color-bg);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px var(--site-shadow-0-12), 0 1px 4px var(--site-shadow-0-08);
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--sl-color-text);
@@ -299,7 +299,7 @@ watch(
 }
 
 .gamification-bar:hover .bar-inner {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18), 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 20px var(--site-shadow-0-18), 0 2px 6px var(--site-shadow-0-10);
   transform: translateY(-1px);
 }
 
@@ -357,7 +357,7 @@ watch(
   position: fixed;
   inset: 0;
   z-index: 100;
-  background: rgba(0, 0, 0, 0.35);
+  background: var(--site-shadow-0-35);
   backdrop-filter: blur(2px);
   display: flex;
   align-items: flex-end;
@@ -374,7 +374,7 @@ watch(
   border: 1px solid var(--sl-color-gray-5);
   border-radius: 1rem;
   padding: 1.5rem;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 40px var(--site-shadow-0-25);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -610,7 +610,7 @@ watch(
   border: 1px solid var(--sl-color-accent);
   border-radius: 0.5rem;
   background: var(--sl-color-bg);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px var(--site-shadow-0-20);
   cursor: pointer;
   animation: toast-slide-in 0.4s ease-out;
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 import {
   Alert,
   ScrollView,
@@ -41,8 +42,8 @@ function SettingRow({
       <Switch
         value={value}
         onValueChange={onToggle}
-        trackColor={{ false: "#2a2a4a", true: "#6c47ff" }}
-        thumbColor="#fff"
+        trackColor={{ false: AppDesignTokens.colors.border, true: AppDesignTokens.colors.accent }}
+        thumbColor={AppDesignTokens.colors.text}
       />
     </View>
   );
@@ -113,7 +114,7 @@ export default function SettingsModal() {
                 value={displayName}
                 onChangeText={setDisplayName}
                 placeholder="Ton nom"
-                placeholderTextColor="#555"
+                placeholderTextColor={AppDesignTokens.colors.textSubtle}
                 maxLength={30}
               />
               <TouchableOpacity style={styles.saveButton} onPress={handleSaveName}>
@@ -305,7 +306,7 @@ export default function SettingsModal() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#0f0f1a" },
+  container: { flex: 1, backgroundColor: AppDesignTokens.colors.background },
   header: {
     flexDirection: "row",
     alignItems: "center",
@@ -313,49 +314,49 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 12,
   },
-  closeText: { color: "#888", fontSize: 18, padding: 4 },
-  headerTitle: { color: "#fff", fontSize: 17, fontWeight: "700" },
+  closeText: { color: AppDesignTokens.colors.textMuted, fontSize: 18, padding: 4 },
+  headerTitle: { color: AppDesignTokens.colors.text, fontSize: 17, fontWeight: "700" },
   scroll: { flex: 1 },
   content: { padding: 20, gap: 20, paddingBottom: 40 },
   section: { gap: 8 },
   sectionTitle: {
     fontSize: 13,
     fontWeight: "600",
-    color: "#555",
+    color: AppDesignTokens.colors.textSubtle,
     textTransform: "uppercase",
     letterSpacing: 0.5,
     paddingHorizontal: 4,
   },
   card: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 14,
     padding: 16,
     gap: 12,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
-  label: { color: "#fff", fontSize: 15, fontWeight: "500" },
-  sublabel: { color: "#888", fontSize: 12 },
-  divider: { height: 1, backgroundColor: "#2a2a4a" },
+  label: { color: AppDesignTokens.colors.text, fontSize: 15, fontWeight: "500" },
+  sublabel: { color: AppDesignTokens.colors.textMuted, fontSize: 12 },
+  divider: { height: 1, backgroundColor: AppDesignTokens.colors.border },
   nameRow: { flexDirection: "row", gap: 10, alignItems: "center" },
   nameInput: {
     flex: 1,
-    backgroundColor: "#0f0f1a",
+    backgroundColor: AppDesignTokens.colors.background,
     borderRadius: 10,
     paddingHorizontal: 14,
     paddingVertical: 10,
-    color: "#fff",
+    color: AppDesignTokens.colors.text,
     fontSize: 15,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
   saveButton: {
-    backgroundColor: "#6c47ff",
+    backgroundColor: AppDesignTokens.colors.accent,
     borderRadius: 10,
     paddingVertical: 10,
     paddingHorizontal: 16,
   },
-  saveButtonText: { color: "#fff", fontSize: 14, fontWeight: "600" },
+  saveButtonText: { color: AppDesignTokens.colors.text, fontSize: 14, fontWeight: "600" },
   toggleRow: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -367,13 +368,13 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     paddingHorizontal: 14,
     borderRadius: 10,
-    backgroundColor: "#0f0f1a",
+    backgroundColor: AppDesignTokens.colors.background,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
-  hourChipActive: { backgroundColor: "#6c47ff", borderColor: "#6c47ff" },
-  hourText: { color: "#888", fontSize: 14, fontWeight: "500" },
-  hourTextActive: { color: "#fff", fontWeight: "700" },
+  hourChipActive: { backgroundColor: AppDesignTokens.colors.accent, borderColor: AppDesignTokens.colors.accent },
+  hourText: { color: AppDesignTokens.colors.textMuted, fontSize: 14, fontWeight: "500" },
+  hourTextActive: { color: AppDesignTokens.colors.text, fontWeight: "700" },
   quietRow: {
     flexDirection: "row",
     alignItems: "center",
@@ -381,36 +382,36 @@ const styles = StyleSheet.create({
     gap: 16,
   },
   quietItem: { alignItems: "center", gap: 6 },
-  quietLabel: { color: "#888", fontSize: 11, textTransform: "uppercase" },
+  quietLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 11, textTransform: "uppercase" },
   quietPicker: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#0f0f1a",
+    backgroundColor: AppDesignTokens.colors.background,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
   quietArrow: { padding: 10 },
-  quietArrowText: { color: "#6c47ff", fontSize: 18, fontWeight: "600" },
-  quietTime: { color: "#fff", fontSize: 18, fontWeight: "700", minWidth: 40, textAlign: "center" },
-  quietDash: { color: "#555", fontSize: 16 },
+  quietArrowText: { color: AppDesignTokens.colors.accent, fontSize: 18, fontWeight: "600" },
+  quietTime: { color: AppDesignTokens.colors.text, fontSize: 18, fontWeight: "700", minWidth: 40, textAlign: "center" },
+  quietDash: { color: AppDesignTokens.colors.textSubtle, fontSize: 16 },
   stealthPreview: { gap: 8 },
-  stealthTitle: { color: "#888", fontSize: 12 },
+  stealthTitle: { color: AppDesignTokens.colors.textMuted, fontSize: 12 },
   stealthNotif: {
-    backgroundColor: "#0f0f1a",
+    backgroundColor: AppDesignTokens.colors.background,
     borderRadius: 10,
     padding: 12,
     gap: 2,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
-  stealthNotifTitle: { color: "#888", fontSize: 12, fontWeight: "600" },
-  stealthNotifBody: { color: "#fff", fontSize: 14 },
+  stealthNotifTitle: { color: AppDesignTokens.colors.textMuted, fontSize: 12, fontWeight: "600" },
+  stealthNotifBody: { color: AppDesignTokens.colors.text, fontSize: 14 },
   infoRow: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
   },
-  infoLabel: { color: "#888", fontSize: 14 },
-  infoValue: { color: "#fff", fontSize: 14, fontWeight: "500" },
+  infoLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 14 },
+  infoValue: { color: AppDesignTokens.colors.text, fontSize: 14, fontWeight: "500" },
 });

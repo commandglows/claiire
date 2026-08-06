@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 import {
   ScrollView,
   StyleSheet,
@@ -14,9 +15,9 @@ import { useHabits } from "@/features/tracking/hooks/useHabits";
 const ICONS = ["⚡", "💪", "🧠", "🏃", "📚", "🧘", "💧", "🥗", "😴", "🎯", "✍️", "🎵"];
 
 const DIFFICULTIES = [
-  { id: "easy" as const, label: "Facile", color: "#2f9e44", xp: 10 },
-  { id: "medium" as const, label: "Moyen", color: "#f59f00", xp: 20 },
-  { id: "hard" as const, label: "Difficile", color: "#e03131", xp: 35 },
+  { id: "easy" as const, label: "Facile", color: AppDesignTokens.colors.success, xp: 10 },
+  { id: "medium" as const, label: "Moyen", color: AppDesignTokens.colors.warning, xp: 20 },
+  { id: "hard" as const, label: "Difficile", color: AppDesignTokens.colors.danger, xp: 35 },
 ];
 
 const MISSION_TYPES = [
@@ -114,7 +115,7 @@ export default function LogHabitModal() {
         <TextInput
           style={styles.input}
           placeholder="Ex: Méditer 10 minutes"
-          placeholderTextColor="#555"
+          placeholderTextColor={AppDesignTokens.colors.textSubtle}
           value={name}
           onChangeText={setName}
           maxLength={60}
@@ -166,10 +167,10 @@ export default function LogHabitModal() {
               ]}
               onPress={() => setDifficulty(d.id)}
             >
-              <Text style={[styles.diffLabel, { color: difficulty === d.id ? "#fff" : d.color }]}>
+              <Text style={[styles.diffLabel, { color: difficulty === d.id ? AppDesignTokens.colors.text : d.color }]}>
                 {d.label}
               </Text>
-              <Text style={[styles.diffXP, { color: difficulty === d.id ? "#fff" : d.color, opacity: 0.8 }]}>
+              <Text style={[styles.diffXP, { color: difficulty === d.id ? AppDesignTokens.colors.text : d.color, opacity: 0.8 }]}>
                 +{d.xp} XP
               </Text>
             </TouchableOpacity>
@@ -193,7 +194,7 @@ export default function LogHabitModal() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#0f0f1a" },
+  container: { flex: 1, backgroundColor: AppDesignTokens.colors.background },
   header: {
     flexDirection: "row",
     alignItems: "center",
@@ -201,30 +202,30 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 12,
   },
-  closeText: { color: "#888", fontSize: 18, padding: 4 },
-  headerTitle: { color: "#fff", fontSize: 17, fontWeight: "700" },
+  closeText: { color: AppDesignTokens.colors.textMuted, fontSize: 18, padding: 4 },
+  headerTitle: { color: AppDesignTokens.colors.text, fontSize: 17, fontWeight: "700" },
   scroll: { flex: 1 },
   content: { padding: 20, gap: 12, paddingBottom: 40 },
-  label: { color: "#888", fontSize: 13, fontWeight: "600", textTransform: "uppercase", letterSpacing: 0.5 },
+  label: { color: AppDesignTokens.colors.textMuted, fontSize: 13, fontWeight: "600", textTransform: "uppercase", letterSpacing: 0.5 },
   iconGrid: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
   iconButton: {
     width: 48,
     height: 48,
     borderRadius: 12,
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderWidth: 1.5,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
     alignItems: "center",
     justifyContent: "center",
   },
-  iconButtonActive: { borderColor: "#6c47ff", backgroundColor: "#2d1f6e" },
+  iconButtonActive: { borderColor: AppDesignTokens.colors.accent, backgroundColor: AppDesignTokens.colors.accentMuted },
   iconText: { fontSize: 22 },
   input: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
-    color: "#fff",
+    borderColor: AppDesignTokens.colors.border,
+    color: AppDesignTokens.colors.text,
     fontSize: 16,
     paddingHorizontal: 16,
     paddingVertical: 14,
@@ -234,14 +235,14 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingVertical: 12,
     borderRadius: 12,
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderWidth: 1.5,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
     alignItems: "center",
   },
-  chipActive: { borderColor: "#6c47ff", backgroundColor: "#2d1f6e" },
-  chipText: { color: "#888", fontSize: 14, fontWeight: "500" },
-  chipTextActive: { color: "#fff", fontWeight: "700" },
+  chipActive: { borderColor: AppDesignTokens.colors.accent, backgroundColor: AppDesignTokens.colors.accentMuted },
+  chipText: { color: AppDesignTokens.colors.textMuted, fontSize: 14, fontWeight: "500" },
+  chipTextActive: { color: AppDesignTokens.colors.text, fontWeight: "700" },
   typeGrid: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
   typeChip: {
     flexDirection: "row",
@@ -250,14 +251,14 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 14,
     borderRadius: 12,
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderWidth: 1.5,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
-  typeChipActive: { borderColor: "#6c47ff", backgroundColor: "#2d1f6e" },
+  typeChipActive: { borderColor: AppDesignTokens.colors.accent, backgroundColor: AppDesignTokens.colors.accentMuted },
   typeEmoji: { fontSize: 18 },
-  typeLabel: { color: "#888", fontSize: 13, fontWeight: "500" },
-  typeLabelActive: { color: "#fff", fontWeight: "700" },
+  typeLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 13, fontWeight: "500" },
+  typeLabelActive: { color: AppDesignTokens.colors.text, fontWeight: "700" },
   diffRow: { flexDirection: "row", gap: 8 },
   diffChip: {
     flex: 1,
@@ -270,16 +271,16 @@ const styles = StyleSheet.create({
   },
   diffLabel: { fontSize: 13, fontWeight: "700" },
   diffXP: { fontSize: 11 },
-  error: { color: "#ff6b6b", fontSize: 14, textAlign: "center" },
+  error: { color: AppDesignTokens.colors.dangerSoft, fontSize: 14, textAlign: "center" },
   createButton: {
-    backgroundColor: "#6c47ff",
+    backgroundColor: AppDesignTokens.colors.accent,
     borderRadius: 14,
     paddingVertical: 16,
     alignItems: "center",
     marginTop: 8,
   },
   createButtonDisabled: { opacity: 0.5 },
-  createButtonText: { color: "#fff", fontSize: 16, fontWeight: "700" },
+  createButtonText: { color: AppDesignTokens.colors.text, fontSize: 16, fontWeight: "700" },
   // Success screen
   successScreen: {
     flex: 1,
@@ -289,8 +290,8 @@ const styles = StyleSheet.create({
     padding: 32,
   },
   successEmoji: { fontSize: 72 },
-  successTitle: { color: "#fff", fontSize: 24, fontWeight: "bold" },
-  successName: { color: "#aaa", fontSize: 16 },
+  successTitle: { color: AppDesignTokens.colors.text, fontSize: 24, fontWeight: "bold" },
+  successName: { color: AppDesignTokens.colors.neutralSoft, fontSize: 16 },
   xpBadge: {
     borderRadius: 20,
     paddingHorizontal: 20,
@@ -299,11 +300,11 @@ const styles = StyleSheet.create({
   },
   xpBadgeText: { fontSize: 15, fontWeight: "700" },
   doneButton: {
-    backgroundColor: "#6c47ff",
+    backgroundColor: AppDesignTokens.colors.accent,
     borderRadius: 14,
     paddingVertical: 14,
     paddingHorizontal: 48,
     marginTop: 8,
   },
-  doneButtonText: { color: "#fff", fontSize: 16, fontWeight: "700" },
+  doneButtonText: { color: AppDesignTokens.colors.text, fontSize: 16, fontWeight: "700" },
 });

@@ -3,6 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { useMode } from "@/features/mode";
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 
 type LogEntry = {
   _id: string;
@@ -143,32 +144,35 @@ export function BattleHistory() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 14,
     padding: 16,
     gap: 10,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
   header: { gap: 4 },
-  title: { color: "#fff", fontSize: 15, fontWeight: "600" },
+  title: { color: AppDesignTokens.colors.text, fontSize: 15, fontWeight: "600" },
   statsRow: { flexDirection: "row", gap: 12 },
-  statVictory: { color: "#2f9e44", fontSize: 12, fontWeight: "600" },
-  statBattle: { color: "#e03131", fontSize: 12, fontWeight: "600" },
+  statVictory: { color: AppDesignTokens.colors.success, fontSize: 12, fontWeight: "600" },
+  statBattle: { color: AppDesignTokens.colors.danger, fontSize: 12, fontWeight: "600" },
   filterRow: { flexDirection: "row", gap: 6 },
   filterChip: {
     paddingVertical: 5,
     paddingHorizontal: 12,
     borderRadius: 8,
-    backgroundColor: "#13131f",
+    backgroundColor: AppDesignTokens.colors.surfaceMutedAlt,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
-  filterChipActive: { backgroundColor: "#6c47ff", borderColor: "#6c47ff" },
-  filterText: { color: "#888", fontSize: 12, fontWeight: "500" },
-  filterTextActive: { color: "#fff", fontWeight: "700" },
+  filterChipActive: {
+    backgroundColor: AppDesignTokens.colors.accent,
+    borderColor: AppDesignTokens.colors.accent,
+  },
+  filterText: { color: AppDesignTokens.colors.textMuted, fontSize: 12, fontWeight: "500" },
+  filterTextActive: { color: AppDesignTokens.colors.text, fontWeight: "700" },
   dayHeader: {
-    color: "#555",
+    color: AppDesignTokens.colors.textSubtle,
     fontSize: 11,
     fontWeight: "600",
     textTransform: "uppercase",
@@ -189,22 +193,22 @@ const styles = StyleSheet.create({
     marginTop: 6,
     zIndex: 1,
   },
-  dotVictory: { backgroundColor: "#2f9e44" },
-  dotBattle: { backgroundColor: "#e03131" },
+  dotVictory: { backgroundColor: AppDesignTokens.colors.success },
+  dotBattle: { backgroundColor: AppDesignTokens.colors.danger },
   line: {
     position: "absolute",
     left: 7,
     top: 14,
     bottom: -8,
     width: 1,
-    backgroundColor: "#2a2a4a",
+    backgroundColor: AppDesignTokens.colors.border,
   },
   itemContent: { flex: 1, paddingLeft: 12, paddingBottom: 8 },
   itemRow: { flexDirection: "row", alignItems: "center", gap: 8 },
   itemEmoji: { fontSize: 16 },
-  itemLabel: { flex: 1, color: "#ccc", fontSize: 13, fontWeight: "500" },
-  itemXP: { color: "#6c47ff", fontSize: 12, fontWeight: "700" },
-  itemXPBattle: { color: "#f59f00" },
-  itemTime: { color: "#555", fontSize: 11, paddingLeft: 24 },
-  emptyText: { color: "#555", fontSize: 13, textAlign: "center", paddingVertical: 12 },
+  itemLabel: { flex: 1, color: AppDesignTokens.colors.neutralBorder, fontSize: 13, fontWeight: "500" },
+  itemXP: { color: AppDesignTokens.colors.accent, fontSize: 12, fontWeight: "700" },
+  itemXPBattle: { color: AppDesignTokens.colors.warning },
+  itemTime: { color: AppDesignTokens.colors.textSubtle, fontSize: 11, paddingLeft: 24 },
+  emptyText: { color: AppDesignTokens.colors.textSubtle, fontSize: 13, textAlign: "center", paddingVertical: 12 },
 });

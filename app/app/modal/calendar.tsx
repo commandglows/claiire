@@ -5,6 +5,7 @@ import { useRouter } from "expo-router";
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { useMode } from "@/features/mode";
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 
 const WEEKDAYS = ["L", "M", "M", "J", "V", "S", "D"];
 const MONTH_NAMES = [
@@ -194,7 +195,7 @@ export default function CalendarModal() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#0f0f1a" },
+  container: { flex: 1, backgroundColor: AppDesignTokens.colors.background },
   header: {
     flexDirection: "row",
     alignItems: "center",
@@ -202,8 +203,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 12,
   },
-  closeText: { color: "#888", fontSize: 18, padding: 4 },
-  headerTitle: { color: "#fff", fontSize: 17, fontWeight: "700" },
+  closeText: { color: AppDesignTokens.colors.textMuted, fontSize: 18, padding: 4 },
+  headerTitle: { color: AppDesignTokens.colors.text, fontSize: 17, fontWeight: "700" },
   content: { padding: 20, gap: 16, paddingBottom: 40 },
   monthNav: {
     flexDirection: "row",
@@ -211,11 +212,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   navButton: { padding: 8 },
-  navText: { color: "#fff", fontSize: 24, fontWeight: "300" },
-  monthTitle: { color: "#fff", fontSize: 18, fontWeight: "700" },
+  navText: { color: AppDesignTokens.colors.text, fontSize: 24, fontWeight: "300" },
+  monthTitle: { color: AppDesignTokens.colors.text, fontSize: 18, fontWeight: "700" },
   weekRow: { flexDirection: "row" },
   weekCell: { flex: 1, alignItems: "center", paddingVertical: 8 },
-  weekText: { color: "#555", fontSize: 12, fontWeight: "600" },
+  weekText: { color: AppDesignTokens.colors.textSubtle, fontSize: 12, fontWeight: "600" },
   grid: { flexDirection: "row", flexWrap: "wrap" },
   dayCell: {
     width: `${100 / 7}%`,
@@ -227,11 +228,11 @@ const styles = StyleSheet.create({
     borderColor: "transparent",
     borderRadius: 10,
   },
-  dayCellToday: { backgroundColor: "#1a1a2e", borderRadius: 10 },
-  dayText: { color: "#ccc", fontSize: 14 },
-  dayTextEmpty: { color: "#444" },
+  dayCellToday: { backgroundColor: AppDesignTokens.colors.surface, borderRadius: 10 },
+  dayText: { color: AppDesignTokens.colors.neutralBorder, fontSize: 14 },
+  dayTextEmpty: { color: AppDesignTokens.colors.neutralDark },
   dot: { width: 5, height: 5, borderRadius: 3 },
-  dotCombo: { backgroundColor: "#f59f00" },
+  dotCombo: { backgroundColor: AppDesignTokens.colors.warning },
   legend: {
     flexDirection: "row",
     justifyContent: "center",
@@ -239,27 +240,27 @@ const styles = StyleSheet.create({
   },
   legendItem: { flexDirection: "row", alignItems: "center", gap: 6 },
   legendDot: { width: 8, height: 8, borderRadius: 4 },
-  legendText: { color: "#888", fontSize: 12 },
+  legendText: { color: AppDesignTokens.colors.textMuted, fontSize: 12 },
   detailCard: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 14,
     padding: 16,
     gap: 10,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
-  detailTitle: { color: "#fff", fontSize: 16, fontWeight: "600" },
+  detailTitle: { color: AppDesignTokens.colors.text, fontSize: 16, fontWeight: "600" },
   detailRow: { flexDirection: "row", justifyContent: "space-between" },
-  detailLabel: { color: "#888", fontSize: 14 },
-  detailValue: { color: "#fff", fontSize: 14, fontWeight: "600" },
+  detailLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 14 },
+  detailValue: { color: AppDesignTokens.colors.text, fontSize: 14, fontWeight: "600" },
   detailTypes: { flexDirection: "row", gap: 6, flexWrap: "wrap" },
   typeBadge: {
-    backgroundColor: "#0f0f1a",
+    backgroundColor: AppDesignTokens.colors.background,
     borderRadius: 8,
     paddingHorizontal: 10,
     paddingVertical: 4,
   },
-  typeBadgeText: { color: "#888", fontSize: 12, textTransform: "capitalize" },
-  detailEmpty: { color: "#555", fontSize: 14 },
-  comboText: { color: "#f59f00", fontSize: 14, fontWeight: "600" },
+  typeBadgeText: { color: AppDesignTokens.colors.textMuted, fontSize: 12, textTransform: "capitalize" },
+  detailEmpty: { color: AppDesignTokens.colors.textSubtle, fontSize: 14 },
+  comboText: { color: AppDesignTokens.colors.warning, fontSize: 14, fontWeight: "600" },
 });

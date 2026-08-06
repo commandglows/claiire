@@ -4,7 +4,7 @@ export const parcours = [
     title: 'Être plus heureux',
     icon: '😊',
     description: 'Découvre les clés scientifiques du bonheur et apprends à cultiver le bien-être au quotidien',
-    color: '#FFD700',
+    color: 'var(--site-parcours-bonheur)',
     modules: [
       { title: 'Les hormones du bonheur', link: '/bonheur/les-hormones-du-bonheur' },
       { title: 'Cultiver la gratitude', link: '/psy/emotions/gratitude' },
@@ -19,7 +19,7 @@ export const parcours = [
     title: 'Gérer le stress et l\'anxiété',
     icon: '😰',
     description: 'Apprends à maîtriser ton stress et retrouver ton calme intérieur',
-    color: '#87CEEB',
+    color: 'var(--site-parcours-stress)',
     modules: [
       { title: 'Comprendre le stress', link: '/stress/' },
       { title: 'Le bon et le mauvais stress', link: '/stress/bon-et-mauvais' },
@@ -34,7 +34,7 @@ export const parcours = [
     title: 'Améliorer ton sommeil',
     icon: '😴',
     description: 'Restaure un sommeil réparateur pour une vie plus énergique',
-    color: '#9370DB',
+    color: 'var(--site-parcours-sommeil)',
     modules: [
       { title: 'Comprendre le sommeil', link: '/sommeil/' },
       { title: 'Les cycles du sommeil', link: '/sommeil/cycles' },
@@ -49,7 +49,7 @@ export const parcours = [
     title: 'Développer tes relations sociales',
     icon: '👥',
     description: 'Construis des relations authentiques et enrichissantes',
-    color: '#FF69B4',
+    color: 'var(--site-parcours-relations)',
     modules: [
       { title: 'Liens sociaux et santé', link: '/systeme-social/liens-sociaux' },
       { title: 'Empathie', link: '/psy/emotions/qualite/empathie' },
@@ -64,7 +64,7 @@ export const parcours = [
     title: 'Renforcer ta santé',
     icon: '💪',
     description: 'Optimise ton corps et ton énergie vitale',
-    color: '#32CD32',
+    color: 'var(--site-parcours-sante)',
     modules: [
       { title: 'Vue d\'ensemble santé', link: '/harmonie/' },
       { title: 'Nutrition essentielle', link: '/systeme-digestif/nutrition/' },
@@ -79,7 +79,7 @@ export const parcours = [
     title: 'Comprendre ton esprit',
     icon: '🧠',
     description: 'Explore le fonctionnement de ton psychisme et développe ton intelligence émotionnelle',
-    color: '#FF6347',
+    color: 'var(--site-parcours-esprit)',
     modules: [
       { title: 'Introduction psychologie', link: '/psy/' },
       { title: 'Émotions', link: '/psy/emotions/' },

@@ -1,3 +1,4 @@
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { useRouter } from "expo-router";
 
@@ -9,10 +10,30 @@ type QuickAction = {
 };
 
 const QUICK_ACTIONS: QuickAction[] = [
-  { emoji: "😴", label: "Sommeil", route: "/modal/log-sleep", color: "#3b5bdb" },
-  { emoji: "🎯", label: "Humeur", route: "/modal/log-mood", color: "#7950f2" },
-  { emoji: "⚔️", label: "Crise", route: "/modal/crisis-support", color: "#c92a2a" },
-  { emoji: "🏆", label: "Mission", route: "/modal/log-habit", color: "#2f9e44" },
+  {
+    emoji: "😴",
+    label: "Sommeil",
+    route: "/modal/log-sleep",
+    color: AppDesignTokens.colors.accentAlt,
+  },
+  {
+    emoji: "🎯",
+    label: "Humeur",
+    route: "/modal/log-mood",
+    color: AppDesignTokens.colors.accentSoft,
+  },
+  {
+    emoji: "⚔️",
+    label: "Crise",
+    route: "/modal/crisis-support",
+    color: AppDesignTokens.colors.danger,
+  },
+  {
+    emoji: "🏆",
+    label: "Mission",
+    route: "/modal/log-habit",
+    color: AppDesignTokens.colors.success,
+  },
 ];
 
 export type QuickLogBarProps = {
@@ -55,7 +76,7 @@ const styles = StyleSheet.create({
   },
   button: {
     flex: 1,
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 12,
     paddingVertical: 12,
     alignItems: "center",
@@ -66,7 +87,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
   },
   label: {
-    color: "#ccc",
+    color: AppDesignTokens.colors.neutralBorder,
     fontSize: 11,
     fontWeight: "500",
   },

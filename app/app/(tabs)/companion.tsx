@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 import {
   ScrollView,
   StyleSheet,
@@ -269,7 +270,7 @@ export default function CompanionScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#0f0f1a" },
+  container: { flex: 1, backgroundColor: AppDesignTokens.colors.background },
   emptyState: {
     flex: 1,
     alignItems: "center",
@@ -278,8 +279,8 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   emptyEmoji: { fontSize: 64 },
-  emptyTitle: { fontSize: 20, fontWeight: "bold", color: "#fff" },
-  emptySubtitle: { color: "#888", fontSize: 14, textAlign: "center" },
+  emptyTitle: { fontSize: 20, fontWeight: "bold", color: AppDesignTokens.colors.text },
+  emptySubtitle: { color: AppDesignTokens.colors.textMuted, fontSize: 14, textAlign: "center" },
   avatarSection: {
     alignItems: "center",
     paddingVertical: 20,
@@ -292,7 +293,7 @@ const styles = StyleSheet.create({
   },
   companionName: { fontSize: 18, fontWeight: "700" },
   statusDot: { width: 7, height: 7, borderRadius: 4 },
-  statusText: { color: "#888", fontSize: 13 },
+  statusText: { color: AppDesignTokens.colors.textMuted, fontSize: 13 },
   messagesContainer: { flex: 1 },
   messagesList: {
     padding: 16,
@@ -308,19 +309,19 @@ const styles = StyleSheet.create({
   },
   bubbleCompanion: {
     alignSelf: "flex-start",
-    backgroundColor: "#1a1a2e",
-    borderColor: "#2a2a4a",
+    backgroundColor: AppDesignTokens.colors.surface,
+    borderColor: AppDesignTokens.colors.border,
   },
   bubbleUser: {
     alignSelf: "flex-end",
-    backgroundColor: "#3d2f7a",
-    borderColor: "#6c47ff",
+    backgroundColor: AppDesignTokens.colors.panel,
+    borderColor: AppDesignTokens.colors.accent,
   },
-  bubbleText: { color: "#ddd", fontSize: 15, lineHeight: 21 },
-  bubbleTextUser: { color: "#fff" },
+  bubbleText: { color: AppDesignTokens.colors.borderMuted, fontSize: 15, lineHeight: 21 },
+  bubbleTextUser: { color: AppDesignTokens.colors.text },
   promptsSection: {
     borderTopWidth: 1,
-    borderTopColor: "#1a1a2e",
+    borderTopColor: AppDesignTokens.colors.surface,
     paddingVertical: 10,
   },
   promptsScroll: {
@@ -330,7 +331,7 @@ const styles = StyleSheet.create({
   promptChip: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 20,
     paddingVertical: 8,
     paddingHorizontal: 14,
@@ -339,7 +340,7 @@ const styles = StyleSheet.create({
     marginRight: 8,
   },
   promptEmoji: { fontSize: 16 },
-  promptLabel: { color: "#ccc", fontSize: 13, fontWeight: "500" },
+  promptLabel: { color: AppDesignTokens.colors.neutralBorder, fontSize: 13, fontWeight: "500" },
   actions: {
     flexDirection: "row",
     alignItems: "center",
@@ -350,16 +351,16 @@ const styles = StyleSheet.create({
   },
   sosButton: {
     flex: 1,
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 14,
     paddingVertical: 10,
     alignItems: "center",
     gap: 3,
     borderWidth: 1,
-    borderColor: "#ff6b6b40",
+    borderColor: AppDesignTokens.colors.dangerSoft40,
   },
   sosEmoji: { fontSize: 20 },
-  sosText: { color: "#ff6b6b", fontSize: 11, fontWeight: "600" },
+  sosText: { color: AppDesignTokens.colors.dangerSoft, fontSize: 11, fontWeight: "600" },
   voiceButton: {
     width: 56,
     height: 56,
@@ -374,18 +375,18 @@ const styles = StyleSheet.create({
   voiceEmoji: { fontSize: 24 },
   toolsButton: {
     flex: 1,
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 14,
     paddingVertical: 10,
     alignItems: "center",
     gap: 3,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
   toolsEmoji: { fontSize: 20 },
-  toolsText: { color: "#888", fontSize: 11, fontWeight: "600" },
+  toolsText: { color: AppDesignTokens.colors.textMuted, fontSize: 11, fontWeight: "600" },
   voiceHint: {
-    color: "#333",
+    color: AppDesignTokens.colors.textStrong,
     fontSize: 11,
     textAlign: "center",
     paddingHorizontal: 24,

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 import {
   ActivityIndicator,
   ScrollView,
@@ -144,7 +145,7 @@ export default function LogMoodModal() {
         <TextInput
           style={styles.input}
           placeholder="Ex: stress au travail, dispute, fatigue..."
-          placeholderTextColor="#555"
+          placeholderTextColor={AppDesignTokens.colors.textSubtle}
           value={trigger}
           onChangeText={setTrigger}
         />
@@ -153,7 +154,7 @@ export default function LogMoodModal() {
         <TextInput
           style={[styles.input, styles.notesInput]}
           placeholder="Contexte, pensées, observations..."
-          placeholderTextColor="#555"
+          placeholderTextColor={AppDesignTokens.colors.textSubtle}
           value={notes}
           onChangeText={setNotes}
           multiline
@@ -166,7 +167,7 @@ export default function LogMoodModal() {
           disabled={loading}
         >
           {loading ? (
-            <ActivityIndicator color="#fff" />
+            <ActivityIndicator color={AppDesignTokens.colors.text} />
           ) : (
             <Text style={styles.submitText}>
               Enregistrer (+{xpPreview} XP)
@@ -179,7 +180,7 @@ export default function LogMoodModal() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#0f0f1a" },
+  container: { flex: 1, backgroundColor: AppDesignTokens.colors.background },
   header: {
     flexDirection: "row",
     alignItems: "center",
@@ -187,20 +188,20 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 12,
     borderBottomWidth: 1,
-    borderBottomColor: "#1a1a2e",
+    borderBottomColor: AppDesignTokens.colors.surface,
   },
-  cancelText: { color: "#888", fontSize: 16, width: 60 },
-  title: { color: "#fff", fontSize: 17, fontWeight: "600" },
+  cancelText: { color: AppDesignTokens.colors.textMuted, fontSize: 16, width: 60 },
+  title: { color: AppDesignTokens.colors.text, fontSize: 17, fontWeight: "600" },
   content: { padding: 20, gap: 12 },
   error: {
-    color: "#ff6b6b",
+    color: AppDesignTokens.colors.dangerSoft,
     fontSize: 14,
     textAlign: "center",
-    backgroundColor: "#2a1a1a",
+    backgroundColor: AppDesignTokens.colors.surfaceMuted,
     padding: 12,
     borderRadius: 8,
   },
-  sectionLabel: { color: "#888", fontSize: 13, fontWeight: "500", marginTop: 8 },
+  sectionLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 13, fontWeight: "500", marginTop: 8 },
   emotionGrid: {
     flexDirection: "row",
     flexWrap: "wrap",
@@ -208,21 +209,21 @@ const styles = StyleSheet.create({
   },
   emotionButton: {
     width: "30%",
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 12,
     padding: 12,
     alignItems: "center",
     gap: 4,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
   emotionButtonActive: {
-    backgroundColor: "#3d2f7a",
-    borderColor: "#6c47ff",
+    backgroundColor: AppDesignTokens.colors.panel,
+    borderColor: AppDesignTokens.colors.accent,
   },
   emotionEmoji: { fontSize: 28 },
-  emotionLabel: { color: "#888", fontSize: 11 },
-  emotionLabelActive: { color: "#fff" },
+  emotionLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 11 },
+  emotionLabelActive: { color: AppDesignTokens.colors.text },
   intensityRow: {
     flexDirection: "row",
     gap: 6,
@@ -230,40 +231,40 @@ const styles = StyleSheet.create({
   intensityButton: {
     flex: 1,
     aspectRatio: 1,
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 8,
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
-  intensityButtonActive: { backgroundColor: "#6c47ff", borderColor: "#6c47ff" },
-  intensityLow: { backgroundColor: "#2f9e44", borderColor: "#2f9e44" },
-  intensityHigh: { backgroundColor: "#c92a2a", borderColor: "#c92a2a" },
-  intensityText: { color: "#888", fontSize: 12, fontWeight: "600" },
-  intensityTextActive: { color: "#fff" },
+  intensityButtonActive: { backgroundColor: AppDesignTokens.colors.accent, borderColor: AppDesignTokens.colors.accent },
+  intensityLow: { backgroundColor: AppDesignTokens.colors.success, borderColor: AppDesignTokens.colors.success },
+  intensityHigh: { backgroundColor: AppDesignTokens.colors.dangerAlt, borderColor: AppDesignTokens.colors.dangerAlt },
+  intensityText: { color: AppDesignTokens.colors.textMuted, fontSize: 12, fontWeight: "600" },
+  intensityTextActive: { color: AppDesignTokens.colors.text },
   input: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 12,
     padding: 14,
-    color: "#fff",
+    color: AppDesignTokens.colors.text,
     fontSize: 15,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
   notesInput: {
     minHeight: 80,
     textAlignVertical: "top",
   },
   submitButton: {
-    backgroundColor: "#6c47ff",
+    backgroundColor: AppDesignTokens.colors.accent,
     borderRadius: 12,
     padding: 16,
     alignItems: "center",
     marginTop: 8,
   },
   submitButtonDisabled: { opacity: 0.5 },
-  submitText: { color: "#fff", fontSize: 16, fontWeight: "600" },
+  submitText: { color: AppDesignTokens.colors.text, fontSize: 16, fontWeight: "600" },
   successContent: {
     flex: 1,
     alignItems: "center",
@@ -272,15 +273,15 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   successEmoji: { fontSize: 64 },
-  successTitle: { color: "#fff", fontSize: 22, fontWeight: "bold" },
-  successSub: { color: "#888", fontSize: 14, textAlign: "center" },
-  xpBadge: { color: "#6c47ff", fontSize: 36, fontWeight: "bold" },
+  successTitle: { color: AppDesignTokens.colors.text, fontSize: 22, fontWeight: "bold" },
+  successSub: { color: AppDesignTokens.colors.textMuted, fontSize: 14, textAlign: "center" },
+  xpBadge: { color: AppDesignTokens.colors.accent, fontSize: 36, fontWeight: "bold" },
   doneButton: {
-    backgroundColor: "#6c47ff",
+    backgroundColor: AppDesignTokens.colors.accent,
     borderRadius: 12,
     paddingHorizontal: 32,
     paddingVertical: 14,
     marginTop: 16,
   },
-  doneButtonText: { color: "#fff", fontSize: 16, fontWeight: "600" },
+  doneButtonText: { color: AppDesignTokens.colors.text, fontSize: 16, fontWeight: "600" },
 });

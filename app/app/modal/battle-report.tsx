@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 import {
   ScrollView,
   StyleSheet,
@@ -146,7 +147,7 @@ export default function BattleReportModal() {
 
   if (step === "intensity") {
     const intensityColor =
-      intensity <= 3 ? "#2f9e44" : intensity <= 6 ? "#f59f00" : "#e03131";
+      intensity <= 3 ? AppDesignTokens.colors.success : intensity <= 6 ? AppDesignTokens.colors.warning : AppDesignTokens.colors.danger;
 
     return (
       <SafeAreaView style={s.container}>
@@ -258,7 +259,7 @@ export default function BattleReportModal() {
           <TextInput
             style={s.notesInput}
             placeholder="Ce qui s'est passé..."
-            placeholderTextColor="#555"
+            placeholderTextColor={AppDesignTokens.colors.textSubtle}
             value={notes}
             onChangeText={setNotes}
             multiline
@@ -333,7 +334,7 @@ export default function BattleReportModal() {
 // ─── Styles ──────────────────────────────────────────────────────────────────
 
 const s = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#0f0f1a" },
+  container: { flex: 1, backgroundColor: AppDesignTokens.colors.background },
   header: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -341,102 +342,102 @@ const s = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 12,
   },
-  closeText: { color: "#888", fontSize: 18, padding: 4 },
-  backText: { color: "#6c47ff", fontSize: 24, fontWeight: "600", padding: 4 },
-  stepLabel: { color: "#555", fontSize: 13, fontWeight: "600" },
+  closeText: { color: AppDesignTokens.colors.textMuted, fontSize: 18, padding: 4 },
+  backText: { color: AppDesignTokens.colors.accent, fontSize: 24, fontWeight: "600", padding: 4 },
+  stepLabel: { color: AppDesignTokens.colors.textSubtle, fontSize: 13, fontWeight: "600" },
   content: { padding: 20, gap: 16, paddingBottom: 40 },
   centerContent: { flex: 1, padding: 20, alignItems: "center", justifyContent: "center", gap: 24 },
-  title: { fontSize: 22, fontWeight: "bold", color: "#fff" },
-  subtitle: { color: "#888", fontSize: 14, marginTop: -8 },
+  title: { fontSize: 22, fontWeight: "bold", color: AppDesignTokens.colors.text },
+  subtitle: { color: AppDesignTokens.colors.textMuted, fontSize: 14, marginTop: -8 },
 
   // Type grid
   grid: { flexDirection: "row", flexWrap: "wrap", gap: 10 },
   typeCard: {
     width: "47%",
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 14,
     padding: 16,
     alignItems: "center",
     gap: 8,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
-  typeCardSelected: { borderColor: "#e03131", backgroundColor: "#1a1020" },
+  typeCardSelected: { borderColor: AppDesignTokens.colors.danger, backgroundColor: AppDesignTokens.colors.surfaceAccent },
   typeIcon: { fontSize: 32 },
-  typeLabel: { color: "#ccc", fontSize: 13, fontWeight: "500", textAlign: "center" },
-  typeLabelSelected: { color: "#fff", fontWeight: "700" },
+  typeLabel: { color: AppDesignTokens.colors.neutralBorder, fontSize: 13, fontWeight: "500", textAlign: "center" },
+  typeLabelSelected: { color: AppDesignTokens.colors.text, fontWeight: "700" },
 
   // Intensity
   intensityCircle: {
     width: 120,
     height: 120,
     borderRadius: 60,
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 2,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
   intensityValue: { fontSize: 42, fontWeight: "900" },
-  intensityMax: { color: "#555", fontSize: 14, marginTop: -4 },
+  intensityMax: { color: AppDesignTokens.colors.textSubtle, fontSize: 14, marginTop: -4 },
   intensityRow: { flexDirection: "row", gap: 6 },
   intensityDot: {
     width: 28,
     height: 28,
     borderRadius: 14,
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
-  intensityDotText: { color: "#fff", fontSize: 11, fontWeight: "600" },
+  intensityDotText: { color: AppDesignTokens.colors.text, fontSize: 11, fontWeight: "600" },
   nextButton: {
-    backgroundColor: "#6c47ff",
+    backgroundColor: AppDesignTokens.colors.accent,
     borderRadius: 12,
     paddingVertical: 14,
     paddingHorizontal: 48,
   },
-  nextButtonText: { color: "#fff", fontSize: 16, fontWeight: "700" },
+  nextButtonText: { color: AppDesignTokens.colors.text, fontSize: 16, fontWeight: "700" },
   skipDetails: { paddingVertical: 8 },
-  skipDetailsText: { color: "#555", fontSize: 13 },
+  skipDetailsText: { color: AppDesignTokens.colors.textSubtle, fontSize: 13 },
 
   // Details
-  sectionLabel: { color: "#888", fontSize: 13, fontWeight: "600", textTransform: "uppercase", letterSpacing: 0.5 },
+  sectionLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 13, fontWeight: "600", textTransform: "uppercase", letterSpacing: 0.5 },
   chipRow: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
   chip: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 10,
     paddingVertical: 8,
     paddingHorizontal: 12,
     gap: 6,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
-  chipSelected: { borderColor: "#6c47ff", backgroundColor: "#1a1a3e" },
+  chipSelected: { borderColor: AppDesignTokens.colors.accent, backgroundColor: AppDesignTokens.colors.surfaceAccent },
   chipIcon: { fontSize: 16 },
-  chipLabel: { color: "#888", fontSize: 13, fontWeight: "500" },
-  chipLabelSelected: { color: "#fff" },
+  chipLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 13, fontWeight: "500" },
+  chipLabelSelected: { color: AppDesignTokens.colors.text },
   notesInput: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 12,
     padding: 14,
-    color: "#fff",
+    color: AppDesignTokens.colors.text,
     fontSize: 14,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
     minHeight: 80,
     textAlignVertical: "top",
   },
   logButton: {
-    backgroundColor: "#e03131",
+    backgroundColor: AppDesignTokens.colors.danger,
     borderRadius: 12,
     paddingVertical: 16,
     alignItems: "center",
   },
-  logButtonText: { color: "#fff", fontSize: 16, fontWeight: "700" },
+  logButtonText: { color: AppDesignTokens.colors.text, fontSize: 16, fontWeight: "700" },
 
   // Result
   resultContainer: {
@@ -447,10 +448,10 @@ const s = StyleSheet.create({
     gap: 12,
   },
   resultEmoji: { fontSize: 48 },
-  resultTitle: { color: "#fff", fontSize: 18, fontWeight: "700", textAlign: "center" },
-  resultXP: { color: "#6c47ff", fontSize: 28, fontWeight: "900" },
+  resultTitle: { color: AppDesignTokens.colors.text, fontSize: 18, fontWeight: "700", textAlign: "center" },
+  resultXP: { color: AppDesignTokens.colors.accent, fontSize: 28, fontWeight: "900" },
   counterTitle: {
-    color: "#f59f00",
+    color: AppDesignTokens.colors.warning,
     fontSize: 15,
     fontWeight: "600",
     marginTop: 16,
@@ -459,26 +460,26 @@ const s = StyleSheet.create({
   suggestionCard: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 14,
     padding: 14,
     gap: 12,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
   suggestionEmoji: { fontSize: 24 },
   suggestionInfo: { flex: 1, gap: 2 },
-  suggestionTitle: { color: "#fff", fontSize: 14, fontWeight: "600" },
-  suggestionDesc: { color: "#888", fontSize: 12 },
-  suggestionRate: { color: "#2f9e44", fontSize: 12, fontWeight: "700" },
+  suggestionTitle: { color: AppDesignTokens.colors.text, fontSize: 14, fontWeight: "600" },
+  suggestionDesc: { color: AppDesignTokens.colors.textMuted, fontSize: 12 },
+  suggestionRate: { color: AppDesignTokens.colors.success, fontSize: 12, fontWeight: "700" },
   doneButton: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 12,
     paddingVertical: 14,
     paddingHorizontal: 32,
     marginTop: 12,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
-  doneButtonText: { color: "#888", fontSize: 14, fontWeight: "600" },
+  doneButtonText: { color: AppDesignTokens.colors.textMuted, fontSize: 14, fontWeight: "600" },
 });

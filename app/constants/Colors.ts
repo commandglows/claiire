@@ -1,19 +1,21 @@
-const tintColorLight = '#2f95dc';
-const tintColorDark = '#fff';
+import { AppDesignTokens } from "@/constants/AppDesignTokens";
+
+const tintColorLight = AppDesignTokens.colors.accentAlt;
+const tintColorDark = AppDesignTokens.colors.text;
 
 export default {
   light: {
-    text: '#000',
-    background: '#fff',
+    text: AppDesignTokens.colors.textInverse,
+    background: AppDesignTokens.colors.text,
     tint: tintColorLight,
-    tabIconDefault: '#ccc',
+    tabIconDefault: AppDesignTokens.colors.neutralBorder,
     tabIconSelected: tintColorLight,
   },
   dark: {
-    text: '#fff',
-    background: '#000',
+    text: AppDesignTokens.colors.text,
+    background: AppDesignTokens.colors.textInverse,
     tint: tintColorDark,
-    tabIconDefault: '#ccc',
+    tabIconDefault: AppDesignTokens.colors.neutralBorder,
     tabIconSelected: tintColorDark,
   },
 };

@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { useMode } from "@/features/mode";
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 
 type StepProps = {
   icon: string;
@@ -78,23 +79,23 @@ export function DailyCombo() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 14,
     padding: 14,
     gap: 10,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
   headerRow: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
   },
-  title: { color: "#fff", fontSize: 14, fontWeight: "600" },
+  title: { color: AppDesignTokens.colors.text, fontSize: 14, fontWeight: "600" },
   counter: { fontSize: 13, fontWeight: "700" },
   progressBar: {
     height: 6,
-    backgroundColor: "#0f0f1a",
+    backgroundColor: AppDesignTokens.colors.background,
     borderRadius: 3,
     overflow: "hidden",
   },
@@ -105,21 +106,21 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     gap: 6,
-    backgroundColor: "#0f0f1a",
+    backgroundColor: AppDesignTokens.colors.background,
     borderRadius: 10,
     paddingVertical: 8,
     paddingHorizontal: 10,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
   stepIcon: { fontSize: 16 },
   stepIconDim: { opacity: 0.4 },
-  stepLabel: { fontSize: 11, color: "#555", flex: 1 },
+  stepLabel: { fontSize: 11, color: AppDesignTokens.colors.textSubtle, flex: 1 },
   stepCheck: { fontSize: 13, fontWeight: "700" },
-  hint: { color: "#444", fontSize: 11, textAlign: "center" },
+  hint: { color: AppDesignTokens.colors.neutralDark, fontSize: 11, textAlign: "center" },
   comboDone: {
     flexDirection: "row",
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 14,
     padding: 16,
     gap: 12,
@@ -129,5 +130,5 @@ const styles = StyleSheet.create({
   comboDoneEmoji: { fontSize: 32 },
   comboDoneText: { gap: 2 },
   comboDoneTitle: { fontSize: 16, fontWeight: "700" },
-  comboDoneSub: { color: "#888", fontSize: 12 },
+  comboDoneSub: { color: AppDesignTokens.colors.textMuted, fontSize: 12 },
 });

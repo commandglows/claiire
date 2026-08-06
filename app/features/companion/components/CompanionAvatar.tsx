@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 import { StyleSheet, Text, View } from "react-native";
 import Animated, {
   Easing,
@@ -14,9 +15,9 @@ const COMPANION_CONFIG: Record<
   CompanionId,
   { emoji: string; color: string; name: string }
 > = {
-  lumo: { emoji: "✨", color: "#6c47ff", name: "Lumo" },
-  papillon: { emoji: "🦋", color: "#f59f00", name: "Papillon" },
-  etoile: { emoji: "⭐", color: "#74c0fc", name: "Étoile" },
+  lumo: { emoji: "✨", color: AppDesignTokens.colors.accent, name: "Lumo" },
+  papillon: { emoji: "🦋", color: AppDesignTokens.colors.warning, name: "Papillon" },
+  etoile: { emoji: "⭐", color: AppDesignTokens.colors.accentSoft2, name: "Étoile" },
 };
 
 export type CompanionAvatarProps = {
@@ -106,7 +107,7 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   avatarCircle: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderWidth: 2,
     alignItems: "center",
     justifyContent: "center",

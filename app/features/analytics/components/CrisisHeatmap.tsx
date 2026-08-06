@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { useMode } from "@/features/mode";
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 
 type HeatmapData = {
   grid: number[][];
@@ -12,12 +13,12 @@ type HeatmapData = {
 };
 
 function getHeatColor(value: number, max: number): string {
-  if (value === 0) return "#13131f";
+  if (value === 0) return AppDesignTokens.colors.surfaceMutedAlt;
   const intensity = value / max;
-  if (intensity <= 0.25) return "#2a1a3a";
-  if (intensity <= 0.5) return "#5a2d6a";
-  if (intensity <= 0.75) return "#9b3d8a";
-  return "#e03131";
+  if (intensity <= 0.25) return AppDesignTokens.colors.surfaceMutedAlt;
+  if (intensity <= 0.5) return AppDesignTokens.colors.borderSoft;
+  if (intensity <= 0.75) return AppDesignTokens.colors.warning40;
+  return AppDesignTokens.colors.danger;
 }
 
 export function CrisisHeatmap() {
@@ -117,26 +118,26 @@ export function CrisisHeatmap() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 14,
     padding: 16,
     gap: 10,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
-  title: { color: "#fff", fontSize: 15, fontWeight: "600" },
-  subtitle: { color: "#888", fontSize: 12, marginTop: -4 },
+  title: { color: AppDesignTokens.colors.text, fontSize: 15, fontWeight: "600" },
+  subtitle: { color: AppDesignTokens.colors.textMuted, fontSize: 12, marginTop: -4 },
   grid: { gap: 2 },
   headerRow: { flexDirection: "row", marginBottom: 2 },
-  blockLabel: { color: "#555", fontSize: 9, textAlign: "center" },
+  blockLabel: { color: AppDesignTokens.colors.textSubtle, fontSize: 9, textAlign: "center" },
   row: { flexDirection: "row", alignItems: "center", gap: 2 },
-  dayLabel: { color: "#888", fontSize: 10, width: 30, textAlign: "right", paddingRight: 4 },
+  dayLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 10, width: 30, textAlign: "right", paddingRight: 4 },
   cell: {
     borderRadius: 4,
     alignItems: "center",
     justifyContent: "center",
   },
-  cellText: { color: "#fff", fontSize: 10, fontWeight: "600" },
+  cellText: { color: AppDesignTokens.colors.text, fontSize: 10, fontWeight: "600" },
   legend: {
     flexDirection: "row",
     alignItems: "center",
@@ -144,18 +145,18 @@ const styles = StyleSheet.create({
     gap: 4,
     marginTop: 4,
   },
-  legendLabel: { color: "#555", fontSize: 10 },
+  legendLabel: { color: AppDesignTokens.colors.textSubtle, fontSize: 10 },
   legendCell: {
     width: 14,
     height: 14,
     borderRadius: 3,
   },
   insight: {
-    backgroundColor: "#2a1a0a",
+    backgroundColor: AppDesignTokens.colors.surfaceSecondary,
     borderRadius: 8,
     padding: 10,
     borderWidth: 1,
-    borderColor: "#f59f0030",
+    borderColor: AppDesignTokens.colors.warning40,
   },
-  insightText: { color: "#f59f00", fontSize: 12, fontWeight: "500" },
+  insightText: { color: AppDesignTokens.colors.warning, fontSize: 12, fontWeight: "500" },
 });

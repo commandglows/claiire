@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 import {
   ScrollView,
   StyleSheet,
@@ -15,9 +16,9 @@ import { useMode } from "@/features/mode";
 import type { Id } from "@/convex/_generated/dataModel";
 
 const DIFFICULTY_COLORS = {
-  easy: "#2f9e44",
-  medium: "#f59f00",
-  hard: "#e03131",
+  easy: AppDesignTokens.colors.success,
+  medium: AppDesignTokens.colors.warning,
+  hard: AppDesignTokens.colors.danger,
 } as const;
 
 type MissionType = "defense" | "offense" | "support" | "training";
@@ -135,7 +136,7 @@ export default function JournalScreen() {
             </View>
             <View style={styles.quickStatDivider} />
             <View style={styles.quickStatItem}>
-              <Text style={[styles.quickStatValue, { color: "#f59f00" }]}>
+              <Text style={[styles.quickStatValue, { color: AppDesignTokens.colors.warning }]}>
                 {Math.max(0, ...Object.values(streaks))}j
               </Text>
               <Text style={styles.quickStatLabel}>Meilleure</Text>
@@ -215,33 +216,33 @@ export default function JournalScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#0f0f1a" },
+  container: { flex: 1, backgroundColor: AppDesignTokens.colors.background },
   scroll: { flex: 1 },
   content: { padding: 20, gap: 16, paddingBottom: 32 },
-  title: { fontSize: 24, fontWeight: "bold", color: "#fff" },
-  subtitle: { fontSize: 14, color: "#888", marginTop: -8 },
+  title: { fontSize: 24, fontWeight: "bold", color: AppDesignTokens.colors.text },
+  subtitle: { fontSize: 14, color: AppDesignTokens.colors.textMuted, marginTop: -8 },
   quickRow: { flexDirection: "row", gap: 10 },
   quickButton: {
     flex: 1,
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 12,
     paddingVertical: 16,
     alignItems: "center",
     gap: 6,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
   quickEmoji: { fontSize: 26 },
-  quickLabel: { color: "#fff", fontSize: 12, fontWeight: "500" },
+  quickLabel: { color: AppDesignTokens.colors.text, fontSize: 12, fontWeight: "500" },
   sectionHeader: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
   },
-  sectionTitle: { fontSize: 16, fontWeight: "600", color: "#fff" },
+  sectionTitle: { fontSize: 16, fontWeight: "600", color: AppDesignTokens.colors.text },
   sectionBadge: {
-    backgroundColor: "#6c47ff",
-    color: "#fff",
+    backgroundColor: AppDesignTokens.colors.accent,
+    color: AppDesignTokens.colors.text,
     fontSize: 12,
     fontWeight: "700",
     paddingHorizontal: 10,
@@ -252,80 +253,80 @@ const styles = StyleSheet.create({
   habitRow: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 14,
     padding: 14,
     gap: 12,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
-  habitRowDone: { borderColor: "#2f9e44", opacity: 0.7 },
+  habitRowDone: { borderColor: AppDesignTokens.colors.success, opacity: 0.7 },
   habitIcon: { fontSize: 26, width: 32, textAlign: "center" },
   habitInfo: { flex: 1, gap: 2 },
-  habitName: { color: "#fff", fontSize: 15, fontWeight: "500" },
-  habitNameDone: { color: "#888", textDecorationLine: "line-through" },
+  habitName: { color: AppDesignTokens.colors.text, fontSize: 15, fontWeight: "500" },
+  habitNameDone: { color: AppDesignTokens.colors.textMuted, textDecorationLine: "line-through" },
   habitMeta: { flexDirection: "row", alignItems: "center", gap: 8 },
   habitXP: { fontSize: 12, fontWeight: "600" },
   missionBadge: { fontSize: 12 },
-  habitStreak: { color: "#f59f00", fontSize: 11, fontWeight: "600" },
+  habitStreak: { color: AppDesignTokens.colors.warning, fontSize: 11, fontWeight: "600" },
   checkButton: {
-    backgroundColor: "#6c47ff",
+    backgroundColor: AppDesignTokens.colors.accent,
     borderRadius: 8,
     paddingVertical: 7,
     paddingHorizontal: 14,
   },
-  checkButtonDone: { backgroundColor: "#2f9e44" },
-  checkButtonText: { color: "#fff", fontSize: 13, fontWeight: "700" },
+  checkButtonDone: { backgroundColor: AppDesignTokens.colors.success },
+  checkButtonText: { color: AppDesignTokens.colors.text, fontSize: 13, fontWeight: "700" },
   emptyHabits: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 14,
     padding: 32,
     alignItems: "center",
     gap: 8,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
     borderStyle: "dashed",
   },
   emptyEmoji: { fontSize: 40 },
-  emptyText: { color: "#888", fontSize: 15, fontWeight: "500" },
-  emptySub: { color: "#555", fontSize: 12, textAlign: "center" },
+  emptyText: { color: AppDesignTokens.colors.textMuted, fontSize: 15, fontWeight: "500" },
+  emptySub: { color: AppDesignTokens.colors.textSubtle, fontSize: 12, textAlign: "center" },
   addHabitButton: {
     borderRadius: 14,
     paddingVertical: 14,
     alignItems: "center",
     borderWidth: 1.5,
-    borderColor: "#6c47ff",
+    borderColor: AppDesignTokens.colors.accent,
     borderStyle: "dashed",
   },
-  addHabitText: { color: "#6c47ff", fontSize: 15, fontWeight: "600" },
+  addHabitText: { color: AppDesignTokens.colors.accent, fontSize: 15, fontWeight: "600" },
   titleRow: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "flex-start",
   },
   calendarButton: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 10,
     width: 40,
     height: 40,
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
   calendarButtonText: { fontSize: 18 },
   quickStats: {
     flexDirection: "row",
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 12,
     paddingVertical: 12,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
     justifyContent: "space-around",
     alignItems: "center",
   },
   quickStatItem: { alignItems: "center", gap: 2 },
-  quickStatValue: { color: "#fff", fontSize: 18, fontWeight: "800" },
-  quickStatLabel: { color: "#888", fontSize: 10, textTransform: "uppercase", letterSpacing: 0.5 },
-  quickStatDivider: { width: 1, height: 24, backgroundColor: "#2a2a4a" },
+  quickStatValue: { color: AppDesignTokens.colors.text, fontSize: 18, fontWeight: "800" },
+  quickStatLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 10, textTransform: "uppercase", letterSpacing: 0.5 },
+  quickStatDivider: { width: 1, height: 24, backgroundColor: AppDesignTokens.colors.border },
 });

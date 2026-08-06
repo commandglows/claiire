@@ -27,13 +27,13 @@ const siteUrl = "https://claiire.com"
 
 	<style>
 		:root {
-			--bg: hsl(224 10% 10%);
-			--card-bg: hsl(224 10% 14%);
-			--text: hsl(0 0% 96%);
-			--text-muted: hsl(0 0% 65%);
-			--accent: hsl(234 89% 74%);
-			--accent-glow: hsla(234, 89%, 74%, 0.25);
-			--border: hsl(224 10% 20%);
+			--bg: var(--site-bg);
+			--card-bg: var(--site-surface-strong);
+			--text: var(--site-text);
+			--text-muted: var(--site-muted);
+			--accent: var(--site-accent);
+			--accent-glow: var(--site-accent-soft);
+			--border: var(--site-border);
 		}
 
 		* { margin: 0; padding: 0; box-sizing: border-box; }
@@ -121,7 +121,7 @@ const siteUrl = "https://claiire.com"
 
 		.bio-link.cta {
 			background: var(--accent);
-			color: #fff;
+			color: var(--site-text);
 			border: none;
 			box-shadow: 0 0 25px var(--accent-glow);
 		}

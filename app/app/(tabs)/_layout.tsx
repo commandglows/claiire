@@ -4,8 +4,9 @@ import { useAuth } from "@clerk/expo";
 import { Redirect, Tabs, useRouter } from "expo-router";
 import { SymbolView } from "expo-symbols";
 import { useMode } from "@/features/mode";
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 
-const INACTIVE_COLOR = "#555";
+const INACTIVE_COLOR = AppDesignTokens.colors.textSubtle;
 
 function SOSButton() {
   const router = useRouter();
@@ -63,7 +64,7 @@ export default function TabLayout() {
             borderTopColor: colors.card,
           },
           headerStyle: { backgroundColor: colors.bg },
-          headerTintColor: "#fff",
+          headerTintColor: AppDesignTokens.colors.text,
           headerShown: false,
         }}
       >
@@ -150,7 +151,7 @@ const fab = StyleSheet.create({
     zIndex: 999,
   },
   shadow: {
-    shadowColor: "#e03131",
+    shadowColor: AppDesignTokens.colors.danger,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.5,
     shadowRadius: 12,
@@ -160,14 +161,14 @@ const fab = StyleSheet.create({
     width: 56,
     height: 56,
     borderRadius: 28,
-    backgroundColor: "#e03131",
+    backgroundColor: AppDesignTokens.colors.danger,
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 2,
-    borderColor: "#ff6b6b",
+    borderColor: AppDesignTokens.colors.dangerSoft,
   },
   text: {
-    color: "#fff",
+    color: AppDesignTokens.colors.text,
     fontSize: 14,
     fontWeight: "900",
     letterSpacing: 1,

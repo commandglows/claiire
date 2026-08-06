@@ -1,7 +1,8 @@
-import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { useRouter } from "expo-router";
 import { useEffect, useRef, useState } from "react";
+import { useMutation } from "convex/react";
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 import {
   ActivityIndicator,
   Animated,
@@ -35,7 +36,7 @@ const COMPANIONS: CompanionCard[] = [
     emoji: "✨",
     description: "Sage et douce, elle guide avec calme et introspection",
     tagline: "Pour ceux qui cherchent la paix intérieure",
-    color: "#6c47ff",
+    color: AppDesignTokens.colors.accent,
   },
   {
     id: "papillon",
@@ -43,7 +44,7 @@ const COMPANIONS: CompanionCard[] = [
     emoji: "🦋",
     description: "Énergique et motivant, il célèbre chaque victoire avec toi",
     tagline: "Pour ceux qui ont besoin d'être propulsés",
-    color: "#f59f00",
+    color: AppDesignTokens.colors.warning,
   },
   {
     id: "etoile",
@@ -51,7 +52,7 @@ const COMPANIONS: CompanionCard[] = [
     emoji: "⭐",
     description: "Empathique et bienveillante, elle comprend ta douleur",
     tagline: "Pour ceux qui ont besoin d'être compris",
-    color: "#74c0fc",
+    color: AppDesignTokens.colors.accentSoft2,
   },
 ];
 
@@ -189,7 +190,7 @@ export default function OnboardingScreen() {
                 return (
                   <TouchableOpacity
                     key={c.id}
-                    style={[s.card, { borderColor: selected ? c.color : "#2a2a4a" }]}
+                    style={[s.card, { borderColor: selected ? c.color : AppDesignTokens.colors.border }]}
                     onPress={() => setSelectedId(c.id)}
                     activeOpacity={0.8}
                   >
@@ -247,21 +248,21 @@ export default function OnboardingScreen() {
             </Text>
             <View style={s.modeRow}>
               <TouchableOpacity
-                style={[s.modeCard, selectedMode === "warrior" && { borderColor: "#6c47ff" }]}
+                style={[s.modeCard, selectedMode === "warrior" && { borderColor: AppDesignTokens.colors.accent }]}
                 onPress={() => setSelectedMode("warrior")}
               >
                 <Text style={s.modeEmoji}>⚔️</Text>
-                <Text style={[s.modeName, selectedMode === "warrior" && { color: "#6c47ff" }]}>
+                <Text style={[s.modeName, selectedMode === "warrior" && { color: AppDesignTokens.colors.accent }]}>
                   Warrior
                 </Text>
                 <Text style={s.modeDesc}>Missions, combats,{"\n"}XP, victoires</Text>
               </TouchableOpacity>
               <TouchableOpacity
-                style={[s.modeCard, selectedMode === "zen" && { borderColor: "#3b82f6" }]}
+                style={[s.modeCard, selectedMode === "zen" && { borderColor: AppDesignTokens.colors.accentAlt }]}
                 onPress={() => setSelectedMode("zen")}
               >
                 <Text style={s.modeEmoji}>🧘</Text>
-                <Text style={[s.modeName, selectedMode === "zen" && { color: "#3b82f6" }]}>
+                <Text style={[s.modeName, selectedMode === "zen" && { color: AppDesignTokens.colors.accentAlt }]}>
                   Zen
                 </Text>
                 <Text style={s.modeDesc}>Habitudes, journal,{"\n"}sérénité, progrès</Text>
@@ -353,7 +354,7 @@ export default function OnboardingScreen() {
             <TextInput
               style={s.input}
               placeholder="Ton prénom (optionnel)"
-              placeholderTextColor="#555"
+              placeholderTextColor={AppDesignTokens.colors.textSubtle}
               value={displayName}
               onChangeText={setDisplayName}
               autoCapitalize="words"
@@ -421,7 +422,7 @@ export default function OnboardingScreen() {
             disabled={loading}
           >
             {loading ? (
-              <ActivityIndicator color="#fff" />
+              <ActivityIndicator color={AppDesignTokens.colors.text} />
             ) : (
               <Text style={s.launchButtonText}>
                 {isWarrior ? "En avant, guerrier ! ⚔️" : "C'est parti ! 🌿"}
@@ -437,7 +438,7 @@ export default function OnboardingScreen() {
 // ─── Styles ──────────────────────────────────────────────────────────────────
 
 const s = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#0f0f1a" },
+  container: { flex: 1, backgroundColor: AppDesignTokens.colors.background },
   content: { padding: 24, gap: 16, paddingBottom: 40 },
   centerContent: {
     flex: 1,
@@ -453,29 +454,29 @@ const s = StyleSheet.create({
     paddingVertical: 12,
     gap: 12,
   },
-  stepCount: { color: "#555", fontSize: 13, fontWeight: "600" },
-  backText: { color: "#6c47ff", fontSize: 24, fontWeight: "600", paddingRight: 8 },
+  stepCount: { color: AppDesignTokens.colors.textSubtle, fontSize: 13, fontWeight: "600" },
+  backText: { color: AppDesignTokens.colors.accent, fontSize: 24, fontWeight: "600", paddingRight: 8 },
   progressBar: {
     flex: 1,
     height: 4,
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 2,
     overflow: "hidden",
   },
-  progressFill: { height: "100%", backgroundColor: "#6c47ff", borderRadius: 2 },
-  title: { fontSize: 24, fontWeight: "bold", color: "#fff", textAlign: "center" },
-  subtitle: { color: "#888", fontSize: 14, textAlign: "center", lineHeight: 20, paddingHorizontal: 16 },
+  progressFill: { height: "100%", backgroundColor: AppDesignTokens.colors.accent, borderRadius: 2 },
+  title: { fontSize: 24, fontWeight: "bold", color: AppDesignTokens.colors.text, textAlign: "center" },
+  subtitle: { color: AppDesignTokens.colors.textMuted, fontSize: 14, textAlign: "center", lineHeight: 20, paddingHorizontal: 16 },
 
   // Welcome
   welcomeEmoji: { fontSize: 64 },
-  welcomeTitle: { fontSize: 36, fontWeight: "900", color: "#fff", letterSpacing: 2 },
-  welcomeTagline: { color: "#888", fontSize: 16, textAlign: "center", lineHeight: 24 },
+  welcomeTitle: { fontSize: 36, fontWeight: "900", color: AppDesignTokens.colors.text, letterSpacing: 2 },
+  welcomeTagline: { color: AppDesignTokens.colors.textMuted, fontSize: 16, textAlign: "center", lineHeight: 24 },
   featureList: { gap: 12, marginTop: 16, alignSelf: "stretch", paddingHorizontal: 16 },
-  featureItem: { color: "#ccc", fontSize: 15, lineHeight: 22 },
+  featureItem: { color: AppDesignTokens.colors.neutralBorder, fontSize: 15, lineHeight: 22 },
 
   // Primary button
   primaryButton: {
-    backgroundColor: "#6c47ff",
+    backgroundColor: AppDesignTokens.colors.accent,
     borderRadius: 14,
     paddingVertical: 16,
     paddingHorizontal: 48,
@@ -484,13 +485,13 @@ const s = StyleSheet.create({
     marginTop: 8,
   },
   buttonDisabled: { opacity: 0.4 },
-  primaryButtonText: { color: "#fff", fontSize: 17, fontWeight: "700" },
+  primaryButtonText: { color: AppDesignTokens.colors.text, fontSize: 17, fontWeight: "700" },
 
   // Companion cards
   cards: { gap: 12 },
   card: {
     flexDirection: "row",
-    backgroundColor: "#13131f",
+    backgroundColor: AppDesignTokens.colors.surfaceMutedAlt,
     borderRadius: 16,
     borderWidth: 2,
     padding: 16,
@@ -501,14 +502,14 @@ const s = StyleSheet.create({
     width: 52,
     height: 52,
     borderRadius: 26,
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     alignItems: "center",
     justifyContent: "center",
   },
   cardEmoji: { fontSize: 28 },
   cardContent: { flex: 1, gap: 4 },
   cardNameRow: { flexDirection: "row", alignItems: "center", gap: 8 },
-  cardName: { fontSize: 17, fontWeight: "700", color: "#fff" },
+  cardName: { fontSize: 17, fontWeight: "700", color: AppDesignTokens.colors.text },
   checkBadge: {
     width: 20,
     height: 20,
@@ -516,59 +517,59 @@ const s = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  checkMark: { color: "#fff", fontSize: 12, fontWeight: "bold" },
-  cardDescription: { fontSize: 13, color: "#888", lineHeight: 18 },
+  checkMark: { color: AppDesignTokens.colors.text, fontSize: 12, fontWeight: "bold" },
+  cardDescription: { fontSize: 13, color: AppDesignTokens.colors.textMuted, lineHeight: 18 },
   cardTagline: { fontSize: 12, fontWeight: "500" },
 
   // Mode
   modeRow: { flexDirection: "row", gap: 12, alignSelf: "stretch" },
   modeCard: {
     flex: 1,
-    backgroundColor: "#13131f",
+    backgroundColor: AppDesignTokens.colors.surfaceMutedAlt,
     borderRadius: 14,
     borderWidth: 2,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
     padding: 20,
     alignItems: "center",
     gap: 8,
   },
   modeEmoji: { fontSize: 36 },
-  modeName: { fontSize: 18, fontWeight: "700", color: "#fff" },
-  modeDesc: { fontSize: 12, color: "#888", textAlign: "center", lineHeight: 18 },
+  modeName: { fontSize: 18, fontWeight: "700", color: AppDesignTokens.colors.text },
+  modeDesc: { fontSize: 12, color: AppDesignTokens.colors.textMuted, textAlign: "center", lineHeight: 18 },
 
   // Goals
   goalGrid: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
   goalChip: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 12,
     paddingVertical: 12,
     paddingHorizontal: 14,
     gap: 8,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
-  goalChipSelected: { borderColor: "#6c47ff", backgroundColor: "#1a1a3e" },
+  goalChipSelected: { borderColor: AppDesignTokens.colors.accent, backgroundColor: AppDesignTokens.colors.surfaceAccent },
   goalIcon: { fontSize: 20 },
-  goalLabel: { color: "#888", fontSize: 14, fontWeight: "500" },
-  goalLabelSelected: { color: "#fff" },
-  goalXP: { color: "#6c47ff", fontSize: 12, fontWeight: "700" },
-  goalCount: { color: "#555", fontSize: 13, textAlign: "center" },
+  goalLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 14, fontWeight: "500" },
+  goalLabelSelected: { color: AppDesignTokens.colors.text },
+  goalXP: { color: AppDesignTokens.colors.accent, fontSize: 12, fontWeight: "700" },
+  goalCount: { color: AppDesignTokens.colors.textSubtle, fontSize: 13, textAlign: "center" },
 
   // Name
   input: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 12,
     padding: 16,
-    color: "#fff",
+    color: AppDesignTokens.colors.text,
     fontSize: 16,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
     alignSelf: "stretch",
   },
   previewBox: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 12,
     padding: 16,
     borderLeftWidth: 3,
@@ -578,38 +579,38 @@ const s = StyleSheet.create({
     alignSelf: "stretch",
   },
   previewEmoji: { fontSize: 32 },
-  previewText: { flex: 1, color: "#aaa", fontSize: 14, fontStyle: "italic", lineHeight: 20 },
+  previewText: { flex: 1, color: AppDesignTokens.colors.neutralSoft, fontSize: 14, fontStyle: "italic", lineHeight: 20 },
 
   // Ready
   readyEmoji: { fontSize: 64 },
-  readyTitle: { fontSize: 28, fontWeight: "900", color: "#fff" },
+  readyTitle: { fontSize: 28, fontWeight: "900", color: AppDesignTokens.colors.text },
   summaryCard: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 14,
     padding: 20,
     gap: 14,
     alignSelf: "stretch",
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
   summaryRow: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
   },
-  summaryLabel: { color: "#888", fontSize: 14 },
-  summaryValue: { color: "#fff", fontSize: 15, fontWeight: "600" },
+  summaryLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 14 },
+  summaryValue: { color: AppDesignTokens.colors.text, fontSize: 15, fontWeight: "600" },
   launchButton: {
-    backgroundColor: "#6c47ff",
+    backgroundColor: AppDesignTokens.colors.accent,
     borderRadius: 14,
     paddingVertical: 18,
     alignItems: "center",
     alignSelf: "stretch",
-    shadowColor: "#6c47ff",
+    shadowColor: AppDesignTokens.colors.accent,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.4,
     shadowRadius: 12,
     elevation: 8,
   },
-  launchButtonText: { color: "#fff", fontSize: 18, fontWeight: "800" },
+  launchButtonText: { color: AppDesignTokens.colors.text, fontSize: 18, fontWeight: "800" },
 });

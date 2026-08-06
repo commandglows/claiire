@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Animated, StyleSheet, Text } from "react-native";
 import { useGamificationStore } from "../store";
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 
 export function XPToast() {
   const { pendingXP, clearPendingXP } = useGamificationStore();
@@ -43,16 +44,16 @@ const s = StyleSheet.create({
     position: "absolute",
     top: 60,
     alignSelf: "center",
-    backgroundColor: "#6c47ff",
+    backgroundColor: AppDesignTokens.colors.accent,
     borderRadius: 20,
     paddingVertical: 8,
     paddingHorizontal: 20,
     zIndex: 9998,
-    shadowColor: "#6c47ff",
+    shadowColor: AppDesignTokens.colors.accent,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.5,
     shadowRadius: 12,
     elevation: 10,
   },
-  text: { color: "#fff", fontSize: 18, fontWeight: "900", letterSpacing: 1 },
+  text: { color: AppDesignTokens.colors.text, fontSize: 18, fontWeight: "900", letterSpacing: 1 },
 });

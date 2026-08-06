@@ -4,6 +4,7 @@ import { useRouter } from "expo-router";
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { useMode } from "@/features/mode";
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 
 type WeekData = {
   xp: number;
@@ -37,7 +38,7 @@ function CompareStat({
   const same = diff === 0;
 
   const arrow = same ? "=" : improved ? "↑" : "↓";
-  const arrowColor = same ? "#888" : improved ? "#2f9e44" : "#e03131";
+  const arrowColor = same ? AppDesignTokens.colors.textMuted : improved ? AppDesignTokens.colors.success : AppDesignTokens.colors.danger;
 
   return (
     <View style={styles.statRow}>
@@ -127,7 +128,7 @@ export default function RecapModal() {
           <Text style={styles.xpValue}>+{thisWeek.xp}</Text>
           <Text style={styles.xpLabel}>{vocab.xpLabel} cette semaine</Text>
           {lastWeek.xp > 0 && (
-            <Text style={[styles.xpDiff, { color: xpDiff >= 0 ? "#2f9e44" : "#e03131" }]}>
+            <Text style={[styles.xpDiff, { color: xpDiff >= 0 ? AppDesignTokens.colors.success : AppDesignTokens.colors.danger }]}>
               {xpDiff >= 0 ? "+" : ""}{xpDiff} vs semaine dernière
             </Text>
           )}
@@ -182,9 +183,9 @@ export default function RecapModal() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#0f0f1a" },
+  container: { flex: 1, backgroundColor: AppDesignTokens.colors.background },
   loading: { flex: 1, alignItems: "center", justifyContent: "center" },
-  loadingText: { color: "#888", fontSize: 15 },
+  loadingText: { color: AppDesignTokens.colors.textMuted, fontSize: 15 },
   header: {
     flexDirection: "row",
     alignItems: "center",
@@ -192,57 +193,57 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 12,
   },
-  closeText: { color: "#888", fontSize: 18, padding: 4 },
-  headerTitle: { color: "#fff", fontSize: 17, fontWeight: "700" },
+  closeText: { color: AppDesignTokens.colors.textMuted, fontSize: 18, padding: 4 },
+  headerTitle: { color: AppDesignTokens.colors.text, fontSize: 17, fontWeight: "700" },
   scroll: { flex: 1 },
   content: { padding: 20, gap: 16, paddingBottom: 40 },
   verdictCard: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 16,
     padding: 24,
     alignItems: "center",
     gap: 8,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
   verdictEmoji: { fontSize: 56 },
-  verdictText: { color: "#fff", fontSize: 16, fontWeight: "600", textAlign: "center" },
-  verdictWeek: { color: "#555", fontSize: 12 },
+  verdictText: { color: AppDesignTokens.colors.text, fontSize: 16, fontWeight: "600", textAlign: "center" },
+  verdictWeek: { color: AppDesignTokens.colors.textSubtle, fontSize: 12 },
   xpCard: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 14,
     padding: 20,
     alignItems: "center",
     gap: 4,
     borderWidth: 1,
-    borderColor: "#6c47ff40",
+    borderColor: AppDesignTokens.colors.accent40,
   },
-  xpValue: { fontSize: 42, fontWeight: "bold", color: "#6c47ff" },
-  xpLabel: { color: "#888", fontSize: 14 },
+  xpValue: { fontSize: 42, fontWeight: "bold", color: AppDesignTokens.colors.accent },
+  xpLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 14 },
   xpDiff: { fontSize: 13, fontWeight: "600" },
   statsCard: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 14,
     padding: 16,
     gap: 12,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
-  statsTitle: { color: "#fff", fontSize: 15, fontWeight: "600", marginBottom: 4 },
+  statsTitle: { color: AppDesignTokens.colors.text, fontSize: 15, fontWeight: "600", marginBottom: 4 },
   statRow: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
   },
-  statLabel: { color: "#888", fontSize: 14 },
+  statLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 14 },
   statRight: { flexDirection: "row", alignItems: "center", gap: 8 },
-  statValue: { color: "#fff", fontSize: 15, fontWeight: "600" },
+  statValue: { color: AppDesignTokens.colors.text, fontSize: 15, fontWeight: "600" },
   statDiff: { fontSize: 12, fontWeight: "600" },
   doneButton: {
-    backgroundColor: "#6c47ff",
+    backgroundColor: AppDesignTokens.colors.accent,
     borderRadius: 14,
     paddingVertical: 16,
     alignItems: "center",
   },
-  doneButtonText: { color: "#fff", fontSize: 16, fontWeight: "700" },
+  doneButtonText: { color: AppDesignTokens.colors.text, fontSize: 16, fontWeight: "700" },
 });

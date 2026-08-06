@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { useCelebrationStore } from "../store/celebrationStore";
 import { useCompanion } from "@/features/companion/hooks/useCompanion";
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 
 const { width, height } = Dimensions.get("window");
 
@@ -182,7 +183,7 @@ export function CelebrationOverlay() {
 const styles = StyleSheet.create({
   overlay: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(10, 10, 20, 0.85)",
+    backgroundColor: AppDesignTokens.colors.mutedBg,
     zIndex: 9999,
   },
   particle: {
@@ -195,15 +196,15 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   card: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 24,
     padding: 32,
     alignItems: "center",
     gap: 12,
     marginHorizontal: 32,
     borderWidth: 2,
-    borderColor: "#6c47ff",
-    shadowColor: "#6c47ff",
+    borderColor: AppDesignTokens.colors.accent,
+    shadowColor: AppDesignTokens.colors.accent,
     shadowOffset: { width: 0, height: 0 },
     shadowOpacity: 0.5,
     shadowRadius: 30,
@@ -211,40 +212,40 @@ const styles = StyleSheet.create({
   },
   emoji: { fontSize: 56 },
   title: {
-    color: "#fff",
+    color: AppDesignTokens.colors.text,
     fontSize: 24,
     fontWeight: "900",
     textAlign: "center",
   },
   subtitle: {
-    color: "#a78bfa",
+    color: AppDesignTokens.colors.accentSoft,
     fontSize: 15,
     textAlign: "center",
     lineHeight: 22,
   },
   xpBonus: {
-    color: "#6c47ff",
+    color: AppDesignTokens.colors.accent,
     fontSize: 28,
     fontWeight: "900",
     marginTop: 4,
   },
   companionBubble: {
-    backgroundColor: "#13131f",
+    backgroundColor: AppDesignTokens.colors.surfaceMutedAlt,
     borderRadius: 12,
     padding: 12,
     marginTop: 8,
     borderWidth: 1,
-    borderColor: "#6c47ff30",
+    borderColor: AppDesignTokens.colors.accent40,
   },
   companionText: {
-    color: "#888",
+    color: AppDesignTokens.colors.textMuted,
     fontSize: 13,
     fontStyle: "italic",
     textAlign: "center",
     lineHeight: 18,
   },
   tapHint: {
-    color: "#444",
+    color: AppDesignTokens.colors.neutralDark,
     fontSize: 12,
     marginTop: 8,
   },

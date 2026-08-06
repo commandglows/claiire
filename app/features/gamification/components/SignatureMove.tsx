@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 
 type InterventionStat = {
   interventionId: string;
@@ -60,16 +61,16 @@ export function SignatureMove() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 14,
     padding: 14,
     gap: 8,
     borderWidth: 1,
-    borderColor: "#f59f0040",
+    borderColor: AppDesignTokens.colors.warning40,
   },
   header: { flexDirection: "row" },
   badge: {
-    color: "#f59f00",
+    color: AppDesignTokens.colors.warning,
     fontSize: 10,
     fontWeight: "800",
     letterSpacing: 1,
@@ -78,6 +79,6 @@ const styles = StyleSheet.create({
   content: { flexDirection: "row", alignItems: "center", gap: 12 },
   emoji: { fontSize: 32 },
   info: { flex: 1, gap: 2 },
-  name: { color: "#fff", fontSize: 16, fontWeight: "700" },
-  stats: { color: "#888", fontSize: 12 },
+  name: { color: AppDesignTokens.colors.text, fontSize: 16, fontWeight: "700" },
+  stats: { color: AppDesignTokens.colors.textMuted, fontSize: 12 },
 });

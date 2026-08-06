@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 
 type DataPoint = {
   label: string;
@@ -42,10 +43,10 @@ export function MiniChart({
           const barHeight = Math.max(ratio * chartHeight, 2);
           const barColor =
             point.value === null
-              ? "#1a1a2e"
+              ? AppDesignTokens.colors.surface
               : invertColor
-                ? `rgba(${Math.round(ratio * 255)}, ${Math.round((1 - ratio) * 180)}, 50, 0.8)`
-                : color;
+              ? AppDesignTokens.colors.warning
+              : color;
 
           return (
             <View key={i} style={styles.barColumn}>
@@ -55,7 +56,7 @@ export function MiniChart({
                     styles.bar,
                     {
                       height: barHeight,
-                      backgroundColor: point.value !== null ? barColor : "#1a1a2e",
+                      backgroundColor: point.value !== null ? barColor : AppDesignTokens.colors.surface,
                       borderRadius: 3,
                     },
                   ]}
@@ -74,19 +75,19 @@ export function MiniChart({
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 14,
     padding: 14,
     gap: 10,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
   header: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
   },
-  title: { color: "#fff", fontSize: 14, fontWeight: "600" },
+  title: { color: AppDesignTokens.colors.text, fontSize: 14, fontWeight: "600" },
   avg: { fontSize: 13, fontWeight: "600" },
   chart: {
     flexDirection: "row",
@@ -109,6 +110,6 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 9,
-    color: "#555",
+    color: AppDesignTokens.colors.textSubtle,
   },
 });

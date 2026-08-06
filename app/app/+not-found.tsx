@@ -1,5 +1,6 @@
-import { Link, Stack } from 'expo-router';
 import { StyleSheet } from 'react-native';
+import { Link, Stack } from 'expo-router';
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 
 import { Text, View } from '@/components/Themed';
 
@@ -35,6 +36,6 @@ const styles = StyleSheet.create({
   },
   linkText: {
     fontSize: 14,
-    color: '#2e78b7',
+    color: AppDesignTokens.colors.info,
   },
 });

@@ -2,6 +2,7 @@ import { useSignIn } from "@clerk/expo/legacy";
 import { useSSO } from "@clerk/expo";
 import * as WebBrowser from "expo-web-browser";
 import { useRouter } from "expo-router";
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 import {
   StyleSheet,
   Text,
@@ -89,7 +90,7 @@ export default function LoginScreen() {
         <TextInput
           style={styles.input}
           placeholder="Email"
-          placeholderTextColor="#888"
+          placeholderTextColor={AppDesignTokens.colors.textMuted}
           value={email}
           onChangeText={setEmail}
           autoCapitalize="none"
@@ -99,7 +100,7 @@ export default function LoginScreen() {
         <TextInput
           style={styles.input}
           placeholder="Mot de passe"
-          placeholderTextColor="#888"
+          placeholderTextColor={AppDesignTokens.colors.textMuted}
           value={password}
           onChangeText={setPassword}
           secureTextEntry
@@ -112,7 +113,7 @@ export default function LoginScreen() {
           disabled={loading || !email || !password}
         >
           {loading ? (
-            <ActivityIndicator color="#fff" />
+            <ActivityIndicator color={AppDesignTokens.colors.text} />
           ) : (
             <Text style={styles.primaryButtonText}>Se connecter</Text>
           )}
@@ -153,7 +154,7 @@ export default function LoginScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0f0f1a",
+    backgroundColor: AppDesignTokens.colors.background,
   },
   inner: {
     flex: 1,
@@ -164,40 +165,40 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 28,
     fontWeight: "bold",
-    color: "#fff",
+    color: AppDesignTokens.colors.text,
     textAlign: "center",
     marginBottom: 4,
   },
   subtitle: {
     fontSize: 14,
-    color: "#888",
+    color: AppDesignTokens.colors.textMuted,
     textAlign: "center",
     marginBottom: 24,
   },
   error: {
-    color: "#ff6b6b",
+    color: AppDesignTokens.colors.dangerSoft,
     fontSize: 14,
     textAlign: "center",
     marginBottom: 8,
   },
   input: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 12,
     padding: 16,
-    color: "#fff",
+    color: AppDesignTokens.colors.text,
     fontSize: 16,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
   primaryButton: {
-    backgroundColor: "#6c47ff",
+    backgroundColor: AppDesignTokens.colors.accent,
     borderRadius: 12,
     padding: 16,
     alignItems: "center",
     marginTop: 8,
   },
   primaryButtonText: {
-    color: "#fff",
+    color: AppDesignTokens.colors.text,
     fontSize: 16,
     fontWeight: "600",
   },
@@ -210,22 +211,22 @@ const styles = StyleSheet.create({
   dividerLine: {
     flex: 1,
     height: 1,
-    backgroundColor: "#2a2a4a",
+    backgroundColor: AppDesignTokens.colors.border,
   },
   dividerText: {
-    color: "#888",
+    color: AppDesignTokens.colors.textMuted,
     fontSize: 14,
   },
   oauthButton: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 12,
     padding: 16,
     alignItems: "center",
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
   oauthButtonText: {
-    color: "#fff",
+    color: AppDesignTokens.colors.text,
     fontSize: 16,
     fontWeight: "500",
   },
@@ -234,7 +235,7 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   linkText: {
-    color: "#6c47ff",
+    color: AppDesignTokens.colors.accent,
     fontSize: 14,
   },
 });

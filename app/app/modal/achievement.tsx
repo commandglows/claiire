@@ -3,6 +3,7 @@ import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-nati
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { useAchievements } from "@/features/gamification/hooks/useAchievements";
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 import {
   ACHIEVEMENTS,
   ACHIEVEMENT_CATEGORIES,
@@ -100,7 +101,7 @@ export default function AchievementModal() {
         </View>
         <View style={styles.summaryDivider} />
         <View style={styles.summaryItem}>
-          <Text style={[styles.summaryValue, { color: "#6c47ff" }]}>+{totalXP}</Text>
+          <Text style={[styles.summaryValue, { color: AppDesignTokens.colors.accent }]}>+{totalXP}</Text>
           <Text style={styles.summaryLabel}>XP gagné</Text>
         </View>
       </View>
@@ -168,7 +169,7 @@ export default function AchievementModal() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#0f0f1a" },
+  container: { flex: 1, backgroundColor: AppDesignTokens.colors.background },
   header: {
     flexDirection: "row",
     alignItems: "center",
@@ -176,24 +177,24 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 12,
   },
-  closeText: { color: "#888", fontSize: 18, padding: 4 },
-  headerTitle: { color: "#fff", fontSize: 17, fontWeight: "700" },
-  headerCount: { color: "#6c47ff", fontSize: 14, fontWeight: "700" },
+  closeText: { color: AppDesignTokens.colors.textMuted, fontSize: 18, padding: 4 },
+  headerTitle: { color: AppDesignTokens.colors.text, fontSize: 17, fontWeight: "700" },
+  headerCount: { color: AppDesignTokens.colors.accent, fontSize: 14, fontWeight: "700" },
   summary: {
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     marginHorizontal: 16,
     borderRadius: 14,
     paddingVertical: 16,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
   summaryItem: { alignItems: "center", gap: 2 },
-  summaryValue: { color: "#fff", fontSize: 22, fontWeight: "900" },
-  summaryLabel: { color: "#888", fontSize: 11, textTransform: "uppercase", letterSpacing: 0.5 },
-  summaryDivider: { width: 1, height: 30, backgroundColor: "#2a2a4a" },
+  summaryValue: { color: AppDesignTokens.colors.text, fontSize: 22, fontWeight: "900" },
+  summaryLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 11, textTransform: "uppercase", letterSpacing: 0.5 },
+  summaryDivider: { width: 1, height: 30, backgroundColor: AppDesignTokens.colors.border },
   categoryScroll: {
     paddingHorizontal: 16,
     paddingVertical: 12,
@@ -202,60 +203,60 @@ const styles = StyleSheet.create({
   categoryChip: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 20,
     paddingVertical: 7,
     paddingHorizontal: 12,
     gap: 5,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
     marginRight: 8,
   },
-  categoryChipActive: { borderColor: "#6c47ff", backgroundColor: "#1a1a3e" },
+  categoryChipActive: { borderColor: AppDesignTokens.colors.accent, backgroundColor: AppDesignTokens.colors.surfaceAccent },
   categoryEmoji: { fontSize: 14 },
-  categoryLabel: { color: "#888", fontSize: 12, fontWeight: "500" },
-  categoryLabelActive: { color: "#fff" },
-  categoryStat: { color: "#555", fontSize: 10, fontWeight: "600" },
+  categoryLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 12, fontWeight: "500" },
+  categoryLabelActive: { color: AppDesignTokens.colors.text },
+  categoryStat: { color: AppDesignTokens.colors.textSubtle, fontSize: 10, fontWeight: "600" },
   scroll: { flex: 1 },
   content: { padding: 16, gap: 8, paddingBottom: 40 },
   card: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 14,
     padding: 14,
     gap: 12,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
     opacity: 0.5,
   },
-  cardUnlocked: { opacity: 1, borderColor: "#6c47ff30" },
+  cardUnlocked: { opacity: 1, borderColor: AppDesignTokens.colors.accent30 },
   cardIcon: { fontSize: 28, width: 36, textAlign: "center" },
   cardIconLocked: { fontSize: 22 },
   cardInfo: { flex: 1, gap: 3 },
-  cardTitle: { color: "#888", fontSize: 15, fontWeight: "600" },
-  cardTitleLocked: { color: "#666" },
-  cardDesc: { color: "#555", fontSize: 12 },
-  cardDate: { color: "#6c47ff", fontSize: 11, fontWeight: "500" },
-  cardXP: { color: "#444", fontSize: 13, fontWeight: "700" },
-  cardXPUnlocked: { color: "#2f9e44", fontSize: 16 },
+  cardTitle: { color: AppDesignTokens.colors.textMuted, fontSize: 15, fontWeight: "600" },
+  cardTitleLocked: { color: AppDesignTokens.colors.neutralDarker },
+  cardDesc: { color: AppDesignTokens.colors.textSubtle, fontSize: 12 },
+  cardDate: { color: AppDesignTokens.colors.accent, fontSize: 11, fontWeight: "500" },
+  cardXP: { color: AppDesignTokens.colors.neutralDark, fontSize: 13, fontWeight: "700" },
+  cardXPUnlocked: { color: AppDesignTokens.colors.success, fontSize: 16 },
   progressBar: {
     height: 6,
-    backgroundColor: "#13131f",
+    backgroundColor: AppDesignTokens.colors.surfaceMutedAlt,
     borderRadius: 3,
     overflow: "hidden",
     marginTop: 4,
   },
   progressFill: {
     height: "100%",
-    backgroundColor: "#6c47ff",
+    backgroundColor: AppDesignTokens.colors.accent,
     borderRadius: 3,
   },
   progressText: {
     position: "absolute",
     right: 0,
     top: -14,
-    color: "#555",
+    color: AppDesignTokens.colors.textSubtle,
     fontSize: 10,
     fontWeight: "500",
   },

@@ -1,5 +1,6 @@
 import { useModeStore } from "./modeStore";
 import { getVocab } from "./vocabulary";
+import { AppDesignTokens } from "@/constants/AppDesignTokens";
 
 export function useMode() {
   const mode = useModeStore((s) => s.mode);
@@ -7,8 +8,20 @@ export function useMode() {
   const vocab = getVocab(mode);
 
   const colors = mode === "warrior"
-    ? { accent: "#6c47ff", accentLight: "#a78bfa", bg: "#0f0f1a", card: "#1a1a2e", border: "#2a2a4a" }
-    : { accent: "#3b82f6", accentLight: "#93c5fd", bg: "#0a1628", card: "#132035", border: "#1e3a5f" };
+    ? {
+      accent: AppDesignTokens.colors.accent,
+      accentLight: AppDesignTokens.colors.accentSoft,
+      bg: AppDesignTokens.colors.background,
+      card: AppDesignTokens.colors.surface,
+      border: AppDesignTokens.colors.border,
+    }
+    : {
+      accent: AppDesignTokens.colors.accentAlt,
+      accentLight: AppDesignTokens.colors.accentSoft2,
+      bg: AppDesignTokens.colors.zenBg,
+      card: AppDesignTokens.colors.zenCard,
+      border: AppDesignTokens.colors.zenBorder,
+    };
 
   return { mode, toggle, vocab, colors };
 }

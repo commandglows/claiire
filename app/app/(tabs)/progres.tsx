@@ -10,6 +10,7 @@ import { api } from "@/convex/_generated/api";
 import { MiniChart } from "@/features/analytics/components/MiniChart";
 import { CrisisHeatmap } from "@/features/analytics/components/CrisisHeatmap";
 import { BattleHistory } from "@/features/analytics/components/BattleHistory";
+import { AppDesignTokens } from '@/constants/AppDesignTokens';
 
 type StatCardProps = {
   label: string;
@@ -31,9 +32,9 @@ function StatCard({ label, value, sub, highlight }: StatCardProps) {
 }
 
 const SEVERITY_COLORS = {
-  danger: "#e03131",
-  warning: "#f59f00",
-  positive: "#2f9e44",
+  danger: AppDesignTokens.colors.danger,
+  warning: AppDesignTokens.colors.warning,
+  positive: AppDesignTokens.colors.success,
 } as const;
 
 export default function ProgresScreen() {
@@ -124,7 +125,7 @@ export default function ProgresScreen() {
             data={trends.mood as { label: string; value: number | null }[]}
             maxValue={10}
             unit="/10"
-            color="#f59f00"
+            color={AppDesignTokens.colors.warning}
             invertColor
           />
         )}
@@ -134,7 +135,7 @@ export default function ProgresScreen() {
             data={trends.sleep as { label: string; value: number | null }[]}
             maxValue={12}
             unit="h"
-            color="#3b82f6"
+            color={AppDesignTokens.colors.accentAlt}
           />
         )}
 
@@ -196,79 +197,79 @@ export default function ProgresScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#0f0f1a" },
+  container: { flex: 1, backgroundColor: AppDesignTokens.colors.background },
   content: { padding: 20, gap: 16 },
-  title: { fontSize: 24, fontWeight: "bold", color: "#fff" },
-  subtitle: { fontSize: 14, color: "#888", marginTop: -8 },
+  title: { fontSize: 24, fontWeight: "bold", color: AppDesignTokens.colors.text },
+  subtitle: { fontSize: 14, color: AppDesignTokens.colors.textMuted, marginTop: -8 },
   levelBadge: {
     alignSelf: "center",
     width: 80,
     height: 80,
     borderRadius: 40,
-    backgroundColor: "#6c47ff",
+    backgroundColor: AppDesignTokens.colors.accent,
     alignItems: "center",
     justifyContent: "center",
     marginVertical: 4,
   },
-  levelNumber: { fontSize: 32, fontWeight: "bold", color: "#fff" },
+  levelNumber: { fontSize: 32, fontWeight: "bold", color: AppDesignTokens.colors.text },
   levelLabel: {
     fontSize: 11,
-    color: "rgba(255,255,255,0.7)",
+    color: AppDesignTokens.colors.mutedText,
     textTransform: "uppercase",
     letterSpacing: 1,
   },
   xpSection: { gap: 6 },
   xpRow: { flexDirection: "row", justifyContent: "space-between" },
-  xpText: { color: "#888", fontSize: 12 },
+  xpText: { color: AppDesignTokens.colors.textMuted, fontSize: 12 },
   xpBar: {
     height: 8,
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 4,
     overflow: "hidden",
   },
   xpBarFill: {
     height: "100%",
-    backgroundColor: "#6c47ff",
+    backgroundColor: AppDesignTokens.colors.accent,
     borderRadius: 4,
   },
-  xpNext: { color: "#555", fontSize: 12, textAlign: "center" },
+  xpNext: { color: AppDesignTokens.colors.textSubtle, fontSize: 12, textAlign: "center" },
   statsGrid: { flexDirection: "row", flexWrap: "wrap", gap: 12 },
   statCard: {
     width: "47%",
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 12,
     padding: 16,
     alignItems: "center",
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
-  statCardHighlight: { borderColor: "#6c47ff" },
-  statValue: { fontSize: 28, fontWeight: "bold", color: "#6c47ff" },
-  statValueHighlight: { color: "#a78bfa" },
-  statLabel: { color: "#888", fontSize: 12, textAlign: "center", marginTop: 4 },
-  statSub: { color: "#555", fontSize: 11 },
-  sectionTitle: { fontSize: 16, fontWeight: "600", color: "#fff" },
+  statCardHighlight: { borderColor: AppDesignTokens.colors.accent },
+  statValue: { fontSize: 28, fontWeight: "bold", color: AppDesignTokens.colors.accent },
+  statValueHighlight: { color: AppDesignTokens.colors.accentSoft },
+  statLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 12, textAlign: "center", marginTop: 4 },
+  statSub: { color: AppDesignTokens.colors.textSubtle, fontSize: 11 },
+  sectionTitle: { fontSize: 16, fontWeight: "600", color: AppDesignTokens.colors.text },
   placeholder: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 12,
     padding: 24,
     alignItems: "center",
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
     borderStyle: "dashed",
   },
-  placeholderText: { color: "#888", fontSize: 14 },
+  placeholderText: { color: AppDesignTokens.colors.textMuted, fontSize: 14 },
   placeholderSub: {
-    color: "#555",
+    color: AppDesignTokens.colors.textSubtle,
     fontSize: 12,
     marginTop: 4,
     textAlign: "center",
   },
   logList: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
     overflow: "hidden",
   },
   logItem: {
@@ -277,27 +278,27 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 14,
     borderBottomWidth: 1,
-    borderBottomColor: "#2a2a4a",
+    borderBottomColor: AppDesignTokens.colors.border,
   },
-  logType: { color: "#fff", fontSize: 14 },
+  logType: { color: AppDesignTokens.colors.text, fontSize: 14 },
   logRight: { alignItems: "flex-end", gap: 2 },
-  logXP: { color: "#6c47ff", fontSize: 13, fontWeight: "600" },
-  logDate: { color: "#555", fontSize: 11 },
+  logXP: { color: AppDesignTokens.colors.accent, fontSize: 13, fontWeight: "600" },
+  logDate: { color: AppDesignTokens.colors.textSubtle, fontSize: 11 },
   insightsList: { gap: 8 },
   insightCard: {
     flexDirection: "row",
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 12,
     padding: 14,
     gap: 12,
     alignItems: "center",
     borderLeftWidth: 3,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
   },
   insightIcon: { fontSize: 24 },
   insightContent: { flex: 1, gap: 2 },
-  insightMessage: { color: "#fff", fontSize: 13, lineHeight: 18 },
+  insightMessage: { color: AppDesignTokens.colors.text, fontSize: 13, lineHeight: 18 },
   insightConfidence: { fontSize: 11, fontWeight: "600" },
   titleRow: {
     flexDirection: "row",
@@ -305,17 +306,17 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
   },
   recapButton: {
-    backgroundColor: "#6c47ff",
+    backgroundColor: AppDesignTokens.colors.accent,
     borderRadius: 10,
     paddingVertical: 8,
     paddingHorizontal: 14,
   },
-  recapButtonText: { color: "#fff", fontSize: 13, fontWeight: "700" },
+  recapButtonText: { color: AppDesignTokens.colors.text, fontSize: 13, fontWeight: "700" },
   triggersCard: {
-    backgroundColor: "#1a1a2e",
+    backgroundColor: AppDesignTokens.colors.surface,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: "#2a2a4a",
+    borderColor: AppDesignTokens.colors.border,
     overflow: "hidden",
   },
   triggerRow: {
@@ -324,11 +325,11 @@ const styles = StyleSheet.create({
     padding: 12,
     gap: 10,
     borderBottomWidth: 1,
-    borderBottomColor: "#2a2a4a",
+    borderBottomColor: AppDesignTokens.colors.border,
   },
-  triggerRank: { color: "#555", fontSize: 13, fontWeight: "700", width: 20, textAlign: "center" },
-  triggerText: { flex: 1, color: "#fff", fontSize: 14, textTransform: "capitalize" },
+  triggerRank: { color: AppDesignTokens.colors.textSubtle, fontSize: 13, fontWeight: "700", width: 20, textAlign: "center" },
+  triggerText: { flex: 1, color: AppDesignTokens.colors.text, fontSize: 14, textTransform: "capitalize" },
   triggerMeta: { flexDirection: "row", alignItems: "center", gap: 6 },
-  triggerCount: { color: "#6c47ff", fontSize: 13, fontWeight: "600" },
+  triggerCount: { color: AppDesignTokens.colors.accent, fontSize: 13, fontWeight: "600" },
   triggerCrisis: { fontSize: 14 },
 });
