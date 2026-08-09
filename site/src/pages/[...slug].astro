@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
 import DocEntryPage from '../components/DocEntryPage.astro';
 import { docPathFromEntryId, slugParamFromEntryId } from '../lib/navigation';
 
@@ -20,7 +20,32 @@ export async function getStaticPaths() {
   }));
 }
 
-const { currentPath, entry } = Astro.props;
+const staticEntry = Astro.props.entry as CollectionEntry<'docs'> | undefined;
+const runtimeSlug = Astro.params.slug;
+const runtimeEntries = staticEntry
+  ? []
+  : await getCollection('docs', ({ data, id }) => {
+      const path = docPathFromEntryId(id);
+      return !data.draft && path !== '/' && path !== '/404';
+    });
+
+let entry =
+  staticEntry ?? runtimeEntries.find((candidate) => slugParamFromEntryId(candidate.id) === runtimeSlug);
+let currentPath = Astro.props.currentPath as string | undefined;
+
+if (entry) {
+  currentPath ??= docPathFromEntryId(entry.id);
+} else {
+  const notFoundEntry = await getEntry('docs', '404');
+
+  if (!notFoundEntry) {
+    throw new Error('La page 404 `src/content/docs/404.md` est introuvable.');
+  }
+
+  Astro.response.status = 404;
+  currentPath = '/404';
+  entry = notFoundEntry;
+}
 ---
 
 <DocEntryPage currentPath={currentPath} entry={entry} />

@@ -8,6 +8,7 @@ export function initParcourTracker() {
     const parcourId = widget.dataset.parcourId;
     const checkboxes = widget.querySelectorAll('.module-checkbox');
     const progressBar = widget.querySelector('.progress-fill');
+    const progressTrack = widget.querySelector('.progress-bar');
     const progressPercentage = widget.querySelector('.progress-percentage');
     const resetButton = widget.querySelector('.reset-progress');
 
@@ -15,14 +16,14 @@ export function initParcourTracker() {
     loadProgress(parcourId, checkboxes);
 
     // Mettre à jour l'affichage
-    updateProgress(parcourId, checkboxes, progressBar, progressPercentage);
+    updateProgress(parcourId, checkboxes, progressBar, progressTrack, progressPercentage);
 
     // Écouter les changements
     checkboxes.forEach((checkbox, index) => {
       syncModuleItemState(checkbox);
       checkbox.addEventListener('change', () => {
         saveProgress(parcourId, index, checkbox.checked);
-        updateProgress(parcourId, checkboxes, progressBar, progressPercentage);
+        updateProgress(parcourId, checkboxes, progressBar, progressTrack, progressPercentage);
         syncModuleItemState(checkbox);
         if (checkbox.checked) {
           fireChecklistConfetti(findChecklistConfettiTarget(checkbox));
@@ -57,7 +58,7 @@ export function initParcourTracker() {
             cb.checked = false;
             syncModuleItemState(cb);
           });
-          updateProgress(parcourId, checkboxes, progressBar, progressPercentage);
+          updateProgress(parcourId, checkboxes, progressBar, progressTrack, progressPercentage);
         }
       });
     }
@@ -122,13 +123,17 @@ function saveProgress(parcourId, moduleIndex, checked) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(allProgress));
 }
 
-function updateProgress(parcourId, checkboxes, progressBar, progressPercentage) {
+function updateProgress(parcourId, checkboxes, progressBar, progressTrack, progressPercentage) {
   const total = checkboxes.length;
   const completed = Array.from(checkboxes).filter(cb => cb.checked).length;
   const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
 
   if (progressBar) {
     progressBar.style.width = `${percentage}%`;
+  }
+
+  if (progressTrack) {
+    progressTrack.setAttribute('aria-valuenow', String(completed));
   }
 
   if (progressPercentage) {

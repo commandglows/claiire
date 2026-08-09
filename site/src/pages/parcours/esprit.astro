@@ -1,26 +1,27 @@
 ---
 import ParcoursPage from '../../components/ParcoursPage.astro';
+import { getFirstModuleRoute, getParcours, getParcoursPageTitle } from '../../config/parcours.js';
+
+const parcours = getParcours('esprit');
 ---
 
 <ParcoursPage
-  currentPath="/parcours/esprit"
-  title="Parcours : Comprendre Ton Esprit"
-  description="Explore le fonctionnement de ton psychisme et développe ton intelligence émotionnelle"
+  currentPath={`/parcours/${parcours.id}`}
+  title={getParcoursPageTitle(parcours)}
+  description={parcours.description}
   hero={{
-    title: '🧠 Comprendre ton esprit',
-    tagline:
-      'Explore le fonctionnement de ton psychisme et développe ton intelligence émotionnelle',
-    actions: [{ text: 'Commencer le premier module', link: '/psy/', variant: 'primary' }],
+    title: `${parcours.icon} ${parcours.title}`,
+    tagline: parcours.description,
+    actions: [
+      {
+        text: 'Commencer le premier module',
+        link: getFirstModuleRoute(parcours),
+        variant: 'primary',
+      },
+    ],
   }}
-  parcourId="esprit"
-  modules={[
-    { title: 'Introduction psychologie', link: '/psy/' },
-    { title: 'Émotions', link: '/psy/emotions/' },
-    { title: 'Approches cognitives', link: '/psy/approche/cognitive' },
-    { title: 'Résilience', link: '/psy/solution/resilience' },
-    { title: 'Mindfulness', link: '/psy/solution/mindfulness' },
-    { title: 'Biais cognitifs', link: '/psy/biais/' },
-  ]}
+  parcourId={parcours.id}
+  modules={parcours.modules}
   intro="Ce parcours te donne les outils pour te comprendre toi-même — tes pensées, tes émotions, tes schémas. Pas pour t'analyser à l'infini, mais pour agir avec plus de clarté, de liberté et d'alignement."
   steps={[
     {

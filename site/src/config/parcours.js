@@ -3,7 +3,8 @@ export const parcours = [
     id: 'bonheur',
     title: 'Être plus heureux',
     icon: '😊',
-    description: 'Découvre les clés scientifiques du bonheur et apprends à cultiver le bien-être au quotidien',
+    description:
+      'Découvre les clés scientifiques du bonheur et apprends à cultiver le bien-être au quotidien',
     color: 'var(--site-parcours-bonheur)',
     modules: [
       { title: 'Les hormones du bonheur', link: '/bonheur/les-hormones-du-bonheur' },
@@ -12,11 +13,11 @@ export const parcours = [
       { title: 'Équilibre mental', link: '/psy/equilibre/equilibre-mental' },
       { title: 'Cultiver le bonheur', link: '/bonheur/cultiver-le-bonheur' },
       { title: 'Bonheur durable', link: '/bonheur/bonheur-durable' },
-    ]
+    ],
   },
   {
     id: 'stress',
-    title: 'Gérer le stress et l\'anxiété',
+    title: "Gérer le stress et l'anxiété",
     icon: '😰',
     description: 'Apprends à maîtriser ton stress et retrouver ton calme intérieur',
     color: 'var(--site-parcours-stress)',
@@ -27,7 +28,7 @@ export const parcours = [
       { title: 'Cohérence cardiaque', link: '/systeme-immunitaire/coherence-cardiaque' },
       { title: 'Nerf vague', link: '/systeme-nerveux/nerf-vague' },
       { title: 'Respiration et relaxation', link: '/psy/solution/relaxation' },
-    ]
+    ],
   },
   {
     id: 'sommeil',
@@ -42,7 +43,7 @@ export const parcours = [
       { title: 'Dette de sommeil', link: '/sommeil/dette' },
       { title: 'Nutrition et sommeil', link: '/systeme-digestif/nutrition/sommeil-nutriments' },
       { title: 'Lumière et mélatonine', link: '/systeme-hormonal/melatonine' },
-    ]
+    ],
   },
   {
     id: 'relations',
@@ -57,7 +58,7 @@ export const parcours = [
       { title: 'Codes sociaux', link: '/psy/codes-sociaux/' },
       { title: 'Appartenance', link: '/psy/emotions/appartenance' },
       { title: 'Solitude', link: '/systeme-social/solitude' },
-    ]
+    ],
   },
   {
     id: 'sante',
@@ -66,19 +67,20 @@ export const parcours = [
     description: 'Optimise ton corps et ton énergie vitale',
     color: 'var(--site-parcours-sante)',
     modules: [
-      { title: 'Vue d\'ensemble santé', link: '/harmonie/' },
+      { title: "Vue d'ensemble santé", link: '/harmonie/' },
       { title: 'Nutrition essentielle', link: '/systeme-digestif/nutrition/' },
       { title: 'Activité physique', link: '/activite/physique/' },
       { title: 'Système immunitaire', link: '/systeme-immunitaire/' },
       { title: 'Métabolisme', link: '/harmonie/metabolisme' },
       { title: 'Inflammation', link: '/systeme-immunitaire/inflammation' },
-    ]
+    ],
   },
   {
     id: 'esprit',
     title: 'Comprendre ton esprit',
     icon: '🧠',
-    description: 'Explore le fonctionnement de ton psychisme et développe ton intelligence émotionnelle',
+    description:
+      'Explore le fonctionnement de ton psychisme et développe ton intelligence émotionnelle',
     color: 'var(--site-parcours-esprit)',
     modules: [
       { title: 'Introduction psychologie', link: '/psy/' },
@@ -87,6 +89,25 @@ export const parcours = [
       { title: 'Résilience', link: '/psy/solution/resilience' },
       { title: 'Mindfulness', link: '/psy/solution/mindfulness' },
       { title: 'Biais cognitifs', link: '/psy/biais/' },
-    ]
+    ],
   },
 ];
+
+export function getParcours(id) {
+  const entry = parcours.find((candidate) => candidate.id === id);
+
+  if (!entry) {
+    throw new Error(`Unknown parcours id: "${id}"`);
+  }
+
+  return entry;
+}
+
+export function getFirstModuleRoute(entry) {
+  return entry.modules[0]?.link;
+}
+
+export function getParcoursPageTitle(entry) {
+  const title = entry.title.replace(/(^|[\s'])\p{L}/gu, (letter) => letter.toUpperCase());
+  return `Parcours : ${title}`;
+}

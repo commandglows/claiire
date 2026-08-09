@@ -1,0 +1,162 @@
+- generic [active] [ref=f10e1]:
+  - link "Aller au contenu" [ref=f10e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f10e3]:
+    - generic [ref=f10e4]:
+      - link [ref=f10e5] [cursor=pointer]:
+        - /url: /
+        - img "Claiire" [ref=f10e6]
+        - strong [ref=f10e8]: Claiire
+      - group [ref=f10e10]:
+        - generic "Menu de navigation" [ref=f10e11] [cursor=pointer]: Menu
+  - generic [ref=f10e17]:
+    - generic [ref=f10e19]:
+      - paragraph [ref=f10e20]: Parcours thématiques
+      - heading "😰 Gérer le stress et l'anxiété" [level=1] [ref=f10e21]
+      - paragraph [ref=f10e22]: Apprends à maîtriser ton stress et retrouver ton calme intérieur
+      - link "Commencer le premier module" [ref=f10e24] [cursor=pointer]:
+        - /url: /stress/
+    - main [ref=f10e25]:
+      - article [ref=f10e26]:
+        - generic [ref=f10e27]:
+          - complementary "Progression du parcours" [ref=f10e28]:
+            - generic [ref=f10e29]:
+              - generic [ref=f10e30]:
+                - heading "Ta progression" [level=3] [ref=f10e31]
+                - generic [ref=f10e32]: 0%
+              - progressbar "Progression du parcours" [ref=f10e33]
+              - list [ref=f10e34]:
+                - listitem [ref=f10e35]:
+                  - checkbox "Comprendre le stress" [ref=f10e36] [cursor=pointer]
+                  - generic [ref=f10e37] [cursor=pointer]: Comprendre le stress
+                  - link "Accéder à Comprendre le stress" [ref=f10e40] [cursor=pointer]:
+                    - /url: /stress/
+                - listitem [ref=f10e43]:
+                  - checkbox "Le bon et le mauvais stress" [ref=f10e44] [cursor=pointer]
+                  - generic [ref=f10e45] [cursor=pointer]: Le bon et le mauvais stress
+                  - link "Accéder à Le bon et le mauvais stress" [ref=f10e48] [cursor=pointer]:
+                    - /url: /stress/bon-et-mauvais
+                - listitem [ref=f10e51]:
+                  - checkbox "Solutions naturelles" [ref=f10e52] [cursor=pointer]
+                  - generic [ref=f10e53] [cursor=pointer]: Solutions naturelles
+                  - link "Accéder à Solutions naturelles" [ref=f10e56] [cursor=pointer]:
+                    - /url: /stress/solutions-naturelles
+                - listitem [ref=f10e59]:
+                  - checkbox "Cohérence cardiaque" [ref=f10e60] [cursor=pointer]
+                  - generic [ref=f10e61] [cursor=pointer]: Cohérence cardiaque
+                  - link "Accéder à Cohérence cardiaque" [ref=f10e64] [cursor=pointer]:
+                    - /url: /systeme-immunitaire/coherence-cardiaque
+                - listitem [ref=f10e67]:
+                  - checkbox "Nerf vague" [ref=f10e68] [cursor=pointer]
+                  - generic [ref=f10e69] [cursor=pointer]: Nerf vague
+                  - link "Accéder à Nerf vague" [ref=f10e72] [cursor=pointer]:
+                    - /url: /systeme-nerveux/nerf-vague
+                - listitem [ref=f10e75]:
+                  - checkbox "Respiration et relaxation" [ref=f10e76] [cursor=pointer]
+                  - generic [ref=f10e77] [cursor=pointer]: Respiration et relaxation
+                  - link "Accéder à Respiration et relaxation" [ref=f10e80] [cursor=pointer]:
+                    - /url: /psy/solution/relaxation
+              - button "Réinitialiser la progression" [ref=f10e83] [cursor=pointer]
+          - generic [ref=f10e84]:
+            - paragraph [ref=f10e85]:
+              - strong [ref=f10e86]: "En suivant ce parcours, tu vas passer de subir ton stress à le comprendre — puis à le dompter. Des mécanismes biologiques aux outils pratiques : tout ce dont tu as besoin pour retrouver ton calme, même sous pression."
+            - separator [ref=f10e87]
+            - heading "Étape 1 — Comprendre le stress (mécanismes, physique, mental)" [level=2] [ref=f10e88]
+            - paragraph [ref=f10e89]: Avant de gérer le stress, il faut savoir ce qu'il est. Réponse de survie, cortisol, système nerveux autonome — cette étape pose les bases pour que tu arrêtes de te battre contre toi-même.
+            - paragraph [ref=f10e90]:
+              - text: →
+              - 'link "Comprendre le stress : mécanismes" [ref=f10e91] [cursor=pointer]':
+                - /url: /stress/
+            - paragraph [ref=f10e92]:
+              - text: →
+              - link "Le stress physique" [ref=f10e93] [cursor=pointer]:
+                - /url: /stress/physique
+            - paragraph [ref=f10e94]:
+              - text: →
+              - link "Le stress psychique" [ref=f10e95] [cursor=pointer]:
+                - /url: /stress/psychique
+            - separator [ref=f10e96]
+            - heading "Étape 2 — Distinguer bon stress et stress toxique" [level=2] [ref=f10e97]
+            - paragraph [ref=f10e98]: Tout stress n'est pas l'ennemi. Le stress aigu peut te booster ; c'est le stress chronique qui épuise. Apprends à différencier les deux et à repérer quand tu bascules dans la zone danger.
+            - paragraph [ref=f10e99]:
+              - text: →
+              - link "Le bon et le mauvais stress" [ref=f10e100] [cursor=pointer]:
+                - /url: /stress/bon-et-mauvais
+            - paragraph [ref=f10e101]:
+              - text: →
+              - link "L'impact du stress sur le système nerveux" [ref=f10e102] [cursor=pointer]:
+                - /url: /systeme-nerveux/stress-impact
+            - separator [ref=f10e103]
+            - heading "Étape 3 — Agir sur le corps (nerf vague, cohérence cardiaque)" [level=2] [ref=f10e104]
+            - paragraph [ref=f10e105]: "Ton corps a un frein naturel au stress : le système parasympathique. Cette étape te donne les outils pour l'activer — respiration, nerf vague, cohérence cardiaque. Des techniques validées scientifiquement que tu peux pratiquer n'importe où."
+            - paragraph [ref=f10e106]:
+              - text: →
+              - 'link "Le nerf vague : ton allié anti-stress" [ref=f10e107] [cursor=pointer]':
+                - /url: /systeme-nerveux/nerf-vague
+            - paragraph [ref=f10e108]:
+              - text: →
+              - link "La cohérence cardiaque" [ref=f10e109] [cursor=pointer]:
+                - /url: /systeme-immunitaire/coherence-cardiaque
+            - separator [ref=f10e110]
+            - heading "Étape 4 — Agir sur l'esprit (mindfulness, relaxation)" [level=2] [ref=f10e111]
+            - paragraph [ref=f10e112]: Le corps et l'esprit se répondent. Une fois que tu maîtrises les outils corporels, cette étape t'apprend à calmer le mental, à observer tes pensées sans être emporté par elles, et à te recentrer.
+            - paragraph [ref=f10e113]:
+              - text: →
+              - link "La pleine conscience (mindfulness)" [ref=f10e114] [cursor=pointer]:
+                - /url: /psy/solution/mindfulness
+            - paragraph [ref=f10e115]:
+              - text: →
+              - link "Les techniques de relaxation" [ref=f10e116] [cursor=pointer]:
+                - /url: /psy/solution/relaxation
+            - separator [ref=f10e117]
+            - heading "Étape 5 — Prévenir le burn-out et pérenniser l'équilibre" [level=2] [ref=f10e118]
+            - paragraph [ref=f10e119]: Gérer le stress ponctuellement, c'est bien. Ne plus en arriver là, c'est mieux. Cette dernière étape t'aide à identifier tes signaux d'alerte et à construire une hygiène de vie qui te protège sur la durée.
+            - paragraph [ref=f10e120]:
+              - text: →
+              - link "Solutions naturelles contre le stress" [ref=f10e121] [cursor=pointer]:
+                - /url: /stress/solutions-naturelles
+            - paragraph [ref=f10e122]:
+              - text: →
+              - 'link "Le burn-out : reconnaître et prévenir" [ref=f10e123] [cursor=pointer]':
+                - /url: /burnout/
+            - separator [ref=f10e124]
+            - heading "Pour aller plus loin" [level=2] [ref=f10e125]
+            - list [ref=f10e126]:
+              - listitem [ref=f10e127]:
+                - link "Comprendre le stress en profondeur" [ref=f10e128] [cursor=pointer]:
+                  - /url: /stress/
+              - listitem [ref=f10e129]:
+                - link "Les solutions naturelles anti-stress" [ref=f10e130] [cursor=pointer]:
+                  - /url: /stress/solutions-naturelles
+              - listitem [ref=f10e131]:
+                - link "Gérer l'anxiété" [ref=f10e132] [cursor=pointer]:
+                  - /url: /anxiete/
+              - listitem [ref=f10e133]:
+                - link "Réguler ton système nerveux" [ref=f10e134] [cursor=pointer]:
+                  - /url: /systeme-nerveux/regulation-nerveuse
+              - listitem [ref=f10e135]:
+                - link "L'impact du stress sur le sommeil" [ref=f10e136] [cursor=pointer]:
+                  - /url: /sommeil/
+              - listitem [ref=f10e137]:
+                - link "La nutrition nerveuse" [ref=f10e138] [cursor=pointer]:
+                  - /url: /systeme-nerveux/nutrition-nerveuse
+              - listitem [ref=f10e139]:
+                - 'link "La résilience : rebondir après les épreuves" [ref=f10e140] [cursor=pointer]':
+                  - /url: /psy/solution/resilience
+            - separator [ref=f10e141]
+            - paragraph [ref=f10e142]:
+              - strong [ref=f10e143]: Le calme n'est pas l'absence de tempête. C'est apprendre à naviguer dedans.
+  - contentinfo [ref=f10e144]:
+    - generic [ref=f10e145]:
+      - generic [ref=f10e146]:
+        - paragraph [ref=f10e147]: Claiire
+        - paragraph [ref=f10e148]: Un site éditorial pensé pour aider à comprendre ce que tu vis, retrouver des repères fiables, et avancer avec des contenus structurés.
+      - navigation "Liens utiles" [ref=f10e149]:
+        - link "Notre approche" [ref=f10e150] [cursor=pointer]:
+          - /url: /a-propos
+        - link "Formations" [ref=f10e151] [cursor=pointer]:
+          - /url: /formations/
+        - link "Contact" [ref=f10e152] [cursor=pointer]:
+          - /url: /contact
+        - link "Confidentialité" [ref=f10e153] [cursor=pointer]:
+          - /url: /confidentialite

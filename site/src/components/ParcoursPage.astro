@@ -39,42 +39,49 @@ const { currentPath, title, description, hero, parcourId, modules, intro, steps,
   description={description}
   hero={hero}
   sectionLabel="Parcours thématiques"
+  articleClass="prose--parcours"
 >
-  <ParcourProgress parcourId={parcourId} modules={modules} />
+  <div class="parcours-layout">
+    <aside class="parcours-layout__rail" aria-label="Progression du parcours">
+      <ParcourProgress parcourId={parcourId} modules={modules} />
+    </aside>
 
-  <p>
-    <strong>{intro}</strong>
-  </p>
+    <div class="parcours-layout__content">
+      <p>
+        <strong>{intro}</strong>
+      </p>
 
-  <hr />
-
-  {steps.map((step) => (
-    <>
-      <h2>{step.title}</h2>
-      <p>{step.body}</p>
-      {step.links.map((link) => (
-        <p class="parcours-step-link">
-          → <a href={link.href}>{link.text}</a>
-        </p>
-      ))}
       <hr />
-    </>
-  ))}
 
-  <h2>Pour aller plus loin</h2>
-  <ul>
-    {resources.map((resource) => (
-      <li>
-        <a href={resource.href}>{resource.text}</a>
-      </li>
-    ))}
-  </ul>
+      {steps.map((step) => (
+        <>
+          <h2>{step.title}</h2>
+          <p>{step.body}</p>
+          {step.links.map((link) => (
+            <p class="parcours-step-link">
+              → <a href={link.href}>{link.text}</a>
+            </p>
+          ))}
+          <hr />
+        </>
+      ))}
 
-  <hr />
+      <h2>Pour aller plus loin</h2>
+      <ul>
+        {resources.map((resource) => (
+          <li>
+            <a href={resource.href}>{resource.text}</a>
+          </li>
+        ))}
+      </ul>
 
-  <p>
-    <strong>{closing}</strong>
-  </p>
+      <hr />
+
+      <p>
+        <strong>{closing}</strong>
+      </p>
+    </div>
+  </div>
 </StaticPageLayout>
 
 <style>
@@ -83,6 +90,27 @@ const { currentPath, title, description, hero, parcourId, modules, intro, steps,
     align-items: center;
     min-height: var(--site-control-min-height);
     font-weight: 700;
+  }
+
+  .parcours-layout {
+    display: grid;
+    gap: var(--site-parcours-layout-gap);
+  }
+
+  .parcours-layout__content {
+    max-width: var(--site-content-parcours-reading);
+  }
+
+  @media (min-width: 60.0625rem) {
+    .parcours-layout {
+      grid-template-columns: minmax(var(--site-parcours-rail-min), var(--site-parcours-rail-max)) minmax(0, 1fr);
+      align-items: start;
+    }
+
+    .parcours-layout__rail {
+      position: sticky;
+      top: var(--site-sticky-offset);
+    }
   }
 
   @media (max-width: 45rem) {

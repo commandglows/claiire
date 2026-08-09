@@ -1,3 +1,5 @@
+import { parcours } from '../parcours.js';
+
 /**
  * Parcours Thématiques Sidebar Navigation
  *
@@ -8,12 +10,13 @@
 export const parcoursSidebar = {
   label: '🎯 Parcours Thématiques',
   collapsed: false, // Visible by default for discoverability
-  items: [
-    { label: '😊 Être plus heureux', link: '/parcours/bonheur' },
-    { label: '😰 Gérer le stress', link: '/parcours/stress' },
-    { label: '😴 Améliorer le sommeil', link: '/parcours/sommeil' },
-    { label: '👥 Relations sociales', link: '/parcours/relations' },
-    { label: '💪 Renforcer la santé', link: '/parcours/sante' },
-    { label: '🧠 Comprendre l\'esprit', link: '/parcours/esprit' },
-  ],
+  items: parcours.map((entry) => ({
+    label: `${entry.icon} ${entry.title}`
+      .replace("Gérer le stress et l'anxiété", 'Gérer le stress')
+      .replace('Améliorer ton sommeil', 'Améliorer le sommeil')
+      .replace('Développer tes relations sociales', 'Relations sociales')
+      .replace('Renforcer ta santé', 'Renforcer la santé')
+      .replace('Comprendre ton esprit', "Comprendre l'esprit"),
+    link: `/parcours/${entry.id}`,
+  })),
 };

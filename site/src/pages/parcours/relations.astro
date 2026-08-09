@@ -1,25 +1,27 @@
 ---
 import ParcoursPage from '../../components/ParcoursPage.astro';
+import { getFirstModuleRoute, getParcours, getParcoursPageTitle } from '../../config/parcours.js';
+
+const parcours = getParcours('relations');
 ---
 
 <ParcoursPage
-  currentPath="/parcours/relations"
-  title="Parcours : Développer Tes Relations Sociales"
-  description="Construis des relations authentiques et enrichissantes"
+  currentPath={`/parcours/${parcours.id}`}
+  title={getParcoursPageTitle(parcours)}
+  description={parcours.description}
   hero={{
-    title: '👥 Développer tes relations sociales',
-    tagline: 'Construis des relations authentiques et enrichissantes',
-    actions: [{ text: 'Commencer le premier module', link: '/systeme-social/liens-sociaux', variant: 'primary' }],
+    title: `${parcours.icon} ${parcours.title}`,
+    tagline: parcours.description,
+    actions: [
+      {
+        text: 'Commencer le premier module',
+        link: getFirstModuleRoute(parcours),
+        variant: 'primary',
+      },
+    ],
   }}
-  parcourId="relations"
-  modules={[
-    { title: 'Liens sociaux et santé', link: '/systeme-social/liens-sociaux' },
-    { title: 'Empathie', link: '/psy/emotions/qualite/empathie' },
-    { title: 'Communication', link: '/psy/communication/pouvoir-des-mots' },
-    { title: 'Codes sociaux', link: '/psy/codes-sociaux/' },
-    { title: 'Appartenance', link: '/psy/emotions/appartenance' },
-    { title: 'Solitude', link: '/systeme-social/solitude' },
-  ]}
+  parcourId={parcours.id}
+  modules={parcours.modules}
   intro="Ce parcours te guide pour comprendre tes patterns relationnels, sortir des liens qui t'épuisent et construire des relations qui te font grandir. Les relations, ça s'apprend — et ça commence par soi."
   steps={[
     {

@@ -255,6 +255,12 @@
   --site-content-wide: 1440px;
   --site-content-reading: 760px;
   --site-content-landing: var(--site-content-wide);
+  --site-content-formation: 60rem;
+  --site-content-formation-reading: 42rem;
+  --site-content-parcours-reading: 46rem;
+  --site-parcours-rail-min: 17rem;
+  --site-parcours-rail-max: 20rem;
+  --site-parcours-layout-gap: clamp(2rem, 4vw, 4.5rem);
   --site-breakpoint-compact: 720px;
   --site-breakpoint-medium: 960px;
   --site-breakpoint-wide: 1180px;
@@ -276,6 +282,15 @@
   --site-orientation-change-accent: #ff9ca7;
   --site-safety-surface: rgba(87, 30, 40, 0.46);
   --site-safety-border: rgba(255, 155, 164, 0.54);
+  --site-focus-ring: #ffd1d7;
+  --site-focus-ring-shadow: 0 0 0 1px #2b1016;
+  --site-sticky-offset: calc(var(--sl-nav-height) + var(--site-space-4));
+  --site-formation-surface-shadow: 0 18px 44px rgba(0, 0, 0, 0.3);
+  --site-hero-pattern-line: rgba(255, 209, 215, 0.12);
+  --site-hero-pattern-glow: rgba(201, 47, 69, 0.22);
+  --site-hero-composition-size: 28rem;
+  --site-hero-splash-min-height: 31rem;
+  --site-section-rule: linear-gradient(90deg, transparent, var(--site-rule), transparent);
   --content-width: 760px;
   --sl-nav-height: 4.75rem;
   --site-accent-outline: rgba(255, 135, 146, 0.42);
@@ -486,8 +501,9 @@ pre {
 }
 
 :focus-visible {
-  outline: var(--site-size-3px) solid var(--site-accent-outline);
+  outline: var(--site-size-3px) solid var(--site-focus-ring);
   outline-offset: 3px;
+  box-shadow: var(--site-focus-ring-shadow);
 }
 
 ::selection {
@@ -718,11 +734,32 @@ pre {
   border-radius: calc(var(--radius-lg) + var(--site-space-0p3));
   background: var(--site-hero-bg);
   box-shadow: var(--shadow-soft);
+  isolation: isolate;
 }
 
+.page-hero::before,
 .page-hero::after {
   content: "";
   position: absolute;
+  pointer-events: none;
+}
+
+.page-hero::before {
+  z-index: 0;
+  right: clamp(1.5rem, 5vw, 6rem);
+  top: var(--site-size-50pct);
+  width: var(--site-hero-composition-size);
+  aspect-ratio: 1;
+  border-radius: var(--site-radius-circle);
+  border: 1px solid var(--site-hero-pattern-line);
+  background:
+    repeating-radial-gradient(circle at center, transparent 0 2.9rem, var(--site-hero-pattern-line) 3rem 3.05rem, transparent 3.1rem 5.85rem),
+    radial-gradient(circle at center, var(--site-hero-pattern-glow), transparent 66%);
+  transform: translateY(-50%);
+}
+
+.page-hero::after {
+  z-index: 0;
   inset: auto -8% -22% auto;
   width: var(--site-size-220px);
   height: var(--site-size-220px);
@@ -735,6 +772,18 @@ pre {
   z-index: var(--site-z-content);
   max-width: var(--site-size-820px);
   padding: clamp(2rem, 4vw, 4.6rem);
+}
+
+@media (min-width: 68.75rem) {
+  .page-hero--splash {
+    min-height: var(--site-hero-splash-min-height);
+    display: grid;
+    align-items: center;
+  }
+
+  .page-hero--splash .page-hero__inner {
+    padding-block: clamp(4.25rem, 7vw, 6.5rem);
+  }
 }
 
 .page-hero__eyebrow,
@@ -843,7 +892,7 @@ pre {
 .docs-sidebar,
 .toc {
   position: sticky;
-  top: calc(var(--sl-nav-height) + 1rem);
+  top: var(--site-sticky-offset);
 }
 
 .docs-sidebar__card,
@@ -853,6 +902,15 @@ pre {
   background: var(--site-surface);
   border: 1px solid var(--site-border);
   box-shadow: var(--shadow-soft);
+}
+
+@media (min-width: 60.0625rem) {
+  .docs-sidebar__card,
+  .toc__card {
+    max-height: calc(100dvh - var(--sl-nav-height) - var(--site-space-8));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
 }
 
 .docs-sidebar h2,
@@ -944,6 +1002,10 @@ pre {
   width: min(var(--site-size-100pct), var(--content-width));
 }
 
+.page-grid:not(.page-grid--with-sidebar) :where(.page-intro, .prose, .prev-next) {
+  margin-inline: auto;
+}
+
 .page-intro {
   padding: var(--site-size-1p6) 0 var(--site-space-0p4);
 }
@@ -972,6 +1034,20 @@ pre {
 
 .prose--landing {
   width: min(var(--site-size-100pct), var(--site-content-landing));
+}
+
+.prose--formation {
+  width: min(var(--site-size-100pct), var(--site-content-formation));
+  margin-inline: auto;
+}
+
+.prose--formation .formation-shell,
+.prose--formation .member-shell {
+  width: var(--site-size-100pct);
+}
+
+.prose--parcours {
+  width: min(var(--site-size-100pct), var(--site-content-wide));
 }
 
 .prose > :first-child {
@@ -1166,6 +1242,7 @@ pre {
   border-radius: var(--radius-lg);
   background: var(--site-footer-bg);
   border: 1px solid var(--site-footer-border);
+  box-shadow: var(--shadow-soft);
 }
 
 .site-footer__text {
@@ -1182,6 +1259,33 @@ pre {
 
 .site-footer__nav a {
   text-decoration: none;
+}
+
+@media (min-width: 68.75rem) {
+  .prose--landing > section,
+  .prose--landing > aside {
+    position: relative;
+  }
+
+  .prose--landing > section + section,
+  .prose--landing > aside + section {
+    padding-top: var(--site-section-space);
+  }
+
+  .prose--landing > section + section::before,
+  .prose--landing > aside + section::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--site-size-100pct);
+    height: var(--site-size-1px);
+    content: '';
+    background: var(--site-section-rule);
+  }
+
+  .site-footer {
+    padding-top: var(--site-space-10);
+  }
 }
 
 .landing-intro {
@@ -1352,7 +1456,7 @@ pre {
   }
 
   .page-hero__actions .button {
-    width: 100%;
+    width: var(--site-size-100pct);
   }
 }
 

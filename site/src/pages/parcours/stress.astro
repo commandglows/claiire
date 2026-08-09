@@ -1,25 +1,27 @@
 ---
 import ParcoursPage from '../../components/ParcoursPage.astro';
+import { getFirstModuleRoute, getParcours, getParcoursPageTitle } from '../../config/parcours.js';
+
+const parcours = getParcours('stress');
 ---
 
 <ParcoursPage
-  currentPath="/parcours/stress"
-  title="Parcours : Gérer Le Stress Et L'Anxiété"
-  description="Apprends à maîtriser ton stress et retrouver ton calme intérieur"
+  currentPath={`/parcours/${parcours.id}`}
+  title={getParcoursPageTitle(parcours)}
+  description={parcours.description}
   hero={{
-    title: "😰 Gérer le stress et l'anxiété",
-    tagline: "Apprends à maîtriser ton stress et retrouver ton calme intérieur",
-    actions: [{ text: 'Commencer le premier module', link: '/stress/', variant: 'primary' }],
+    title: `${parcours.icon} ${parcours.title}`,
+    tagline: parcours.description,
+    actions: [
+      {
+        text: 'Commencer le premier module',
+        link: getFirstModuleRoute(parcours),
+        variant: 'primary',
+      },
+    ],
   }}
-  parcourId="stress"
-  modules={[
-    { title: 'Comprendre le stress', link: '/stress/' },
-    { title: 'Le bon et le mauvais stress', link: '/stress/bon-et-mauvais' },
-    { title: 'Solutions naturelles', link: '/stress/solutions-naturelles' },
-    { title: 'Cohérence cardiaque', link: '/systeme-immunitaire/coherence-cardiaque' },
-    { title: 'Nerf vague', link: '/systeme-nerveux/nerf-vague' },
-    { title: 'Respiration et relaxation', link: '/psy/solution/relaxation' },
-  ]}
+  parcourId={parcours.id}
+  modules={parcours.modules}
   intro="En suivant ce parcours, tu vas passer de subir ton stress à le comprendre — puis à le dompter. Des mécanismes biologiques aux outils pratiques : tout ce dont tu as besoin pour retrouver ton calme, même sous pression."
   steps={[
     {

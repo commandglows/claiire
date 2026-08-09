@@ -1,26 +1,27 @@
 ---
 import ParcoursPage from '../../components/ParcoursPage.astro';
+import { getFirstModuleRoute, getParcours, getParcoursPageTitle } from '../../config/parcours.js';
+
+const parcours = getParcours('bonheur');
 ---
 
 <ParcoursPage
-  currentPath="/parcours/bonheur"
-  title="Parcours : Être Plus Heureux"
+  currentPath={`/parcours/${parcours.id}`}
+  title={getParcoursPageTitle(parcours)}
   description="Ton parcours guidé vers un bonheur durable et authentique"
   hero={{
-    title: '😊 Être plus heureux',
-    tagline:
-      'Découvre les clés scientifiques du bonheur et apprends à cultiver le bien-être au quotidien',
-    actions: [{ text: 'Commencer le premier module', link: '/bonheur/les-hormones-du-bonheur', variant: 'primary' }],
+    title: `${parcours.icon} ${parcours.title}`,
+    tagline: parcours.description,
+    actions: [
+      {
+        text: 'Commencer le premier module',
+        link: getFirstModuleRoute(parcours),
+        variant: 'primary',
+      },
+    ],
   }}
-  parcourId="bonheur"
-  modules={[
-    { title: 'Les hormones du bonheur', link: '/bonheur/les-hormones-du-bonheur' },
-    { title: 'Cultiver la gratitude', link: '/psy/emotions/gratitude' },
-    { title: 'Le moment présent', link: '/bonheur/choyer-le-moment-present' },
-    { title: 'Équilibre mental', link: '/psy/equilibre/equilibre-mental' },
-    { title: 'Cultiver le bonheur', link: '/bonheur/cultiver-le-bonheur' },
-    { title: 'Bonheur durable', link: '/bonheur/bonheur-durable' },
-  ]}
+  parcourId={parcours.id}
+  modules={parcours.modules}
   intro="À l'issue de ce parcours, tu comprendras pourquoi le bonheur se construit — et tu auras des outils concrets pour le faire. Pas de promesses magiques : de la science, des pratiques testées, et un chemin qui te ressemble."
   steps={[
     {

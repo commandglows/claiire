@@ -15,7 +15,14 @@ const { parcourId, modules } = Astro.props;
     <span class="progress-percentage">0%</span>
   </div>
 
-  <div class="progress-bar">
+  <div
+    class="progress-bar"
+    role="progressbar"
+    aria-label="Progression du parcours"
+    aria-valuemin="0"
+    aria-valuemax={modules.length}
+    aria-valuenow="0"
+  >
     <div class="progress-fill"></div>
   </div>
 
@@ -56,7 +63,7 @@ const { parcourId, modules } = Astro.props;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-soft);
     padding: var(--site-space-6);
-    margin: var(--site-space-8) 0;
+    margin: 0;
   }
 
   .progress-header {
@@ -170,7 +177,7 @@ const { parcourId, modules } = Astro.props;
   }
 
   .module-checkbox:focus-visible + label .checkbox-custom {
-    outline: var(--site-size-2px) solid var(--sl-color-accent);
+    outline: var(--site-size-3px) solid var(--site-focus-ring);
     outline-offset: var(--site-space-2);
   }
 
@@ -292,7 +299,7 @@ const { parcourId, modules } = Astro.props;
     }
 
     .reset-progress {
-      width: 100%;
+      width: var(--site-size-100pct);
     }
   }
 

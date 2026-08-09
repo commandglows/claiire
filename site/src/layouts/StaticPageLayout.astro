@@ -24,9 +24,10 @@ interface Props {
   hero?: HeroData;
   sectionLabel?: string;
   robots?: 'index, follow' | 'noindex, nofollow';
+  articleClass?: string;
 }
 
-const { currentPath, title, description, hero, sectionLabel, robots = 'index, follow' } = Astro.props;
+const { currentPath, title, description, hero, sectionLabel, robots = 'index, follow', articleClass } = Astro.props;
 const canonical = Astro.site ? new URL(currentPath, Astro.site).toString() : undefined;
 const metaDescription =
   description ??
@@ -36,7 +37,7 @@ const showGamification = !currentPath.startsWith('/violence') && !currentPath.st
 ---
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -97,7 +98,7 @@ const showGamification = !currentPath.startsWith('/violence') && !currentPath.st
       )}
 
       <main id="main-content" class="page-main">
-        <article class:list={['prose', 'prose--splash', isHomepage && 'prose--landing']}>
+        <article class:list={['prose', 'prose--splash', isHomepage && 'prose--landing', articleClass]}>
           <slot />
         </article>
       </main>

@@ -1,25 +1,27 @@
 ---
 import ParcoursPage from '../../components/ParcoursPage.astro';
+import { getFirstModuleRoute, getParcours, getParcoursPageTitle } from '../../config/parcours.js';
+
+const parcours = getParcours('sante');
 ---
 
 <ParcoursPage
-  currentPath="/parcours/sante"
-  title="Parcours : Renforcer Ta Santé"
-  description="Optimise ton corps et ton énergie vitale"
+  currentPath={`/parcours/${parcours.id}`}
+  title={getParcoursPageTitle(parcours)}
+  description={parcours.description}
   hero={{
-    title: '💪 Renforcer ta santé',
-    tagline: 'Optimise ton corps et ton énergie vitale',
-    actions: [{ text: 'Commencer le premier module', link: '/harmonie/', variant: 'primary' }],
+    title: `${parcours.icon} ${parcours.title}`,
+    tagline: parcours.description,
+    actions: [
+      {
+        text: 'Commencer le premier module',
+        link: getFirstModuleRoute(parcours),
+        variant: 'primary',
+      },
+    ],
   }}
-  parcourId="sante"
-  modules={[
-    { title: "Vue d'ensemble santé", link: '/harmonie/' },
-    { title: 'Nutrition essentielle', link: '/systeme-digestif/nutrition/' },
-    { title: 'Activité physique', link: '/activite/physique/' },
-    { title: 'Système immunitaire', link: '/systeme-immunitaire/' },
-    { title: 'Métabolisme', link: '/harmonie/metabolisme' },
-    { title: 'Inflammation', link: '/systeme-immunitaire/inflammation' },
-  ]}
+  parcourId={parcours.id}
+  modules={parcours.modules}
   intro="Ce parcours te donne une vision globale et cohérente de ta santé — pas un régime, pas un programme miracle. Une compréhension profonde de ton corps et des leviers concrets pour te sentir vraiment bien dans ta peau."
   steps={[
     {

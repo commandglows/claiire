@@ -1,0 +1,173 @@
+- generic [active] [ref=f8e1]:
+  - link "Aller au contenu" [ref=f8e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f8e3]:
+    - generic [ref=f8e4]:
+      - link "Claiire Claiire Comprendre. Réguler. Transformer." [ref=f8e5] [cursor=pointer]:
+        - /url: /
+        - img "Claiire" [ref=f8e6]
+        - generic [ref=f8e7]:
+          - strong [ref=f8e8]: Claiire
+          - generic [ref=f8e9]: Comprendre. Réguler. Transformer.
+      - navigation "Navigation principale" [ref=f8e11]:
+        - link "Accueil" [ref=f8e12] [cursor=pointer]:
+          - /url: /
+        - link "Parcours" [ref=f8e13] [cursor=pointer]:
+          - /url: /parcours/bonheur
+        - link "Corps & santé" [ref=f8e14] [cursor=pointer]:
+          - /url: /systeme-nerveux/
+        - link "Esprit" [ref=f8e15] [cursor=pointer]:
+          - /url: /psy/
+        - link "Émotions" [ref=f8e16] [cursor=pointer]:
+          - /url: /psy/emotions/
+        - link "Bonheur" [ref=f8e17] [cursor=pointer]:
+          - /url: /bonheur/
+        - link "Violence" [ref=f8e18] [cursor=pointer]:
+          - /url: /violence/
+        - link "Formations" [ref=f8e19] [cursor=pointer]:
+          - /url: /formations/
+  - generic [ref=f8e20]:
+    - generic [ref=f8e22]:
+      - paragraph [ref=f8e23]: Parcours relationnels
+      - heading "Ce que tu vis dans ta relation t'inquiète" [level=1] [ref=f8e24]
+      - paragraph [ref=f8e25]: Tu n'as pas besoin de te définir comme victime pour commencer. Ce parcours part des faits, de ta sécurité et de ton rythme.
+      - generic [ref=f8e26]:
+        - link "Commencer le module 1" [ref=f8e27] [cursor=pointer]:
+          - /url: /formations/victimes/1-securite/
+        - link "Voir les ressources immédiates" [ref=f8e28] [cursor=pointer]:
+          - /url: /violence/victimes/
+    - main [ref=f8e30]:
+      - article [ref=f8e31]:
+        - paragraph [ref=f8e32]: Merci d’être là.
+        - paragraph [ref=f8e33]: Si tu lis cette page, quelque chose dans une relation actuelle ou passée t’inquiète peut-être. Tu n’as pas besoin d’être déjà sûr(e) du mot « violence ». Tu as besoin d’un chemin qui respecte ton rythme, sans minimiser les faits ni décider à ta place.
+        - paragraph [ref=f8e34]: C’est le rôle de ce parcours.
+        - heading "Ce parcours sert à quoi ?" [level=2] [ref=f8e35]
+        - paragraph [ref=f8e36]: "Le parcours victimes t’aide à avancer sur six axes :"
+        - list [ref=f8e37]:
+          - listitem [ref=f8e38]: retrouver de la sécurité
+          - listitem [ref=f8e39]: comprendre le trauma
+          - listitem [ref=f8e40]: poser tes limites
+          - listitem [ref=f8e41]: reconstruire des relations plus saines
+          - listitem [ref=f8e42]: reprendre ton autonomie
+          - listitem [ref=f8e43]: ancrer ce que tu reconstruis dans la durée
+        - paragraph [ref=f8e44]: Il ne te demande pas d’aller bien tout de suite. Il te donne des étapes.
+        - heading "Les 6 modules du parcours victimes" [level=2] [ref=f8e45]
+        - heading "1. Ton plan de sécurité" [level=3] [ref=f8e46]
+        - paragraph [ref=f8e47]:
+          - link "Accéder au module 1" [ref=f8e48] [cursor=pointer]:
+            - /url: /formations/victimes/1-securite/
+        - paragraph [ref=f8e49]: "Tu poses les bases les plus concrètes : sécurité immédiate, personnes relais, repères, priorités."
+        - heading "2. Guérir du trauma" [level=3] [ref=f8e50]
+        - paragraph [ref=f8e51]:
+          - link "Accéder au module 2" [ref=f8e52] [cursor=pointer]:
+            - /url: /formations/victimes/2-guerison/
+        - paragraph [ref=f8e53]: Tu comprends pourquoi la guérison n’est pas linéaire, ce que le trauma fait au corps, et comment avancer sans te brusquer.
+        - heading "3. Poser tes limites" [level=3] [ref=f8e54]
+        - paragraph [ref=f8e55]:
+          - link "Accéder au module 3" [ref=f8e56] [cursor=pointer]:
+            - /url: /formations/victimes/3-limites/
+        - paragraph [ref=f8e57]: Tu retrouves peu à peu le droit de dire oui, non, stop, plus tard, autrement.
+        - heading "4. Reconstruction relationnelle" [level=3] [ref=f8e58]
+        - paragraph [ref=f8e59]:
+          - link "Accéder au module 4" [ref=f8e60] [cursor=pointer]:
+            - /url: /formations/victimes/4-relations/
+        - paragraph [ref=f8e61]: Tu travailles les repères relationnels, la confiance et la capacité à reconnaître ce qui est sain.
+        - heading "5. Ton autonomie" [level=3] [ref=f8e62]
+        - paragraph [ref=f8e63]:
+          - link "Accéder au module 5" [ref=f8e64] [cursor=pointer]:
+            - /url: /formations/victimes/5-autonomie/
+        - paragraph [ref=f8e65]: Tu renforces ta capacité à décider, agir, choisir et te remettre au centre de ta propre vie.
+        - heading "6. Ancrage durable" [level=3] [ref=f8e66]
+        - paragraph [ref=f8e67]:
+          - link "Accéder au module 6" [ref=f8e68] [cursor=pointer]:
+            - /url: /formations/victimes/6-ancrage/
+        - paragraph [ref=f8e69]: Tu apprends à consolider ce que tu reconstruis pour ne pas perdre pied dès qu’un moment difficile revient.
+        - heading "Ce parcours est pour toi si…" [level=2] [ref=f8e70]
+        - list [ref=f8e71]:
+          - listitem [ref=f8e72]: tu te sens encore sous l’effet de ce que tu as vécu
+          - listitem [ref=f8e73]: tu as du mal à distinguer sécurité, peur, trauma et emprise
+          - listitem [ref=f8e74]: tu veux comprendre sans te faire violence
+          - listitem [ref=f8e75]: tu cherches un cadre plus structuré que des lectures dispersées
+        - heading "Les repères cliniques derrière ce parcours" [level=2] [ref=f8e76]
+        - paragraph [ref=f8e77]:
+          - text: Le parcours s’appuie notamment sur le travail de
+          - strong [ref=f8e78]: Judith Herman
+          - text: ": sécurité, intégration, reconnexion. Ce cadre est utile parce qu’il remet la reconstruction dans le bon ordre."
+        - paragraph [ref=f8e79]: Avant de réparer la suite, il faut assez de sécurité.
+        - paragraph [ref=f8e80]: Avant de reprendre confiance, il faut comprendre ce que le trauma a fait au corps, aux émotions et aux relations.
+        - heading "Ce que tu peux lire en parallèle" [level=2] [ref=f8e81]
+        - paragraph [ref=f8e82]: "Pour renforcer ce parcours, va voir aussi :"
+        - list [ref=f8e83]:
+          - listitem [ref=f8e84]:
+            - link "notre dossier sur le trauma" [ref=f8e85] [cursor=pointer]:
+              - /url: /psy/trauma/
+          - listitem [ref=f8e86]:
+            - link "notre ressource victimes" [ref=f8e87] [cursor=pointer]:
+              - /url: /violence/victimes/
+          - listitem [ref=f8e88]:
+            - link "reconstruire ta confiance" [ref=f8e89] [cursor=pointer]:
+              - /url: /confiance/reconstruire/
+          - listitem [ref=f8e90]:
+            - link "notre dossier sur les relations" [ref=f8e91] [cursor=pointer]:
+              - /url: /relations/
+        - heading "Ce que tu débloques en allant plus loin" [level=2] [ref=f8e92]
+        - paragraph [ref=f8e93]: Les pages publiques te donnent le cadre et les bases.
+        - paragraph [ref=f8e94]: "La logique premium de la formation ajoute la partie la plus guidée :"
+        - list [ref=f8e95]:
+          - listitem [ref=f8e96]: exercices
+          - listitem [ref=f8e97]: checklists
+          - listitem [ref=f8e98]: protocoles
+          - listitem [ref=f8e99]: repères de progression
+          - listitem [ref=f8e100]: ressources pratiques plus profondes
+        - paragraph [ref=f8e101]: L’idée n’est pas de te frustrer. L’idée est de garder l’essentiel visible, puis de réserver la partie la plus accompagnante à la version complète.
+        - heading "Quelques mots importants" [level=2] [ref=f8e102]
+        - paragraph [ref=f8e103]: Ce parcours ne remplace pas une thérapie. Si tu es très submergé(e), dissocié(e), en danger ou sans appui autour de toi, il faut aussi du soutien humain réel.
+        - paragraph [ref=f8e104]:
+          - text: Si tu es en danger maintenant, priorise les ressources immédiates via
+          - link "l’espace victimes" [ref=f8e105] [cursor=pointer]:
+            - /url: /violence/victimes/
+          - text: .
+        - heading "FAQ" [level=2] [ref=f8e106]
+        - heading "Dois-je commencer par des contenus généraux ?" [level=3] [ref=f8e107]
+        - paragraph [ref=f8e108]: Non. Si une relation t’inquiète, tu peux commencer directement ici. Les ressources de santé et de bien-être restent disponibles en complément.
+        - heading "Est-ce que ce parcours est utile si la violence est ancienne ?" [level=3] [ref=f8e109]
+        - paragraph [ref=f8e110]: Oui. Les traces peuvent rester très actives longtemps après.
+        - heading "Est-ce que je dois tout faire d’un coup ?" [level=3] [ref=f8e111]
+        - paragraph [ref=f8e112]: Non. Ce parcours est justement conçu pour être suivi étape par étape.
+        - heading "Comment utiliser ce parcours" [level=2] [ref=f8e113]
+        - paragraph [ref=f8e114]: Commence par la page publique du module qui correspond à ton étape actuelle.
+        - paragraph [ref=f8e115]: Quand tu sens que tu as besoin d’un cadre plus guidé, tu peux débloquer la version complète pour accéder au contenu intégral, à la checklist, au protocole et aux ressources premium sans perdre le fil.
+        - paragraph [ref=f8e116]: "Le meilleur point d’entrée reste :"
+        - list [ref=f8e117]:
+          - listitem [ref=f8e118]:
+            - 'link "module 1 : ton plan de sécurité" [ref=f8e119] [cursor=pointer]':
+              - /url: /formations/victimes/1-securite/
+          - listitem [ref=f8e120]:
+            - link "explorer la santé et le bien-être" [ref=f8e121] [cursor=pointer]:
+              - /url: /parcours/sante
+          - listitem [ref=f8e122]:
+            - link "voir les ressources victimes" [ref=f8e123] [cursor=pointer]:
+              - /url: /violence/victimes/
+      - navigation "Pages voisines" [ref=f8e124]:
+        - link "Page précédente Trouver mon point de départ" [ref=f8e125] [cursor=pointer]:
+          - /url: /formations/
+          - generic [ref=f8e126]: Page précédente
+          - strong [ref=f8e127]: Trouver mon point de départ
+        - link "Page suivante 1 · Retrouver de la sécurité" [ref=f8e128] [cursor=pointer]:
+          - /url: /formations/victimes/1-securite/
+          - generic [ref=f8e129]: Page suivante
+          - strong [ref=f8e130]: 1 · Retrouver de la sécurité
+  - contentinfo [ref=f8e131]:
+    - generic [ref=f8e132]:
+      - generic [ref=f8e133]:
+        - paragraph [ref=f8e134]: Claiire
+        - paragraph [ref=f8e135]: Un site éditorial pensé pour aider à comprendre ce que tu vis, retrouver des repères fiables, et avancer avec des contenus structurés.
+      - navigation "Liens utiles" [ref=f8e136]:
+        - link "Notre approche" [ref=f8e137] [cursor=pointer]:
+          - /url: /a-propos
+        - link "Formations" [ref=f8e138] [cursor=pointer]:
+          - /url: /formations/
+        - link "Contact" [ref=f8e139] [cursor=pointer]:
+          - /url: /contact
+        - link "Confidentialité" [ref=f8e140] [cursor=pointer]:
+          - /url: /confidentialite

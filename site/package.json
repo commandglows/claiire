@@ -15,6 +15,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "check-links": "node scripts/check-links.mjs",
+    "check:parcours": "node scripts/check-parcours-config.mjs",
     "fix-links": "node scripts/fix-internal-links.mjs",
     "member-access:set": "node scripts/set-clerk-member-access.mjs",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,md,mdx,astro}\"",

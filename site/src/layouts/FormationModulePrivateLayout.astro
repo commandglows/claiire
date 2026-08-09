@@ -70,6 +70,7 @@ const hero = {
   sectionLabel={sectionLabel}
   hero={hero}
   robots={robots}
+  articleClass="prose--formation"
 >
   <section class="member-shell">
     <header class="member-shell__intro">
@@ -174,7 +175,7 @@ const hero = {
     border: 1px solid var(--sl-color-gray-5);
     border-radius: var(--radius-lg);
     padding: var(--site-space-6);
-    box-shadow: 0 12px 32px var(--site-shadow-raised-6);
+    box-shadow: var(--site-formation-surface-shadow);
   }
 
   .member-shell__intro {
@@ -191,6 +192,17 @@ const hero = {
     letter-spacing: var(--site-letter-0p08);
     margin: 0 0 0.4rem;
     text-transform: uppercase;
+  }
+
+  .member-shell__intro h2,
+  .member-block h3 {
+    margin-top: 0;
+  }
+
+  .member-richtext,
+  .member-shell__intro > div,
+  .member-block--content > p {
+    max-width: var(--site-content-formation-reading);
   }
 
   .member-shell__progress {

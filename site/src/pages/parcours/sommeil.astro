@@ -1,25 +1,27 @@
 ---
 import ParcoursPage from '../../components/ParcoursPage.astro';
+import { getFirstModuleRoute, getParcours, getParcoursPageTitle } from '../../config/parcours.js';
+
+const parcours = getParcours('sommeil');
 ---
 
 <ParcoursPage
-  currentPath="/parcours/sommeil"
-  title="Parcours : Améliorer Ton Sommeil"
-  description="Restaure un sommeil réparateur pour une vie plus énergique"
+  currentPath={`/parcours/${parcours.id}`}
+  title={getParcoursPageTitle(parcours)}
+  description={parcours.description}
   hero={{
-    title: '😴 Améliorer ton sommeil',
-    tagline: 'Restaure un sommeil réparateur pour une vie plus énergique',
-    actions: [{ text: 'Commencer le premier module', link: '/sommeil/', variant: 'primary' }],
+    title: `${parcours.icon} ${parcours.title}`,
+    tagline: parcours.description,
+    actions: [
+      {
+        text: 'Commencer le premier module',
+        link: getFirstModuleRoute(parcours),
+        variant: 'primary',
+      },
+    ],
   }}
-  parcourId="sommeil"
-  modules={[
-    { title: 'Comprendre le sommeil', link: '/sommeil/' },
-    { title: 'Les cycles du sommeil', link: '/sommeil/cycles' },
-    { title: 'Hygiène du sommeil', link: '/sommeil/hygiene' },
-    { title: 'Dette de sommeil', link: '/sommeil/dette' },
-    { title: 'Nutrition et sommeil', link: '/systeme-digestif/nutrition/sommeil-nutriments' },
-    { title: 'Lumière et mélatonine', link: '/systeme-hormonal/melatonine' },
-  ]}
+  parcourId={parcours.id}
+  modules={parcours.modules}
   intro="Ce parcours te donne les clés pour comprendre ton sommeil, identifier ce qui le perturbe et retrouver des nuits vraiment réparatrices. Fini de te réveiller épuisé : on reconstruit tout, étape par étape."
   steps={[
     {

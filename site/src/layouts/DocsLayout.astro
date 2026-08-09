@@ -3,7 +3,6 @@ import type { CollectionEntry } from 'astro:content';
 import GamificationBar from '../components/GamificationBar.vue';
 import SiteFooter from '../components/layout/SiteFooter.astro';
 import SiteHeader from '../components/layout/SiteHeader.astro';
-import ThemeScript from '../components/layout/ThemeScript.astro';
 import DocsSidebar from '../components/navigation/DocsSidebar.astro';
 import TableOfContents from '../components/navigation/TableOfContents.astro';
 import {
@@ -67,7 +66,7 @@ const description =
 ---
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -88,8 +87,6 @@ const description =
     <meta name="twitter:description" content={description} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <ThemeScript />
-
     {import.meta.env.PROD && (
       <>
         <script async src="https://cdn.onthe.io/io.js/YyAMWtaLLPUi"></script>
