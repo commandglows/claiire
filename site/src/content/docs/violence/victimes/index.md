@@ -1,32 +1,31 @@
 ---
-title: "Ressources Pour Les Victimes De Violence"
-description: "Tu n'es pas seul(e). Trouve ici un espace sûr, des ressources et un parcours de reconstruction."
+title: "Ressources pour les personnes exposées à la violence"
+description: "Tu n'es pas seul·e. Trouve des repères pour te protéger, demander de l'aide et avancer à ton rythme."
 template: splash
 hero:
-  title: "Tu n'es pas seul(e) 💙"
-  tagline: "Un espace sûr pour comprendre, te protéger et te reconstruire"
+  title: "Tu n'es pas seul·e"
+  tagline: "Des repères pour comprendre, te protéger et te reconstruire"
   actions:
     - text: "Besoin d'aide immédiate"
       link: "/violence/solutions/urgence"
       variant: primary
       icon: warning
-    - text: "Commencer le parcours de guérison"
+    - text: "Découvrir le parcours dédié"
       link: "/formations/victimes/"
       variant: secondary
       icon: right-arrow
 ---
 
-## Numéros d'urgence
+## Aide immédiate et lignes d'écoute
 
-:::danger[Besoin d'aide immédiate ?]
-**3919** - Violence Femmes Info (appel gratuit et anonyme)
-Du lundi au samedi de 9h à 19h (22h les lundi, mercredi, vendredi)
+:::danger[Danger immédiat ?]
+**17 ou 112** — Police, gendarmerie ou services d'urgence. Appels gratuits, 24h/24 et 7j/7.
 
-**17** - Police secours (24h/24)
+**114** — Service d'urgence gratuit, 24h/24 et 7j/7, si tu ne peux pas parler ou entendre, ou si parler risque de te mettre en danger. Contact possible notamment par SMS, tchat ou application.
 
-**08 019 019 11** - Enfance en danger (24h/24)
+**119 — Enfance en danger** — Appel gratuit et confidentiel, 24h/24 et 7j/7, pour un enfant ou un adolescent en danger ou toute personne préoccupée par sa situation.
 
-**114** - SMS d'urgence pour personnes sourdes ou malentendantes
+**3919 — Violences Femmes Info** — Écoute, information et orientation, appel gratuit et anonyme, 24h/24 et 7j/7. **Le 3919 n'est pas un service d'urgence.**
 :::
 
 ## Comprendre ce qui t'arrive
@@ -63,7 +62,7 @@ La violence prend de nombreuses formes. Comprendre ce que tu vis est la premièr
 
 ### Formation guidée
 
-Notre parcours "Sortir de la Violence" est spécialement conçu pour t'accompagner dans ta reconstruction. Il comprend 10 modules progressifs :
+Le parcours « Sortir de la violence » propose des repères progressifs pour avancer à ton rythme. Il ne remplace pas les services d'urgence ni l'accompagnement de professionnels formés.
 
 - [Sortir de la Violence - Parcours Victimes](/formations/victimes)
 
@@ -94,5 +93,5 @@ Notre parcours "Sortir de la Violence" est spécialement conçu pour t'accompagn
 
 La violence n'est jamais justifiée, quels que soient les circonstances ou les comportements. Tu mérites d'être en sécurité, respecté(e) et aimé(e).
 
-Il existe des professionnels formés pour t'aider. Tu as le droit de demander de l'aide et de te protéger.
+Il existe des professionnels formés pour t'aider. Tu as le droit de demander de l'aide et de te protéger, sans confrontation ni médiation avec la personne qui exerce la violence.
 :::

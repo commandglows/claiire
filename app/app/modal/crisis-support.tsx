@@ -14,6 +14,7 @@ import { useRouter } from "expo-router";
 import { useMutation, useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import type { Id } from "@/convex/_generated/dataModel";
+import { AppIcon, type AppIconName } from "@/components/AppIcon";
 
 // ─── Breathing Guide ─────────────────────────────────────────────────────────
 
@@ -237,11 +238,11 @@ type CustomIntervention = {
 
 function CreateCustomForm({ onDone }: { onDone: () => void }) {
   const [name, setName] = useState("");
-  const [icon, setIcon] = useState("🎯");
+  const [icon, setIcon] = useState<AppIconName>("target");
   const [desc, setDesc] = useState("");
   const createCustom = useMutation(api.interventions.createCustom);
 
-  const ICONS = ["🎯", "🏋️", "🎨", "🎵", "🧩", "🌿", "💎", "🔔", "🛁", "📱"];
+  const ICONS: AppIconName[] = ["target", "dumbbell", "palette", "music", "puzzle", "leaf", "gem", "bell", "bath", "smartphone"];
 
   async function handleCreate() {
     if (!name.trim()) return;
@@ -263,7 +264,7 @@ function CreateCustomForm({ onDone }: { onDone: () => void }) {
             style={[customForm.iconChip, icon === e && customForm.iconChipActive]}
             onPress={() => setIcon(e)}
           >
-            <Text style={customForm.iconText}>{e}</Text>
+            <AppIcon name={e} color={icon === e ? AppDesignTokens.colors.accentSoft : AppDesignTokens.colors.textMuted} size={AppDesignTokens.icons.sizeSm} />
           </TouchableOpacity>
         ))}
       </View>
@@ -276,7 +277,7 @@ function CreateCustomForm({ onDone }: { onDone: () => void }) {
         maxLength={40}
       />
       <TextInput
-        style={[customForm.input, { minHeight: 60 }]}
+        style={[customForm.input, { minHeight: AppDesignTokens.layout.v60 }]}
         placeholder="Description (optionnel)"
         placeholderTextColor={AppDesignTokens.colors.textSubtle}
         value={desc}
@@ -296,24 +297,24 @@ function CreateCustomForm({ onDone }: { onDone: () => void }) {
 }
 
 const customForm = StyleSheet.create({
-  container: { gap: 12, paddingVertical: 8 },
-  title: { color: AppDesignTokens.colors.text, fontSize: 16, fontWeight: "600" },
-  iconRow: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
+  container: { gap: AppDesignTokens.layout.v12, paddingVertical: AppDesignTokens.layout.v8 },
+  title: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v16, fontWeight: "600" },
+  iconRow: { flexDirection: "row", flexWrap: "wrap", gap: AppDesignTokens.layout.v8 },
   iconChip: {
-    width: 40, height: 40, borderRadius: 10,
+    width: AppDesignTokens.layout.v40, height: AppDesignTokens.layout.v40, borderRadius: AppDesignTokens.layout.v10,
     backgroundColor: AppDesignTokens.colors.surfaceMutedAlt, alignItems: "center", justifyContent: "center",
     borderWidth: 1, borderColor: AppDesignTokens.colors.border,
   },
   iconChipActive: { borderColor: AppDesignTokens.colors.accent, backgroundColor: AppDesignTokens.colors.surfaceAccent },
-  iconText: { fontSize: 20 },
+  iconText: { fontSize: AppDesignTokens.layout.v20 },
   input: {
-    backgroundColor: AppDesignTokens.colors.surfaceMutedAlt, borderRadius: 10, padding: 12,
-    color: AppDesignTokens.colors.text, fontSize: 14, borderWidth: 1, borderColor: AppDesignTokens.colors.border,
+    backgroundColor: AppDesignTokens.colors.surfaceMutedAlt, borderRadius: AppDesignTokens.layout.v10, padding: AppDesignTokens.layout.v12,
+    color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v14, borderWidth: 1, borderColor: AppDesignTokens.colors.border,
   },
   createBtn: {
-    backgroundColor: AppDesignTokens.colors.accent, borderRadius: 10, paddingVertical: 12, alignItems: "center",
+    backgroundColor: AppDesignTokens.colors.accent, borderRadius: AppDesignTokens.layout.v10, paddingVertical: AppDesignTokens.layout.v12, alignItems: "center",
   },
-  createBtnText: { color: AppDesignTokens.colors.text, fontSize: 14, fontWeight: "700" },
+  createBtnText: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v14, fontWeight: "700" },
 });
 
 function Arsenal({ onSwitchToBreathing }: { onSwitchToBreathing: () => void }) {
@@ -387,7 +388,7 @@ function Arsenal({ onSwitchToBreathing }: { onSwitchToBreathing: () => void }) {
         return (
           <View key={item.id}>
             <View style={[arsenal.card, isUsed && arsenal.cardUsed]}>
-              <Text style={arsenal.cardEmoji}>{item.emoji}</Text>
+              <AppIcon name={item.emoji} color={AppDesignTokens.colors.accentSoft} size={AppDesignTokens.icons.sizeLg} />
               <View style={arsenal.cardContent}>
                 <View style={arsenal.cardTitleRow}>
                   <Text style={arsenal.cardTitle}>{item.title}</Text>
@@ -468,8 +469,8 @@ export default function CrisisSupportModal() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()}>
-          <Text style={styles.closeText}>✕</Text>
+        <TouchableOpacity onPress={() => router.back()} accessibilityLabel="Fermer">
+          <AppIcon name="close" color={AppDesignTokens.colors.textMuted} size={AppDesignTokens.icons.sizeSm} />
         </TouchableOpacity>
         <View style={styles.headerCenter}>
           <Text style={styles.headerEmoji}>🆘</Text>
@@ -535,112 +536,111 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: 20,
-    paddingTop: 8,
-    paddingBottom: 12,
+    paddingHorizontal: AppDesignTokens.layout.v20,
+    paddingTop: AppDesignTokens.layout.v8,
+    paddingBottom: AppDesignTokens.layout.v12,
   },
-  closeText: { color: AppDesignTokens.colors.textMuted, fontSize: 18, padding: 4 },
-  headerCenter: { alignItems: "center", gap: 2 },
-  headerEmoji: { fontSize: 28 },
-  headerTitle: { color: AppDesignTokens.colors.text, fontSize: 16, fontWeight: "700" },
-  logText: { color: AppDesignTokens.colors.accent, fontSize: 14, fontWeight: "600" },
+  headerCenter: { alignItems: "center", gap: AppDesignTokens.layout.v2 },
+  headerEmoji: { fontSize: AppDesignTokens.layout.v28 },
+  headerTitle: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v16, fontWeight: "700" },
+  logText: { color: AppDesignTokens.colors.accent, fontSize: AppDesignTokens.layout.v14, fontWeight: "600" },
   headerSub: {
     color: AppDesignTokens.colors.textMuted,
-    fontSize: 13,
+    fontSize: AppDesignTokens.layout.v13,
     textAlign: "center",
-    paddingHorizontal: 24,
-    marginBottom: 12,
+    paddingHorizontal: AppDesignTokens.layout.v24,
+    marginBottom: AppDesignTokens.layout.v12,
   },
   tabBar: {
     flexDirection: "row",
-    marginHorizontal: 16,
+    marginHorizontal: AppDesignTokens.layout.v16,
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 12,
-    padding: 4,
-    marginBottom: 4,
+    borderRadius: AppDesignTokens.layout.v12,
+    padding: AppDesignTokens.layout.v4,
+    marginBottom: AppDesignTokens.layout.v4,
   },
   tabButton: {
     flex: 1,
-    paddingVertical: 8,
+    paddingVertical: AppDesignTokens.layout.v8,
     alignItems: "center",
-    borderRadius: 9,
+    borderRadius: AppDesignTokens.layout.v9,
   },
   tabButtonActive: { backgroundColor: AppDesignTokens.colors.accent },
-  tabText: { color: AppDesignTokens.colors.textMuted, fontSize: 13, fontWeight: "500" },
+  tabText: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v13, fontWeight: "500" },
   tabTextActive: { color: AppDesignTokens.colors.text, fontWeight: "700" },
   scrollView: { flex: 1 },
-  scrollContent: { padding: 16, paddingBottom: 24 },
+  scrollContent: { padding: AppDesignTokens.layout.v16, paddingBottom: AppDesignTokens.layout.v24 },
   footer: {
-    padding: 16,
+    padding: AppDesignTokens.layout.v16,
     borderTopWidth: 1,
     borderTopColor: AppDesignTokens.colors.surface,
     alignItems: "center",
-    gap: 4,
+    gap: AppDesignTokens.layout.v4,
   },
-  footerText: { color: AppDesignTokens.colors.textSubtle, fontSize: 12 },
-  footerNumber: { color: AppDesignTokens.colors.textMuted, fontSize: 11, textAlign: "center" },
+  footerText: { color: AppDesignTokens.colors.textSubtle, fontSize: AppDesignTokens.layout.v12 },
+  footerNumber: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v11, textAlign: "center" },
   number: { color: AppDesignTokens.colors.dangerSoft, fontWeight: "600" },
 });
 
 const breathing = StyleSheet.create({
-  container: { alignItems: "center", gap: 20, paddingVertical: 16 },
-  title: { color: AppDesignTokens.colors.text, fontSize: 17, fontWeight: "600" },
-  circleWrapper: { height: 180, alignItems: "center", justifyContent: "center" },
+  container: { alignItems: "center", gap: AppDesignTokens.layout.v20, paddingVertical: AppDesignTokens.layout.v16 },
+  title: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v17, fontWeight: "600" },
+  circleWrapper: { height: AppDesignTokens.layout.v180, alignItems: "center", justifyContent: "center" },
   circle: {
-    width: 120,
-    height: 120,
-    borderRadius: 60,
+    width: AppDesignTokens.layout.v120,
+    height: AppDesignTokens.layout.v120,
+    borderRadius: AppDesignTokens.layout.v60,
     borderWidth: 3,
     backgroundColor: AppDesignTokens.colors.surface,
     alignItems: "center",
     justifyContent: "center",
-    shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 0.6,
-    shadowRadius: 20,
-    elevation: 10,
+    shadowOffset: { width: AppDesignTokens.layout.v0, height: AppDesignTokens.layout.v0 },
+    shadowOpacity: AppDesignTokens.layout.v0p6,
+    shadowRadius: AppDesignTokens.layout.v20,
+    elevation: AppDesignTokens.layout.v10,
   },
-  countText: { color: AppDesignTokens.colors.text, fontSize: 36, fontWeight: "bold" },
-  phaseText: { fontSize: 13, fontWeight: "600" },
+  countText: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v36, fontWeight: "bold" },
+  phaseText: { fontSize: AppDesignTokens.layout.v13, fontWeight: "600" },
   button: {
-    borderRadius: 12,
-    paddingVertical: 14,
-    paddingHorizontal: 40,
+    borderRadius: AppDesignTokens.layout.v12,
+    paddingVertical: AppDesignTokens.layout.v14,
+    paddingHorizontal: AppDesignTokens.layout.v40,
   },
-  buttonText: { color: AppDesignTokens.colors.text, fontSize: 16, fontWeight: "700" },
+  buttonText: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v16, fontWeight: "700" },
   hint: {
     color: AppDesignTokens.colors.textSubtle,
-    fontSize: 12,
+    fontSize: AppDesignTokens.layout.v12,
     textAlign: "center",
-    paddingHorizontal: 24,
+    paddingHorizontal: AppDesignTokens.layout.v24,
   },
 });
 
 const grounding = StyleSheet.create({
-  container: { gap: 16 },
-  title: { color: AppDesignTokens.colors.text, fontSize: 17, fontWeight: "600" },
-  subtitle: { color: AppDesignTokens.colors.textMuted, fontSize: 13, marginTop: -8 },
+  container: { gap: AppDesignTokens.layout.v16 },
+  title: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v17, fontWeight: "600" },
+  subtitle: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v13, marginTop: AppDesignTokens.layout.vMinus8 },
   completeBox: {
     backgroundColor: AppDesignTokens.colors.surfaceAccent,
-    borderRadius: 10,
-    padding: 12,
+    borderRadius: AppDesignTokens.layout.v10,
+    padding: AppDesignTokens.layout.v12,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.success,
   },
-  completeText: { color: AppDesignTokens.colors.success, fontSize: 14, fontWeight: "600" },
+  completeText: { color: AppDesignTokens.colors.success, fontSize: AppDesignTokens.layout.v14, fontWeight: "600" },
   step: {
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 12,
-    padding: 14,
-    gap: 10,
+    borderRadius: AppDesignTokens.layout.v12,
+    padding: AppDesignTokens.layout.v14,
+    gap: AppDesignTokens.layout.v10,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
   },
-  stepPrompt: { color: AppDesignTokens.colors.neutralBorder, fontSize: 14, fontWeight: "500" },
-  checkRow: { flexDirection: "row", gap: 8, flexWrap: "wrap" },
+  stepPrompt: { color: AppDesignTokens.colors.neutralBorder, fontSize: AppDesignTokens.layout.v14, fontWeight: "500" },
+  checkRow: { flexDirection: "row", gap: AppDesignTokens.layout.v8, flexWrap: "wrap" },
   check: {
-    width: 36,
-    height: 36,
-    borderRadius: 8,
+    width: AppDesignTokens.layout.v36,
+    height: AppDesignTokens.layout.v36,
+    borderRadius: AppDesignTokens.layout.v8,
     backgroundColor: AppDesignTokens.colors.surfaceMutedAlt,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
@@ -648,69 +648,69 @@ const grounding = StyleSheet.create({
     justifyContent: "center",
   },
   checkDone: { backgroundColor: AppDesignTokens.colors.accent, borderColor: AppDesignTokens.colors.accent },
-  checkText: { color: AppDesignTokens.colors.text, fontSize: 13, fontWeight: "600" },
+  checkText: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v13, fontWeight: "600" },
 });
 
 const arsenal = StyleSheet.create({
-  container: { gap: 12 },
-  title: { color: AppDesignTokens.colors.text, fontSize: 17, fontWeight: "600" },
-  subtitle: { color: AppDesignTokens.colors.textMuted, fontSize: 13, marginTop: -4 },
+  container: { gap: AppDesignTokens.layout.v12 },
+  title: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v17, fontWeight: "600" },
+  subtitle: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v13, marginTop: AppDesignTokens.layout.vMinus4 },
   card: {
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 14,
-    padding: 14,
-    gap: 12,
+    borderRadius: AppDesignTokens.layout.v14,
+    padding: AppDesignTokens.layout.v14,
+    gap: AppDesignTokens.layout.v12,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
   },
   cardUsed: { borderColor: AppDesignTokens.colors.accent, opacity: 0.7 },
-  cardEmoji: { fontSize: 28, width: 36, textAlign: "center" },
-  cardContent: { flex: 1, gap: 3 },
-  cardTitleRow: { flexDirection: "row", alignItems: "center", gap: 8 },
-  cardTitle: { color: AppDesignTokens.colors.text, fontSize: 14, fontWeight: "600" },
-  cardDesc: { color: AppDesignTokens.colors.textMuted, fontSize: 12, lineHeight: 17 },
-  successRate: { color: AppDesignTokens.colors.accent, fontSize: 11, fontWeight: "500" },
-  masteredBadge: { color: AppDesignTokens.colors.warning, fontSize: 10, fontWeight: "700" },
-  advancedBadge: { color: AppDesignTokens.colors.dangerSoft, fontSize: 10, fontWeight: "700" },
+  cardEmoji: { fontSize: AppDesignTokens.layout.v28, width: AppDesignTokens.layout.v36, textAlign: "center" },
+  cardContent: { flex: 1, gap: AppDesignTokens.layout.v3 },
+  cardTitleRow: { flexDirection: "row", alignItems: "center", gap: AppDesignTokens.layout.v8 },
+  cardTitle: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v14, fontWeight: "600" },
+  cardDesc: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v12, lineHeight: AppDesignTokens.layout.v17 },
+  successRate: { color: AppDesignTokens.colors.accent, fontSize: AppDesignTokens.layout.v11, fontWeight: "500" },
+  masteredBadge: { color: AppDesignTokens.colors.warning, fontSize: AppDesignTokens.layout.v10, fontWeight: "700" },
+  advancedBadge: { color: AppDesignTokens.colors.dangerSoft, fontSize: AppDesignTokens.layout.v10, fontWeight: "700" },
   useButton: {
     backgroundColor: AppDesignTokens.colors.accent,
-    borderRadius: 8,
-    paddingVertical: 7,
-    paddingHorizontal: 12,
+    borderRadius: AppDesignTokens.layout.v8,
+    paddingVertical: AppDesignTokens.layout.v7,
+    paddingHorizontal: AppDesignTokens.layout.v12,
   },
   useButtonDone: { backgroundColor: AppDesignTokens.colors.success },
-  useButtonText: { color: AppDesignTokens.colors.text, fontSize: 12, fontWeight: "700" },
+  useButtonText: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v12, fontWeight: "700" },
   rateRow: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 8,
-    paddingHorizontal: 14,
-    paddingVertical: 6,
+    gap: AppDesignTokens.layout.v8,
+    paddingHorizontal: AppDesignTokens.layout.v14,
+    paddingVertical: AppDesignTokens.layout.v6,
   },
-  rateText: { color: AppDesignTokens.colors.textMuted, fontSize: 12, flex: 1 },
+  rateText: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v12, flex: 1 },
   rateYes: {
     backgroundColor: AppDesignTokens.colors.success,
-    borderRadius: 6,
-    paddingVertical: 5,
-    paddingHorizontal: 10,
+    borderRadius: AppDesignTokens.layout.v6,
+    paddingVertical: AppDesignTokens.layout.v5,
+    paddingHorizontal: AppDesignTokens.layout.v10,
   },
   rateNo: {
     backgroundColor: AppDesignTokens.colors.textStrong,
-    borderRadius: 6,
-    paddingVertical: 5,
-    paddingHorizontal: 10,
+    borderRadius: AppDesignTokens.layout.v6,
+    paddingVertical: AppDesignTokens.layout.v5,
+    paddingHorizontal: AppDesignTokens.layout.v10,
   },
-  rateButtonText: { color: AppDesignTokens.colors.text, fontSize: 11, fontWeight: "600" },
-  rateConfirm: { color: AppDesignTokens.colors.success, fontSize: 12, fontWeight: "500" },
+  rateButtonText: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v11, fontWeight: "600" },
+  rateConfirm: { color: AppDesignTokens.colors.success, fontSize: AppDesignTokens.layout.v12, fontWeight: "500" },
   addButton: {
-    borderRadius: 12,
-    paddingVertical: 14,
+    borderRadius: AppDesignTokens.layout.v12,
+    paddingVertical: AppDesignTokens.layout.v14,
     alignItems: "center",
     borderWidth: 1.5,
     borderColor: AppDesignTokens.colors.accent,
     borderStyle: "dashed",
   },
-  addButtonText: { color: AppDesignTokens.colors.accent, fontSize: 13, fontWeight: "600" },
+  addButtonText: { color: AppDesignTokens.colors.accent, fontSize: AppDesignTokens.layout.v13, fontWeight: "600" },
 });

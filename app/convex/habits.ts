@@ -29,7 +29,7 @@ export const createHabit = mutation({
     const id = await ctx.db.insert("habitDefinition", {
       userId: user._id,
       name: args.name,
-      icon: args.icon ?? "⚡",
+      icon: args.icon ?? "zap",
       missionType: args.missionType,
       targetFrequency: args.targetFrequency,
       difficulty: args.difficulty,

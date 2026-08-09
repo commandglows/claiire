@@ -24,18 +24,18 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 20,
+    padding: AppDesignTokens.layout.v20,
   },
   title: {
-    fontSize: 20,
+    fontSize: AppDesignTokens.layout.v20,
     fontWeight: 'bold',
   },
   link: {
-    marginTop: 15,
-    paddingVertical: 15,
+    marginTop: AppDesignTokens.layout.v15,
+    paddingVertical: AppDesignTokens.layout.v15,
   },
   linkText: {
-    fontSize: 14,
+    fontSize: AppDesignTokens.layout.v14,
     color: AppDesignTokens.colors.info,
   },
 });

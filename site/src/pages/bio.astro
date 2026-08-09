@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 const title = "Claiire | Liens"
 const description = "Ton guide bien-être : santé, psychologie et transformation personnelle. Parcours guidés, science vulgarisée, zéro jargon."
 const siteUrl = "https://claiire.com"
@@ -39,83 +41,83 @@ const siteUrl = "https://claiire.com"
 		* { margin: 0; padding: 0; box-sizing: border-box; }
 
 		body {
-			font-family: system-ui, -apple-system, sans-serif;
+			font-family: var(--site-font-body, system-ui), -apple-system, sans-serif;
 			background: var(--bg);
 			color: var(--text);
-			min-height: 100vh;
+			min-height: var(--site-size-100dvh);
 			display: flex;
 			justify-content: center;
-			padding: 2rem 1rem;
+			padding: var(--site-space-8) var(--site-space-4);
 		}
 
-		.bio-container {
-			width: 100%;
-			max-width: 480px;
+.bio-container {
+				width: var(--site-size-100pct);
+				max-width: var(--site-content-bio);
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			gap: 1.5rem;
+			gap: var(--site-space-6);
 		}
 
 		.bio-avatar {
-			width: 96px;
-			height: 96px;
-			border-radius: 50%;
-			border: 2px solid var(--accent);
+			width: var(--site-bio-avatar-size);
+			height: var(--site-bio-avatar-size);
+			border-radius: var(--site-radius-circle);
+			border: var(--site-size-2px) solid var(--accent);
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			background: var(--card-bg);
 			overflow: hidden;
-			box-shadow: 0 0 20px var(--accent-glow);
+			box-shadow: var(--site-bio-avatar-shadow);
 		}
 
 		.bio-avatar img {
-			width: 80%;
-			height: 80%;
+			width: var(--site-size-80pct);
+			height: var(--site-size-80pct);
 			object-fit: contain;
 		}
 
 		.bio-name {
-			font-size: 1.5rem;
+			font-size: var(--site-font-xl);
 			font-weight: 700;
 			text-align: center;
 			color: var(--text);
 		}
 
 		.bio-tagline {
-			font-size: 0.95rem;
+			font-size: var(--site-font-sm);
 			text-align: center;
 			color: var(--text-muted);
-			line-height: 1.6;
-			max-width: 340px;
+			line-height: var(--site-leading-normal);
+			max-width: var(--site-content-bio);
 		}
 
-		.bio-links {
-			width: 100%;
-			display: flex;
+.bio-links {
+    width: var(--site-size-100pct);
+				display: flex;
 			flex-direction: column;
-			gap: 0.75rem;
+			gap: var(--site-space-3);
 		}
 
 		.bio-link {
 			display: block;
-			width: 100%;
-			padding: 1rem 1.25rem;
+				width: var(--site-size-100pct);
+			padding: var(--site-space-4) var(--site-space-5);
 			text-align: center;
 			text-decoration: none;
 			font-weight: 600;
-			font-size: 0.95rem;
+			font-size: var(--site-font-sm);
 			color: var(--text);
 			background: var(--card-bg);
 			border: 1px solid var(--border);
-			border-radius: 0.75rem;
-			transition: all 0.3s ease;
+			border-radius: var(--radius-sm);
+			transition: all var(--site-motion-slow) var(--site-ease-standard);
 		}
 
 		.bio-link:hover {
 			border-color: var(--accent);
-			box-shadow: 0 0 15px var(--accent-glow);
+			box-shadow: var(--site-bio-link-shadow);
 			transform: translateY(-1px);
 		}
 
@@ -123,23 +125,23 @@ const siteUrl = "https://claiire.com"
 			background: var(--accent);
 			color: var(--site-text);
 			border: none;
-			box-shadow: 0 0 25px var(--accent-glow);
+			box-shadow: var(--site-bio-cta-shadow);
 		}
 
 		.bio-link.cta:hover {
-			box-shadow: 0 0 35px var(--accent-glow);
+			box-shadow: var(--site-bio-cta-shadow-hover);
 			transform: translateY(-2px);
 		}
 
 		.bio-socials {
 			display: flex;
-			gap: 1.25rem;
-			margin-top: 0.5rem;
+			gap: var(--site-space-5);
+			margin-top: var(--site-space-2);
 		}
 
 		.bio-socials a {
 			color: var(--text-muted);
-			transition: color 0.2s ease;
+			transition: color var(--site-motion-fast) var(--site-ease-standard);
 		}
 
 		.bio-socials a:hover {
@@ -147,15 +149,15 @@ const siteUrl = "https://claiire.com"
 		}
 
 		.bio-socials svg {
-			width: 26px;
-			height: 26px;
+			width: var(--site-icon-md);
+			height: var(--site-icon-md);
 		}
 
 		.bio-footer {
-			font-size: 0.8rem;
+			font-size: var(--site-font-xs);
 			color: var(--text-muted);
 			opacity: 0.5;
-			margin-top: 1rem;
+			margin-top: var(--site-space-4);
 		}
 
 	</style>

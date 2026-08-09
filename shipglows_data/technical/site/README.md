@@ -6,7 +6,7 @@ Site web de ressources sur le bien-être, la psychologie et la santé.
 
 ### Prérequis
 
-- [Node.js](https://nodejs.org/) version 20 ou supérieure
+- [Node.js](https://nodejs.org/) version 24
 - pnpm
 
 ### Installation et Lancement
@@ -19,18 +19,18 @@ Site web de ressources sur le bien-être, la psychologie et la santé.
 
 2. **Installer les dépendances**
    ```bash
-   npm install
+   pnpm install
    ```
    
-   Note: Les problèmes de peer dependencies sont automatiquement gérés via le fichier `.npmrc` du projet.
+   La version du gestionnaire est fixée dans `package.json` (`pnpm@11.8.0`).
 
 3. **Lancer le serveur de développement**
    ```bash
-   npm run dev
+   pnpm dev
    ```
    ou simplement:
    ```bash
-   npm start
+   pnpm start
    ```
 
 4. **Ouvrir dans le navigateur**
@@ -39,12 +39,12 @@ Site web de ressources sur le bien-être, la psychologie et la santé.
 
 ## 📜 Scripts Disponibles
 
-- `npm run dev` ou `npm start` - Lance le serveur de développement
-- `npm run build` - Construit le site pour la production
-- `npm run preview` - Prévisualise le build de production localement
-- `npm run check` - Vérifie les erreurs TypeScript et Astro
-- `npm run format` - Formate le code avec Prettier
-- `npm run format:check` - Vérifie le formatage du code
+- `pnpm dev` ou `pnpm start` - Lance le serveur de développement
+- `pnpm build` - Construit le site pour la production
+- `pnpm preview` - Prévisualise le build de production localement
+- `pnpm check` - Vérifie les erreurs TypeScript et Astro
+- `pnpm format` - Formate le code avec Prettier
+- `pnpm format:check` - Vérifie le formatage du code
 
 ## 🛠️ Technologies Utilisées
 
@@ -75,15 +75,14 @@ Le site est configuré pour être déployé sur Vercel. Les commits sur la branc
 ## 🔧 Dépannage
 
 ### Erreur lors de l'installation
-Si vous rencontrez des erreurs pendant `npm install`, essayez:
+Si vous rencontrez des erreurs pendant `pnpm install`, essayez:
 ```bash
-rm -rf node_modules package-lock.json
-npm install
+pnpm install --force
 ```
 
 ### Le serveur ne démarre pas
 Assurez-vous que:
-- Node.js version 20+ est installé: `node --version`
+- Node.js version 24 est installé: `node --version`
 - Le port 4321 n'est pas déjà utilisé
 - Les dépendances sont correctement installées
 
@@ -103,7 +102,7 @@ title: Titre de la page
 
 1. Créez une branche pour vos modifications
 2. Effectuez vos changements
-3. Testez localement avec `npm run dev`
+3. Testez localement avec `pnpm dev`
 4. Soumettez une pull request
 
 ## 📄 Licence

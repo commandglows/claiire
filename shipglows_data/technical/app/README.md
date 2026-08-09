@@ -2,6 +2,15 @@
 
 Mobile application package for Claiire.
 
+## Runtime requirements
+
+- Node.js 24.x (checked via `app/.node-version`, `app/.nvmrc` and `app/package.json.engines.node`)
+- `pnpm` (pinned via `packageManager: "pnpm@11.8.0"` in `app/package.json`)
+
+## Architecture Decisions
+
+- Mobile runtime: Expo and React Native remain the canonical Claiire app stack. See `shipglows_data/technical/app/decisions/mobile-runtime-expo.md` for rationale, preserved constraints, and reconsideration criteria.
+
 ## Entry Points
 
 - package root: `app/`
@@ -12,13 +21,17 @@ Mobile application package for Claiire.
 
 ## Commands
 
-- install from monorepo root with the workspace toolchain
-- run app tests from `app/`
+- install dependencies with the workspace toolchain:
+  - `pnpm --dir app install`
+- run app tests from `app/`:
+  - `pnpm --dir app test`
+  - `pnpm --dir app test:watch`
 - keep business and branding decisions in `shipglows_data/`, not in package-local Markdown
 
 ## Related Docs
 
 - `shipglows_data/technical/app/CLAUDE.md`
 - `shipglows_data/technical/app/guidelines.md`
+- `shipglows_data/technical/app/decisions/mobile-runtime-expo.md`
 - `shipglows_data/business/business.md`
 - `shipglows_data/branding/branding.md`

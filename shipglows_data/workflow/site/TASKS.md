@@ -191,8 +191,8 @@
 - [x] Pinner `@diane-winflowz/gamification` sur un commit avec `dist/` disponible pour les types
 - [ ] Finaliser la mitigation `path-to-regexp` / `@vercel/routing-utils` et prouver la version runtime réellement utilisée
 - [ ] Supprimer les devDependencies inutiles: `broken-link-checker`, `markdown-link-check`, `glob`, `nanoid`, `title-case`
-- [ ] Aligner le runtime Node réel avec `engines.node >=24.0.0`
-- [ ] Ajouter un pin explicite du gestionnaire de paquets et du runtime (`packageManager`, `.nvmrc`)
+- [x] Aligner le runtime Node réel avec `engines.node >=24.0.0`
+- [x] Ajouter un pin explicite du gestionnaire de paquets et du runtime (`packageManager`, `.nvmrc`)
 - [ ] Configurer Dependabot ou Renovate pour les mises à jour automatiques
 - [ ] Ouvrir un chantier `/404-sg-migrate` pour les migrations majeures (`@clerk/astro`, `@astrojs/vercel`, `@astrojs/vue`, `astro`, `@types/node`, `glob`, `nanoid`, `typescript`)
 

@@ -7,6 +7,7 @@ import {
 } from '@diane-winflowz/gamification'
 import type { Badge } from '@diane-winflowz/gamification'
 import { createClaiireConfig } from '../gamification/config'
+import ClaiireIcon from './ClaiireIcon.vue'
 
 const props = defineProps<{
   slug: string
@@ -34,11 +35,11 @@ const allBadges = computed(() => [...badges.earned.value, ...badges.unearned.val
 
 // Level system
 const LEVELS = [
-  { min: 0, max: 4, name: 'Curieux', icon: '👣', next: 5 },
-  { min: 5, max: 14, name: 'Explorateur', icon: '🔍', next: 15 },
-  { min: 15, max: 29, name: 'Studieux', icon: '📖', next: 30 },
-  { min: 30, max: 49, name: 'Érudit', icon: '🎓', next: 50 },
-  { min: 50, max: Infinity, name: 'Savant', icon: '🧠', next: null },
+  { min: 0, max: 4, name: 'Curieux', icon: 'footprints', next: 5 },
+  { min: 5, max: 14, name: 'Explorateur', icon: 'search', next: 15 },
+  { min: 15, max: 29, name: 'Studieux', icon: 'book', next: 30 },
+  { min: 30, max: 49, name: 'Érudit', icon: 'graduation', next: 50 },
+  { min: 50, max: Infinity, name: 'Savant', icon: 'brain', next: null },
 ]
 
 const currentLevel = computed(() => {
@@ -127,11 +128,11 @@ watch(
       <Transition name="panel">
         <div v-if="showPanel" class="panel-backdrop" @click.self="showPanel = false">
           <div class="panel">
-            <button class="panel-close" @click="showPanel = false" aria-label="Fermer">✕</button>
+            <button class="panel-close" @click="showPanel = false" aria-label="Fermer"><ClaiireIcon name="close" :size="20" /></button>
 
             <!-- Level -->
             <div class="panel-level">
-              <span class="level-icon">{{ currentLevel.icon }}</span>
+              <span class="level-icon"><ClaiireIcon :name="currentLevel.icon" :size="32" /></span>
               <div class="level-info">
                 <div class="level-name">{{ currentLevel.name }}</div>
                 <div class="level-sub">
@@ -147,17 +148,17 @@ watch(
             <!-- Stats row -->
             <div class="panel-stats">
               <div class="pstat">
-                <span class="pstat-icon" :class="{ active: streak.isActive.value }">🔥</span>
+                <span class="pstat-icon" :class="{ active: streak.isActive.value }"><ClaiireIcon name="flame" :size="24" /></span>
                 <span class="pstat-val">{{ streak.currentStreak.value }}</span>
                 <span class="pstat-lbl">jours consécutifs</span>
               </div>
               <div class="pstat">
-                <span class="pstat-icon">🏆</span>
+                <span class="pstat-icon"><ClaiireIcon name="trophy" :size="24" /></span>
                 <span class="pstat-val">{{ streak.longestStreak.value }}</span>
                 <span class="pstat-lbl">record de série</span>
               </div>
               <div class="pstat">
-                <span class="pstat-icon">🎖️</span>
+                <span class="pstat-icon"><ClaiireIcon name="medal" :size="24" /></span>
                 <span class="pstat-val">{{ badges.earned.value.length }}/{{ allBadges.length }}</span>
                 <span class="pstat-lbl">badges</span>
               </div>
@@ -185,7 +186,7 @@ watch(
                   :class="{ earned: badges.earned.value.some(b => b.id === badge.id), locked: !badges.earned.value.some(b => b.id === badge.id) }"
                   :title="badges.earned.value.some(b => b.id === badge.id) ? badge.description : 'Badge verrouillé'"
                 >
-                  <span class="badge-ico">{{ badge.icon }}</span>
+                  <span class="badge-ico"><ClaiireIcon :name="badge.icon" :size="24" /></span>
                   <span class="badge-name">{{ badges.earned.value.some(b => b.id === badge.id) ? badge.name : '???' }}</span>
                 </div>
               </div>
@@ -199,7 +200,7 @@ watch(
     <button class="gamification-bar" @click="togglePanel" :aria-label="'Ouvrir le tableau de bord — ' + currentLevel.name">
       <div class="bar-inner">
         <div class="stat-item">
-          <span class="streak-icon" :class="{ active: streak.isActive.value }">🔥</span>
+          <span class="streak-icon" :class="{ active: streak.isActive.value }"><ClaiireIcon name="flame" :size="24" /></span>
           <span class="stat-value">{{ streak.currentStreak.value }}</span>
           <span class="stat-label">{{ streak.currentStreak.value > 1 ? 'jours' : 'jour' }}</span>
         </div>
@@ -214,14 +215,14 @@ watch(
         <div class="divider" />
 
         <div class="stat-item badges-item">
-          <span class="level-badge-icon">{{ currentLevel.icon }}</span>
+          <span class="level-badge-icon"><ClaiireIcon :name="currentLevel.icon" :size="20" /></span>
           <span class="stat-value">{{ currentLevel.name }}</span>
           <span
             v-for="badge in recentBadges"
             :key="badge.id"
             class="recent-badge"
             :title="badge.name"
-          >{{ badge.icon }}</span>
+          ><ClaiireIcon :name="badge.icon" :size="18" /></span>
         </div>
       </div>
     </button>
@@ -230,7 +231,7 @@ watch(
       <AchievementToast :badge="toastBadge" :duration="5000" class="toast-wrapper">
         <template #default="{ badge: b, dismiss }">
           <div class="toast-content" @click="dismiss">
-            <span class="toast-icon">{{ b.icon }}</span>
+            <span class="toast-icon"><ClaiireIcon :name="b.icon" :size="32" /></span>
             <div class="toast-text">
               <strong>Badge débloqué !</strong>
               <span>{{ b.name }}</span>
@@ -249,26 +250,26 @@ watch(
   top: var(--sl-nav-height, 3.5rem);
   left: 0;
   right: 0;
-  height: 3px;
-  z-index: 9;
+  height: var(--site-size-3px);
+  z-index: var(--site-z-reader);
   background: transparent;
   pointer-events: none;
 }
 
 .read-progress-fill {
-  height: 100%;
+  height: var(--site-size-100pct);
   background: var(--sl-color-accent);
-  transition: width 0.15s linear;
-  border-radius: 0 2px 2px 0;
+  transition: width var(--site-motion-fast) linear;
+  border-radius: 0 var(--site-size-2px) var(--site-size-2px) 0;
 }
 
 /* Floating bar */
 .gamification-bar {
   position: fixed;
-  bottom: 1.25rem;
-  left: 50%;
+  bottom: var(--site-space-5);
+  left: var(--site-size-50pct);
   transform: translateX(-50%);
-  z-index: 50;
+  z-index: var(--site-z-header);
   border: none;
   background: none;
   padding: 0;
@@ -276,44 +277,44 @@ watch(
 }
 
 .gamification-bar:focus-visible {
-  outline: 2px solid var(--sl-color-accent);
-  outline-offset: 3px;
-  border-radius: 9999px;
+  outline: var(--site-size-2px) solid var(--sl-color-accent);
+  outline-offset: var(--site-size-3px);
+  border-radius: var(--site-radius-pill);
 }
 
 .bar-inner {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 0.6rem 1.5rem;
+  gap: var(--site-space-4);
+  padding: var(--site-space-2) var(--site-space-6);
   border: 1px solid var(--sl-color-gray-5);
-  border-radius: 9999px;
+  border-radius: var(--site-radius-pill);
   background: var(--sl-color-bg);
   box-shadow: 0 4px 16px var(--site-shadow-0-12), 0 1px 4px var(--site-shadow-0-08);
-  font-size: 0.875rem;
+  font-size: var(--site-font-sm);
   font-weight: 600;
   color: var(--sl-color-text);
   white-space: nowrap;
-  backdrop-filter: blur(8px);
-  transition: box-shadow 0.2s, transform 0.15s;
+  backdrop-filter: blur(var(--site-size-8px));
+  transition: box-shadow var(--site-motion-fast), transform var(--site-motion-fast);
 }
 
 .gamification-bar:hover .bar-inner {
   box-shadow: 0 6px 20px var(--site-shadow-0-18), 0 2px 6px var(--site-shadow-0-10);
-  transform: translateY(-1px);
+  transform: translateY(calc(var(--site-size-1px) * -1));
 }
 
 .stat-item {
   display: flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: var(--site-space-0p3);
 }
 
 .streak-icon {
-  font-size: 1.1rem;
+  font-size: var(--site-font-1p1);
   opacity: 0.35;
-  transition: opacity 0.3s;
-  line-height: 1;
+  transition: opacity var(--site-motion-slow);
+  line-height: var(--site-leading-1);
 }
 
 .streak-icon.active {
@@ -321,76 +322,76 @@ watch(
 }
 
 .level-badge-icon {
-  font-size: 1rem;
-  line-height: 1;
+  font-size: var(--site-font-md);
+  line-height: var(--site-leading-1);
 }
 
 .stat-value {
-  font-size: 0.9rem;
+  font-size: var(--site-font-0p9);
   font-weight: 700;
   color: var(--sl-color-text);
 }
 
 .stat-label {
-  font-size: 0.75rem;
+  font-size: var(--site-font-xs);
   font-weight: 400;
   opacity: 0.6;
 }
 
 .divider {
-  width: 1px;
-  height: 1rem;
+  width: var(--site-size-1px);
+  height: var(--site-font-md);
   background: var(--sl-color-gray-5);
 }
 
 .badges-item {
-  gap: 0.3rem;
+  gap: var(--site-space-0p3);
 }
 
 .recent-badge {
-  font-size: 0.95rem;
-  margin-left: 0.1rem;
+  font-size: var(--site-font-0p95);
+  margin-left: var(--site-space-0p1);
 }
 
 /* Panel */
 .panel-backdrop {
   position: fixed;
   inset: 0;
-  z-index: 100;
+  z-index: var(--site-z-panel);
   background: var(--site-shadow-0-35);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(var(--site-size-2px));
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding-bottom: 5rem;
+  padding-bottom: var(--site-size-5rem);
 }
 
 .panel {
   position: relative;
   width: min(420px, calc(100vw - 2rem));
-  max-height: 70vh;
+  max-height: var(--site-size-70vh);
   overflow-y: auto;
   background: var(--sl-color-bg);
   border: 1px solid var(--sl-color-gray-5);
-  border-radius: 1rem;
-  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  padding: var(--site-space-6);
   box-shadow: 0 12px 40px var(--site-shadow-0-25);
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: var(--site-space-5);
 }
 
 .panel-close {
   position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  width: 1.75rem;
-  height: 1.75rem;
+  top: var(--site-space-3);
+  right: var(--site-space-3);
+  width: var(--site-space-1p75);
+  height: var(--site-space-1p75);
   border: none;
   background: var(--sl-color-gray-6);
-  border-radius: 50%;
+  border-radius: var(--site-radius-circle);
   cursor: pointer;
-  font-size: 0.75rem;
+  font-size: var(--site-font-xs);
   color: var(--sl-color-gray-2);
   display: flex;
   align-items: center;
@@ -405,68 +406,68 @@ watch(
 .panel-level {
   display: flex;
   align-items: center;
-  gap: 0.875rem;
+  gap: var(--site-space-0p875);
 }
 
 .level-icon {
-  font-size: 2.25rem;
-  line-height: 1;
+  font-size: var(--site-font-2p25);
+  line-height: var(--site-leading-1);
   flex-shrink: 0;
 }
 
 .level-info {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: var(--site-space-0p2);
 }
 
 .level-name {
-  font-size: 1.125rem;
+  font-size: var(--site-font-1p125);
   font-weight: 700;
   color: var(--sl-color-text);
 }
 
 .level-sub {
-  font-size: 0.8125rem;
+  font-size: var(--site-font-0p8125);
   color: var(--sl-color-gray-3);
 }
 
 .level-bar-track {
-  height: 6px;
-  border-radius: 9999px;
+  height: var(--site-size-6px);
+  border-radius: var(--site-radius-9999);
   background: var(--sl-color-gray-6);
   overflow: hidden;
 }
 
 .level-bar-fill {
-  height: 100%;
+  height: var(--site-size-100pct);
   background: var(--sl-color-accent);
-  border-radius: 9999px;
-  transition: width 0.6s ease;
+  border-radius: var(--site-radius-9999);
+  transition: width var(--site-motion-slow) ease;
 }
 
 /* Stats row */
 .panel-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
+  gap: var(--site-space-3);
 }
 
 .pstat {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.2rem;
-  padding: 0.75rem 0.5rem;
+  gap: var(--site-space-0p2);
+  padding: var(--site-space-3) var(--site-space-1);
   border: 1px solid var(--sl-color-gray-5);
-  border-radius: 0.625rem;
+  border-radius: var(--site-radius-0p625);
   background: var(--sl-color-accent-low);
 }
 
 .pstat-icon {
-  font-size: 1.25rem;
+  font-size: var(--site-font-1p25);
   opacity: 0.4;
-  transition: opacity 0.3s;
+  transition: opacity var(--site-motion-slow);
 }
 
 .pstat-icon.active {
@@ -474,16 +475,16 @@ watch(
 }
 
 .pstat-val {
-  font-size: 1.125rem;
+  font-size: var(--site-font-1p125);
   font-weight: 700;
   color: var(--sl-color-accent);
-  line-height: 1;
+  line-height: var(--site-leading-1);
 }
 
 .pstat-lbl {
-  font-size: 0.65rem;
+  font-size: var(--site-font-0p6875);
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: var(--site-letter-0p04);
   color: var(--sl-color-gray-3);
   text-align: center;
 }
@@ -492,14 +493,14 @@ watch(
 .panel-section {
   display: flex;
   flex-direction: column;
-  gap: 0.625rem;
+  gap: var(--site-space-0p625);
 }
 
 .section-title {
-  font-size: 0.75rem;
+  font-size: var(--site-font-xs);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: var(--site-letter-0p06);
   color: var(--sl-color-gray-3);
 }
 
@@ -507,17 +508,17 @@ watch(
 .cat-list {
   display: flex;
   flex-direction: column;
-  gap: 0.375rem;
+  gap: var(--site-space-0p35);
 }
 
 .cat-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.4rem 0.625rem;
-  border-radius: 0.375rem;
-  background: var(--sl-color-gray-7, var(--sl-color-gray-6));
-  font-size: 0.875rem;
+  padding: var(--site-space-0p4) var(--site-space-0p625);
+  border-radius: var(--site-radius-0p375);
+  background: var(--sl-color-gray-7);
+  font-size: var(--site-font-0p875);
 }
 
 .cat-label {
@@ -533,19 +534,19 @@ watch(
 .badges-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-  gap: 0.5rem;
+  gap: var(--site-space-2);
 }
 
 .badge-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.25rem;
-  padding: 0.625rem 0.5rem;
+  gap: var(--site-space-1);
+  padding: var(--site-space-0p625) var(--site-space-1);
   border: 1px solid var(--sl-color-gray-5);
-  border-radius: 0.5rem;
+  border-radius: var(--site-radius-0p5);
   text-align: center;
-  transition: transform 0.15s;
+  transition: transform var(--site-motion-0p15);
 }
 
 .badge-item.earned {
@@ -558,25 +559,25 @@ watch(
 }
 
 .badge-ico {
-  font-size: 1.5rem;
+  font-size: var(--site-font-1p5);
 }
 
 .badge-name {
-  font-size: 0.7rem;
+  font-size: var(--site-font-0p7);
   font-weight: 600;
   color: var(--sl-color-text);
-  line-height: 1.2;
+  line-height: var(--site-leading-1p2);
 }
 
 /* Transitions */
 .panel-enter-active,
 .panel-leave-active {
-  transition: opacity 0.2s ease;
+  transition: opacity var(--site-motion-slow) ease;
 }
 
 .panel-enter-active .panel,
 .panel-leave-active .panel {
-  transition: transform 0.25s ease, opacity 0.2s ease;
+  transition: transform var(--site-motion-standard) ease, opacity var(--site-motion-slow) ease;
 }
 
 .panel-enter-from,
@@ -585,38 +586,38 @@ watch(
 }
 
 .panel-enter-from .panel {
-  transform: translateY(1.5rem) scale(0.97);
+  transform: translateY(var(--site-space-6)) scale(0.97);
   opacity: 0;
 }
 
 .panel-leave-to .panel {
-  transform: translateY(1.5rem) scale(0.97);
+  transform: translateY(var(--site-space-6)) scale(0.97);
   opacity: 0;
 }
 
 /* Toast */
 .toast-wrapper {
   position: fixed;
-  top: 1.5rem;
-  right: 1.5rem;
-  z-index: 200;
+  top: var(--site-space-6);
+  right: var(--site-space-6);
+  z-index: var(--site-z-toast);
 }
 
 .toast-content {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 1rem 1.5rem;
+  gap: var(--site-space-3);
+  padding: var(--site-space-4) var(--site-space-6);
   border: 1px solid var(--sl-color-accent);
-  border-radius: 0.5rem;
+  border-radius: var(--site-radius-0p5);
   background: var(--sl-color-bg);
   box-shadow: 0 4px 12px var(--site-shadow-0-20);
   cursor: pointer;
-  animation: toast-slide-in 0.4s ease-out;
+  animation: toast-slide-in var(--site-motion-0p4) ease-out;
 }
 
 .toast-icon {
-  font-size: 2rem;
+  font-size: var(--site-font-xl);
 }
 
 .toast-text {
@@ -625,13 +626,13 @@ watch(
 }
 
 .toast-text strong {
-  font-size: 0.875rem;
+  font-size: var(--site-font-0p875);
   color: var(--sl-color-accent);
   text-transform: uppercase;
 }
 
 .toast-text span {
-  font-size: 1rem;
+  font-size: var(--site-font-md);
   color: var(--sl-color-text);
 }
 
@@ -647,10 +648,10 @@ watch(
 }
 
 :global(.toast-enter-active) {
-  animation: toast-slide-in 0.4s ease-out;
+  animation: toast-slide-in var(--site-motion-0p4) ease-out;
 }
 
 :global(.toast-leave-active) {
-  animation: toast-slide-in 0.3s ease-in reverse;
+  animation: toast-slide-in var(--site-motion-slow) ease-in reverse;
 }
 </style>

@@ -1,7 +1,7 @@
 # TASKS.md
 
 🟠 [app] task: Patch critical/high npm audit | status: todo | area: dependencies
-🟡 [app] task: Align runtime/package-manager pins | status: todo | area: configuration
+🟢 [app] task: Align runtime/package-manager pins | status: done | area: configuration
 🟡 [app] task: Add dependabot/renovate automation | status: todo | area: configuration
 🟡 [app] task: Update expo-secure-store version alignment | status: todo | area: dependencies
 🟢 [site] task: Unify package manager and lockfile for site installs and audits | status: done | area: dependencies | id: site-deps-package-manager

@@ -4,6 +4,7 @@ import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { useMode } from "@/features/mode";
 import { AppDesignTokens } from '@/constants/AppDesignTokens';
+import { AppIcon, type AppIconName } from "@/components/AppIcon";
 
 type LogEntry = {
   _id: string;
@@ -23,12 +24,12 @@ const FILTER_LABELS: Record<Filter, string> = {
   "90d": "90j",
 };
 
-const TYPE_CONFIG: Record<string, { emoji: string; warrior: string; zen: string; isVictory: boolean }> = {
-  sleep: { emoji: "😴", warrior: "Rapport sommeil", zen: "Sommeil", isVictory: true },
-  mood: { emoji: "🎯", warrior: "Rapport humeur", zen: "Humeur", isVictory: true },
-  habit: { emoji: "⚡", warrior: "Mission accomplie", zen: "Habitude", isVictory: true },
-  crisis: { emoji: "⚔️", warrior: "Bataille", zen: "Moment difficile", isVictory: false },
-  meal: { emoji: "🍽️", warrior: "Ravitaillement", zen: "Repas", isVictory: true },
+const TYPE_CONFIG: Record<string, { icon: AppIconName; warrior: string; zen: string; isVictory: boolean }> = {
+  sleep: { icon: "moon", warrior: "Rapport sommeil", zen: "Sommeil", isVictory: true },
+  mood: { icon: "target", warrior: "Rapport humeur", zen: "Humeur", isVictory: true },
+  habit: { icon: "zap", warrior: "Mission accomplie", zen: "Habitude", isVictory: true },
+  crisis: { icon: "swords", warrior: "Bataille", zen: "Moment difficile", isVictory: false },
+  meal: { icon: "utensils", warrior: "Ravitaillement", zen: "Repas", isVictory: true },
 };
 
 function formatTime(ts: number): string {
@@ -108,7 +109,7 @@ export function BattleHistory() {
           <Text style={styles.dayHeader}>{day}</Text>
           {dayLogs.map((log) => {
             const config = TYPE_CONFIG[log.type] ?? {
-              emoji: "📝",
+              icon: "notebook" as const,
               warrior: log.type,
               zen: log.type,
               isVictory: true,
@@ -119,7 +120,7 @@ export function BattleHistory() {
                 <View style={styles.line} />
                 <View style={styles.itemContent}>
                   <View style={styles.itemRow}>
-                    <Text style={styles.itemEmoji}>{config.emoji}</Text>
+                    <AppIcon name={config.icon} color={config.isVictory ? AppDesignTokens.colors.success : AppDesignTokens.colors.danger} size={AppDesignTokens.icons.sizeSm} />
                     <Text style={styles.itemLabel}>
                       {isWarrior ? config.warrior : config.zen}
                     </Text>
@@ -145,22 +146,22 @@ export function BattleHistory() {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 14,
-    padding: 16,
-    gap: 10,
+    borderRadius: AppDesignTokens.layout.v14,
+    padding: AppDesignTokens.layout.v16,
+    gap: AppDesignTokens.layout.v10,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
   },
-  header: { gap: 4 },
-  title: { color: AppDesignTokens.colors.text, fontSize: 15, fontWeight: "600" },
-  statsRow: { flexDirection: "row", gap: 12 },
-  statVictory: { color: AppDesignTokens.colors.success, fontSize: 12, fontWeight: "600" },
-  statBattle: { color: AppDesignTokens.colors.danger, fontSize: 12, fontWeight: "600" },
-  filterRow: { flexDirection: "row", gap: 6 },
+  header: { gap: AppDesignTokens.layout.v4 },
+  title: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v15, fontWeight: "600" },
+  statsRow: { flexDirection: "row", gap: AppDesignTokens.layout.v12 },
+  statVictory: { color: AppDesignTokens.colors.success, fontSize: AppDesignTokens.layout.v12, fontWeight: "600" },
+  statBattle: { color: AppDesignTokens.colors.danger, fontSize: AppDesignTokens.layout.v12, fontWeight: "600" },
+  filterRow: { flexDirection: "row", gap: AppDesignTokens.layout.v6 },
   filterChip: {
-    paddingVertical: 5,
-    paddingHorizontal: 12,
-    borderRadius: 8,
+    paddingVertical: AppDesignTokens.layout.v5,
+    paddingHorizontal: AppDesignTokens.layout.v12,
+    borderRadius: AppDesignTokens.layout.v8,
     backgroundColor: AppDesignTokens.colors.surfaceMutedAlt,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
@@ -169,46 +170,45 @@ const styles = StyleSheet.create({
     backgroundColor: AppDesignTokens.colors.accent,
     borderColor: AppDesignTokens.colors.accent,
   },
-  filterText: { color: AppDesignTokens.colors.textMuted, fontSize: 12, fontWeight: "500" },
+  filterText: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v12, fontWeight: "500" },
   filterTextActive: { color: AppDesignTokens.colors.text, fontWeight: "700" },
   dayHeader: {
     color: AppDesignTokens.colors.textSubtle,
-    fontSize: 11,
+    fontSize: AppDesignTokens.layout.v11,
     fontWeight: "600",
     textTransform: "uppercase",
-    letterSpacing: 0.5,
-    paddingTop: 8,
-    paddingBottom: 4,
+    letterSpacing: AppDesignTokens.layout.v0p5,
+    paddingTop: AppDesignTokens.layout.v8,
+    paddingBottom: AppDesignTokens.layout.v4,
   },
   timelineItem: {
     flexDirection: "row",
     alignItems: "flex-start",
-    paddingLeft: 4,
-    minHeight: 40,
+    paddingLeft: AppDesignTokens.layout.v4,
+    minHeight: AppDesignTokens.layout.v40,
   },
   dot: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    marginTop: 6,
-    zIndex: 1,
+    width: AppDesignTokens.layout.v8,
+    height: AppDesignTokens.layout.v8,
+    borderRadius: AppDesignTokens.layout.v4,
+    marginTop: AppDesignTokens.layout.v6,
+    zIndex: AppDesignTokens.layout.v1,
   },
   dotVictory: { backgroundColor: AppDesignTokens.colors.success },
   dotBattle: { backgroundColor: AppDesignTokens.colors.danger },
   line: {
     position: "absolute",
-    left: 7,
-    top: 14,
-    bottom: -8,
-    width: 1,
+    left: AppDesignTokens.layout.v7,
+    top: AppDesignTokens.layout.v14,
+    bottom: AppDesignTokens.layout.vMinus8,
+    width: AppDesignTokens.layout.v1,
     backgroundColor: AppDesignTokens.colors.border,
   },
-  itemContent: { flex: 1, paddingLeft: 12, paddingBottom: 8 },
-  itemRow: { flexDirection: "row", alignItems: "center", gap: 8 },
-  itemEmoji: { fontSize: 16 },
-  itemLabel: { flex: 1, color: AppDesignTokens.colors.neutralBorder, fontSize: 13, fontWeight: "500" },
-  itemXP: { color: AppDesignTokens.colors.accent, fontSize: 12, fontWeight: "700" },
+  itemContent: { flex: 1, paddingLeft: AppDesignTokens.layout.v12, paddingBottom: AppDesignTokens.layout.v8 },
+  itemRow: { flexDirection: "row", alignItems: "center", gap: AppDesignTokens.layout.v8 },
+  itemLabel: { flex: 1, color: AppDesignTokens.colors.neutralBorder, fontSize: AppDesignTokens.layout.v13, fontWeight: "500" },
+  itemXP: { color: AppDesignTokens.colors.accent, fontSize: AppDesignTokens.layout.v12, fontWeight: "700" },
   itemXPBattle: { color: AppDesignTokens.colors.warning },
-  itemTime: { color: AppDesignTokens.colors.textSubtle, fontSize: 11, paddingLeft: 24 },
-  emptyText: { color: AppDesignTokens.colors.textSubtle, fontSize: 13, textAlign: "center", paddingVertical: 12 },
+  itemTime: { color: AppDesignTokens.colors.textSubtle, fontSize: AppDesignTokens.layout.v11, paddingLeft: AppDesignTokens.layout.v24 },
+  emptyText: { color: AppDesignTokens.colors.textSubtle, fontSize: AppDesignTokens.layout.v13, textAlign: "center", paddingVertical: AppDesignTokens.layout.v12 },
 });

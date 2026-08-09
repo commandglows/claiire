@@ -11,8 +11,9 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { useHabits } from "@/features/tracking/hooks/useHabits";
+import { AppIcon, type AppIconName } from "@/components/AppIcon";
 
-const ICONS = ["⚡", "💪", "🧠", "🏃", "📚", "🧘", "💧", "🥗", "😴", "🎯", "✍️", "🎵"];
+const ICONS: AppIconName[] = ["zap", "dumbbell", "brain", "person", "book", "flower", "droplet", "salad", "moon", "target", "pen", "music"];
 
 const DIFFICULTIES = [
   { id: "easy" as const, label: "Facile", color: AppDesignTokens.colors.success, xp: 10 },
@@ -21,10 +22,10 @@ const DIFFICULTIES = [
 ];
 
 const MISSION_TYPES = [
-  { id: "defense" as const, emoji: "🛡️", label: "Défense", desc: "Éviter les addictions" },
-  { id: "offense" as const, emoji: "⚔️", label: "Attaque", desc: "Comportements positifs" },
-  { id: "support" as const, emoji: "💊", label: "Support", desc: "Médicaments, suivi" },
-  { id: "training" as const, emoji: "🏃", label: "Entraînement", desc: "Exercice, méditation" },
+  { id: "defense" as const, icon: "shield" as const, label: "Défense", desc: "Éviter les addictions" },
+  { id: "offense" as const, icon: "swords" as const, label: "Attaque", desc: "Comportements positifs" },
+  { id: "support" as const, icon: "heart" as const, label: "Support", desc: "Médicaments, suivi" },
+  { id: "training" as const, icon: "person" as const, label: "Entraînement", desc: "Exercice, méditation" },
 ] as const;
 
 type MissionType = "defense" | "offense" | "support" | "training";
@@ -39,7 +40,7 @@ export default function LogHabitModal() {
   const { createHabit } = useHabits();
 
   const [name, setName] = useState("");
-  const [icon, setIcon] = useState("⚡");
+  const [icon, setIcon] = useState<AppIconName>("zap");
   const [missionType, setMissionType] = useState<MissionType>("offense");
   const [difficulty, setDifficulty] = useState<"easy" | "medium" | "hard">("medium");
   const [frequency, setFrequency] = useState<"daily" | "weekly">("daily");
@@ -69,7 +70,7 @@ export default function LogHabitModal() {
     return (
       <SafeAreaView style={styles.container}>
         <View style={styles.successScreen}>
-          <Text style={styles.successEmoji}>{icon}</Text>
+          <AppIcon name={icon} color={AppDesignTokens.colors.accentSoft} size={AppDesignTokens.icons.sizeHero} />
           <Text style={styles.successTitle}>Habitude créée !</Text>
           <Text style={styles.successName}>{name}</Text>
           <View style={[styles.xpBadge, { backgroundColor: diff.color + "30", borderColor: diff.color }]}>
@@ -88,11 +89,11 @@ export default function LogHabitModal() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()}>
-          <Text style={styles.closeText}>✕</Text>
+        <TouchableOpacity onPress={() => router.back()} accessibilityLabel="Fermer">
+          <AppIcon name="close" color={AppDesignTokens.colors.textMuted} size={AppDesignTokens.icons.sizeSm} />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Nouvelle habitude</Text>
-        <View style={{ width: 32 }} />
+        <View style={{ width: AppDesignTokens.layout.v32 }} />
       </View>
 
       <ScrollView style={styles.scroll} contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
@@ -105,7 +106,7 @@ export default function LogHabitModal() {
               style={[styles.iconButton, icon === ic && styles.iconButtonActive]}
               onPress={() => setIcon(ic)}
             >
-              <Text style={styles.iconText}>{ic}</Text>
+              <AppIcon name={ic} color={icon === ic ? AppDesignTokens.colors.accentSoft : AppDesignTokens.colors.textMuted} />
             </TouchableOpacity>
           ))}
         </View>
@@ -130,7 +131,7 @@ export default function LogHabitModal() {
               style={[styles.typeChip, missionType === t.id && styles.typeChipActive]}
               onPress={() => setMissionType(t.id)}
             >
-              <Text style={styles.typeEmoji}>{t.emoji}</Text>
+              <AppIcon name={t.icon} color={missionType === t.id ? AppDesignTokens.colors.accentSoft : AppDesignTokens.colors.textMuted} size={AppDesignTokens.icons.sizeSm} />
               <Text style={[styles.typeLabel, missionType === t.id && styles.typeLabelActive]}>
                 {t.label}
               </Text>
@@ -199,19 +200,18 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: 20,
-    paddingVertical: 12,
+    paddingHorizontal: AppDesignTokens.layout.v20,
+    paddingVertical: AppDesignTokens.layout.v12,
   },
-  closeText: { color: AppDesignTokens.colors.textMuted, fontSize: 18, padding: 4 },
-  headerTitle: { color: AppDesignTokens.colors.text, fontSize: 17, fontWeight: "700" },
+  headerTitle: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v17, fontWeight: "700" },
   scroll: { flex: 1 },
-  content: { padding: 20, gap: 12, paddingBottom: 40 },
-  label: { color: AppDesignTokens.colors.textMuted, fontSize: 13, fontWeight: "600", textTransform: "uppercase", letterSpacing: 0.5 },
-  iconGrid: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
+  content: { padding: AppDesignTokens.layout.v20, gap: AppDesignTokens.layout.v12, paddingBottom: AppDesignTokens.layout.v40 },
+  label: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v13, fontWeight: "600", textTransform: "uppercase", letterSpacing: AppDesignTokens.layout.v0p5 },
+  iconGrid: { flexDirection: "row", flexWrap: "wrap", gap: AppDesignTokens.layout.v8 },
   iconButton: {
-    width: 48,
-    height: 48,
-    borderRadius: 12,
+    width: AppDesignTokens.layout.v48,
+    height: AppDesignTokens.layout.v48,
+    borderRadius: AppDesignTokens.layout.v12,
     backgroundColor: AppDesignTokens.colors.surface,
     borderWidth: 1.5,
     borderColor: AppDesignTokens.colors.border,
@@ -219,92 +219,89 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   iconButtonActive: { borderColor: AppDesignTokens.colors.accent, backgroundColor: AppDesignTokens.colors.accentMuted },
-  iconText: { fontSize: 22 },
   input: {
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 12,
+    borderRadius: AppDesignTokens.layout.v12,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
     color: AppDesignTokens.colors.text,
-    fontSize: 16,
-    paddingHorizontal: 16,
-    paddingVertical: 14,
+    fontSize: AppDesignTokens.layout.v16,
+    paddingHorizontal: AppDesignTokens.layout.v16,
+    paddingVertical: AppDesignTokens.layout.v14,
   },
-  row: { flexDirection: "row", gap: 10 },
+  row: { flexDirection: "row", gap: AppDesignTokens.layout.v10 },
   chip: {
     flex: 1,
-    paddingVertical: 12,
-    borderRadius: 12,
+    paddingVertical: AppDesignTokens.layout.v12,
+    borderRadius: AppDesignTokens.layout.v12,
     backgroundColor: AppDesignTokens.colors.surface,
     borderWidth: 1.5,
     borderColor: AppDesignTokens.colors.border,
     alignItems: "center",
   },
   chipActive: { borderColor: AppDesignTokens.colors.accent, backgroundColor: AppDesignTokens.colors.accentMuted },
-  chipText: { color: AppDesignTokens.colors.textMuted, fontSize: 14, fontWeight: "500" },
+  chipText: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v14, fontWeight: "500" },
   chipTextActive: { color: AppDesignTokens.colors.text, fontWeight: "700" },
-  typeGrid: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
+  typeGrid: { flexDirection: "row", flexWrap: "wrap", gap: AppDesignTokens.layout.v8 },
   typeChip: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 6,
-    paddingVertical: 10,
-    paddingHorizontal: 14,
-    borderRadius: 12,
+    gap: AppDesignTokens.layout.v6,
+    paddingVertical: AppDesignTokens.layout.v10,
+    paddingHorizontal: AppDesignTokens.layout.v14,
+    borderRadius: AppDesignTokens.layout.v12,
     backgroundColor: AppDesignTokens.colors.surface,
     borderWidth: 1.5,
     borderColor: AppDesignTokens.colors.border,
   },
   typeChipActive: { borderColor: AppDesignTokens.colors.accent, backgroundColor: AppDesignTokens.colors.accentMuted },
-  typeEmoji: { fontSize: 18 },
-  typeLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 13, fontWeight: "500" },
+  typeLabel: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v13, fontWeight: "500" },
   typeLabelActive: { color: AppDesignTokens.colors.text, fontWeight: "700" },
-  diffRow: { flexDirection: "row", gap: 8 },
+  diffRow: { flexDirection: "row", gap: AppDesignTokens.layout.v8 },
   diffChip: {
     flex: 1,
-    paddingVertical: 12,
-    borderRadius: 12,
+    paddingVertical: AppDesignTokens.layout.v12,
+    borderRadius: AppDesignTokens.layout.v12,
     backgroundColor: "transparent",
     borderWidth: 1.5,
     alignItems: "center",
-    gap: 2,
+    gap: AppDesignTokens.layout.v2,
   },
-  diffLabel: { fontSize: 13, fontWeight: "700" },
-  diffXP: { fontSize: 11 },
-  error: { color: AppDesignTokens.colors.dangerSoft, fontSize: 14, textAlign: "center" },
+  diffLabel: { fontSize: AppDesignTokens.layout.v13, fontWeight: "700" },
+  diffXP: { fontSize: AppDesignTokens.layout.v11 },
+  error: { color: AppDesignTokens.colors.dangerSoft, fontSize: AppDesignTokens.layout.v14, textAlign: "center" },
   createButton: {
     backgroundColor: AppDesignTokens.colors.accent,
-    borderRadius: 14,
-    paddingVertical: 16,
+    borderRadius: AppDesignTokens.layout.v14,
+    paddingVertical: AppDesignTokens.layout.v16,
     alignItems: "center",
-    marginTop: 8,
+    marginTop: AppDesignTokens.layout.v8,
   },
   createButtonDisabled: { opacity: 0.5 },
-  createButtonText: { color: AppDesignTokens.colors.text, fontSize: 16, fontWeight: "700" },
+  createButtonText: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v16, fontWeight: "700" },
   // Success screen
   successScreen: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    gap: 16,
-    padding: 32,
+    gap: AppDesignTokens.layout.v16,
+    padding: AppDesignTokens.layout.v32,
   },
-  successEmoji: { fontSize: 72 },
-  successTitle: { color: AppDesignTokens.colors.text, fontSize: 24, fontWeight: "bold" },
-  successName: { color: AppDesignTokens.colors.neutralSoft, fontSize: 16 },
+  successTitle: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v24, fontWeight: "bold" },
+  successName: { color: AppDesignTokens.colors.neutralSoft, fontSize: AppDesignTokens.layout.v16 },
   xpBadge: {
-    borderRadius: 20,
-    paddingHorizontal: 20,
-    paddingVertical: 8,
+    borderRadius: AppDesignTokens.layout.v20,
+    paddingHorizontal: AppDesignTokens.layout.v20,
+    paddingVertical: AppDesignTokens.layout.v8,
     borderWidth: 1.5,
   },
-  xpBadgeText: { fontSize: 15, fontWeight: "700" },
+  xpBadgeText: { fontSize: AppDesignTokens.layout.v15, fontWeight: "700" },
   doneButton: {
     backgroundColor: AppDesignTokens.colors.accent,
-    borderRadius: 14,
-    paddingVertical: 14,
-    paddingHorizontal: 48,
-    marginTop: 8,
+    borderRadius: AppDesignTokens.layout.v14,
+    paddingVertical: AppDesignTokens.layout.v14,
+    paddingHorizontal: AppDesignTokens.layout.v48,
+    marginTop: AppDesignTokens.layout.v8,
   },
-  doneButtonText: { color: AppDesignTokens.colors.text, fontSize: 16, fontWeight: "700" },
+  doneButtonText: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v16, fontWeight: "700" },
 });

@@ -194,7 +194,7 @@ export const markDiscovered = internalMutation({
     userId: v.id("userProfile"),
     milestoneId: v.string(),
   },
-  handler: async (ctx, args) => {
+  handler: async (ctx, args): Promise<Id<"discoveryMilestone">> => {
     const existing = await ctx.db
       .query("discoveryMilestone")
       .withIndex("by_user_milestone", (q) =>
@@ -219,7 +219,7 @@ export const acknowledge = mutation({
   args: {
     milestoneId: v.string(),
   },
-  handler: async (ctx, args) => {
+  handler: async (ctx, args): Promise<Id<"discoveryMilestone">> => {
     const identity = await ctx.auth.getUserIdentity();
     if (!identity) throw new ConvexError("NOT_AUTHENTICATED");
 

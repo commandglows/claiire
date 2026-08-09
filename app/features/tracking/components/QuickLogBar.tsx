@@ -1,9 +1,10 @@
 import { AppDesignTokens } from '@/constants/AppDesignTokens';
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { useRouter } from "expo-router";
+import { AppIcon, type AppIconName } from "@/components/AppIcon";
 
 type QuickAction = {
-  emoji: string;
+  icon: AppIconName;
   label: string;
   route: string;
   color: string;
@@ -11,25 +12,25 @@ type QuickAction = {
 
 const QUICK_ACTIONS: QuickAction[] = [
   {
-    emoji: "😴",
+    icon: "moon",
     label: "Sommeil",
     route: "/modal/log-sleep",
     color: AppDesignTokens.colors.accentAlt,
   },
   {
-    emoji: "🎯",
+    icon: "target",
     label: "Humeur",
     route: "/modal/log-mood",
     color: AppDesignTokens.colors.accentSoft,
   },
   {
-    emoji: "⚔️",
+    icon: "swords",
     label: "Crise",
     route: "/modal/crisis-support",
     color: AppDesignTokens.colors.danger,
   },
   {
-    emoji: "🏆",
+    icon: "trophy",
     label: "Mission",
     route: "/modal/log-habit",
     color: AppDesignTokens.colors.success,
@@ -61,7 +62,7 @@ export function QuickLogBar({ exclude = [] }: QuickLogBarProps) {
           onPress={() => router.push(action.route as never)}
           activeOpacity={0.7}
         >
-          <Text style={styles.emoji}>{action.emoji}</Text>
+          <AppIcon name={action.icon} color={action.color} size={AppDesignTokens.icons.sizeMd} />
           <Text style={styles.label}>{action.label}</Text>
         </TouchableOpacity>
       ))}
@@ -72,23 +73,20 @@ export function QuickLogBar({ exclude = [] }: QuickLogBarProps) {
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    gap: 8,
+    gap: AppDesignTokens.layout.v8,
   },
   button: {
     flex: 1,
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 12,
-    paddingVertical: 12,
+    borderRadius: AppDesignTokens.layout.v12,
+    paddingVertical: AppDesignTokens.layout.v12,
     alignItems: "center",
-    gap: 4,
+    gap: AppDesignTokens.layout.v4,
     borderWidth: 1,
-  },
-  emoji: {
-    fontSize: 22,
   },
   label: {
     color: AppDesignTokens.colors.neutralBorder,
-    fontSize: 11,
+    fontSize: AppDesignTokens.layout.v11,
     fontWeight: "500",
   },
 });

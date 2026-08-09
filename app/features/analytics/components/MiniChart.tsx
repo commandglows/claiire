@@ -57,7 +57,7 @@ export function MiniChart({
                     {
                       height: barHeight,
                       backgroundColor: point.value !== null ? barColor : AppDesignTokens.colors.surface,
-                      borderRadius: 3,
+                      borderRadius: AppDesignTokens.layout.v3,
                     },
                   ]}
                 />
@@ -76,9 +76,9 @@ export function MiniChart({
 const styles = StyleSheet.create({
   container: {
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 14,
-    padding: 14,
-    gap: 10,
+    borderRadius: AppDesignTokens.layout.v14,
+    padding: AppDesignTokens.layout.v14,
+    gap: AppDesignTokens.layout.v10,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
   },
@@ -87,17 +87,17 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
   },
-  title: { color: AppDesignTokens.colors.text, fontSize: 14, fontWeight: "600" },
-  avg: { fontSize: 13, fontWeight: "600" },
+  title: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v14, fontWeight: "600" },
+  avg: { fontSize: AppDesignTokens.layout.v13, fontWeight: "600" },
   chart: {
     flexDirection: "row",
     alignItems: "flex-end",
-    gap: 3,
+    gap: AppDesignTokens.layout.v3,
   },
   barColumn: {
     flex: 1,
     alignItems: "center",
-    gap: 4,
+    gap: AppDesignTokens.layout.v4,
   },
   barContainer: {
     justifyContent: "flex-end",
@@ -106,10 +106,10 @@ const styles = StyleSheet.create({
   },
   bar: {
     width: "70%",
-    minWidth: 4,
+    minWidth: AppDesignTokens.layout.v4,
   },
   label: {
-    fontSize: 9,
+    fontSize: AppDesignTokens.layout.v9,
     color: AppDesignTokens.colors.textSubtle,
   },
 });

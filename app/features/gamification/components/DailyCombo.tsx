@@ -3,6 +3,7 @@ import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { useMode } from "@/features/mode";
 import { AppDesignTokens } from '@/constants/AppDesignTokens';
+import { AppIcon } from "@/components/AppIcon";
 
 type StepProps = {
   icon: string;
@@ -14,9 +15,11 @@ type StepProps = {
 function ComboStep({ icon, label, done, accent }: StepProps) {
   return (
     <View style={[styles.step, done && { borderColor: accent }]}>
-      <Text style={[styles.stepIcon, !done && styles.stepIconDim]}>{icon}</Text>
+      <View style={!done && styles.stepIconDim}>
+        <AppIcon name={icon} color={done ? accent : AppDesignTokens.colors.textSubtle} size={AppDesignTokens.icons.sizeXs} />
+      </View>
       <Text style={[styles.stepLabel, done && { color: accent }]}>{label}</Text>
-      {done && <Text style={[styles.stepCheck, { color: accent }]}>✓</Text>}
+      {done && <AppIcon name="check" color={accent} size={AppDesignTokens.icons.sizeXs} />}
     </View>
   );
 }
@@ -38,7 +41,7 @@ export function DailyCombo() {
   if (activity.comboComplete) {
     return (
       <View style={[styles.comboDone, { borderColor: colors.accent }]}>
-        <Text style={styles.comboDoneEmoji}>🔥</Text>
+        <AppIcon name="flame" color={colors.accent} size={AppDesignTokens.icons.sizeLg} />
         <View style={styles.comboDoneText}>
           <Text style={[styles.comboDoneTitle, { color: colors.accent }]}>
             Combo du jour !
@@ -80,9 +83,9 @@ export function DailyCombo() {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 14,
-    padding: 14,
-    gap: 10,
+    borderRadius: AppDesignTokens.layout.v14,
+    padding: AppDesignTokens.layout.v14,
+    gap: AppDesignTokens.layout.v10,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
   },
@@ -91,44 +94,41 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
   },
-  title: { color: AppDesignTokens.colors.text, fontSize: 14, fontWeight: "600" },
-  counter: { fontSize: 13, fontWeight: "700" },
+  title: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v14, fontWeight: "600" },
+  counter: { fontSize: AppDesignTokens.layout.v13, fontWeight: "700" },
   progressBar: {
-    height: 6,
+    height: AppDesignTokens.layout.v6,
     backgroundColor: AppDesignTokens.colors.background,
-    borderRadius: 3,
+    borderRadius: AppDesignTokens.layout.v3,
     overflow: "hidden",
   },
-  progressFill: { height: "100%", borderRadius: 3 },
-  steps: { flexDirection: "row", gap: 8 },
+  progressFill: { height: "100%", borderRadius: AppDesignTokens.layout.v3 },
+  steps: { flexDirection: "row", gap: AppDesignTokens.layout.v8 },
   step: {
     flex: 1,
     flexDirection: "row",
     alignItems: "center",
-    gap: 6,
+    gap: AppDesignTokens.layout.v6,
     backgroundColor: AppDesignTokens.colors.background,
-    borderRadius: 10,
-    paddingVertical: 8,
-    paddingHorizontal: 10,
+    borderRadius: AppDesignTokens.layout.v10,
+    paddingVertical: AppDesignTokens.layout.v8,
+    paddingHorizontal: AppDesignTokens.layout.v10,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
   },
-  stepIcon: { fontSize: 16 },
   stepIconDim: { opacity: 0.4 },
-  stepLabel: { fontSize: 11, color: AppDesignTokens.colors.textSubtle, flex: 1 },
-  stepCheck: { fontSize: 13, fontWeight: "700" },
-  hint: { color: AppDesignTokens.colors.neutralDark, fontSize: 11, textAlign: "center" },
+  stepLabel: { fontSize: AppDesignTokens.layout.v11, color: AppDesignTokens.colors.textSubtle, flex: 1 },
+  hint: { color: AppDesignTokens.colors.neutralDark, fontSize: AppDesignTokens.layout.v11, textAlign: "center" },
   comboDone: {
     flexDirection: "row",
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 14,
-    padding: 16,
-    gap: 12,
+    borderRadius: AppDesignTokens.layout.v14,
+    padding: AppDesignTokens.layout.v16,
+    gap: AppDesignTokens.layout.v12,
     alignItems: "center",
     borderWidth: 1.5,
   },
-  comboDoneEmoji: { fontSize: 32 },
-  comboDoneText: { gap: 2 },
-  comboDoneTitle: { fontSize: 16, fontWeight: "700" },
-  comboDoneSub: { color: AppDesignTokens.colors.textMuted, fontSize: 12 },
+  comboDoneText: { gap: AppDesignTokens.layout.v2 },
+  comboDoneTitle: { fontSize: AppDesignTokens.layout.v16, fontWeight: "700" },
+  comboDoneSub: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v12 },
 });

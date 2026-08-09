@@ -5,7 +5,6 @@ import { ExternalLink } from './ExternalLink';
 import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
 
-import Colors from '@/constants/Colors';
 import { AppDesignTokens } from '@/constants/AppDesignTokens';
 
 export default function EditScreenInfo({ path }: { path: string }) {
@@ -38,7 +37,10 @@ export default function EditScreenInfo({ path }: { path: string }) {
         <ExternalLink
           style={styles.helpLink}
           href="https://docs.expo.io/get-started/create-a-new-app/#opening-the-app-on-your-phonetablet">
-          <Text style={styles.helpLinkText} lightColor={Colors.light.tint}>
+          <Text
+            style={styles.helpLinkText}
+            lightColor={AppDesignTokens.colors.accentAlt}
+          >
             Tap here if your app doesn't automatically update after making changes
           </Text>
         </ExternalLink>
@@ -50,27 +52,27 @@ export default function EditScreenInfo({ path }: { path: string }) {
 const styles = StyleSheet.create({
   getStartedContainer: {
     alignItems: 'center',
-    marginHorizontal: 50,
+    marginHorizontal: AppDesignTokens.layout.v50,
   },
   homeScreenFilename: {
-    marginVertical: 7,
+    marginVertical: AppDesignTokens.layout.v7,
   },
   codeHighlightContainer: {
-    borderRadius: 3,
-    paddingHorizontal: 4,
+    borderRadius: AppDesignTokens.layout.v3,
+    paddingHorizontal: AppDesignTokens.layout.v4,
   },
   getStartedText: {
-    fontSize: 17,
-    lineHeight: 24,
+    fontSize: AppDesignTokens.layout.v17,
+    lineHeight: AppDesignTokens.layout.v24,
     textAlign: 'center',
   },
   helpContainer: {
-    marginTop: 15,
-    marginHorizontal: 20,
+    marginTop: AppDesignTokens.layout.v15,
+    marginHorizontal: AppDesignTokens.layout.v20,
     alignItems: 'center',
   },
   helpLink: {
-    paddingVertical: 15,
+    paddingVertical: AppDesignTokens.layout.v15,
   },
   helpLinkText: {
     textAlign: 'center',

@@ -1,23 +1,37 @@
 ---
-title: Violence | De l'ombre à la lumière
-description: Comprendre, prévenir et transcender la violence. Découvrez comment transformer les conflits en opportunités de croissance et construire des relations plus harmonieuses
+title: Violence | Comprendre, se protéger et agir
+description: Reconnaître les formes de violence, trouver de l'aide et accéder à un parcours adapté à sa situation.
 ---
 
-Imagine un monde où la violence ne serait plus notre première réponse face aux conflits. Un monde où
-nous aurions les outils pour transformer nos blessures en sagesse, nos peurs en courage. Ce n'est
-pas une utopie - c'est un chemin que nous pouvons emprunter ensemble.
+La violence n'est pas un conflit ordinaire. Elle peut prendre la forme d'actes, de menaces, de
+contrôle ou de privations qui portent atteinte à la sécurité, à la dignité ou à la liberté d'une
+personne. La responsabilité appartient toujours à la personne qui commet ces actes.
 
-La violence est une réalité complexe qui touche chacun d'entre nous, directement ou indirectement.
-Comme une onde de choc qui se propage dans notre société, touchant des vies bien au-delà de son
-point d'impact initial.
+:::danger[Danger immédiat ?]
+Appelle le **17 ou le 112**. Si tu ne peux pas parler ou entendre, ou si parler risque de te mettre
+en danger, contacte le **114** par écrit. Ces services sont accessibles gratuitement, 24h/24 et
+7j/7. Le **3919** propose une écoute et une orientation gratuites et anonymes, 24h/24 et 7j/7, mais
+ce n'est pas un service d'urgence.
+:::
 
-Dans ses expressions les plus évidentes, elle laisse des traces visibles sur les corps, mais la
-violence moderne de nos civilisations développées a fait grandir d'autres visages, plus sophistiqués
-mais tout autant destructeurs.
+## Choisis le parcours qui correspond à ta situation
 
-Selon l'OMS, plus de 1,6 million de personnes perdent la vie chaque année à cause de la violence.
-Mais là où il y a de l'ombre, il y a aussi de la lumière : comprendre la violence, c'est déjà
-commencer à la transformer. Quels sont les visages de la violence ?
+### Je suis exposé·e à la violence ou je m'inquiète pour quelqu'un
+
+Ta sécurité passe avant toute démarche de dialogue. Tu n'es pas responsable des actes que tu subis
+et tu n'as pas à confronter la personne ni à accepter une médiation. Le
+[parcours pour les personnes exposées à la violence](/formations/victimes/) aide à identifier des
+ressources et à préparer des étapes adaptées à ta situation.
+
+### Je suis inquiet·ète de mes propres comportements
+
+Reconnaître ses actes permet de commencer à les arrêter. Le stress, l'alcool, la fatigue, une
+addiction, l'histoire personnelle ou la santé peuvent être des facteurs, jamais des excuses. Le
+[parcours pour les personnes préoccupées par leurs propres actes](/formations/auteurs/) propose un
+cadre séparé pour prendre sa responsabilité et chercher des relais adaptés.
+
+Ces deux parcours restent distincts. Claiire ne remplace ni les services d'urgence, ni la police,
+ni un accompagnement médical, psychologique, social ou juridique.
 
 ## Les Blessures Du Corps : Le Visible Souvent Masqué
 
@@ -30,10 +44,8 @@ La [violence physique](/violence/types/violence-physique) est comme une tempête
 traces visibles sur son passage. Des coups aux contraintes physiques, elle marque les corps et les
 esprits, brisant non seulement la chair mais aussi la confiance et la dignité humaine. La négligence
 active et la mise en danger délibérée sont aussi des manifestations qui ébranlent gravement notre
-sécurité. C'est la forme la plus reconnaissable, elle marque facilement les chairs et les esprits,
-du simple conflit qui dégénère jusqu'aux agressions les plus graves. Des coups et blessures aux
-contraintes physiques, en passant par la privation de liberté, elle est bien moins rare qu'on ne le
-croit.
+sécurité. Des coups et blessures aux contraintes physiques, en passant par la privation de liberté,
+ces actes ne doivent pas être minimisés comme un simple conflit qui aurait dégénéré.
 
 ### La Violence Économique : Les Chaînes Financières
 
@@ -134,7 +146,7 @@ perçues. Cette biologie s'entremêle intimement avec notre
 [histoire personnelle](/violence/causes/developpement-trauma), portant en elle les échos de nos
 expériences passées, les traumatismes qui ont sculpté notre rapport au monde. Notre
 [environnement social](/violence/causes/social) joue également un rôle crucial, tel un moule
-invisible qui façonne nos comportements et nos réponses aux conflits. Les
+invisible qui façonne certains comportements et certaines réactions. Les
 [conditions de vie](/violence/causes/environnemental) quotidiennes, de la qualité de notre habitat à
 nos interactions sociales, constituent le terreau fertile ou aride dans lequel ces dynamiques
 s'enracinent et se développent.
@@ -148,8 +160,8 @@ entre en hypervigilance tandis que notre corps subit des modifications hormonale
 plasticité neuronale, cette capacité extraordinaire de notre cerveau à se transformer, peut alors
 jouer un rôle à double tranchant : soit en cristallisant les traumatismes, soit en ouvrant la voie à
 la guérison. Chaque [histoire personnelle](/violence/causes/developpement-trauma) influence
-profondément ces réactions, comme un livre dont chaque chapitre façonne la réponse aux menaces
-futures, ce qui est violent est donc lié à nos expériences passées et est intime et subjectif.
+profondément ces réactions. Ces facteurs peuvent aider à comprendre une situation, mais ils
+n'excusent jamais un acte violent et ne transfèrent pas sa responsabilité à la personne exposée.
 
 Les traumatismes précoces laissent des empreintes profondes dans notre psyché, influençant nos
 schémas d'attachement et nos modèles relationnels dans la vie d'adulte. Les stratégies de survie que
@@ -166,138 +178,52 @@ transformées.
 
 ### La Spirale Sans Fin
 
-Les [cycles](/violence/mecanismes/cycles) de la violence sont comme une danse macabre qui se
-répète : tension, explosion, justification, réconciliation... Les
+Les [cycles](/violence/mecanismes/cycles) de la violence peuvent se répéter : tension, passage à
+l'acte, justification, puis accalmie ou promesses de changement. Les
 [cycles familiaux](/violence/mecanismes/cycles) transmettent cet héritage de génération en
 génération, renforcé par la [banalisation](/violence/causes/normalisation) qui érode progressivement
 nos repères moraux jusqu'à ce que l'inacceptable devienne la norme. Les
 [blessures non guéries](/violence/causes/trauma) perpétuent ce cercle vicieux jusqu'à ce qu'une
 intervention consciente vienne le briser.
 
-## Le Chemin De La Guérison : De L'Ombre À La Lumière
+## Se protéger et avancer avec des relais adaptés
 
-Si tu traverses une situation de violence ou si tu cherches à comprendre pour aider quelqu'un, notre [formation pour comprendre et sortir de la violence](/formations) peut t'accompagner pas à pas. Pour les personnes qui ont vécu la violence, [le parcours dédié aux victimes](/formations/victimes) propose un accompagnement spécifique. Et si tu veux commencer par reconstruire ce qui a été abîmé, tu trouveras dans [reconstruire sa confiance après la violence](/confiance/reconstruire) une première porte d'entrée vers toi-même.
+Si tu es exposé·e à la violence ou si tu cherches à aider quelqu'un, le
+[parcours dédié aux personnes exposées](/formations/victimes/) propose des repères spécifiques. Si
+tu es préoccupé·e par tes propres actes, utilise le
+[parcours de responsabilisation](/formations/auteurs/). Ces parcours ne sont pas partagés et ne
+proposent ni confrontation, ni travail de couple, ni médiation.
 
-Tels des fantômes qui hantent notre présent, les traumatismes non résolus continuent de dicter nos
-comportements, créant un cercle vicieux de souffrance qui se perpétue tant qu'il n'est pas
-consciemment interrompu, comme une malédiction que nous devons activement briser.
+Les [cycles de la violence](/violence/mecanismes/cycles) peuvent comporter une montée de tension, un
+passage à l'acte, des justifications, puis une accalmie ou des promesses de changement. Sans arrêt
+des actes et sans aide adaptée, le cycle peut reprendre.
 
-Au cœur de cette dynamique se trouvent les cycles de la violence, le phénomène reconnu qui permet à
-la violence de se perpétuer et se diffuser, en s'alimentant de sa propre énergie destructrice. Ils
-suivent souvent une chorégraphie
-[prévisible mais difficile à interrompre](/violence/mecanismes/cycles). La tension monte
-progressivement, comme une cocotte-minute sous pression, jusqu'à l'explosion. Viennent ensuite les
-justifications, puis une période de réconciliation qui donne l'illusion du changement. Mais sans
-intervention profonde, le cycle reprend inexorablement son cours.
+### Pour les personnes exposées à la violence
 
-### Les Outils De Transformation
+La priorité est la sécurité. Les [techniques de protection](/violence/solutions/outils-protection),
+un réseau de confiance et des professionnels formés peuvent aider à préparer les prochaines étapes
+sans imposer un rythme ou une décision. La personne exposée n'a pas à mieux communiquer, convaincre
+ou apaiser la personne qui exerce la violence.
 
-La guérison n'est pas un événement magique, mais un voyage conscient que chacun peut entreprendre.
-Au cœur de ce processus se trouve les relations d'aides, le pouvoir de l'humain et la résilience,
-cette capacité extraordinaire que nous possédons tous de nous reconstruire et de grandir à travers
-nos épreuves. La [résilience](/violence/solutions/resilience) est comme une graine qui peut fleurir
-même dans les sols les plus arides.
+La [résilience](/violence/solutions/resilience), les
+[signaux d'alerte](/violence/solutions/signes) et les
+[ressources de survie](/violence/solutions/survie) restent disponibles comme repères complémentaires.
 
-Le chemin vers la guérison commence par une écoute attentive de soi : apprendre à reconnaître les
-[signaux d'alerte](/violence/solutions/signes) que notre corps et notre esprit nous
-envoient, ces messages subtils qui nous avertissent bien avant que la situation ne devienne
-critique.
+### Pour les personnes préoccupées par leurs propres actes
 
-En parallèle, le développement de tes [ressources intérieures](/violence/solutions/survie) nourrit
-ta force et ta sagesse jour après jour, comme un jardinier patient qui cultive son jardin,
-nourrissant chaque jour notre force et notre sagesse.
+L'objectif est d'arrêter les actes et d'en prendre la responsabilité. Les facteurs personnels ou
+sociaux peuvent être examinés pour mieux prévenir un nouveau passage à l'acte, mais ils ne sont pas
+des excuses. En cas de risque imminent, éloigne-toi de la situation et cherche immédiatement un
+relais humain ou professionnel adapté.
 
-Cette transformation personnelle devient alors une source d'inspiration pour les autres,
-transformant nos cicatrices en témoignages d'espoir, nos apprentissages en lumière pour ceux qui
-cherchent encore leur chemin et qui ont besoin de guides.
+### Prévenir collectivement
 
-### La Communication, Le Plus Puissant Outil De Transformation
-
-La [communication non-violente](/violence/solutions/communication-non-violente) devient ta nouvelle
-langue pour naviguer dans les conflits. Elle t'invite à observer sans juger, à exprimer tes
-sentiments avec authenticité, et à formuler des demandes claires.
-L'[assertivité](/violence/solutions/assertivite-limites) t'apprend à poser des frontières saines,
-essentielles pour ta protection.
-
-### L'équilibre Et La Non-Violence : Notre Super-Pouvoir
-
-La [non-violence](/violence/solutions/non-violence) n'est pas une simple absence de violence - c'est
-une philosophie active de transformation. Elle s'exprime à travers la résistance pacifique et
-l'action constructive, privilégiant le dialogue authentique comme outil de changement. La
-transformation des conflits et la justice restaurative deviennent des voies concrètes pour
-reconstruire ce qui a été brisé.
-
-La [communication non-violente](/violence/solutions/communication-non-violente) nous offre un
-nouveau langage pour naviguer dans les conflits. Elle nous invite à observer sans juger, à exprimer
-nos sentiments avec authenticité, à identifier nos besoins profonds et à formuler des demandes
-claires et constructives. C'est un art qui se cultive avec patience et pratique.
-
-Face aux conflits, elle nous offre des outils créatifs de
-[résolution](/violence/solutions/non-violence/methodes/resolution-conflits) qui transcendent la
-simple opposition pour créer des solutions où chacun peut grandir. En adoptant cette approche, nous
-ne devenons pas seulement des observateurs passifs, mais des artisans actifs de la paix,
-transformant chaque interaction en une opportunité de créer plus d'harmonie dans notre monde.
-
-### Pour Les Personnes Concernées
-
-Face à la violence, la première étape est de se protéger et de reprendre le contrôle de sa vie. Les
-[techniques de protection](/violence/solutions/outils-protection) constituent un filet de sécurité
-essentiel. Un plan de sécurité bien pensé et un réseau de confiance solide forment les premiers
-remparts. La documentation méthodique des faits et le développement de stratégies d'évitement
-intelligentes complètent cet arsenal protecteur. Les ressources d'urgence doivent être connues et
-accessibles à tout moment.
-
-Au-delà de la protection immédiate, le développement personnel devient un allié précieux dans ce
-voyage. Poser des [limites saines](/violence/solutions/assertivite-limites) devient un acte d'amour
-envers soi-même et les autres. Cela commence par l'identification de nos valeurs fondamentales et
-l'expression claire de nos besoins. Apprendre à dire non avec respect tout en maintenant la
-cohérence de nos limites demande du courage. La gestion des transgressions devient alors un exercice
-de respect mutuel plutôt qu'un combat.
-
-Le travail sur la [résilience](/violence/solutions/resilience) nous permet de transformer nos
-épreuves en force, pendant que l'apprentissage de la
-[communication non-violente](/violence/solutions/communication-non-violente) nous offre de nouveaux
-outils pour exprimer nos besoins et nos limites. L'art de
-l'[assertivité](/violence/solutions/assertivite-limites) nous apprend à poser des frontières saines,
-essentielles pour notre protection et notre épanouissement.
-
-### Les Solutions Collectives
-
-La transformation de la violence ne peut se faire seul - elle nécessite une approche collective et
-coordonnée.
-
-La prévention commence par des [approches préventives](/violence/solutions) innovantes qui
-s'attaquent aux racines du problème.
-L'[éducation non-violente](/violence/solutions/non-violence/pratiques/education) joue un rôle
-crucial en formant les nouvelles générations à des modes d'interaction plus harmonieux, pendant que
-la [médiation](/violence/solutions/mediation) offre des espaces sécurisés pour résoudre les conflits
-de manière constructive.
-
-Cette transformation s'ancre dans une
-[philosophie non-violente](/violence/solutions/non-violence/fondements/philosophiques) profonde qui
-guide nos actions quotidiennes. À travers des
-[pratiques quotidiennes](/violence/solutions/non-violence/pratiques/quotidien) accessibles à tous,
-nous construisons peu à peu un monde plus paisible. La
-[résolution des conflits](/violence/solutions/non-violence/methodes/resolution-conflits) devient
-alors non pas une confrontation, mais une opportunité de croissance collective, où chaque défi nous
-rapproche d'une société plus harmonieuse.
-
-:::tip[Le saviez-vous ?] La pratique régulière de la communication non-violente transforme nos
-relations. Les études montrent une réduction de 70% des conflits dans les organisations qui
-l'adoptent, témoignant de son pouvoir de transformation. :::
-
-La transformation de la violence nécessite une approche collective. La
-[médiation](/violence/solutions/mediation) crée des espaces de dialogue sécurisés, qu'il s'agisse de
-médiation familiale, de justice restaurative ou de cercles de parole.
-L'[éducation non-violente](/violence/solutions/non-violence/pratiques/education) forme les nouvelles
-générations à des modes d'interaction plus harmonieux.
-
-La [philosophie non-violente](/violence/solutions/non-violence/fondements/philosophiques) guide tes
-actions quotidiennes, tandis que les
-[pratiques quotidiennes](/violence/solutions/non-violence/pratiques/quotidien) construisent peu à
-peu un monde plus paisible. La
-[résolution des conflits](/violence/solutions/non-violence/methodes/resolution-conflits) devient une
-opportunité de croissance collective.
+Les [approches préventives](/violence/solutions),
+l'[éducation non-violente](/violence/solutions/non-violence/pratiques/education), la
+[philosophie non-violente](/violence/solutions/non-violence/fondements/philosophiques) et les
+[pratiques quotidiennes](/violence/solutions/non-violence/pratiques/quotidien) peuvent renforcer les
+repères, la responsabilité et l'accès à l'aide. Elles ne justifient jamais d'imposer un dialogue à
+une personne exposée à la violence.
 
 ## Ressources Et Soutien : Tu N'Es Pas Seul(e)
 
@@ -319,33 +245,30 @@ permanences d'écoute.
 
 :::danger[Besoin d'aide urgente ?] Si tu es en danger immédiat, n'attends pas :
 
-- Appelez le 17 (Police)
-- Le 112 (Urgences européennes)
-- Le 3919 (Violences conjugales)
-- Le 119 (Enfance en danger)
-- Le 114 (SMS d'urgence)
+- **17 ou 112** : police, gendarmerie ou services d'urgence, 24h/24 et 7j/7
+- **114** : urgence par écrit si tu ne peux pas parler ou entendre, ou si parler te met en danger,
+  24h/24 et 7j/7
+- **119** : Enfance en danger, appel gratuit et confidentiel, 24h/24 et 7j/7
+- **3919** : écoute, information et orientation, appel gratuit et anonyme, 24h/24 et 7j/7 ; ce
+  n'est pas un service d'urgence
 
 Ta sécurité est la priorité. Consulte notre [page des urgences](/violence/solutions/urgence) pour
 plus de ressources. :::
 
-:::tip[Le saviez-vous ?] La pratique régulière de la
-[communication non-violente](/violence/solutions/communication-non-violente) transforme profondément
-tes relations. Les études montrent une réduction de 70% des conflits dans les organisations qui
-l'adoptent. :::
-
 ## Ta Boussole Pour Le Changement
 
-🛡️ [Protège-toi](/violence/solutions/outils-protection)  
-💪 [Renforce ta résilience](/violence/solutions/resilience)  
-🤝 [Apprends la communication non-violente](/violence/solutions/communication-non-violente)  
-🌍 [Participe au changement](/violence/solutions/non-violence/pratiques/quotidien)
+- [Protège-toi](/violence/solutions/outils-protection)
+- [Renforce ta résilience](/violence/solutions/resilience)
+- [Trouve des professionnels et associations](/violence/solutions/ressources-locales)
+- [Participe au changement](/violence/solutions/non-violence/pratiques/quotidien)
 
 ---
 
 :::tip[Tu n'as pas à traverser ça seul·e]
-Comprendre la violence, c'est déjà un acte courageux. Si tu veux aller plus loin — que tu sois victime, proche ou simplement curieux de comprendre — la [formation pour sortir de la violence](/formations) t'offre un cadre bienveillant et structuré pour avancer à ton rythme.
+Si tu es exposé·e à la violence ou proche d'une personne qui l'est, consulte le
+[parcours dédié](/formations/victimes/). Si tu es inquiet·ète de tes propres actes, consulte le
+[parcours de responsabilisation](/formations/auteurs/). Les deux parcours restent séparés.
 :::
 
-_Cette ressource est régulièrement mise à jour pour t'accompagner au mieux dans ton cheminement vers
-la paix. [Découvres notre approche](/a-propos) pour participer à cette transformation collective ou
-[partage ton expérience](/contact#experts) pour enrichir notre compréhension commune._
+_[Découvre notre approche](/a-propos) ou [partage ton expérience](/contact#experts) pour contribuer à
+une meilleure compréhension de ces enjeux._

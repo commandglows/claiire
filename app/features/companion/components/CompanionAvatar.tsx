@@ -104,20 +104,20 @@ export function CompanionAvatar({
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
-    gap: 8,
+    gap: AppDesignTokens.layout.v8,
   },
   avatarCircle: {
     backgroundColor: AppDesignTokens.colors.surface,
     borderWidth: 2,
     alignItems: "center",
     justifyContent: "center",
-    shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 0.5,
-    shadowRadius: 16,
-    elevation: 8,
+    shadowOffset: { width: AppDesignTokens.layout.v0, height: AppDesignTokens.layout.v0 },
+    shadowOpacity: AppDesignTokens.layout.v0p5,
+    shadowRadius: AppDesignTokens.layout.v16,
+    elevation: AppDesignTokens.layout.v8,
   },
   name: {
-    fontSize: 16,
+    fontSize: AppDesignTokens.layout.v16,
     fontWeight: "600",
   },
 });

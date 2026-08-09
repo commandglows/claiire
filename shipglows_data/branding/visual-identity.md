@@ -1,10 +1,10 @@
 ---
 artifact: brand_visual_identity
 metadata_schema_version: "1.0"
-artifact_version: "1.0.0"
+artifact_version: "1.1.0"
 project: "claiire"
 created: "2026-06-30"
-updated: "2026-06-30"
+updated: "2026-08-09"
 status: reviewed
 source_skill: 300-sg-docs
 scope: branding
@@ -21,6 +21,7 @@ supersedes: []
 evidence:
   - "Extracted from the previous single-file Claiire branding source."
   - "Implementation note: exact theme values remain owned by the technical surface."
+  - "Operator decision 2026-08-09: adopt a red and black atmosphere with gradients for the app and public site."
 next_review: "2026-07-30"
 next_step: "/300-sg-docs update branding bundle"
 ---
@@ -29,23 +30,28 @@ next_step: "/300-sg-docs update branding bundle"
 
 ## Direction generale
 
-Claiire doit paraitre chaleureuse, lisible et rassurante. La confiance ne doit pas venir d'un code medical ou corporate, mais d'une sensation de clarte, de douceur et de maitrise.
+Claiire doit paraitre forte, protectrice, lisible et rassurante. Son univers "crimson nocturne" associe la profondeur du noir a l'energie d'un rouge braise. La violence n'est jamais romantisee : l'interface evoque la reprise de pouvoir, la lucidite et le passage a l'action, sans imagerie anxiogene.
 
 ## Couleurs
 
 Principes :
 
-- chaleur sans agressivite
+- intensite sans agressivite
 - contraste suffisant pour l'accessibilite
-- coherence entre clair et sombre
+- coherence entre l'app et le site, avec une base sombre assumee
 - la couleur sert le contenu, pas l'inverse
+- le rouge de marque et le rouge de danger doivent rester visuellement distincts
+- les parcours d'urgence privilegient toujours la lisibilite et la clarte des actions
 
 Palette indicative :
 
-- tons chauds : ambre, creme, terracotta doux
-- accents : vert sauge ou bleu profond pour la confiance
-- neutres : blancs casses, gris chauds
-- fonds : lumineux en clair, profonds en sombre
+- fonds : noir encre et charbon rougeatre
+- surfaces : noirs chauds et bordeaux tres desatures
+- accent principal : rouge braise profond
+- accent lumineux : corail rouge pour les details et les etats actifs
+- texte : blanc rose tres leger et gris chauds
+- etats semantiques : vert net pour la reussite, ambre pour l'attention, bleu pour l'information
+- gradients : halos cramoisis localises sur fonds noirs, jamais derriere du texte long
 
 Les valeurs exactes de theme et de token ne sont pas gouvernees ici. Elles doivent etre declarees dans les surfaces techniques runtime qui les implementent.
 

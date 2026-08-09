@@ -10,18 +10,18 @@ type Insight = {
 };
 
 const PATTERN_META: Record<string, { icon: string; severity: "positive" | "warning" | "danger" }> = {
-  sleep_mood_link: { icon: "🌙", severity: "warning" },
-  crisis_alert: { icon: "🚨", severity: "danger" },
-  mood_trend_down: { icon: "📉", severity: "warning" },
-  mood_improving: { icon: "📈", severity: "positive" },
-  habit_consistency: { icon: "🔥", severity: "positive" },
+  sleep_mood_link: { icon: "moon", severity: "warning" },
+  crisis_alert: { icon: "shield-alert", severity: "danger" },
+  mood_trend_down: { icon: "trend-down", severity: "warning" },
+  mood_improving: { icon: "trend-up", severity: "positive" },
+  habit_consistency: { icon: "flame", severity: "positive" },
 };
 
 export function useInsights() {
   const raw = useQuery(api.analytics.getInsights) ?? [];
 
   const insights = (raw as Insight[]).map((p) => {
-    const meta = PATTERN_META[p.patternType] ?? { icon: "💡", severity: "warning" as const };
+    const meta = PATTERN_META[p.patternType] ?? { icon: "lightbulb", severity: "warning" as const };
     return {
       ...p,
       icon: meta.icon,

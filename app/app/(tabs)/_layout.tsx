@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { Animated, StyleSheet, TouchableOpacity, View } from "react-native";
 import { useAuth } from "@clerk/expo";
 import { Redirect, Tabs, useRouter } from "expo-router";
-import { SymbolView } from "expo-symbols";
+import { AppIcon } from "@/components/AppIcon";
 import { useMode } from "@/features/mode";
 import { AppDesignTokens } from '@/constants/AppDesignTokens';
 
@@ -73,11 +73,7 @@ export default function TabLayout() {
           options={{
             title: vocab.tabHome,
             tabBarIcon: ({ color }) => (
-              <SymbolView
-                name={{ ios: "house.fill", android: "home", web: "home" }}
-                tintColor={color}
-                size={24}
-              />
+              <AppIcon name="home" color={color} />
             ),
           }}
         />
@@ -86,11 +82,7 @@ export default function TabLayout() {
           options={{
             title: vocab.tabCompanion,
             tabBarIcon: ({ color }) => (
-              <SymbolView
-                name={{ ios: "sparkles", android: "star", web: "star" }}
-                tintColor={color}
-                size={24}
-              />
+              <AppIcon name="sparkles" color={color} />
             ),
           }}
         />
@@ -99,11 +91,7 @@ export default function TabLayout() {
           options={{
             title: vocab.tabJournal,
             tabBarIcon: ({ color }) => (
-              <SymbolView
-                name={{ ios: "book.fill", android: "book", web: "book" }}
-                tintColor={color}
-                size={24}
-              />
+              <AppIcon name="book" color={color} />
             ),
           }}
         />
@@ -112,15 +100,7 @@ export default function TabLayout() {
           options={{
             title: vocab.tabProgress,
             tabBarIcon: ({ color }) => (
-              <SymbolView
-                name={{
-                  ios: "chart.bar.fill",
-                  android: "bar_chart",
-                  web: "bar_chart",
-                }}
-                tintColor={color}
-                size={24}
-              />
+              <AppIcon name="progress" color={color} />
             ),
           }}
         />
@@ -129,11 +109,7 @@ export default function TabLayout() {
           options={{
             title: vocab.tabProfile,
             tabBarIcon: ({ color }) => (
-              <SymbolView
-                name={{ ios: "person.fill", android: "person", web: "person" }}
-                tintColor={color}
-                size={24}
-              />
+              <AppIcon name="user" color={color} />
             ),
           }}
         />
@@ -146,21 +122,21 @@ export default function TabLayout() {
 const fab = StyleSheet.create({
   wrapper: {
     position: "absolute",
-    bottom: 78,
-    right: 20,
-    zIndex: 999,
+    bottom: AppDesignTokens.layout.v78,
+    right: AppDesignTokens.layout.v20,
+    zIndex: AppDesignTokens.layout.v999,
   },
   shadow: {
     shadowColor: AppDesignTokens.colors.danger,
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.5,
-    shadowRadius: 12,
-    elevation: 10,
+    shadowOffset: { width: AppDesignTokens.layout.v0, height: AppDesignTokens.layout.v4 },
+    shadowOpacity: AppDesignTokens.layout.v0p5,
+    shadowRadius: AppDesignTokens.layout.v12,
+    elevation: AppDesignTokens.layout.v10,
   },
   button: {
-    width: 56,
-    height: 56,
-    borderRadius: 28,
+    width: AppDesignTokens.layout.v56,
+    height: AppDesignTokens.layout.v56,
+    borderRadius: AppDesignTokens.layout.v28,
     backgroundColor: AppDesignTokens.colors.danger,
     alignItems: "center",
     justifyContent: "center",
@@ -169,8 +145,8 @@ const fab = StyleSheet.create({
   },
   text: {
     color: AppDesignTokens.colors.text,
-    fontSize: 14,
+    fontSize: AppDesignTokens.layout.v14,
     fontWeight: "900",
-    letterSpacing: 1,
+    letterSpacing: AppDesignTokens.layout.v1,
   },
 });

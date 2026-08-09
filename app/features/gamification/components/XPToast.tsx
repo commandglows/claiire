@@ -1,7 +1,8 @@
 import { useEffect, useRef } from "react";
-import { Animated, StyleSheet, Text } from "react-native";
+import { Animated, StyleSheet, Text, View } from "react-native";
 import { useGamificationStore } from "../store";
 import { AppDesignTokens } from '@/constants/AppDesignTokens';
+import { AppIcon } from "@/components/AppIcon";
 
 export function XPToast() {
   const { pendingXP, clearPendingXP } = useGamificationStore();
@@ -34,6 +35,9 @@ export function XPToast() {
 
   return (
     <Animated.View style={[s.container, { transform: [{ translateY }], opacity }]} pointerEvents="none">
+      <View style={s.icon}>
+        <AppIcon name="zap" color={AppDesignTokens.colors.text} size={AppDesignTokens.icons.sizeSm} />
+      </View>
       <Text style={s.text}>+{displayXP.current} XP</Text>
     </Animated.View>
   );
@@ -42,18 +46,21 @@ export function XPToast() {
 const s = StyleSheet.create({
   container: {
     position: "absolute",
-    top: 60,
+    top: AppDesignTokens.layout.v60,
     alignSelf: "center",
     backgroundColor: AppDesignTokens.colors.accent,
-    borderRadius: 20,
-    paddingVertical: 8,
-    paddingHorizontal: 20,
-    zIndex: 9998,
+    flexDirection: "row",
+    alignItems: "center",
+    borderRadius: AppDesignTokens.layout.v20,
+    paddingVertical: AppDesignTokens.layout.v8,
+    paddingHorizontal: AppDesignTokens.layout.v20,
+    zIndex: AppDesignTokens.layout.v9998,
     shadowColor: AppDesignTokens.colors.accent,
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.5,
-    shadowRadius: 12,
-    elevation: 10,
+    shadowOffset: { width: AppDesignTokens.layout.v0, height: AppDesignTokens.layout.v4 },
+    shadowOpacity: AppDesignTokens.layout.v0p5,
+    shadowRadius: AppDesignTokens.layout.v12,
+    elevation: AppDesignTokens.layout.v10,
   },
-  text: { color: AppDesignTokens.colors.text, fontSize: 18, fontWeight: "900", letterSpacing: 1 },
+  icon: { marginRight: AppDesignTokens.layout.v6 },
+  text: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v18, fontWeight: "900", letterSpacing: AppDesignTokens.layout.v1 },
 });

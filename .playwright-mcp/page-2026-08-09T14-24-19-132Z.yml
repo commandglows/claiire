@@ -1,0 +1,166 @@
+- generic [active] [ref=f5e1]:
+  - link "Aller au contenu" [ref=f5e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f5e3]:
+    - generic [ref=f5e4]:
+      - link "Claiire Claiire Comprendre. Réguler. Transformer." [ref=f5e5] [cursor=pointer]:
+        - /url: /
+        - img "Claiire" [ref=f5e6]
+        - generic [ref=f5e7]:
+          - strong [ref=f5e8]: Claiire
+          - generic [ref=f5e9]: Comprendre. Réguler. Transformer.
+      - navigation "Navigation principale" [ref=f5e11]:
+        - link "Accueil" [ref=f5e12] [cursor=pointer]:
+          - /url: /
+        - link "Parcours" [ref=f5e13] [cursor=pointer]:
+          - /url: /parcours/bonheur
+        - link "Corps & santé" [ref=f5e14] [cursor=pointer]:
+          - /url: /systeme-nerveux/
+        - link "Esprit" [ref=f5e15] [cursor=pointer]:
+          - /url: /psy/
+        - link "Émotions" [ref=f5e16] [cursor=pointer]:
+          - /url: /psy/emotions/
+        - link "Bonheur" [ref=f5e17] [cursor=pointer]:
+          - /url: /bonheur/
+        - link "Violence" [ref=f5e18] [cursor=pointer]:
+          - /url: /violence/
+        - link "Formations" [ref=f5e19] [cursor=pointer]:
+          - /url: /formations/
+  - generic [ref=f5e20]:
+    - generic [ref=f5e22]:
+      - paragraph [ref=f5e23]: Santé globale · Relations · Violence
+      - heading "Comprendre la violence. Retrouver de la sécurité. Changer ce qui doit l’être." [level=1] [ref=f5e24]
+      - paragraph [ref=f5e25]: Claiire relie santé, bien-être et évolution personnelle pour t'aider à comprendre ce que tu vis et agir à ton rythme, sans jugement.
+      - generic [ref=f5e26]:
+        - link "Trouver mon point de départ" [ref=f5e27] [cursor=pointer]:
+          - /url: "#orientation"
+        - link "Explorer santé et bien-être" [ref=f5e28] [cursor=pointer]:
+          - /url: "#bien-etre"
+    - main [ref=f5e29]:
+      - article [ref=f5e30]:
+        - complementary "Ressources de sécurité immédiates" [ref=f5e31]:
+          - strong [ref=f5e32]: Danger immédiat ? 17 / 114
+          - generic [ref=f5e33]: La priorité n'est pas de finir une page. Consulte les ressources immédiates adaptées à ta situation.
+          - link "Voir les ressources de sécurité" [ref=f5e34] [cursor=pointer]:
+            - /url: /violence/victimes/
+        - region [ref=f5e35]:
+          - paragraph [ref=f5e36]: Toute ta vie est liée
+          - heading "Le corps, les émotions et les relations ne vivent pas séparément" [level=2] [ref=f5e37]
+          - paragraph [ref=f5e38]: Le sommeil influence ton équilibre. Le stress change tes réactions. Tes relations touchent ta santé, ta confiance et ta capacité à choisir. Claiire t'aide à comprendre ces liens avec des ressources concrètes, accessibles et non cliniques.
+          - paragraph [ref=f5e39]: Et quand une relation devient inquiétante, le flou ne doit pas t'empêcher de chercher de l'aide. Tu peux commencer ici sans avoir à te définir comme victime ou auteur.
+        - region [ref=f5e40]:
+          - generic [ref=f5e41]:
+            - paragraph [ref=f5e42]: Deux situations, deux chemins séparés
+            - heading "Qu'est-ce qui t'amène aujourd'hui ?" [level=2] [ref=f5e43]
+            - paragraph [ref=f5e44]: Choisis la phrase la plus proche de ce que tu ressens. Tu pourras avancer sans étiquette.
+          - generic [ref=f5e45]:
+            - link "Ce que je vis dans ma relation m'inquiète Mettre des mots sur les faits, retrouver des repères, penser à ta sécurité et découvrir les aides possibles sans décision imposée. Découvrir ce parcours" [ref=f5e46] [cursor=pointer]:
+              - /url: /formations/victimes/
+              - generic [ref=f5e47]: "01"
+              - generic [ref=f5e48]: Ce que je vis dans ma relation m'inquiète
+              - generic [ref=f5e49]: Mettre des mots sur les faits, retrouver des repères, penser à ta sécurité et découvrir les aides possibles sans décision imposée.
+              - generic [ref=f5e50]: Découvrir ce parcours
+            - link "Certains de mes comportements m'inquiètent Repérer l'escalade, interrompre un comportement violent, regarder les faits avec honnêteté et trouver un accompagnement spécialisé. Découvrir ce parcours" [ref=f5e51] [cursor=pointer]:
+              - /url: /formations/auteurs/
+              - generic [ref=f5e52]: "02"
+              - generic [ref=f5e53]: Certains de mes comportements m'inquiètent
+              - generic [ref=f5e54]: Repérer l'escalade, interrompre un comportement violent, regarder les faits avec honnêteté et trouver un accompagnement spécialisé.
+              - generic [ref=f5e55]: Découvrir ce parcours
+        - region [ref=f5e56]:
+          - generic [ref=f5e57]:
+            - paragraph [ref=f5e58]: Prendre soin de l'ensemble
+            - heading "Ta santé et ton bien-être comptent aussi" [level=2] [ref=f5e59]
+            - paragraph [ref=f5e60]: Tu peux venir pour mieux dormir, comprendre ton stress, retrouver de l'énergie, explorer tes émotions ou construire des relations plus saines. Ces dimensions ont de la valeur en elles-mêmes et peuvent aussi soutenir un changement plus profond.
+          - generic [ref=f5e61]:
+            - link "Être plus heureux 6 modules Découvre les clés scientifiques du bonheur et apprends à cultiver le bien-être au quotidien 0% Commencer" [ref=f5e62] [cursor=pointer]:
+              - /url: /parcours/bonheur
+              - generic [ref=f5e63]:
+                - generic [ref=f5e64]:
+                  - heading "Être plus heureux" [level=3] [ref=f5e71]
+                  - generic [ref=f5e72]: 6 modules
+                - paragraph [ref=f5e77]: Découvre les clés scientifiques du bonheur et apprends à cultiver le bien-être au quotidien
+                - generic [ref=f5e78]:
+                  - generic [ref=f5e79]: 0%
+                  - generic [ref=f5e82]: Commencer
+            - link "Gérer le stress et l'anxiété 6 modules Apprends à maîtriser ton stress et retrouver ton calme intérieur 0% Commencer" [ref=f5e85] [cursor=pointer]:
+              - /url: /parcours/stress
+              - generic [ref=f5e86]:
+                - generic [ref=f5e87]:
+                  - heading "Gérer le stress et l'anxiété" [level=3] [ref=f5e94]
+                  - generic [ref=f5e95]: 6 modules
+                - paragraph [ref=f5e100]: Apprends à maîtriser ton stress et retrouver ton calme intérieur
+                - generic [ref=f5e101]:
+                  - generic [ref=f5e102]: 0%
+                  - generic [ref=f5e105]: Commencer
+            - link "Améliorer ton sommeil 6 modules Restaure un sommeil réparateur pour une vie plus énergique 0% Commencer" [ref=f5e108] [cursor=pointer]:
+              - /url: /parcours/sommeil
+              - generic [ref=f5e109]:
+                - generic [ref=f5e110]:
+                  - heading "Améliorer ton sommeil" [level=3] [ref=f5e116]
+                  - generic [ref=f5e117]: 6 modules
+                - paragraph [ref=f5e122]: Restaure un sommeil réparateur pour une vie plus énergique
+                - generic [ref=f5e123]:
+                  - generic [ref=f5e124]: 0%
+                  - generic [ref=f5e127]: Commencer
+            - link "Développer tes relations sociales 6 modules Construis des relations authentiques et enrichissantes 0% Commencer" [ref=f5e130] [cursor=pointer]:
+              - /url: /parcours/relations
+              - generic [ref=f5e131]:
+                - generic [ref=f5e132]:
+                  - heading "Développer tes relations sociales" [level=3] [ref=f5e141]
+                  - generic [ref=f5e142]: 6 modules
+                - paragraph [ref=f5e147]: Construis des relations authentiques et enrichissantes
+                - generic [ref=f5e148]:
+                  - generic [ref=f5e149]: 0%
+                  - generic [ref=f5e152]: Commencer
+            - link "Renforcer ta santé 6 modules Optimise ton corps et ton énergie vitale 0% Commencer" [ref=f5e155] [cursor=pointer]:
+              - /url: /parcours/sante
+              - generic [ref=f5e156]:
+                - generic [ref=f5e157]:
+                  - heading "Renforcer ta santé" [level=3] [ref=f5e163]
+                  - generic [ref=f5e164]: 6 modules
+                - paragraph [ref=f5e169]: Optimise ton corps et ton énergie vitale
+                - generic [ref=f5e170]:
+                  - generic [ref=f5e171]: 0%
+                  - generic [ref=f5e174]: Commencer
+            - link "Comprendre ton esprit 6 modules Explore le fonctionnement de ton psychisme et développe ton intelligence émotionnelle 0% Commencer" [ref=f5e177] [cursor=pointer]:
+              - /url: /parcours/esprit
+              - generic [ref=f5e178]:
+                - generic [ref=f5e179]:
+                  - heading "Comprendre ton esprit" [level=3] [ref=f5e191]
+                  - generic [ref=f5e192]: 6 modules
+                - paragraph [ref=f5e197]: Explore le fonctionnement de ton psychisme et développe ton intelligence émotionnelle
+                - generic [ref=f5e198]:
+                  - generic [ref=f5e199]: 0%
+                  - generic [ref=f5e202]: Commencer
+        - region [ref=f5e205]:
+          - paragraph [ref=f5e206]: L'approche Claiire
+          - heading "Comprendre avant de proposer" [level=2] [ref=f5e207]
+          - generic [ref=f5e208]:
+            - generic [ref=f5e209]:
+              - heading "Claire, pas simpliste" [level=3] [ref=f5e210]
+              - paragraph [ref=f5e211]: Des mots accessibles, des mécanismes expliqués et aucune promesse miracle.
+            - generic [ref=f5e212]:
+              - heading "Bienveillante, pas naïve" [level=3] [ref=f5e213]
+              - paragraph [ref=f5e214]: Pas de jugement sur la personne, pas de minimisation des comportements violents.
+            - generic [ref=f5e215]:
+              - heading "Concrète, pas autoritaire" [level=3] [ref=f5e216]
+              - paragraph [ref=f5e217]: Des options et de petits pas utiles, avec ton autonomie et ta sécurité au premier plan.
+        - complementary [ref=f5e218]:
+          - generic [ref=f5e219]:
+            - paragraph [ref=f5e220]: Bientôt dans l'app Claiire
+            - heading "Un accompagnement quotidien, discret et progressif" [level=2] [ref=f5e221]
+            - paragraph [ref=f5e222]: L'application prolongera les ressources du site avec des parcours guidés. Elle ne remplacera ni un professionnel, ni les services d'urgence.
+  - contentinfo [ref=f5e223]:
+    - generic [ref=f5e224]:
+      - generic [ref=f5e225]:
+        - paragraph [ref=f5e226]: Claiire
+        - paragraph [ref=f5e227]: Un site éditorial pensé pour aider à comprendre ce que tu vis, retrouver des repères fiables, et avancer avec des contenus structurés.
+      - navigation "Liens utiles" [ref=f5e228]:
+        - link "Notre approche" [ref=f5e229] [cursor=pointer]:
+          - /url: /a-propos
+        - link "Formations" [ref=f5e230] [cursor=pointer]:
+          - /url: /formations/
+        - link "Contact" [ref=f5e231] [cursor=pointer]:
+          - /url: /contact
+        - link "Confidentialité" [ref=f5e232] [cursor=pointer]:
+          - /url: /confidentialite

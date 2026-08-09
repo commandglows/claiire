@@ -18,6 +18,12 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
   }}
   sectionLabel="Santé globale · Relations · Violence"
 >
+  <aside class="safety-note safety-note--priority" aria-label="Ressources de sécurité immédiates">
+    <strong>Danger immédiat ? 17 / 114</strong>
+    <span>La priorité n'est pas de finir une page. Consulte les ressources immédiates adaptées à ta situation.</span>
+    <a href="/violence/victimes/">Voir les ressources de sécurité</a>
+  </aside>
+
   <section class="welcome" aria-labelledby="welcome-title">
     <p class="welcome__kicker">Toute ta vie est liée</p>
     <h2 id="welcome-title">Le corps, les émotions et les relations ne vivent pas séparément</h2>
@@ -63,14 +69,6 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
       </a>
     </div>
 
-    <aside class="safety-note">
-      <strong>Tu es en danger maintenant ?</strong>
-      <span
-        >La priorité n'est pas de finir une page. Consulte les ressources immédiates adaptées à ta
-        situation.</span
-      >
-      <a href="/violence/victimes/">Voir les ressources de sécurité</a>
-    </aside>
   </section>
 
   <section id="bien-etre" class="wellbeing" aria-labelledby="wellbeing-title">
@@ -130,7 +128,7 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
   }
 
   .welcome {
-    max-width: 48rem;
+    max-width: var(--site-width-48);
     padding-left: clamp(1rem, 4vw, 3rem);
     border-left: 3px solid var(--sl-color-accent);
   }
@@ -140,15 +138,15 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
   .app-note__eyebrow {
     margin: 0 0 0.65rem;
     color: var(--sl-color-accent-high);
-    font-size: 0.78rem;
+    font-size: var(--site-font-0p78);
     font-weight: 800;
-    letter-spacing: 0.12em;
+    letter-spacing: var(--site-letter-0p12);
     text-transform: uppercase;
   }
 
   .section-heading {
-    max-width: 46rem;
-    margin-bottom: 2rem;
+    max-width: var(--site-width-46);
+    margin-bottom: var(--site-space-8);
   }
 
   .section-heading--centered {
@@ -160,90 +158,110 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
   .approach-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
+    gap: var(--site-space-4);
   }
 
   .orientation-card {
     position: relative;
     display: flex;
-    min-height: 19rem;
+    min-height: var(--site-size-19rem);
     padding: clamp(1.5rem, 4vw, 2.5rem);
     overflow: hidden;
-    color: var(--sl-color-white);
+    color: var(--site-text);
     text-decoration: none;
-    border: 1px solid color-mix(in srgb, var(--sl-color-white) 18%, transparent);
-    border-radius: 1.5rem 0.35rem 1.5rem 0.35rem;
+    border: 1px solid var(--orientation-card-border);
+    border-radius: var(--site-radius-1p5-0p35);
     flex-direction: column;
+    background: var(--orientation-card-surface);
+    transition:
+      transform var(--site-motion-standard) var(--site-ease-emphasis),
+      border-color var(--site-motion-standard) var(--site-ease-standard),
+      box-shadow var(--site-motion-standard) var(--site-ease-standard);
   }
 
   .orientation-card--safe {
-    background: linear-gradient(145deg, #164e63, #0f766e);
+    --orientation-card-surface: var(--site-orientation-safe-surface);
+    --orientation-card-border: var(--site-orientation-safe-border);
+    --orientation-card-accent: var(--site-orientation-safe-accent);
   }
 
   .orientation-card--change {
-    background: linear-gradient(145deg, #713f12, #b45309);
+    --orientation-card-surface: var(--site-orientation-change-surface);
+    --orientation-card-border: var(--site-orientation-change-border);
+    --orientation-card-accent: var(--site-orientation-change-accent);
   }
 
   .orientation-card::after {
     position: absolute;
-    right: -3rem;
-    bottom: -4rem;
-    width: 11rem;
-    height: 11rem;
+    right: var(--site-size--3rem);
+    bottom: var(--site-size--4rem);
+    width: var(--site-size-11rem);
+    height: var(--site-size-11rem);
     content: '';
-    border: 1px solid color-mix(in srgb, var(--sl-color-white) 20%, transparent);
-    border-radius: 50%;
+    border: 1px solid var(--orientation-card-border);
+    border-radius: var(--site-radius-circle);
   }
 
   .orientation-card__number {
     margin-bottom: auto;
-    font-size: 0.78rem;
+    font-size: var(--site-font-0p78);
     font-weight: 800;
-    letter-spacing: 0.14em;
+    letter-spacing: var(--site-letter-0p14);
     opacity: 0.75;
   }
 
   .orientation-card__title {
-    max-width: 24rem;
-    margin-top: 3rem;
+    max-width: var(--site-width-24);
+    margin-top: var(--site-space-12);
     font-family: var(--sl-font-heading);
     font-size: clamp(1.45rem, 3vw, 2rem);
     font-weight: 800;
-    line-height: 1.12;
+    line-height: var(--site-leading-tight);
   }
 
   .orientation-card__text {
-    max-width: 32rem;
-    margin-top: 1rem;
-    line-height: 1.6;
+    max-width: var(--site-width-32);
+    margin-top: var(--site-space-4);
+    line-height: var(--site-leading-readable);
     opacity: 0.9;
   }
 
   .orientation-card__link {
-    margin-top: 1.5rem;
+    margin-top: var(--site-space-6);
     font-weight: 800;
+    color: var(--orientation-card-accent);
   }
 
   .orientation-card:hover,
   .orientation-card:focus-visible {
-    color: var(--sl-color-white);
+    color: var(--site-text);
     transform: translateY(-3px);
+    border-color: var(--orientation-card-accent);
+    box-shadow: var(--shadow-strong);
   }
 
   .safety-note {
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 1rem;
+    gap: var(--site-space-4);
     align-items: center;
-    margin-top: 1rem;
-    padding: 1rem 1.25rem;
-    border: 1px solid var(--sl-color-orange);
-    border-radius: 0.75rem;
-    background: var(--sl-color-orange-low);
+    margin-top: var(--site-space-4);
+    padding: var(--site-space-4) var(--site-space-5);
+    border: 1px solid var(--site-safety-border);
+    border-radius: var(--radius-sm);
+    background: var(--site-safety-surface);
   }
 
   .safety-note a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--site-control-min-height);
+    padding: var(--site-space-0p6) var(--site-control-padding-inline);
+    border: 1px solid var(--site-safety-border);
+    border-radius: var(--site-radius-pill);
     font-weight: 800;
+    text-decoration: none;
   }
 
   .safety-note strong {
@@ -253,7 +271,7 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
   .approach {
     padding: clamp(1.5rem, 5vw, 3rem);
     border: 1px solid var(--sl-color-gray-5);
-    border-radius: 1rem;
+    border-radius: var(--radius-md);
     background: linear-gradient(135deg, var(--sl-color-gray-7), transparent);
   }
 
@@ -262,18 +280,18 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
   }
 
   .approach-grid > div {
-    padding-top: 1rem;
+    padding-top: var(--site-space-4);
     border-top: 2px solid var(--sl-color-accent);
   }
 
   .app-note {
     padding: clamp(1.5rem, 5vw, 3rem);
-    border-radius: 0.35rem 1.5rem 0.35rem 1.5rem;
+    border-radius: var(--site-radius-0p35-1p5);
     background: var(--sl-color-accent-low);
   }
 
   .app-note > div {
-    max-width: 48rem;
+    max-width: var(--site-width-48);
   }
 
   @media (max-width: 48rem) {
@@ -283,11 +301,15 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
     }
 
     .orientation-card {
-      min-height: 17rem;
+    min-height: var(--site-size-17rem);
     }
 
     .safety-note {
       grid-template-columns: 1fr;
+    }
+
+    .safety-note a {
+      width: 100%;
     }
   }
 </style>

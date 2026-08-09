@@ -24,27 +24,6 @@ const isSignedIn = Boolean(authState?.userId);
     </a>
 
     <div class="site-header__controls">
-      <button
-        class="theme-toggle"
-        type="button"
-        data-theme-toggle
-        aria-label="Passer au mode sombre"
-        aria-pressed="false"
-      >
-        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>
-          </svg>
-        </span>
-        <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-            <circle cx="12" cy="12" r="4"></circle>
-            <path d="M12 2v2.2M12 19.8V22M4.22 4.22l1.56 1.56M18.22 18.22l1.56 1.56M2 12h2.2M19.8 12H22M4.22 19.78l1.56-1.56M18.22 5.78l1.56-1.56"></path>
-          </svg>
-        </span>
-        <span class="theme-toggle__label">Thème</span>
-      </button>
-
       <nav class="site-nav" aria-label="Navigation principale">
         {headerNavigation.map((item) => (
           <a
@@ -76,7 +55,10 @@ const isSignedIn = Boolean(authState?.userId);
       )}
 
       <details class="mobile-nav">
-        <summary>Menu</summary>
+        <summary aria-label="Menu de navigation">
+          <span class="mobile-nav__menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>Menu</span>
+        </summary>
         <div class="mobile-nav__panel">
           {headerNavigation.map((item) => (
             <a
@@ -97,76 +79,3 @@ const isSignedIn = Boolean(authState?.userId);
     </div>
   </div>
 </header>
-
-<script is:inline>
-  (() => {
-    const storageKey = 'claiire-theme';
-    const root = document.documentElement;
-    const buttons = Array.from(document.querySelectorAll('[data-theme-toggle]'));
-
-    if (buttons.length === 0) {
-      return;
-    }
-
-    const media = window.matchMedia('(prefers-color-scheme: dark)');
-
-    const getStoredTheme = () => {
-      try {
-        return localStorage.getItem(storageKey);
-      } catch {
-        return null;
-      }
-    };
-
-    const setStoredTheme = (theme) => {
-      try {
-        localStorage.setItem(storageKey, theme);
-      } catch {
-        return;
-      }
-    };
-
-    const resolveTheme = () => {
-      const storedTheme = getStoredTheme();
-
-      if (storedTheme === 'light' || storedTheme === 'dark') {
-        return storedTheme;
-      }
-
-      return media.matches ? 'dark' : 'light';
-    };
-
-    const applyTheme = (theme, persist = false) => {
-      root.dataset.theme = theme;
-      root.style.colorScheme = theme;
-
-      if (persist) {
-        setStoredTheme(theme);
-      }
-
-      buttons.forEach((button) => {
-        const nextLabel = theme === 'dark' ? 'Passer au mode clair' : 'Passer au mode sombre';
-        button.setAttribute('aria-label', nextLabel);
-        button.setAttribute('aria-pressed', String(theme === 'dark'));
-      });
-    };
-
-    applyTheme(resolveTheme());
-
-    buttons.forEach((button) => {
-      button.addEventListener('click', () => {
-        applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark', true);
-      });
-    });
-
-    const syncWithSystemTheme = (event) => {
-      if (getStoredTheme()) {
-        return;
-      }
-
-      applyTheme(event.matches ? 'dark' : 'light');
-    };
-
-    media.addEventListener('change', syncWithSystemTheme);
-  })();
-</script>

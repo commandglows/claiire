@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Badge } from '@diane-winflowz/gamification'
+import ClaiireIcon from './ClaiireIcon.vue'
 
 defineProps<{
   badge: Badge
@@ -10,7 +11,7 @@ defineProps<{
 <template>
   <div class="badge-card" :class="{ earned, locked: !earned }">
     <div class="badge-icon-wrap">
-      <span class="badge-icon">{{ badge.icon }}</span>
+      <span class="badge-icon"><ClaiireIcon :name="earned ? badge.icon : 'question'" :size="36" /></span>
     </div>
     <div class="badge-info">
       <span class="badge-name">{{ badge.name }}</span>
@@ -24,16 +25,16 @@ defineProps<{
 .badge-card {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem 1rem;
+  gap: var(--site-space-3);
+  padding: var(--site-space-3) var(--site-space-4);
   border: 1px solid var(--sl-color-gray-5);
-  border-radius: 0.5rem;
+  border-radius: var(--site-radius-0p5);
   background: var(--sl-color-bg);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform var(--site-motion-0p2), box-shadow var(--site-motion-0p2);
 }
 
 .badge-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(calc(var(--site-size-2px) * -1));
   box-shadow: var(--shadow-soft);
 }
 
@@ -47,30 +48,30 @@ defineProps<{
 }
 
 .badge-icon-wrap {
-  font-size: 2rem;
+  font-size: var(--site-font-2p25);
   flex-shrink: 0;
 }
 
 .badge-info {
   display: flex;
   flex-direction: column;
-  gap: 0.125rem;
+  gap: var(--site-space-0p1);
 }
 
 .badge-name {
   font-weight: 600;
-  font-size: 0.9375rem;
+  font-size: var(--site-font-0p9375);
   color: var(--sl-color-text);
 }
 
 .badge-desc {
-  font-size: 0.8125rem;
+  font-size: var(--site-font-0p8125);
   color: var(--sl-color-text);
   opacity: 0.8;
 }
 
 .badge-locked {
-  font-size: 0.8125rem;
+  font-size: var(--site-font-0p8125);
   opacity: 0.5;
   font-style: italic;
   color: var(--sl-color-gray-3);

@@ -1,6 +1,7 @@
 import * as Notifications from "expo-notifications";
 import * as Device from "expo-device";
 import { Platform } from "react-native";
+import { iconNotificationGlyph } from "@/components/AppIcon";
 
 // Configure how notifications appear when app is in foreground
 Notifications.setNotificationHandler({
@@ -102,7 +103,7 @@ export async function cancelStreakWarning(): Promise<void> {
 export async function notifyAchievement(title: string, icon: string): Promise<void> {
   await Notifications.scheduleNotificationAsync({
     content: {
-      title: `${icon} Achievement débloqué !`,
+      title: `${iconNotificationGlyph(icon)} Achievement débloqué !`,
       body: title,
       data: { type: "achievement" },
     },

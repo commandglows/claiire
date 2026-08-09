@@ -27,6 +27,8 @@
     "@astrojs/vue": "^6.0.1",
     "@clerk/astro": "^3.0.18",
     "@diane-winflowz/gamification": "github:dianedef/gamification#0cad1606d50e3e1dd48c65d278e05363e439f1bd",
+    "@lucide/astro": "^1.30.0",
+    "@lucide/vue": "^1.30.0",
     "astro": "^6.4.8",
     "remark-directive": "^3.0.1",
     "sharp": "^0.32.6",

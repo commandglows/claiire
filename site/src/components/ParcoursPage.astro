@@ -38,7 +38,7 @@ const { currentPath, title, description, hero, parcourId, modules, intro, steps,
   title={title}
   description={description}
   hero={hero}
-  sectionLabel="🎯 Parcours thématiques"
+  sectionLabel="Parcours thématiques"
 >
   <ParcourProgress parcourId={parcourId} modules={modules} />
 
@@ -53,7 +53,7 @@ const { currentPath, title, description, hero, parcourId, modules, intro, steps,
       <h2>{step.title}</h2>
       <p>{step.body}</p>
       {step.links.map((link) => (
-        <p>
+        <p class="parcours-step-link">
           → <a href={link.href}>{link.text}</a>
         </p>
       ))}
@@ -76,3 +76,18 @@ const { currentPath, title, description, hero, parcourId, modules, intro, steps,
     <strong>{closing}</strong>
   </p>
 </StaticPageLayout>
+
+<style>
+  .parcours-step-link a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--site-control-min-height);
+    font-weight: 700;
+  }
+
+  @media (max-width: 45rem) {
+    .parcours-step-link {
+      margin-block: var(--site-space-3);
+    }
+  }
+</style>

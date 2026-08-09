@@ -1,4 +1,6 @@
 ---
+import ClaiireIcon from './ClaiireIcon.astro';
+
 interface Props {
   id: string;
   title: string;
@@ -16,15 +18,12 @@ const { id, title, icon, description, color, moduleCount } = Astro.props;
     <div class="parcour-header">
       <div class="parcour-title-row">
         <div class="parcour-icon-wrapper">
-          <span class="parcour-icon">{icon}</span>
+          <span class="parcour-icon"><ClaiireIcon name={icon} size="var(--site-icon-base)" /></span>
         </div>
         <h3>{title}</h3>
       </div>
       <div class="parcour-module-badge">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-        </svg>
+        <ClaiireIcon name="book" size="var(--site-icon-xs)" />
         <span>{moduleCount} modules</span>
       </div>
     </div>
@@ -40,10 +39,7 @@ const { id, title, icon, description, color, moduleCount } = Astro.props;
       </div>
       <span class="parcour-cta">
         Commencer
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M5 12h14"/>
-          <path d="m12 5 7 7-7 7"/>
-        </svg>
+        <ClaiireIcon name="arrowRight" size="var(--site-icon-xs)" />
       </span>
     </div>
   </div>
@@ -56,11 +52,11 @@ const { id, title, icon, description, color, moduleCount } = Astro.props;
     color: inherit;
     background: var(--site-surface);
     border: 1px solid var(--site-border);
-    border-radius: 16px;
-    padding: 1.5rem;
-    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
-                box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1),
-                border-color 0.25s ease;
+    border-radius: var(--radius-md);
+    padding: var(--site-space-6);
+    transition: transform var(--site-motion-standard) var(--site-ease-emphasis),
+                box-shadow var(--site-motion-standard) var(--site-ease-emphasis),
+                border-color var(--site-motion-standard) var(--site-ease-standard);
     position: relative;
     overflow: hidden;
   }
@@ -71,16 +67,21 @@ const { id, title, icon, description, color, moduleCount } = Astro.props;
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
+    height: var(--site-size-3px);
     background: linear-gradient(90deg, var(--parcour-color), color-mix(in srgb, var(--parcour-color) 60%, white));
     opacity: 0.8;
-    transition: opacity 0.25s ease;
+    transition: opacity var(--site-motion-0p24) var(--site-ease-standard);
   }
 
   .parcour-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(calc(-1 * var(--site-size-6px)));
     box-shadow: var(--shadow-strong);
     border-color: var(--parcour-color);
+  }
+
+  .parcour-card:focus-visible {
+    border-color: var(--parcour-color);
+    box-shadow: var(--shadow-strong);
   }
 
   .parcour-card:hover::before {
@@ -90,44 +91,45 @@ const { id, title, icon, description, color, moduleCount } = Astro.props;
   .parcour-card-inner {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    gap: 1rem;
+    height: var(--site-size-100pct);
+    gap: var(--site-space-4);
   }
 
   .parcour-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 0.75rem;
+    gap: var(--site-space-3);
   }
 
   .parcour-title-row {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: var(--site-space-3);
     flex: 1;
     min-width: 0;
   }
 
   .parcour-card h3 {
     margin: 0;
-    font-size: 1.05rem;
+    font-size: var(--site-font-1p05);
     font-weight: 700;
     color: var(--site-text);
-    line-height: 1;
+    line-height: var(--site-leading-1);
   }
 
   .parcour-icon-wrapper {
-    width: 42px;
-    height: 42px;
+    width: var(--site-size-42px);
+    height: var(--site-size-42px);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 12px;
+    border-radius: var(--site-size-12px);
     background: color-mix(in srgb, var(--parcour-color) 12%, transparent);
     flex-shrink: 0;
-    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
-                background 0.25s ease;
+    transition:
+      transform var(--site-motion-standard) var(--site-ease-emphasis),
+      background var(--site-motion-standard) var(--site-ease-standard);
   }
 
   .parcour-card:hover .parcour-icon-wrapper {
@@ -136,20 +138,21 @@ const { id, title, icon, description, color, moduleCount } = Astro.props;
   }
 
   .parcour-icon {
-    font-size: 1.4rem;
-    line-height: 1;
+    font-size: var(--site-font-1p4);
+    line-height: var(--site-leading-1);
   }
 
   .parcour-module-badge {
     display: flex;
     align-items: center;
-    gap: 0.35rem;
-    font-size: 0.75rem;
+    gap: var(--site-space-0p35);
+    font-size: var(--site-font-xs);
     font-weight: 500;
     color: var(--sl-color-gray-3);
     background: var(--sl-color-gray-6);
-    padding: 0.3rem 0.6rem;
-    border-radius: 20px;
+    padding: var(--site-space-0p3) var(--site-space-0p6);
+    border-radius: var(--radius-sm);
+    min-height: var(--site-control-min-height);
   }
 
   .parcour-module-badge svg {
@@ -163,62 +166,91 @@ const { id, title, icon, description, color, moduleCount } = Astro.props;
   .parcour-card p {
     margin: 0;
     color: var(--sl-color-gray-2);
-    font-size: 0.875rem;
-    line-height: 1.55;
+    font-size: var(--site-font-sm);
+    line-height: var(--site-leading-1p55);
   }
 
   .parcour-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 0.75rem;
+    padding-top: var(--site-space-0p75);
     border-top: 1px solid var(--sl-color-gray-6);
-    gap: 1rem;
+    gap: var(--site-space-4);
   }
 
   .parcour-progress-mini {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--site-space-2);
     flex: 1;
   }
 
   .progress-bar-bg {
     flex: 1;
-    height: 4px;
+    height: var(--site-size-4px);
     background: var(--sl-color-gray-5);
-    border-radius: 4px;
+    border-radius: var(--site-size-4px);
     overflow: hidden;
-    max-width: 80px;
+    max-width: var(--site-size-80px);
   }
 
   .progress-bar-fill {
-    height: 100%;
-    width: 0%;
+    height: var(--site-size-100pct);
+    width: var(--site-size-0pct);
     background: var(--parcour-color);
-    border-radius: 4px;
-    transition: width 0.4s ease;
+    border-radius: var(--site-size-4px);
+    transition: width var(--site-motion-0p4) var(--site-ease-standard);
   }
 
   .progress-text {
-    font-size: 0.7rem;
+    font-size: var(--site-font-0p7);
     font-weight: 600;
     color: var(--sl-color-gray-3);
-    min-width: 2rem;
+    min-width: var(--site-space-2);
   }
 
   .parcour-cta {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
-    font-size: 0.8rem;
+    gap: var(--site-space-0p4);
+    font-size: var(--site-font-0p8);
     font-weight: 600;
     color: var(--parcour-color);
-    transition: gap 0.2s ease;
+    transition: gap var(--site-motion-0p2) var(--site-ease-standard);
     white-space: nowrap;
   }
 
   .parcour-card:hover .parcour-cta {
-    gap: 0.6rem;
+    gap: var(--site-space-0p6);
+  }
+
+  @media (max-width: 45rem) {
+    .parcour-card {
+      padding: var(--site-space-5);
+    }
+
+    .parcour-header,
+    .parcour-footer {
+      align-items: flex-start;
+    }
+
+    .parcour-header {
+      flex-direction: column;
+    }
+
+    .parcour-module-badge {
+      padding-inline: var(--site-space-0p75);
+    }
+
+    .parcour-footer {
+      flex-direction: column;
+    }
+
+    .parcour-progress-mini,
+    .progress-bar-bg {
+      max-width: none;
+      width: 100%;
+    }
   }
 </style>

@@ -1,0 +1,101 @@
+---
+import {
+  Activity,
+  ArrowRight,
+  Award,
+  BookOpen,
+  Brain,
+  Check,
+  CircleCheck,
+  CircleQuestionMark,
+  Flame,
+  Footprints,
+  GraduationCap,
+  Heart,
+  Leaf,
+  Medal,
+  Moon,
+  Search,
+  ShieldCheck,
+  Sparkles,
+  Star,
+  Sun,
+  Target,
+  Trophy,
+  UserRound,
+  Users,
+  X,
+  Zap,
+  type Icon as LucideAstroIcon,
+} from '@lucide/astro';
+
+const icons = {
+  activity: Activity,
+  arrowRight: ArrowRight,
+  award: Award,
+  book: BookOpen,
+  brain: Brain,
+  check: Check,
+  checkCircle: CircleCheck,
+  close: X,
+  flame: Flame,
+  footprints: Footprints,
+  graduation: GraduationCap,
+  heart: Heart,
+  leaf: Leaf,
+  medal: Medal,
+  moon: Moon,
+  question: CircleQuestionMark,
+  search: Search,
+  shield: ShieldCheck,
+  sparkles: Sparkles,
+  star: Star,
+  sun: Sun,
+  target: Target,
+  trophy: Trophy,
+  user: UserRound,
+  users: Users,
+  zap: Zap,
+} as const satisfies Record<string, typeof LucideAstroIcon>;
+
+export type ClaiireIconName = keyof typeof icons;
+
+interface Props {
+  name: ClaiireIconName | string;
+  size?: number | string;
+  strokeWidth?: number;
+  label?: string;
+  class?: string;
+}
+
+const {
+  name,
+  size = 'var(--site-icon-base)',
+  strokeWidth = 2,
+  label,
+  class: className,
+} = Astro.props;
+const legacyIcons: Record<string, ClaiireIconName> = {
+  '😊': 'sparkles',
+  '😰': 'shield',
+  '😴': 'moon',
+  '👥': 'users',
+  '💪': 'activity',
+  '🧠': 'brain',
+  '🎯': 'target',
+  '📖': 'book',
+  '🔥': 'flame',
+  '🏆': 'trophy',
+  '🎖️': 'medal',
+};
+const normalizedName = (name in icons ? name : legacyIcons[name] ?? 'sparkles') as ClaiireIconName;
+const Icon = icons[normalizedName];
+---
+
+<Icon
+  size={size}
+  stroke-width={strokeWidth}
+  aria-hidden={label ? undefined : 'true'}
+  aria-label={label}
+  class={className}
+/>

@@ -15,28 +15,29 @@ import { useMutation, useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import type { Id } from "@/convex/_generated/dataModel";
 import { useCompanion } from "@/features/companion/hooks/useCompanion";
+import { AppIcon, type AppIconName } from "@/components/AppIcon";
 
 // ─── Pre-defined actions ─────────────────────────────────────────────────────
 
 const PRESET_ACTIONS = [
-  { id: "water", label: "Boire de l'eau", icon: "💧", durationSeconds: undefined },
-  { id: "stretch", label: "Étirements", icon: "🤸", durationSeconds: 120 },
-  { id: "meditate", label: "Méditer", icon: "🧘", durationSeconds: 300 },
-  { id: "journal", label: "Journaliser", icon: "📝", durationSeconds: 300 },
-  { id: "exercise", label: "Exercice", icon: "🏃", durationSeconds: 600 },
-  { id: "breathe", label: "Respiration", icon: "🌬️", durationSeconds: 180 },
-  { id: "gratitude", label: "Gratitude (3 choses)", icon: "🙏", durationSeconds: 120 },
-  { id: "cold-shower", label: "Douche froide", icon: "🚿", durationSeconds: 120 },
-  { id: "read", label: "Lire 10 pages", icon: "📖", durationSeconds: 600 },
-  { id: "no-phone", label: "Pas de téléphone 30min", icon: "📵", durationSeconds: 1800 },
-  { id: "skincare", label: "Soin du visage", icon: "🧴", durationSeconds: undefined },
-  { id: "teeth", label: "Brossage de dents", icon: "🪥", durationSeconds: 120 },
+  { id: "water", label: "Boire de l'eau", icon: "droplet", durationSeconds: undefined },
+  { id: "stretch", label: "Étirements", icon: "person", durationSeconds: 120 },
+  { id: "meditate", label: "Méditer", icon: "flower", durationSeconds: 300 },
+  { id: "journal", label: "Journaliser", icon: "notebook", durationSeconds: 300 },
+  { id: "exercise", label: "Exercice", icon: "dumbbell", durationSeconds: 600 },
+  { id: "breathe", label: "Respiration", icon: "wind", durationSeconds: 180 },
+  { id: "gratitude", label: "Gratitude (3 choses)", icon: "heart", durationSeconds: 120 },
+  { id: "cold-shower", label: "Douche froide", icon: "shower", durationSeconds: 120 },
+  { id: "read", label: "Lire 10 pages", icon: "book", durationSeconds: 600 },
+  { id: "no-phone", label: "Pas de téléphone 30min", icon: "smartphone", durationSeconds: 1800 },
+  { id: "skincare", label: "Soin du visage", icon: "scan", durationSeconds: undefined },
+  { id: "teeth", label: "Brossage de dents", icon: "sparkles", durationSeconds: 120 },
 ] as const;
 
 type Action = {
   id: string;
   label: string;
-  icon: string;
+  icon: AppIconName | string;
   durationSeconds?: number;
 };
 
@@ -201,7 +202,7 @@ function CreateRoutine({
               style={[create.actionChip, isSelected && create.actionChipSelected]}
               onPress={() => toggleAction(action as Action)}
             >
-              <Text style={create.actionIcon}>{action.icon}</Text>
+              <AppIcon name={action.icon} color={isSelected ? AppDesignTokens.colors.accentSoft : AppDesignTokens.colors.textMuted} size={AppDesignTokens.icons.sizeSm} />
               <Text style={[create.actionLabel, isSelected && create.actionLabelSelected]}>
                 {action.label}
               </Text>
@@ -217,7 +218,7 @@ function CreateRoutine({
           {selected.map((action, i) => (
             <View key={action.id} style={create.orderRow}>
               <Text style={create.orderNum}>{i + 1}</Text>
-              <Text style={create.orderIcon}>{action.icon}</Text>
+              <AppIcon name={action.icon} color={AppDesignTokens.colors.accentSoft} size={AppDesignTokens.icons.sizeSm} />
               <Text style={create.orderLabel}>{action.label}</Text>
               {action.durationSeconds && (
                 <Text style={create.orderDuration}>
@@ -358,7 +359,7 @@ function ExecuteRoutine({ routine, onDone }: { routine: Routine; onDone: () => v
         <Text style={exec.actionStep}>
           {currentIdx + 1} / {routine.actions.length}
         </Text>
-        <Text style={exec.actionIcon}>{action.icon}</Text>
+        <AppIcon name={action.icon} color={AppDesignTokens.colors.accentSoft} size={AppDesignTokens.icons.sizeHero} />
         <Text style={exec.actionLabel}>{action.label}</Text>
 
         {action.durationSeconds && !completed.has(action.id) ? (
@@ -497,9 +498,10 @@ export default function RoutineModal() {
 
                 <View style={styles.routineActionsList}>
                   {routine.actions.map((a) => (
-                    <Text key={a.id} style={styles.routineActionLabel}>
-                      {a.icon} {a.label}
-                    </Text>
+                    <View key={a.id} style={styles.routineActionRow}>
+                      <AppIcon name={a.icon} color={AppDesignTokens.colors.textMuted} size={AppDesignTokens.icons.sizeXs} />
+                      <Text style={styles.routineActionLabel}>{a.label}</Text>
+                    </View>
                   ))}
                 </View>
 
@@ -539,223 +541,224 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingHorizontal: 20,
-    paddingVertical: 12,
+    paddingHorizontal: AppDesignTokens.layout.v20,
+    paddingVertical: AppDesignTokens.layout.v12,
   },
-  closeText: { color: AppDesignTokens.colors.textMuted, fontSize: 18, padding: 4 },
-  backText: { color: AppDesignTokens.colors.accent, fontSize: 15, fontWeight: "600" },
-  headerTitle: { color: AppDesignTokens.colors.text, fontSize: 17, fontWeight: "700" },
-  addText: { color: AppDesignTokens.colors.accent, fontSize: 14, fontWeight: "600" },
-  listContent: { padding: 16, gap: 16, paddingBottom: 40 },
+  closeText: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v18, padding: AppDesignTokens.layout.v4 },
+  backText: { color: AppDesignTokens.colors.accent, fontSize: AppDesignTokens.layout.v15, fontWeight: "600" },
+  headerTitle: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v17, fontWeight: "700" },
+  addText: { color: AppDesignTokens.colors.accent, fontSize: AppDesignTokens.layout.v14, fontWeight: "600" },
+  listContent: { padding: AppDesignTokens.layout.v16, gap: AppDesignTokens.layout.v16, paddingBottom: AppDesignTokens.layout.v40 },
   empty: {
     alignItems: "center",
-    paddingVertical: 60,
-    gap: 10,
+    paddingVertical: AppDesignTokens.layout.v60,
+    gap: AppDesignTokens.layout.v10,
   },
-  emptyEmoji: { fontSize: 48 },
-  emptyText: { color: AppDesignTokens.colors.textMuted, fontSize: 16, fontWeight: "600" },
-  emptySub: { color: AppDesignTokens.colors.textSubtle, fontSize: 13, textAlign: "center", paddingHorizontal: 40 },
+  emptyEmoji: { fontSize: AppDesignTokens.layout.v48 },
+  emptyText: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v16, fontWeight: "600" },
+  emptySub: { color: AppDesignTokens.colors.textSubtle, fontSize: AppDesignTokens.layout.v13, textAlign: "center", paddingHorizontal: AppDesignTokens.layout.v40 },
   emptyButton: {
     backgroundColor: AppDesignTokens.colors.accent,
-    borderRadius: 12,
-    paddingVertical: 12,
-    paddingHorizontal: 24,
-    marginTop: 8,
+    borderRadius: AppDesignTokens.layout.v12,
+    paddingVertical: AppDesignTokens.layout.v12,
+    paddingHorizontal: AppDesignTokens.layout.v24,
+    marginTop: AppDesignTokens.layout.v8,
   },
-  emptyButtonText: { color: AppDesignTokens.colors.text, fontSize: 14, fontWeight: "700" },
+  emptyButtonText: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v14, fontWeight: "700" },
   routineCard: {
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 14,
-    padding: 16,
-    gap: 12,
+    borderRadius: AppDesignTokens.layout.v14,
+    padding: AppDesignTokens.layout.v16,
+    gap: AppDesignTokens.layout.v12,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
   },
   routineCardDone: { borderColor: AppDesignTokens.colors.success, opacity: 0.75 },
-  routineHeader: { flexDirection: "row", alignItems: "center", gap: 12 },
-  routineType: { fontSize: 28 },
-  routineInfo: { flex: 1, gap: 2 },
-  routineName: { color: AppDesignTokens.colors.text, fontSize: 16, fontWeight: "600" },
-  routineActions: { color: AppDesignTokens.colors.textMuted, fontSize: 12 },
-  doneBadge: { color: AppDesignTokens.colors.success, fontSize: 13, fontWeight: "700" },
-  routineActionsList: { flexDirection: "row", flexWrap: "wrap", gap: 6 },
-  routineActionLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 12 },
-  routineButtons: { flexDirection: "row", gap: 10, marginTop: 4 },
+  routineHeader: { flexDirection: "row", alignItems: "center", gap: AppDesignTokens.layout.v12 },
+  routineType: { fontSize: AppDesignTokens.layout.v28 },
+  routineInfo: { flex: 1, gap: AppDesignTokens.layout.v2 },
+  routineName: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v16, fontWeight: "600" },
+  routineActions: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v12 },
+  doneBadge: { color: AppDesignTokens.colors.success, fontSize: AppDesignTokens.layout.v13, fontWeight: "700" },
+  routineActionsList: { flexDirection: "row", flexWrap: "wrap", gap: AppDesignTokens.layout.v6 },
+  routineActionRow: { flexDirection: "row", alignItems: "center", gap: AppDesignTokens.layout.v4 },
+  routineActionLabel: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v12 },
+  routineButtons: { flexDirection: "row", gap: AppDesignTokens.layout.v10, marginTop: AppDesignTokens.layout.v4 },
   startButton: {
     flex: 1,
     backgroundColor: AppDesignTokens.colors.accent,
-    borderRadius: 10,
-    paddingVertical: 10,
+    borderRadius: AppDesignTokens.layout.v10,
+    paddingVertical: AppDesignTokens.layout.v10,
     alignItems: "center",
   },
   startButtonDone: { backgroundColor: AppDesignTokens.colors.textStrong },
-  startButtonText: { color: AppDesignTokens.colors.text, fontSize: 14, fontWeight: "700" },
-  deleteButton: { paddingVertical: 10, paddingHorizontal: 12 },
-  deleteText: { color: AppDesignTokens.colors.dangerSoft, fontSize: 13, fontWeight: "500" },
+  startButtonText: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v14, fontWeight: "700" },
+  deleteButton: { paddingVertical: AppDesignTokens.layout.v10, paddingHorizontal: AppDesignTokens.layout.v12 },
+  deleteText: { color: AppDesignTokens.colors.dangerSoft, fontSize: AppDesignTokens.layout.v13, fontWeight: "500" },
 });
 
 const create = StyleSheet.create({
-  content: { padding: 20, gap: 16, paddingBottom: 40 },
-  title: { fontSize: 22, fontWeight: "bold", color: AppDesignTokens.colors.text },
-  typeRow: { flexDirection: "row", gap: 12 },
+  content: { padding: AppDesignTokens.layout.v20, gap: AppDesignTokens.layout.v16, paddingBottom: AppDesignTokens.layout.v40 },
+  title: { fontSize: AppDesignTokens.layout.v22, fontWeight: "bold", color: AppDesignTokens.colors.text },
+  typeRow: { flexDirection: "row", gap: AppDesignTokens.layout.v12 },
   typeButton: {
     flex: 1,
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 12,
-    paddingVertical: 16,
+    borderRadius: AppDesignTokens.layout.v12,
+    paddingVertical: AppDesignTokens.layout.v16,
     alignItems: "center",
-    gap: 6,
+    gap: AppDesignTokens.layout.v6,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
   },
   typeActive: { borderColor: AppDesignTokens.colors.accent, backgroundColor: AppDesignTokens.colors.surfaceAccent },
-  typeEmoji: { fontSize: 28 },
-  typeLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 14, fontWeight: "500" },
+  typeEmoji: { fontSize: AppDesignTokens.layout.v28 },
+  typeLabel: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v14, fontWeight: "500" },
   typeLabelActive: { color: AppDesignTokens.colors.text, fontWeight: "700" },
   input: {
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 12,
-    padding: 14,
+    borderRadius: AppDesignTokens.layout.v12,
+    padding: AppDesignTokens.layout.v14,
     color: AppDesignTokens.colors.text,
-    fontSize: 15,
+    fontSize: AppDesignTokens.layout.v15,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
   },
-  sectionTitle: { fontSize: 15, fontWeight: "600", color: AppDesignTokens.colors.text },
-  actionsGrid: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
+  sectionTitle: { fontSize: AppDesignTokens.layout.v15, fontWeight: "600", color: AppDesignTokens.colors.text },
+  actionsGrid: { flexDirection: "row", flexWrap: "wrap", gap: AppDesignTokens.layout.v8 },
   actionChip: {
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 10,
-    paddingVertical: 10,
-    paddingHorizontal: 12,
-    gap: 6,
+    borderRadius: AppDesignTokens.layout.v10,
+    paddingVertical: AppDesignTokens.layout.v10,
+    paddingHorizontal: AppDesignTokens.layout.v12,
+    gap: AppDesignTokens.layout.v6,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
   },
   actionChipSelected: { borderColor: AppDesignTokens.colors.accent, backgroundColor: AppDesignTokens.colors.surfaceAccent },
-  actionIcon: { fontSize: 18 },
-  actionLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 13, fontWeight: "500" },
+  actionIcon: { fontSize: AppDesignTokens.layout.v18 },
+  actionLabel: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v13, fontWeight: "500" },
   actionLabelSelected: { color: AppDesignTokens.colors.text },
   orderRow: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 10,
+    gap: AppDesignTokens.layout.v10,
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 10,
-    padding: 12,
+    borderRadius: AppDesignTokens.layout.v10,
+    padding: AppDesignTokens.layout.v12,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
   },
-  orderNum: { color: AppDesignTokens.colors.accent, fontSize: 14, fontWeight: "700", width: 20, textAlign: "center" },
-  orderIcon: { fontSize: 18 },
-  orderLabel: { flex: 1, color: AppDesignTokens.colors.text, fontSize: 14 },
-  orderDuration: { color: AppDesignTokens.colors.textSubtle, fontSize: 12 },
+  orderNum: { color: AppDesignTokens.colors.accent, fontSize: AppDesignTokens.layout.v14, fontWeight: "700", width: AppDesignTokens.layout.v20, textAlign: "center" },
+  orderIcon: { fontSize: AppDesignTokens.layout.v18 },
+  orderLabel: { flex: 1, color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v14 },
+  orderDuration: { color: AppDesignTokens.colors.textSubtle, fontSize: AppDesignTokens.layout.v12 },
   createButton: {
     backgroundColor: AppDesignTokens.colors.accent,
-    borderRadius: 12,
-    paddingVertical: 14,
+    borderRadius: AppDesignTokens.layout.v12,
+    paddingVertical: AppDesignTokens.layout.v14,
     alignItems: "center",
   },
   createButtonDisabled: { opacity: 0.4 },
-  createButtonText: { color: AppDesignTokens.colors.text, fontSize: 15, fontWeight: "700" },
+  createButtonText: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v15, fontWeight: "700" },
 });
 
 const exec = StyleSheet.create({
-  container: { flex: 1, padding: 20, justifyContent: "center", gap: 20 },
-  progressBar: { flexDirection: "row", justifyContent: "center", gap: 6 },
+  container: { flex: 1, padding: AppDesignTokens.layout.v20, justifyContent: "center", gap: AppDesignTokens.layout.v20 },
+  progressBar: { flexDirection: "row", justifyContent: "center", gap: AppDesignTokens.layout.v6 },
   progressDot: {
-    width: 10,
-    height: 10,
-    borderRadius: 5,
+    width: AppDesignTokens.layout.v10,
+    height: AppDesignTokens.layout.v10,
+    borderRadius: AppDesignTokens.layout.v5,
     backgroundColor: AppDesignTokens.colors.border,
   },
   progressDotDone: { backgroundColor: AppDesignTokens.colors.success },
-  progressDotCurrent: { backgroundColor: AppDesignTokens.colors.accent, width: 24, borderRadius: 5 },
+  progressDotCurrent: { backgroundColor: AppDesignTokens.colors.accent, width: AppDesignTokens.layout.v24, borderRadius: AppDesignTokens.layout.v5 },
   companionBubble: {
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 12,
-    padding: 14,
+    borderRadius: AppDesignTokens.layout.v12,
+    padding: AppDesignTokens.layout.v14,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.accent40,
   },
-  companionText: { color: AppDesignTokens.colors.accentSoft, fontSize: 13, fontStyle: "italic", lineHeight: 18 },
+  companionText: { color: AppDesignTokens.colors.accentSoft, fontSize: AppDesignTokens.layout.v13, fontStyle: "italic", lineHeight: AppDesignTokens.layout.v18 },
   actionCard: {
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 20,
-    padding: 32,
+    borderRadius: AppDesignTokens.layout.v20,
+    padding: AppDesignTokens.layout.v32,
     alignItems: "center",
-    gap: 16,
+    gap: AppDesignTokens.layout.v16,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
   },
-  actionStep: { color: AppDesignTokens.colors.textSubtle, fontSize: 12, fontWeight: "600" },
-  actionIcon: { fontSize: 56 },
-  actionLabel: { color: AppDesignTokens.colors.text, fontSize: 20, fontWeight: "700", textAlign: "center" },
+  actionStep: { color: AppDesignTokens.colors.textSubtle, fontSize: AppDesignTokens.layout.v12, fontWeight: "600" },
+  actionIcon: { fontSize: AppDesignTokens.layout.v56 },
+  actionLabel: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v20, fontWeight: "700", textAlign: "center" },
   markButton: {
     backgroundColor: AppDesignTokens.colors.accent,
-    borderRadius: 12,
-    paddingVertical: 14,
-    paddingHorizontal: 40,
+    borderRadius: AppDesignTokens.layout.v12,
+    paddingVertical: AppDesignTokens.layout.v14,
+    paddingHorizontal: AppDesignTokens.layout.v40,
   },
   markButtonDone: { backgroundColor: AppDesignTokens.colors.success },
-  markButtonText: { color: AppDesignTokens.colors.text, fontSize: 16, fontWeight: "700" },
+  markButtonText: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v16, fontWeight: "700" },
   bottomRow: {
     flexDirection: "row",
     justifyContent: "center",
-    gap: 16,
+    gap: AppDesignTokens.layout.v16,
   },
-  skipButton: { paddingVertical: 12, paddingHorizontal: 20 },
-  skipText: { color: AppDesignTokens.colors.textMuted, fontSize: 14, fontWeight: "500" },
+  skipButton: { paddingVertical: AppDesignTokens.layout.v12, paddingHorizontal: AppDesignTokens.layout.v20 },
+  skipText: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v14, fontWeight: "500" },
   finishButton: {
     backgroundColor: AppDesignTokens.colors.success,
-    borderRadius: 12,
-    paddingVertical: 12,
-    paddingHorizontal: 24,
+    borderRadius: AppDesignTokens.layout.v12,
+    paddingVertical: AppDesignTokens.layout.v12,
+    paddingHorizontal: AppDesignTokens.layout.v24,
   },
-  finishText: { color: AppDesignTokens.colors.text, fontSize: 14, fontWeight: "700" },
+  finishText: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v14, fontWeight: "700" },
   resultContainer: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    gap: 12,
-    padding: 32,
+    gap: AppDesignTokens.layout.v12,
+    padding: AppDesignTokens.layout.v32,
   },
-  resultEmoji: { fontSize: 56 },
-  resultTitle: { color: AppDesignTokens.colors.text, fontSize: 22, fontWeight: "bold" },
-  resultXP: { color: AppDesignTokens.colors.accent, fontSize: 28, fontWeight: "900" },
-  resultBonus: { color: AppDesignTokens.colors.success, fontSize: 13, fontWeight: "600" },
-  resultStats: { color: AppDesignTokens.colors.textMuted, fontSize: 14 },
+  resultEmoji: { fontSize: AppDesignTokens.layout.v56 },
+  resultTitle: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v22, fontWeight: "bold" },
+  resultXP: { color: AppDesignTokens.colors.accent, fontSize: AppDesignTokens.layout.v28, fontWeight: "900" },
+  resultBonus: { color: AppDesignTokens.colors.success, fontSize: AppDesignTokens.layout.v13, fontWeight: "600" },
+  resultStats: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v14 },
   companionResult: {
     color: AppDesignTokens.colors.accentSoft,
-    fontSize: 14,
+    fontSize: AppDesignTokens.layout.v14,
     fontStyle: "italic",
     textAlign: "center",
-    paddingHorizontal: 20,
-    marginTop: 8,
+    paddingHorizontal: AppDesignTokens.layout.v20,
+    marginTop: AppDesignTokens.layout.v8,
   },
   doneButton: {
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 12,
-    paddingVertical: 14,
-    paddingHorizontal: 32,
-    marginTop: 16,
+    borderRadius: AppDesignTokens.layout.v12,
+    paddingVertical: AppDesignTokens.layout.v14,
+    paddingHorizontal: AppDesignTokens.layout.v32,
+    marginTop: AppDesignTokens.layout.v16,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
   },
-  doneButtonText: { color: AppDesignTokens.colors.text, fontSize: 15, fontWeight: "600" },
+  doneButtonText: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v15, fontWeight: "600" },
 });
 
 const timer = StyleSheet.create({
-  container: { alignItems: "center", gap: 12 },
-  display: { color: AppDesignTokens.colors.text, fontSize: 36, fontWeight: "bold", fontVariant: ["tabular-nums"] },
+  container: { alignItems: "center", gap: AppDesignTokens.layout.v12 },
+  display: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v36, fontWeight: "bold", fontVariant: ["tabular-nums"] },
   button: {
     backgroundColor: AppDesignTokens.colors.accent,
-    borderRadius: 10,
-    paddingVertical: 10,
-    paddingHorizontal: 28,
+    borderRadius: AppDesignTokens.layout.v10,
+    paddingVertical: AppDesignTokens.layout.v10,
+    paddingHorizontal: AppDesignTokens.layout.v28,
   },
   buttonStop: { backgroundColor: AppDesignTokens.colors.warning },
-  buttonText: { color: AppDesignTokens.colors.text, fontSize: 14, fontWeight: "700" },
+  buttonText: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v14, fontWeight: "700" },
 });

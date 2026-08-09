@@ -4,6 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { useAchievements } from "@/features/gamification/hooks/useAchievements";
 import { AppDesignTokens } from '@/constants/AppDesignTokens';
+import { AppIcon } from "@/components/AppIcon";
 import {
   ACHIEVEMENTS,
   ACHIEVEMENT_CATEGORIES,
@@ -33,9 +34,13 @@ function AchievementCard({
 }) {
   return (
     <View style={[styles.card, unlocked && styles.cardUnlocked]}>
-      <Text style={[styles.cardIcon, !unlocked && styles.cardIconLocked]}>
-        {unlocked ? def.icon : "🔒"}
-      </Text>
+      <View style={styles.cardIcon}>
+        <AppIcon
+          name={unlocked ? def.icon : "lock"}
+          color={unlocked ? AppDesignTokens.colors.accentSoft : AppDesignTokens.colors.textStrong}
+          size={unlocked ? AppDesignTokens.icons.sizeLg : AppDesignTokens.icons.sizeMd}
+        />
+      </View>
       <View style={styles.cardInfo}>
         <Text style={[styles.cardTitle, !unlocked && styles.cardTitleLocked]}>
           {def.title}
@@ -79,8 +84,8 @@ export default function AchievementModal() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()}>
-          <Text style={styles.closeText}>✕</Text>
+        <TouchableOpacity onPress={() => router.back()} accessibilityLabel="Fermer">
+          <AppIcon name="close" color={AppDesignTokens.colors.textMuted} size={AppDesignTokens.icons.sizeSm} />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Achievements</Text>
         <Text style={styles.headerCount}>
@@ -132,7 +137,7 @@ export default function AchievementModal() {
               style={[styles.categoryChip, activeCategory === cat && styles.categoryChipActive]}
               onPress={() => setActiveCategory(cat)}
             >
-              <Text style={styles.categoryEmoji}>{meta.emoji}</Text>
+              <AppIcon name={meta.icon} color={activeCategory === cat ? AppDesignTokens.colors.accentSoft : AppDesignTokens.colors.textMuted} size={AppDesignTokens.icons.sizeXs} />
               <Text style={[styles.categoryLabel, activeCategory === cat && styles.categoryLabelActive]}>
                 {meta.label}
               </Text>
@@ -174,90 +179,87 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: 20,
-    paddingVertical: 12,
+    paddingHorizontal: AppDesignTokens.layout.v20,
+    paddingVertical: AppDesignTokens.layout.v12,
   },
-  closeText: { color: AppDesignTokens.colors.textMuted, fontSize: 18, padding: 4 },
-  headerTitle: { color: AppDesignTokens.colors.text, fontSize: 17, fontWeight: "700" },
-  headerCount: { color: AppDesignTokens.colors.accent, fontSize: 14, fontWeight: "700" },
+  headerTitle: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v17, fontWeight: "700" },
+  headerCount: { color: AppDesignTokens.colors.accent, fontSize: AppDesignTokens.layout.v14, fontWeight: "700" },
   summary: {
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
     backgroundColor: AppDesignTokens.colors.surface,
-    marginHorizontal: 16,
-    borderRadius: 14,
-    paddingVertical: 16,
+    marginHorizontal: AppDesignTokens.layout.v16,
+    borderRadius: AppDesignTokens.layout.v14,
+    paddingVertical: AppDesignTokens.layout.v16,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
   },
-  summaryItem: { alignItems: "center", gap: 2 },
-  summaryValue: { color: AppDesignTokens.colors.text, fontSize: 22, fontWeight: "900" },
-  summaryLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 11, textTransform: "uppercase", letterSpacing: 0.5 },
-  summaryDivider: { width: 1, height: 30, backgroundColor: AppDesignTokens.colors.border },
+  summaryItem: { alignItems: "center", gap: AppDesignTokens.layout.v2 },
+  summaryValue: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v22, fontWeight: "900" },
+  summaryLabel: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v11, textTransform: "uppercase", letterSpacing: AppDesignTokens.layout.v0p5 },
+  summaryDivider: { width: AppDesignTokens.layout.v1, height: AppDesignTokens.layout.v30, backgroundColor: AppDesignTokens.colors.border },
   categoryScroll: {
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    gap: 8,
+    paddingHorizontal: AppDesignTokens.layout.v16,
+    paddingVertical: AppDesignTokens.layout.v12,
+    gap: AppDesignTokens.layout.v8,
   },
   categoryChip: {
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 20,
-    paddingVertical: 7,
-    paddingHorizontal: 12,
-    gap: 5,
+    borderRadius: AppDesignTokens.layout.v20,
+    paddingVertical: AppDesignTokens.layout.v7,
+    paddingHorizontal: AppDesignTokens.layout.v12,
+    gap: AppDesignTokens.layout.v5,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
-    marginRight: 8,
+    marginRight: AppDesignTokens.layout.v8,
   },
   categoryChipActive: { borderColor: AppDesignTokens.colors.accent, backgroundColor: AppDesignTokens.colors.surfaceAccent },
-  categoryEmoji: { fontSize: 14 },
-  categoryLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 12, fontWeight: "500" },
+  categoryLabel: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v12, fontWeight: "500" },
   categoryLabelActive: { color: AppDesignTokens.colors.text },
-  categoryStat: { color: AppDesignTokens.colors.textSubtle, fontSize: 10, fontWeight: "600" },
+  categoryStat: { color: AppDesignTokens.colors.textSubtle, fontSize: AppDesignTokens.layout.v10, fontWeight: "600" },
   scroll: { flex: 1 },
-  content: { padding: 16, gap: 8, paddingBottom: 40 },
+  content: { padding: AppDesignTokens.layout.v16, gap: AppDesignTokens.layout.v8, paddingBottom: AppDesignTokens.layout.v40 },
   card: {
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 14,
-    padding: 14,
-    gap: 12,
+    borderRadius: AppDesignTokens.layout.v14,
+    padding: AppDesignTokens.layout.v14,
+    gap: AppDesignTokens.layout.v12,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
     opacity: 0.5,
   },
   cardUnlocked: { opacity: 1, borderColor: AppDesignTokens.colors.accent30 },
-  cardIcon: { fontSize: 28, width: 36, textAlign: "center" },
-  cardIconLocked: { fontSize: 22 },
-  cardInfo: { flex: 1, gap: 3 },
-  cardTitle: { color: AppDesignTokens.colors.textMuted, fontSize: 15, fontWeight: "600" },
+  cardIcon: { width: AppDesignTokens.layout.v36, alignItems: "center", justifyContent: "center" },
+  cardInfo: { flex: 1, gap: AppDesignTokens.layout.v3 },
+  cardTitle: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v15, fontWeight: "600" },
   cardTitleLocked: { color: AppDesignTokens.colors.neutralDarker },
-  cardDesc: { color: AppDesignTokens.colors.textSubtle, fontSize: 12 },
-  cardDate: { color: AppDesignTokens.colors.accent, fontSize: 11, fontWeight: "500" },
-  cardXP: { color: AppDesignTokens.colors.neutralDark, fontSize: 13, fontWeight: "700" },
-  cardXPUnlocked: { color: AppDesignTokens.colors.success, fontSize: 16 },
+  cardDesc: { color: AppDesignTokens.colors.textSubtle, fontSize: AppDesignTokens.layout.v12 },
+  cardDate: { color: AppDesignTokens.colors.accent, fontSize: AppDesignTokens.layout.v11, fontWeight: "500" },
+  cardXP: { color: AppDesignTokens.colors.neutralDark, fontSize: AppDesignTokens.layout.v13, fontWeight: "700" },
+  cardXPUnlocked: { color: AppDesignTokens.colors.success, fontSize: AppDesignTokens.layout.v16 },
   progressBar: {
-    height: 6,
+    height: AppDesignTokens.layout.v6,
     backgroundColor: AppDesignTokens.colors.surfaceMutedAlt,
-    borderRadius: 3,
+    borderRadius: AppDesignTokens.layout.v3,
     overflow: "hidden",
-    marginTop: 4,
+    marginTop: AppDesignTokens.layout.v4,
   },
   progressFill: {
     height: "100%",
     backgroundColor: AppDesignTokens.colors.accent,
-    borderRadius: 3,
+    borderRadius: AppDesignTokens.layout.v3,
   },
   progressText: {
     position: "absolute",
-    right: 0,
-    top: -14,
+    right: AppDesignTokens.layout.v0,
+    top: AppDesignTokens.layout.vMinus14,
     color: AppDesignTokens.colors.textSubtle,
-    fontSize: 10,
+    fontSize: AppDesignTokens.layout.v10,
     fontWeight: "500",
   },
 });

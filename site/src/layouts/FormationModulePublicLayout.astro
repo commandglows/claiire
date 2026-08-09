@@ -192,9 +192,9 @@ const hero = {
 <style>
   .formation-shell {
     display: grid;
-    gap: 1.5rem;
+    gap: var(--site-space-6);
     margin: 0 auto;
-    max-width: 58rem;
+    max-width: var(--site-width-public);
   }
 
   .formation-shell__intro,
@@ -202,17 +202,17 @@ const hero = {
     background:
       linear-gradient(180deg, color-mix(in srgb, var(--sl-color-bg) 92%, white 8%), var(--sl-color-bg));
     border: 1px solid var(--sl-color-gray-5);
-    border-radius: 1.25rem;
-    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    padding: var(--site-space-6);
     box-shadow: 0 10px 30px var(--site-shadow-raised-5);
   }
 
   .formation-shell__eyebrow,
   .formation-lockup__label {
     color: var(--sl-color-text-accent);
-    font-size: 0.8rem;
+    font-size: var(--site-font-0p8);
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: var(--site-letter-0p08);
     margin: 0 0 0.4rem;
     text-transform: uppercase;
   }
@@ -230,15 +230,15 @@ const hero = {
   .formation-lockup__actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8rem;
-    margin-top: 1rem;
+    gap: var(--site-space-0p8);
+    margin-top: var(--site-space-4);
   }
 
   .formation-list {
     display: grid;
-    gap: 0.85rem;
+    gap: var(--site-space-0p85);
     margin: 0;
-    padding-left: 1.2rem;
+    padding-left: var(--site-space-1p2);
   }
 
   .formation-list--checks {
@@ -247,13 +247,13 @@ const hero = {
 
   .formation-faq {
     display: grid;
-    gap: 0.9rem;
+    gap: var(--site-space-0p9);
   }
 
   .formation-faq details {
     border: 1px solid var(--sl-color-gray-5);
-    border-radius: 1rem;
-    padding: 1rem 1.1rem;
+    border-radius: var(--radius-md);
+    padding: var(--site-space-4) var(--site-space-5);
     background: color-mix(in srgb, var(--sl-color-bg) 95%, white 5%);
   }
 
@@ -265,21 +265,21 @@ const hero = {
   .formation-related {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
+    gap: var(--site-space-0p75);
   }
 
   .formation-related a {
     border: 1px solid var(--sl-color-gray-5);
-    border-radius: 999px;
-    padding: 0.65rem 1rem;
+    border-radius: var(--site-radius-pill);
+    padding: var(--site-space-3) var(--site-space-4);
     text-decoration: none;
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 45rem) {
     .formation-shell__intro,
     .formation-block {
-      padding: 1.2rem;
-      border-radius: 1rem;
+      padding: var(--site-space-5);
+      border-radius: var(--radius-md);
     }
 
     .formation-lockup__actions {

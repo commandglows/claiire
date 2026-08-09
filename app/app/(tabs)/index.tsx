@@ -16,6 +16,7 @@ import { DailyCombo } from "@/features/gamification/components/DailyCombo";
 import { useMode } from "@/features/mode";
 import type { Id } from "@/convex/_generated/dataModel";
 import { AppDesignTokens } from '@/constants/AppDesignTokens';
+import { AppIcon } from "@/components/AppIcon";
 
 function getTimeGreeting(): string {
   const h = new Date().getHours();
@@ -160,7 +161,7 @@ export default function AccueilScreen() {
         {/* Prediction alert (Attack Alert — PRD 9.7) */}
         {activeAlerts.length > 0 && (
           <View style={styles.predictionBanner}>
-            <Text style={styles.predictionIcon}>⚡</Text>
+            <AppIcon name="zap" color={AppDesignTokens.colors.accentSoft} size={AppDesignTokens.icons.sizeSm} />
             <View style={styles.predictionContent}>
               <Text style={styles.predictionText}>{activeAlerts[0].message}</Text>
               <Text style={styles.predictionConfidence}>
@@ -193,7 +194,7 @@ export default function AccueilScreen() {
             style={styles.alertBanner}
             onPress={() => router.push("/(tabs)/progres" as never)}
           >
-            <Text style={styles.alertIcon}>{warnings[0].icon}</Text>
+            <AppIcon name={warnings[0].icon} color={AppDesignTokens.colors.warning} size={AppDesignTokens.icons.sizeSm} />
             <Text style={styles.alertText} numberOfLines={2}>
               {warnings[0].message}
             </Text>
@@ -231,7 +232,7 @@ export default function AccueilScreen() {
                   onPress={() => !done && completeHabit(habit._id)}
                   disabled={done}
                 >
-                  <Text style={styles.habitChipIcon}>{habit.icon ?? "⚡"}</Text>
+                  <AppIcon name={habit.icon ?? "zap"} color={AppDesignTokens.colors.accentSoft} size={AppDesignTokens.icons.sizeSm} />
                   <Text style={[styles.habitChipName, done && styles.habitChipNameDone]}>
                     {habit.name}
                   </Text>
@@ -257,51 +258,51 @@ export default function AccueilScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: AppDesignTokens.colors.background },
-  content: { padding: 20, gap: 14, paddingBottom: 32 },
+  content: { padding: AppDesignTokens.layout.v20, gap: AppDesignTokens.layout.v14, paddingBottom: AppDesignTokens.layout.v32 },
   headerRow: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
   },
-  headerText: { flex: 1, gap: 4 },
-  greeting: { fontSize: 22, fontWeight: "bold", color: AppDesignTokens.colors.text },
-  subtitle: { fontSize: 13, color: AppDesignTokens.colors.textMuted },
-  subtitleAlert: { fontSize: 13, color: AppDesignTokens.colors.warning },
-  levelRow: { flexDirection: "row", alignItems: "center", gap: 12 },
+  headerText: { flex: 1, gap: AppDesignTokens.layout.v4 },
+  greeting: { fontSize: AppDesignTokens.layout.v22, fontWeight: "bold", color: AppDesignTokens.colors.text },
+  subtitle: { fontSize: AppDesignTokens.layout.v13, color: AppDesignTokens.colors.textMuted },
+  subtitleAlert: { fontSize: AppDesignTokens.layout.v13, color: AppDesignTokens.colors.warning },
+  levelRow: { flexDirection: "row", alignItems: "center", gap: AppDesignTokens.layout.v12 },
   levelBadge: {
-    width: 44,
-    height: 44,
-    borderRadius: 22,
+    width: AppDesignTokens.layout.v44,
+    height: AppDesignTokens.layout.v44,
+    borderRadius: AppDesignTokens.layout.v22,
     backgroundColor: AppDesignTokens.colors.accent,
     alignItems: "center",
     justifyContent: "center",
   },
-  levelNumber: { fontSize: 18, fontWeight: "bold", color: AppDesignTokens.colors.text },
-  xpSection: { flex: 1, gap: 4 },
+  levelNumber: { fontSize: AppDesignTokens.layout.v18, fontWeight: "bold", color: AppDesignTokens.colors.text },
+  xpSection: { flex: 1, gap: AppDesignTokens.layout.v4 },
   xpBar: {
-    height: 8,
+    height: AppDesignTokens.layout.v8,
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 4,
+    borderRadius: AppDesignTokens.layout.v4,
     overflow: "hidden",
   },
-  xpBarFill: { height: "100%", backgroundColor: AppDesignTokens.colors.accent, borderRadius: 4 },
+  xpBarFill: { height: "100%", backgroundColor: AppDesignTokens.colors.accent, borderRadius: AppDesignTokens.layout.v4 },
   xpMeta: { flexDirection: "row", justifyContent: "space-between" },
-  xpLabel: { fontSize: 12, color: AppDesignTokens.colors.textSubtle },
-  streakBadge: { fontSize: 12, color: AppDesignTokens.colors.warning, fontWeight: "600" },
+  xpLabel: { fontSize: AppDesignTokens.layout.v12, color: AppDesignTokens.colors.textSubtle },
+  streakBadge: { fontSize: AppDesignTokens.layout.v12, color: AppDesignTokens.colors.warning, fontWeight: "600" },
   alertBanner: {
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: AppDesignTokens.colors.surfaceSecondary,
-    borderRadius: 12,
-    padding: 12,
-    gap: 10,
+    borderRadius: AppDesignTokens.layout.v12,
+    padding: AppDesignTokens.layout.v12,
+    gap: AppDesignTokens.layout.v10,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.warning40,
   },
-  alertIcon: { fontSize: 20 },
-  alertText: { flex: 1, color: AppDesignTokens.colors.warning, fontSize: 13, lineHeight: 18 },
-  alertArrow: { color: AppDesignTokens.colors.warning, fontSize: 18 },
-  sectionTitle: { fontSize: 15, fontWeight: "600", color: AppDesignTokens.colors.text },
+  alertIcon: { fontSize: AppDesignTokens.layout.v20 },
+  alertText: { flex: 1, color: AppDesignTokens.colors.warning, fontSize: AppDesignTokens.layout.v13, lineHeight: AppDesignTokens.layout.v18 },
+  alertArrow: { color: AppDesignTokens.colors.warning, fontSize: AppDesignTokens.layout.v18 },
+  sectionTitle: { fontSize: AppDesignTokens.layout.v15, fontWeight: "600", color: AppDesignTokens.colors.text },
   sectionHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -310,90 +311,90 @@ const styles = StyleSheet.create({
   habitBadge: {
     backgroundColor: AppDesignTokens.colors.accent,
     color: AppDesignTokens.colors.text,
-    fontSize: 11,
+    fontSize: AppDesignTokens.layout.v11,
     fontWeight: "700",
-    paddingHorizontal: 8,
-    paddingVertical: 2,
-    borderRadius: 8,
+    paddingHorizontal: AppDesignTokens.layout.v8,
+    paddingVertical: AppDesignTokens.layout.v2,
+    borderRadius: AppDesignTokens.layout.v8,
   },
   emptyHabits: {
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 12,
-    padding: 16,
+    borderRadius: AppDesignTokens.layout.v12,
+    padding: AppDesignTokens.layout.v16,
     alignItems: "center",
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.accent,
     borderStyle: "dashed",
   },
-  emptyText: { color: AppDesignTokens.colors.accent, fontSize: 14, fontWeight: "500" },
-  habitsList: { gap: 6 },
+  emptyText: { color: AppDesignTokens.colors.accent, fontSize: AppDesignTokens.layout.v14, fontWeight: "500" },
+  habitsList: { gap: AppDesignTokens.layout.v6 },
   habitChip: {
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 12,
-    paddingVertical: 12,
-    paddingHorizontal: 14,
-    gap: 10,
+    borderRadius: AppDesignTokens.layout.v12,
+    paddingVertical: AppDesignTokens.layout.v12,
+    paddingHorizontal: AppDesignTokens.layout.v14,
+    gap: AppDesignTokens.layout.v10,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
   },
   habitChipDone: { borderColor: AppDesignTokens.colors.success, opacity: 0.65 },
-  habitChipIcon: { fontSize: 20 },
-  habitChipName: { flex: 1, color: AppDesignTokens.colors.text, fontSize: 14, fontWeight: "500" },
+  habitChipIcon: { fontSize: AppDesignTokens.layout.v20 },
+  habitChipName: { flex: 1, color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v14, fontWeight: "500" },
   habitChipNameDone: { color: AppDesignTokens.colors.textMuted, textDecorationLine: "line-through" },
-  habitCheck: { color: AppDesignTokens.colors.success, fontSize: 16, fontWeight: "700" },
-  habitXP: { color: AppDesignTokens.colors.accent, fontSize: 12, fontWeight: "600" },
-  seeAll: { color: AppDesignTokens.colors.accent, fontSize: 13, fontWeight: "500", textAlign: "center", paddingTop: 4 },
+  habitCheck: { color: AppDesignTokens.colors.success, fontSize: AppDesignTokens.layout.v16, fontWeight: "700" },
+  habitXP: { color: AppDesignTokens.colors.accent, fontSize: AppDesignTokens.layout.v12, fontWeight: "600" },
+  seeAll: { color: AppDesignTokens.colors.accent, fontSize: AppDesignTokens.layout.v13, fontWeight: "500", textAlign: "center", paddingTop: AppDesignTokens.layout.v4 },
   routinePrompt: {
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 12,
-    padding: 14,
-    gap: 12,
+    borderRadius: AppDesignTokens.layout.v12,
+    padding: AppDesignTokens.layout.v14,
+    gap: AppDesignTokens.layout.v12,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.accent40,
   },
-  routineEmoji: { fontSize: 28 },
-  routinePromptInfo: { flex: 1, gap: 2 },
-  routinePromptTitle: { color: AppDesignTokens.colors.text, fontSize: 14, fontWeight: "600" },
-  routinePromptSub: { color: AppDesignTokens.colors.textMuted, fontSize: 12 },
-  routineArrow: { color: AppDesignTokens.colors.accent, fontSize: 20 },
+  routineEmoji: { fontSize: AppDesignTokens.layout.v28 },
+  routinePromptInfo: { flex: 1, gap: AppDesignTokens.layout.v2 },
+  routinePromptTitle: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v14, fontWeight: "600" },
+  routinePromptSub: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v12 },
+  routineArrow: { color: AppDesignTokens.colors.accent, fontSize: AppDesignTokens.layout.v20 },
   routinePromptEmpty: {
-    borderRadius: 12,
-    paddingVertical: 12,
+    borderRadius: AppDesignTokens.layout.v12,
+    paddingVertical: AppDesignTokens.layout.v12,
     alignItems: "center",
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.accent,
     borderStyle: "dashed",
   },
-  routinePromptEmptyText: { color: AppDesignTokens.colors.accent, fontSize: 13, fontWeight: "500" },
+  routinePromptEmptyText: { color: AppDesignTokens.colors.accent, fontSize: AppDesignTokens.layout.v13, fontWeight: "500" },
   predictionBanner: {
     backgroundColor: AppDesignTokens.colors.surfaceTertiary,
-    borderRadius: 12,
-    padding: 12,
-    gap: 8,
+    borderRadius: AppDesignTokens.layout.v12,
+    padding: AppDesignTokens.layout.v12,
+    gap: AppDesignTokens.layout.v8,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.accent80,
   },
-  predictionIcon: { fontSize: 20 },
-  predictionContent: { gap: 2 },
-  predictionText: { color: AppDesignTokens.colors.accentSoft, fontSize: 13, fontWeight: "600", lineHeight: 18 },
-  predictionConfidence: { color: AppDesignTokens.colors.accent, fontSize: 11, fontWeight: "500" },
-  predictionActions: { flexDirection: "row", gap: 8, marginTop: 4 },
+  predictionIcon: { fontSize: AppDesignTokens.layout.v20 },
+  predictionContent: { gap: AppDesignTokens.layout.v2 },
+  predictionText: { color: AppDesignTokens.colors.accentSoft, fontSize: AppDesignTokens.layout.v13, fontWeight: "600", lineHeight: AppDesignTokens.layout.v18 },
+  predictionConfidence: { color: AppDesignTokens.colors.accent, fontSize: AppDesignTokens.layout.v11, fontWeight: "500" },
+  predictionActions: { flexDirection: "row", gap: AppDesignTokens.layout.v8, marginTop: AppDesignTokens.layout.v4 },
   predictionAct: {
     backgroundColor: AppDesignTokens.colors.accent,
-    borderRadius: 8,
-    paddingVertical: 7,
-    paddingHorizontal: 14,
+    borderRadius: AppDesignTokens.layout.v8,
+    paddingVertical: AppDesignTokens.layout.v7,
+    paddingHorizontal: AppDesignTokens.layout.v14,
   },
-  predictionActText: { color: AppDesignTokens.colors.text, fontSize: 12, fontWeight: "700" },
+  predictionActText: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v12, fontWeight: "700" },
   predictionDismiss: {
     backgroundColor: AppDesignTokens.colors.border,
-    borderRadius: 8,
-    paddingVertical: 7,
-    paddingHorizontal: 14,
+    borderRadius: AppDesignTokens.layout.v8,
+    paddingVertical: AppDesignTokens.layout.v7,
+    paddingHorizontal: AppDesignTokens.layout.v14,
   },
-  predictionDismissText: { color: AppDesignTokens.colors.textMuted, fontSize: 12, fontWeight: "600" },
+  predictionDismissText: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v12, fontWeight: "600" },
 });

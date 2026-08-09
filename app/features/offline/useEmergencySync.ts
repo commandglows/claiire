@@ -63,7 +63,7 @@ export function useEmergencySync() {
       const cachedHabits: CachedHabit[] = (habits ?? []).slice(0, 5).map((h) => ({
         id: h._id,
         name: h.name,
-        icon: h.icon ?? "⚡",
+        icon: h.icon ?? "zap",
       }));
 
       await updateEmergencyCache({

@@ -56,7 +56,7 @@ export function CrisisHeatmap() {
       <View style={styles.grid}>
         {/* Time block headers */}
         <View style={styles.headerRow}>
-          <View style={{ width: 32 }} />
+          <View style={{ width: AppDesignTokens.layout.v32 }} />
           {data.blocks.map((block) => (
             <Text key={block} style={[styles.blockLabel, { width: CELL_SIZE }]}>
               {block.split("-")[0]}h
@@ -119,44 +119,44 @@ export function CrisisHeatmap() {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: AppDesignTokens.colors.surface,
-    borderRadius: 14,
-    padding: 16,
-    gap: 10,
+    borderRadius: AppDesignTokens.layout.v14,
+    padding: AppDesignTokens.layout.v16,
+    gap: AppDesignTokens.layout.v10,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
   },
-  title: { color: AppDesignTokens.colors.text, fontSize: 15, fontWeight: "600" },
-  subtitle: { color: AppDesignTokens.colors.textMuted, fontSize: 12, marginTop: -4 },
-  grid: { gap: 2 },
-  headerRow: { flexDirection: "row", marginBottom: 2 },
-  blockLabel: { color: AppDesignTokens.colors.textSubtle, fontSize: 9, textAlign: "center" },
-  row: { flexDirection: "row", alignItems: "center", gap: 2 },
-  dayLabel: { color: AppDesignTokens.colors.textMuted, fontSize: 10, width: 30, textAlign: "right", paddingRight: 4 },
+  title: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v15, fontWeight: "600" },
+  subtitle: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v12, marginTop: AppDesignTokens.layout.vMinus4 },
+  grid: { gap: AppDesignTokens.layout.v2 },
+  headerRow: { flexDirection: "row", marginBottom: AppDesignTokens.layout.v2 },
+  blockLabel: { color: AppDesignTokens.colors.textSubtle, fontSize: AppDesignTokens.layout.v9, textAlign: "center" },
+  row: { flexDirection: "row", alignItems: "center", gap: AppDesignTokens.layout.v2 },
+  dayLabel: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v10, width: AppDesignTokens.layout.v30, textAlign: "right", paddingRight: AppDesignTokens.layout.v4 },
   cell: {
-    borderRadius: 4,
+    borderRadius: AppDesignTokens.layout.v4,
     alignItems: "center",
     justifyContent: "center",
   },
-  cellText: { color: AppDesignTokens.colors.text, fontSize: 10, fontWeight: "600" },
+  cellText: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v10, fontWeight: "600" },
   legend: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    gap: 4,
-    marginTop: 4,
+    gap: AppDesignTokens.layout.v4,
+    marginTop: AppDesignTokens.layout.v4,
   },
-  legendLabel: { color: AppDesignTokens.colors.textSubtle, fontSize: 10 },
+  legendLabel: { color: AppDesignTokens.colors.textSubtle, fontSize: AppDesignTokens.layout.v10 },
   legendCell: {
-    width: 14,
-    height: 14,
-    borderRadius: 3,
+    width: AppDesignTokens.layout.v14,
+    height: AppDesignTokens.layout.v14,
+    borderRadius: AppDesignTokens.layout.v3,
   },
   insight: {
     backgroundColor: AppDesignTokens.colors.surfaceSecondary,
-    borderRadius: 8,
-    padding: 10,
+    borderRadius: AppDesignTokens.layout.v8,
+    padding: AppDesignTokens.layout.v10,
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.warning40,
   },
-  insightText: { color: AppDesignTokens.colors.warning, fontSize: 12, fontWeight: "500" },
+  insightText: { color: AppDesignTokens.colors.warning, fontSize: AppDesignTokens.layout.v12, fontWeight: "500" },
 });

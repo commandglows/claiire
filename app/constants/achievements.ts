@@ -1,3 +1,5 @@
+import type { AppIconName } from "@/components/AppIcon";
+
 export type AchievementCategory =
   | "starter"
   | "streak"
@@ -11,7 +13,7 @@ export type AchievementCategory =
 
 export type AchievementDef = {
   id: string;
-  icon: string;
+  icon: AppIconName | string;
   title: string;
   description: string;
   xpBonus: number;
@@ -20,16 +22,16 @@ export type AchievementDef = {
   target?: number;
 };
 
-export const CATEGORY_LABELS: Record<AchievementCategory, { label: string; emoji: string }> = {
-  starter: { label: "Premiers pas", emoji: "🌱" },
-  streak: { label: "Séries", emoji: "🔥" },
-  combo: { label: "Combos", emoji: "💎" },
-  volume: { label: "Volume", emoji: "📊" },
-  crisis: { label: "Batailles", emoji: "⚔️" },
-  routine: { label: "Routines", emoji: "🌅" },
-  intervention: { label: "Arsenal", emoji: "🛡️" },
-  insight: { label: "Intelligence", emoji: "💡" },
-  level: { label: "Niveaux", emoji: "⬆️" },
+export const CATEGORY_LABELS: Record<AchievementCategory, { label: string; icon: AppIconName }> = {
+  starter: { label: "Premiers pas", icon: "sprout" },
+  streak: { label: "Séries", icon: "flame" },
+  combo: { label: "Combos", icon: "gem" },
+  volume: { label: "Volume", icon: "chart" },
+  crisis: { label: "Batailles", icon: "swords" },
+  routine: { label: "Routines", icon: "sparkles" },
+  intervention: { label: "Arsenal", icon: "shield" },
+  insight: { label: "Intelligence", icon: "lightbulb" },
+  level: { label: "Niveaux", icon: "arrow-up" },
 };
 
 export const ACHIEVEMENTS: AchievementDef[] = [
