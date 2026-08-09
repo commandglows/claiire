@@ -1,6 +1,6 @@
 # Claiire Monorepo
 
-## Shipglowz Development Mode
+## Shipglows Development Mode
 
 - development_mode: local
 - validation_surface: local
@@ -20,16 +20,16 @@
 
 - `site/`: Astro site
 - `app/`: Expo mobile app package root
-- `shipglowz_data/`: documentation and workflow corpus
+- `shipglows_data/`: documentation and workflow corpus
 
 ## Documentation Rules
 
-- shared branding: `shipglowz_data/branding/branding.md`
-- shared business/product: `shipglowz_data/business/`
-- technical docs by surface: `shipglowz_data/technical/site/` and `shipglowz_data/technical/app/`
-- editorial docs: `shipglowz_data/editorial/site/`
-- research and inspiration staging: `shipglowz_data/research/app-inspiration/`
-- workflow trackers and specs: `shipglowz_data/workflow/`
+- shared branding: `shipglows_data/branding/branding.md`
+- shared business/product: `shipglows_data/business/`
+- technical docs by surface: `shipglows_data/technical/site/` and `shipglows_data/technical/app/`
+- editorial docs: `shipglows_data/editorial/site/`
+- research and inspiration staging: `shipglows_data/research/app-inspiration/`
+- workflow trackers and specs: `shipglows_data/workflow/`
 
 ## Notes
 

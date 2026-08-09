@@ -22,26 +22,26 @@
     "postinstall": "node scripts/postinstall.cjs"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.3",
-    "@astrojs/vercel": "^10.0.8",
-    "@astrojs/vue": "^6.0.1",
-    "@clerk/astro": "^3.0.18",
+    "@astrojs/sitemap": "^4.0.0",
+    "@astrojs/vercel": "^11.0.0",
+    "@astrojs/vue": "^7.0.0",
+    "@clerk/astro": "^3.4.8",
     "@diane-winflowz/gamification": "github:dianedef/gamification#0cad1606d50e3e1dd48c65d278e05363e439f1bd",
-    "astro": "^6.4.8",
-    "remark-directive": "^3.0.1",
-    "sharp": "^0.32.6",
+    "astro": "^7.0.3",
+    "remark-directive": "^4.0.0",
+    "sharp": "^0.35.2",
     "unist-util-visit": "^5.1.0",
     "vue": "^3.5.39"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
-    "@types/node": "^24.x",
-    "glob": "^11.1.0",
-    "nanoid": "^3.3.15",
+    "@types/node": "^24.0.1",
+    "glob": "^13.0.6",
+    "nanoid": "^5.1.16",
     "nodemon": "^3.1.14",
-    "prettier": "^3.8.5",
+    "prettier": "^3.9.0",
     "prettier-plugin-astro": "^0.14.1",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.3"
   },
   "pnpm": {
     "overrides": {
