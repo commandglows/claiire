@@ -1,20 +1,27 @@
 ---
-title: "Comprendre ton cycle de violence"
-description: "Repère la montée de tension, les déclencheurs, les formes de contrôle et les points d'interruption possibles avant l'explosion."
+title: 'Comprendre ton cycle de violence'
+description:
+  "Repère la montée de tension, les déclencheurs, les formes de contrôle et les points
+  d'interruption possibles avant l'explosion."
 template: splash
 hero:
-  title: "Comprendre ton cycle de violence"
-  tagline: "Ce module t'aide à voir la mécanique qui revient : tension, déclencheurs, contrôle, explosion, accalmie, répétition. Le but n'est pas de l'excuser. Le but est de pouvoir l'interrompre plus tôt."
+  title: 'Comprendre ton cycle de violence'
+  tagline:
+    "Ce module t'aide à voir la mécanique qui revient : tension, déclencheurs, contrôle, explosion,
+    accalmie, répétition. Le but n'est pas de l'excuser. Le but est de pouvoir l'interrompre plus
+    tôt."
   actions:
-    - text: "Débloquer le module complet"
-      link: "/membres/formations/auteurs/2-cycle/"
-      variant: "primary"
-    - text: "Voir le parcours auteurs"
-      link: "/formations/auteurs/"
-      variant: "secondary"
+    - text: 'Débloquer le module complet'
+      link: '/membres/formations/auteurs/2-cycle/'
+      variant: 'primary'
+    - text: 'Voir le parcours auteurs'
+      link: '/formations/auteurs/'
+      variant: 'secondary'
 ---
 
-Si tu es arrivé(e) jusqu'ici, tu as déjà commencé à voir les mécanismes qui te protègent de la réalité. Ce deuxième module va plus loin : il te demande de regarder la mécanique précise qui fait monter la tension, puis la violence ou le contrôle.
+Si tu es arrivé(e) jusqu'ici, tu as déjà commencé à voir les mécanismes qui te protègent de la
+réalité. Ce deuxième module va plus loin : il te demande de regarder la mécanique précise qui fait
+monter la tension, puis la violence ou le contrôle.
 
 Un cycle n'est pas une fatalité. C'est une structure. Et une structure peut se cartographier.
 
@@ -34,7 +41,8 @@ Voir ce cycle, c'est commencer à chercher les points où quelque chose peut êt
 
 ## La roue du pouvoir et du contrôle
 
-Le travail de Duluth aide à voir que la violence ne passe pas seulement par l'explosion visible. Elle peut aussi passer par :
+Le travail de Duluth aide à voir que la violence ne passe pas seulement par l'explosion visible.
+Elle peut aussi passer par :
 
 - l'intimidation
 - l'abus émotionnel
@@ -68,14 +76,15 @@ Ce module s'appuie notamment sur :
 - **Ellen Pence** et **Michael Paymar** pour la roue du pouvoir et du contrôle
 - **Evan Stark** pour la coercition de contrôle
 
-Le but est simple : rendre observable ce que tu vivais jusque-là comme une succession d'épisodes flous.
+Le but est simple : rendre observable ce que tu vivais jusque-là comme une succession d'épisodes
+flous.
 
 ## Ce que tu débloques dans le module complet
 
 - la version intégrale du module, plus détaillée
 - un exercice complet de cartographie à partir d'un épisode réel
 - une checklist de déclencheurs et de formes de contrôle
-- un protocole simple pour repérer les premiers signes d'escalade
+- un exercice guidé pour cartographier les premiers signes d'escalade hors situation de crise
 - un passage plus propre vers le travail émotionnel du module 3
 
 ## Extrait du module complet
@@ -89,6 +98,10 @@ Dans la version complète, on va plus loin sur :
 
 [Débloquer le module complet](/membres/formations/auteurs/2-cycle/)
 
+Si la tension monte maintenant et que tu crains de passer à l'acte, ne poursuis pas l'exercice :
+éloigne-toi de la situation et consulte
+[les ressources d'interruption immédiate](/violence/auteurs/). Cette orientation reste gratuite.
+
 ## FAQ
 
 ### Est-ce qu'un cycle veut dire que tout est écrit d'avance ?
@@ -97,7 +110,8 @@ Non. Ça veut dire qu'il y a une répétition, donc des points où travailler.
 
 ### Est-ce que ce module parle seulement de violence physique ?
 
-Non. Il parle aussi de contrôle, de menaces, d'humiliation, d'isolement et d'autres formes de violence.
+Non. Il parle aussi de contrôle, de menaces, d'humiliation, d'isolement et d'autres formes de
+violence.
 
 ### Pourquoi regarder les déclencheurs si ça n'excuse rien ?
 
@@ -116,6 +130,7 @@ Continuer avec [Tes émotions, tes alliées](/formations/auteurs/3-emotions/).
 
 ## Tu veux le module complet ?
 
-Débloque la version intégrale pour accéder au contenu complet, à la checklist, au protocole, aux ressources premium et au passage guidé entre lucidité, responsabilité et changement concret.
+Débloque l'approfondissement pour accéder aux exercices de réflexion, au suivi et aux outils de
+progression hors crise. Les ressources d'interruption immédiate restent gratuites.
 
 [Débloquer le module complet](/membres/formations/auteurs/2-cycle/)

@@ -5,7 +5,7 @@
 Migrer les contenus de formation vers une architecture en deux couches :
 
 - **public** : page SEO indexable, utile, persuasive
-- **prive** : contenu integral, exercices, checklists, protocoles, ressources premium
+- **prive** : approfondissements, exercices de progression, suivi et outils premium non critiques
 
 Le but n'est pas seulement de deplacer le contenu.
 Le but est de **recomposer** chaque module dans un nouveau systeme :
@@ -14,6 +14,10 @@ Le but est de **recomposer** chaque module dans un nouveau systeme :
 2. meilleure monétisation
 3. meilleur maillage interne
 4. contenu de formation plus net et plus actionnable
+
+## Decision de positionnement 2026-08-09
+
+Ce plan reste un historique d'execution, mais son architecture produit est corrigee : il n'existe plus de socle commun obligatoire avant bifurcation. Les themes communs sont dupliques et adaptes dans deux parcours strictement separes. Les ressources de securite, d'urgence et d'interruption immediate restent publiques, quel que soit le modele premium.
 
 ## Source de ton et de posture
 
@@ -38,7 +42,7 @@ Cette contrainte fait partie de la definition de termine pour chaque module.
 ### Hubs
 
 - `/formations/`
-- `/formations/socle/`
+- `/formations/socle/` (route historique a reorienter vers les deux parcours, pas un parcours commun)
 - `/formations/victimes/`
 - `/formations/auteurs/`
 
@@ -108,10 +112,10 @@ Exemple :
 
 #### Prive
 
-- contenu integral
+- approfondissement pedagogique non critique
 - exercice guide
 - checklist
-- protocole
+- protocole de progression hors urgence
 - ressources premium
 - progression
 
@@ -230,7 +234,7 @@ Tant que ce lot n'est pas satisfaisant, on ne migre pas tout le reste.
 
 ---
 
-## Phase 3 — Socle commun complet
+## Phase 3 — Themes transversaux adaptes par parcours
 
 ### Pages
 
@@ -240,7 +244,7 @@ Tant que ce lot n'est pas satisfaisant, on ne migre pas tout le reste.
 
 ### Objectif
 
-Uniformiser tout le socle commun avant de finir les deux parcours specialises.
+Reutiliser les connaissances utiles sans creer de parcours, progression ou etat commun. Chaque version doit etre reecrite selon la responsabilite, le risque et le besoin du parcours concerne.
 
 ### Benefice
 
@@ -337,7 +341,7 @@ Depuis chaque module auteurs :
 ### Passe en prive
 
 - checklist complete
-- protocoles detailles
+- protocoles de progression detailles hors urgence
 - exercices guides
 - journaux / templates
 - ressources premium

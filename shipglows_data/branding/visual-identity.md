@@ -6,7 +6,7 @@ project: "claiire"
 created: "2026-06-30"
 updated: "2026-06-30"
 status: reviewed
-source_skill: 300-sf-docs
+source_skill: 300-sg-docs
 scope: branding
 owner: Diane
 confidence: medium
@@ -22,7 +22,7 @@ evidence:
   - "Extracted from the previous single-file Claiire branding source."
   - "Implementation note: exact theme values remain owned by the technical surface."
 next_review: "2026-07-30"
-next_step: "/300-sf-docs update branding bundle"
+next_step: "/300-sg-docs update branding bundle"
 ---
 
 # Visual Identity

@@ -1,22 +1,27 @@
 ---
-title: "Parcours auteurs : changer des comportements violents"
-description: "Six modules pour sortir du brouillard, reconnaître tes mécanismes, travailler tes émotions et construire des relations sans violence."
+title: "Certains de tes comportements t'inquiètent"
+description:
+  'Six modules pour sortir du brouillard, reconnaître tes mécanismes, travailler tes émotions et
+  construire des relations sans violence.'
 template: splash
 hero:
-  title: "Parcours auteurs : changer des comportements violents"
-  tagline: "Tu n'as pas besoin qu'on t'humilie pour changer. Tu as besoin d'un cadre honnête, ferme et utile pour voir ce qui se passe, assumer ta responsabilité et faire autrement dans la durée."
+  title: "Certains de tes comportements t'inquiètent"
+  tagline:
+    "Tu n'as pas besoin qu'on t'humilie pour changer. Tu as besoin d'un cadre honnête pour
+    interrompre la violence, regarder les faits et agir autrement."
   actions:
-    - text: "Commencer le module 1"
-      link: "/formations/auteurs/1-responsabilite/"
-      variant: "primary"
-    - text: "Voir le socle commun"
-      link: "/formations/socle/"
-      variant: "secondary"
+    - text: 'Commencer le module 1'
+      link: '/formations/auteurs/1-responsabilite/'
+      variant: 'primary'
+    - text: 'Trouver une aide spécialisée'
+      link: '/violence/auteurs/'
+      variant: 'secondary'
 ---
 
 Merci d'être là.
 
-Si tu arrives jusqu'ici, c'est qu'une part de toi sait déjà qu'il faut arrêter quelque chose. Pas juste promettre. Pas juste regretter après. Changer vraiment.
+Si tu arrives jusqu'ici, c'est qu'une part de toi sait déjà qu'il faut arrêter quelque chose. Pas
+juste promettre. Pas juste regretter après. Changer vraiment.
 
 Ce parcours est fait pour ça.
 
@@ -39,31 +44,36 @@ Le but n'est pas de te coller une étiquette. Le but est d'empêcher la répéti
 
 [Accéder au module 1](/formations/auteurs/1-responsabilite/)
 
-Tu commences par regarder les mécanismes de protection qui t'empêchent de voir clairement : minimisation, externalisation, rationalisation, honte.
+Tu commences par regarder les mécanismes de protection qui t'empêchent de voir clairement :
+minimisation, externalisation, rationalisation, honte.
 
 ### 2. Comprendre ton cycle
 
 [Accéder au module 2](/formations/auteurs/2-cycle/)
 
-Tu repères la montée de tension, les déclencheurs, les bascules, les moments de regret et les schémas qui reviennent.
+Tu repères la montée de tension, les déclencheurs, les bascules, les moments de regret et les
+schémas qui reviennent.
 
 ### 3. Travailler tes émotions
 
 [Accéder au module 3](/formations/auteurs/3-emotions/)
 
-Tu apprends à reconnaître plus tôt ce qui monte en toi pour éviter que ça déborde sur quelqu'un d'autre.
+Tu apprends à reconnaître plus tôt ce qui monte en toi pour éviter que ça déborde sur quelqu'un
+d'autre.
 
 ### 4. Voir l'autre
 
 [Accéder au module 4](/formations/auteurs/4-empathie/)
 
-Tu travailles l'impact réel de tes actes et la capacité à sortir d'une vision centrée seulement sur ton ressenti immédiat.
+Tu travailles l'impact réel de tes actes et la capacité à sortir d'une vision centrée seulement sur
+ton ressenti immédiat.
 
 ### 5. Construire des relations plus saines
 
 [Accéder au module 5](/formations/auteurs/5-relations/)
 
-Tu remplaces la logique de contrôle par une logique de respect, de communication et de partage du pouvoir.
+Tu remplaces la logique de contrôle par une logique de respect, de communication et de partage du
+pouvoir.
 
 ### 6. Prévenir la répétition
 
@@ -84,7 +94,8 @@ Ici, on ne te traite pas comme un monstre.
 
 Mais on ne minimise pas non plus ce que la violence produit.
 
-La ligne est simple : être ferme sur les actes, et utile pour la personne qui veut vraiment changer. C'est comme ça qu'on augmente les chances d'un changement réel.
+La ligne est simple : être ferme sur les actes, et utile pour la personne qui veut vraiment changer.
+C'est comme ça qu'on augmente les chances d'un changement réel.
 
 ## Les cadres derrière ce parcours
 
@@ -112,36 +123,44 @@ La logique premium ajoute :
 - des exercices plus confrontants mais mieux guidés
 - des checklists de progression
 - des protocoles de régulation et de prévention
-- des ressources pratiques pour les situations de crise
+- des outils de suivi et de progression hors situation de crise
 
 ## Quelques mots importants
 
-Ce parcours ne remplace ni un suivi thérapeutique ni un cadre judiciaire si tu en as un. Il peut compléter un vrai travail, pas s'y substituer.
+Ce parcours ne remplace ni un suivi thérapeutique ni un cadre judiciaire si tu en as un. Il peut
+compléter un vrai travail, pas s'y substituer.
 
-Si tu sens qu'une crise monte et que tu risques de passer à l'acte, éloigne-toi de la situation et cherche immédiatement du relais via [les ressources auteurs](/violence/auteurs/).
+Si tu sens qu'une crise monte et que tu risques de passer à l'acte, éloigne-toi de la situation et
+cherche immédiatement du relais via [les ressources auteurs](/violence/auteurs/).
 
 ## FAQ
 
 ### Est-ce que ce parcours est fait pour quelqu'un qui "n'a pas frappé" ?
 
-Oui. La violence ne se limite pas au physique. Le contrôle, les humiliations, les menaces et la terreur psychologique comptent aussi.
+Oui. La violence ne se limite pas au physique. Le contrôle, les humiliations, les menaces et la
+terreur psychologique comptent aussi.
 
 ### Est-ce que reconnaître un trauma personnel excuse la violence ?
 
-Non. Ça peut aider à comprendre certains mécanismes, mais ça n'efface ni l'impact ni la responsabilité.
+Non. Ça peut aider à comprendre certains mécanismes, mais ça n'efface ni l'impact ni la
+responsabilité.
 
-### Est-ce que je dois avoir fini le socle avant ?
+### Dois-je commencer par des contenus généraux ?
 
-Oui, c'est préférable. Le socle rend ce parcours plus clair et plus utile.
+Non. Si tes comportements t'inquiètent, commence directement par l'interruption et la
+responsabilité. Les ressources de santé et de régulation restent disponibles en complément, jamais
+comme excuses.
 
 ## Comment utiliser ce parcours
 
-Commence par la page publique du module pour poser le cadre et voir si tu es prêt à faire le travail.
+Commence par la page publique du module pour poser le cadre et voir si tu es prêt à faire le
+travail.
 
-Quand tu veux aller jusqu'à l'exécution, tu peux débloquer la version complète du module pour accéder au contenu intégral, à la checklist, au protocole et aux ressources premium.
+Quand tu veux aller jusqu'à l'exécution, tu peux débloquer la version complète du module pour
+accéder au contenu intégral, à la checklist, au protocole et aux ressources premium.
 
 Le meilleur point d'entrée reste :
 
 - [module 1 : sortir du brouillard](/formations/auteurs/1-responsabilite/)
-- [revenir au socle commun](/formations/socle/)
+- [explorer la santé et le bien-être](/parcours/sante)
 - [voir les ressources auteurs](/violence/auteurs/)

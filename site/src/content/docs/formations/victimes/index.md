@@ -1,22 +1,28 @@
 ---
-title: "Parcours victimes : te reconstruire après la violence"
-description: "Six modules pour retrouver de la sécurité, comprendre le trauma, poser tes limites et reprendre une vie qui t'appartient."
+title: "Ce que tu vis dans ta relation t'inquiète"
+description:
+  'Un parcours pour partir des faits, retrouver de la sécurité et reprendre des marges de choix, que
+  la violence soit actuelle ou passée.'
 template: splash
 hero:
-  title: "Parcours victimes : te reconstruire après la violence"
-  tagline: "Tu n'as pas besoin d'aller vite. Tu as besoin d'un cadre sûr, clair et progressif pour retrouver de la sécurité, comprendre ce que la violence a laissé en toi, et reprendre ta vie morceau par morceau."
+  title: "Ce que tu vis dans ta relation t'inquiète"
+  tagline:
+    "Tu n'as pas besoin de te définir comme victime pour commencer. Ce parcours part des faits, de
+    ta sécurité et de ton rythme."
   actions:
-    - text: "Commencer le module 1"
-      link: "/formations/victimes/1-securite/"
-      variant: "primary"
-    - text: "Voir le socle commun"
-      link: "/formations/socle/"
-      variant: "secondary"
+    - text: 'Commencer le module 1'
+      link: '/formations/victimes/1-securite/'
+      variant: 'primary'
+    - text: 'Voir les ressources immédiates'
+      link: '/violence/victimes/'
+      variant: 'secondary'
 ---
 
 Merci d'être là.
 
-Si tu lis cette page, il y a de bonnes chances que tu aies vécu quelque chose de lourd, de confus, ou de profondément déstabilisant. Tu n'as pas besoin qu'on te secoue. Tu as besoin d'un chemin qui respecte ton rythme, sans minimiser ce que tu as traversé.
+Si tu lis cette page, quelque chose dans une relation actuelle ou passée t'inquiète peut-être. Tu
+n'as pas besoin d'être déjà sûr(e) du mot « violence ». Tu as besoin d'un chemin qui respecte ton
+rythme, sans minimiser les faits ni décider à ta place.
 
 C'est le rôle de ce parcours.
 
@@ -45,7 +51,8 @@ Tu poses les bases les plus concrètes : sécurité immédiate, personnes relais
 
 [Accéder au module 2](/formations/victimes/2-guerison/)
 
-Tu comprends pourquoi la guérison n'est pas linéaire, ce que le trauma fait au corps, et comment avancer sans te brusquer.
+Tu comprends pourquoi la guérison n'est pas linéaire, ce que le trauma fait au corps, et comment
+avancer sans te brusquer.
 
 ### 3. Poser tes limites
 
@@ -69,7 +76,8 @@ Tu renforces ta capacité à décider, agir, choisir et te remettre au centre de
 
 [Accéder au module 6](/formations/victimes/6-ancrage/)
 
-Tu apprends à consolider ce que tu reconstruis pour ne pas perdre pied dès qu'un moment difficile revient.
+Tu apprends à consolider ce que tu reconstruis pour ne pas perdre pied dès qu'un moment difficile
+revient.
 
 ## Ce parcours est pour toi si...
 
@@ -80,11 +88,13 @@ Tu apprends à consolider ce que tu reconstruis pour ne pas perdre pied dès qu'
 
 ## Les repères cliniques derrière ce parcours
 
-Le parcours s'appuie notamment sur le travail de **Judith Herman** : sécurité, intégration, reconnexion. Ce cadre est utile parce qu'il remet la reconstruction dans le bon ordre.
+Le parcours s'appuie notamment sur le travail de **Judith Herman** : sécurité, intégration,
+reconnexion. Ce cadre est utile parce qu'il remet la reconstruction dans le bon ordre.
 
 Avant de réparer la suite, il faut assez de sécurité.
 
-Avant de reprendre confiance, il faut comprendre ce que le trauma a fait au corps, aux émotions et aux relations.
+Avant de reprendre confiance, il faut comprendre ce que le trauma a fait au corps, aux émotions et
+aux relations.
 
 ## Ce que tu peux lire en parallèle
 
@@ -107,19 +117,23 @@ La logique premium de la formation ajoute la partie la plus guidée :
 - repères de progression
 - ressources pratiques plus profondes
 
-L'idée n'est pas de te frustrer. L'idée est de garder l'essentiel visible, puis de réserver la partie la plus accompagnante à la version complète.
+L'idée n'est pas de te frustrer. L'idée est de garder l'essentiel visible, puis de réserver la
+partie la plus accompagnante à la version complète.
 
 ## Quelques mots importants
 
-Ce parcours ne remplace pas une thérapie. Si tu es très submergé(e), dissocié(e), en danger ou sans appui autour de toi, il faut aussi du soutien humain réel.
+Ce parcours ne remplace pas une thérapie. Si tu es très submergé(e), dissocié(e), en danger ou sans
+appui autour de toi, il faut aussi du soutien humain réel.
 
-Si tu es en danger maintenant, priorise les ressources immédiates via [l'espace victimes](/violence/victimes/).
+Si tu es en danger maintenant, priorise les ressources immédiates via
+[l'espace victimes](/violence/victimes/).
 
 ## FAQ
 
-### Est-ce que je dois avoir fini le socle avant ce parcours ?
+### Dois-je commencer par des contenus généraux ?
 
-Oui, c'est préférable. Le socle pose les bases qui rendent ce parcours plus lisible et plus supportable.
+Non. Si une relation t'inquiète, tu peux commencer directement ici. Les ressources de santé et de
+bien-être restent disponibles en complément.
 
 ### Est-ce que ce parcours est utile si la violence est ancienne ?
 
@@ -133,10 +147,12 @@ Non. Ce parcours est justement conçu pour être suivi étape par étape.
 
 Commence par la page publique du module qui correspond à ton étape actuelle.
 
-Quand tu sens que tu as besoin d'un cadre plus guidé, tu peux débloquer la version complète pour accéder au contenu intégral, à la checklist, au protocole et aux ressources premium sans perdre le fil.
+Quand tu sens que tu as besoin d'un cadre plus guidé, tu peux débloquer la version complète pour
+accéder au contenu intégral, à la checklist, au protocole et aux ressources premium sans perdre le
+fil.
 
 Le meilleur point d'entrée reste :
 
 - [module 1 : ton plan de sécurité](/formations/victimes/1-securite/)
-- [revenir au socle commun](/formations/socle/)
+- [explorer la santé et le bien-être](/parcours/sante)
 - [voir les ressources victimes](/violence/victimes/)

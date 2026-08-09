@@ -1,106 +1,93 @@
+---
+artifact: business_contract
+metadata_schema_version: "1.0"
+artifact_version: "1.2.0"
+project: "claiire"
+created: "2026-06-30"
+updated: "2026-08-09"
+status: reviewed
+source_skill: 300-sg-docs
+scope: business
+owner: Diane
+confidence: high
+risk_level: high
+security_impact: yes
+docs_impact: yes
+depends_on:
+  - artifact: "shipglows_data/product/shared/coach-operating-model.md"
+    artifact_version: "1.0.0"
+    required_status: reviewed
+supersedes: []
+evidence:
+  - "Operator decision 2026-08-09: one product focused on violence, serving both people subjected to violence and people exercising violence through strictly separate journeys."
+  - "Operator decision 2026-08-09: preserve health and holistic wellbeing as a complementary public mission and a softer entry territory."
+next_review: "2026-09-09"
+next_step: "/101-sg-ready claiire-coach-operating-model"
+---
+
 # Business - Claiire
 
 ## Positionnement
 
-Claiire est un meme projet decliné sur deux faces complementaires :
+Claiire est une seule marque et un seul produit d'evolution personnelle, de sante et de bien-etre global, avec une expertise centrale sur les violences relationnelles. Sa double mission est d'aider chacun a mieux comprendre et soutenir son equilibre global, et d'aider a reconnaitre, interrompre et sortir des violences pendant qu'elles existent. Le site construit la confiance et oriente ; l'application accompagne dans la duree.
 
-- un site editorial et commercial centre sur le coaching, la transformation personnelle, la sante, les emotions et les relations
-- une application mobile centre sur l'accompagnement quotidien, la progression gamifiee et la confidentialite
+La sante, la nutrition, le sommeil, les emotions, les relations et les habitudes forment un territoire public complementaire, accessible et non clinique. Cette approche holistique rend l'entree moins frontale et soutient la securite, l'autonomie et le changement. Elle ne masque pas l'expertise violence et n'excuse jamais un acte violent.
 
-Le business et le produit partagent donc une seule surface documentaire. On segmente les details par section dans ce fichier, pas par arborescence parallele.
+## Publics et parcours
 
-## Marque et promesse
+Claiire sert deux publics dans des parcours strictement separes :
 
-- Marque partagee : voir le bundle `shipglows_data/branding/` en commencant par `shipglows_data/branding/branding.md`
-- Promesse generale : aider une personne a reprendre du controle, comprendre ce qu'elle vit et progresser avec des outils concrets
-- Difference cle : approche chaleureuse, non clinique, structuree, avec forte exigence de clarte et de confiance
+- une personne qui subit ou pense subir des violences : reconnaitre les faits, evaluer le danger, renforcer sa securite, retrouver des marges de choix et acceder aux ressources adaptees
+- une personne qui exerce des violences ou s'inquiete de ses comportements : interrompre l'escalade, nommer les actes, assumer sa responsabilite et solliciter une aide humaine specialisee
+
+La separation des parcours est une condition de securite. Claiire ne propose ni mediation, ni parcours de couple partage, ni fausse symetrie des responsabilites. La securite de la personne qui subit la violence prime sur l'engagement, la retention et la conversion.
+
+## Promesse
+
+Descripteur de travail confirme :
+
+> Claiire, l'accompagnement numerique pour reconnaitre, interrompre et sortir des violences relationnelles.
+
+La formulation finale du titre public et les libelles exacts des deux parcours restent a valider avant publication.
 
 ## Face site
 
-### Role
+Le site accueille par la sante, le bien-etre, les emotions et les relations, tout en rendant visible l'expertise violence des la homepage. Il aide a reconnaitre une situation et oriente vers le bon parcours sans forcer une personne a adopter immediatement une etiquette. Les deux dimensions sont complementaires et appartiennent a la meme mission de transformation.
 
-Le site attire, eduque, convertit et prepare la relation de confiance.
-
-### Offres
-
-- coaching individuel
-- formations thematiques
-- contenu editorial et ressources
-- accompagnement corporate ou ateliers si ce canal est relance
-
-### Go-to-market
-
-- SEO et autorite editoriale
-- contenus de reference sur sante, emotions, relations et violence
-- preuves sociales et partenaires
-- tunnel de conversion vers les formations et l'accompagnement
+Les canaux prioritaires sont le contenu de reference, le SEO, les partenaires specialises, les ressources pratiques et les preuves de competence. Les claims doivent correspondre aux capacites reelles de l'app.
 
 ## Face app
 
-### Role
+L'application prolonge la mission dans un usage quotidien, discret et non clinique : accompagnement IA clairement declare, progression non punitive, outils concrets et confidentialite forte. Elle adapte ses interventions au parcours choisi et bascule vers une orientation de securite ou humaine quand la situation l'exige.
 
-L'application prolonge la promesse du site dans l'usage quotidien.
+## Modele economique
 
-### Proposition de valeur
+- une app freemium et un abonnement premium peuvent soutenir le produit
+- les ressources critiques de securite et d'urgence ne doivent jamais etre bloquees par un paywall
+- aucune situation de violence ne doit servir de levier de pression commerciale
+- des accompagnements, formations ou partenariats peuvent completer l'app s'ils respectent la separation des parcours
 
-- compagnon IA on-device
-- progression gamifiee
-- suivi quotidien simple et discret
-- confidentialite forte
+## Indicateurs
 
-### Monetisation
+- acces effectif aux ressources de securite et d'aide specialisee
+- activation et retention mesurees separement par parcours
+- interruptions d'escalade et retours vers un comportement non violent, sans promesse causale excessive
+- comprehension des limites de l'IA et orientation humaine reussie
+- alignement entre les claims du site et le comportement de l'app
+- conversion premium, sans optimisation au detriment de la securite
 
-- freemium
-- abonnement premium
-- logique d'entitlement partagee avec le site via l'infrastructure d'acces membre
+## Contraintes
 
-## Personas
-
-### Persona coeur
-
-Une personne en phase de reconstruction, de regulation ou de changement d'habitudes, qui cherche un accompagnement non jugeant, actionnable et credible.
-
-### Sous-segments
-
-- victimes de violences ou de relations destructrices
-- personnes en situation d'addiction ou de rechute
-- personnes en desequilibre emotionnel ou en periode de transition
-- utilisateurs cherchant un compagnon de progression discret et quotidien
-
-## Avantages concurrentiels
-
-- marque coherente entre contenu long format et experience produit
-- ton non clinique et non culpabilisant
-- confidentialite et argument on-device cote app
-- synergie site -> app -> site sans rupture de positionnement
-
-## Canaux et entonnoir
-
-1. decouverte via contenus, SEO, reseaux ou partenaires
-2. confiance via parcours editoriaux et pages d'offre
-3. conversion vers formation, accompagnement ou application
-4. retention et progression dans l'app
-5. upsell premium et reactivation via contenus et accompagnement
-
-## KPIs prioritaires
-
-- trafic qualifie vers les parcours et formations
-- conversion contenu -> offre
-- activation app
-- retention J7 / J30 cote app
-- conversion free -> premium
-- retention premium
-
-## Contraintes de posture
-
-- ne pas medicaliser le discours
-- ne pas dissocier artificiellement le site et l'app en deux doctrines business concurrentes
-- garder le branding centralise
-- traiter les inspirations et concurrents comme matiere de recherche, pas comme source produit active
+- ne pas medicaliser, diagnostiquer ou promettre une guerison
+- ne pas presenter la violence comme un simple conflit relationnel
+- ne pas confondre bienveillance envers l'auteur et minimisation des actes
+- ne jamais rendre la personne responsable de ce qu'elle subit
+- ne pas deployer un parcours partage entre victime et auteur
+- garder une seule doctrine business entre site et app
 
 ## References
 
-- branding partage : `shipglows_data/branding/` avec `branding.md`, `voice-and-tone.md`, `messaging-pillars.md`, `visual-identity.md`, `brand-rules.md`
-- billing : `shipglows_data/business/billing-strategy.md`
-- inspirations et concurrents : `shipglows_data/business/project-competitors-and-inspirations.md`
-- inspiration archivee et classee : `shipglows_data/research/app-inspiration/`
+- modele produit : `shipglows_data/product/shared/coach-operating-model.md`
+- branding : `shipglows_data/branding/branding.md`
+- spec active : `shipglows_data/workflow/specs/claiire-coach-operating-model.md`
+- archive verbatim : `shipglows_data/workflow/repurpose-packs/2026-08-09-verbatim-claiire-positionnement-violences.md`

@@ -2,15 +2,17 @@
 
 ## Notre Mission
 
-Aider les gens a reprendre le controle de leur sante en leur montrant que le corps humain est une machine extraordinaire, concu pour fonctionner parfaitement — a condition de lui donner ce dont il a besoin.
+Aider chacun a mieux comprendre sa sante, ses emotions, ses relations et ses habitudes pour avancer vers davantage de bien-etre, tout en apportant une aide specialisee pour reconnaitre, interrompre et sortir des violences relationnelles.
+
+Le coaching en evolution personnelle est notre methode. La sante, la nutrition, le sommeil, les emotions et les habitudes appartiennent pleinement a la mission globale. Dans les parcours violence, ils soutiennent la securite et le changement mais n'excusent jamais un acte violent.
 
 ## Positionnement
 
-La sante est simple. C'est notre monde qui est complique.
+Claiire est un accompagnement numerique non clinique de sante, de bien-etre et d'evolution personnelle, avec une expertise centrale sur l'arret des violences. Le contenu aide a comprendre et agir, sans diagnostic, promesse de guerison, mediation de couple ou pretention a remplacer une aide humaine specialisee.
 
-On ne vend pas de pilule miracle. On rappelle ce que la nature a toujours su : bien manger, bien bouger, bien dormir, bien respirer. Le corps sait se guerir — il suffit de le laisser faire.
+Les contenus de sante globale ont une valeur propre et constituent une porte d'entree accueillante. Ils ne doivent toutefois ni masquer l'expertise violence, ni detourner une personne en danger vers un contenu generaliste.
 
-La plupart des maladies chroniques sont reversibles. Ce ne sont pas des fatalites genetiques, ce sont des consequences de notre mode de vie. Et ca, c'est une bonne nouvelle — parce que le mode de vie, ca se change.
+Le contrat produit de reference est `shipglows_data/product/shared/coach-operating-model.md`.
 
 ## Tonalite
 
@@ -115,11 +117,19 @@ Ces regles s'appliquent a tout contenu lie a la violence, au trauma, et aux form
 
 **On ne leur fait pas la morale.** Ils savent que ce qu'ils ont fait est mal. Le repeter ne sert a rien — ca ferme, ca ne ouvre pas. Notre role n'est pas de les accabler, c'est de les accompagner.
 
-**On ne les met pas en position de defensifs.** Pas de "sans excuses", pas de "point final", pas de ton procureur. Ces formules coupent le contact. La personne qui cherche a changer a besoin de se sentir accueillie avec une innocence pleine — comme si elle recommencait a zero.
+**On evite l'humiliation sans effacer la responsabilite.** Pas de ton procureur ni d'identite reduite aux actes. On nomme cependant les comportements, leurs consequences et le fait que stress, alcool, fatigue ou histoire personnelle ne les excusent pas. La personne ne recommence pas « a zero » : le changement commence par la reconnaissance de ce qui s'est passe et par des actes observables de securite.
 
 **On reconnait leur propre vecu.** Etre auteur de violence n'exclut pas d'avoir soi-meme vecu des choses difficiles. La recherche clinique (Voith et al., 2018) le confirme : beaucoup d'auteurs ont un historique traumatique non traite. Ce n'est pas une excuse — mais c'est un fait qui compte pour la transformation. On en fait de la place.
 
 **Le ton est : ferme sur les valeurs, doux sur la personne.** On ne minimise pas la violence. Mais on distingue l'acte de la personne. L'un est inacceptable — l'autre merite d'etre accompagne.
+
+### Separation et securite
+
+**Aucun socle conversationnel ou parcours de couple partage.** Les deux parcours peuvent reutiliser des connaissances generales, mais leurs textes, exercices, donnees, objectifs et orientations restent separes.
+
+**Aucune mediation ou fausse symetrie.** On ne suggere pas que chacun doit « faire sa part » face a des actes violents et on ne pousse jamais a la reconciliation.
+
+**La securite est publique.** Les informations critiques, la sortie rapide, les ressources d'urgence et l'orientation humaine ne sont jamais reservees aux membres payants.
 
 ### Sur les references cliniques
 

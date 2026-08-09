@@ -1,12 +1,12 @@
 ---
 artifact: brand_rules
 metadata_schema_version: "1.0"
-artifact_version: "1.0.0"
+artifact_version: "1.1.0"
 project: "claiire"
 created: "2026-06-30"
-updated: "2026-06-30"
+updated: "2026-08-09"
 status: reviewed
-source_skill: 300-sf-docs
+source_skill: 300-sg-docs
 scope: branding
 owner: Diane
 confidence: high
@@ -26,8 +26,9 @@ depends_on:
 supersedes: []
 evidence:
   - "Operator request 2026-06-30: branding must carry operational rules, not only high-level narrative."
-next_review: "2026-07-30"
-next_step: "/300-sf-docs update branding bundle"
+  - "Operator decision 2026-08-09: two separated violence journeys, no mediation, and subjected-person safety priority."
+next_review: "2026-09-09"
+next_step: "/300-sg-docs update branding bundle"
 ---
 
 # Brand Rules
@@ -73,6 +74,18 @@ Pour violence, addiction, trauma, rechute ou detresse :
 - garder un ton encore plus accueillant
 - ne jamais suggerer que la personne est responsable de ce qu'elle subit
 - distinguer la personne de l'acte ou du symptome
+
+Pour toute surface consacree a la violence :
+
+- proposer deux entrees distinctes sans parcours partage : personne exposee a la violence ; personne inquiete de ses propres comportements
+- ne jamais recommander une mediation, une confrontation ou un travail de couple dans un contexte de violence
+- ne jamais creer de fausse symetrie entre ce qui est subi et la responsabilite des actes
+- faire primer la securite de la personne exposee sur l'engagement, la retention, la reconciliation ou la conversion
+- accueillir la personne qui exerce de la violence sans humiliation, tout en nommant les actes et la responsabilite sans ambiguite
+- traiter stress, alcool, fatigue, addiction, histoire personnelle et sante comme des facteurs possibles, jamais comme des excuses
+- ne jamais partager les donnees, progres ou objectifs entre les deux parcours
+- afficher les limites de l'IA et les ressources humaines ou d'urgence adaptees a la surface et au contexte
+- ne jamais presenter Claiire comme un service d'urgence
 
 ## Visual Rules
 

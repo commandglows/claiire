@@ -5,75 +5,289 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
 
 <StaticPageLayout
   currentPath="/"
-  title="Claiire | Coaching bien-être — bonheur, objectifs, crises"
-  description="Tu veux être heureux, atteindre tes objectifs ou traverser une crise ? Claiire t'accompagne avec des parcours guidés sur la psychologie, les émotions et le corps."
+  title="Claiire | Santé, bien-être et violences relationnelles"
+  description="Comprendre ta santé, tes émotions et tes relations. Claiire propose des ressources de bien-être et deux parcours séparés pour reconnaître, interrompre et sortir des violences relationnelles."
   hero={{
-    title: 'Comprendre ce que tu vis. Avancer pas à pas.',
+    title: 'Comprendre la violence. Retrouver de la sécurité. Changer ce qui doit l’être.',
     tagline:
-      "Des parcours guidés sur la psychologie, les émotions, les relations et le corps, dans un site pensé pour être clair, rapide et réellement utile.",
+      "Claiire relie santé, bien-être et évolution personnelle pour t'aider à comprendre ce que tu vis et agir à ton rythme, sans jugement.",
     actions: [
-      { text: 'Explorer les parcours', link: '/parcours/bonheur', variant: 'primary' },
-      { text: 'Découvrir les formations', link: '/formations/', variant: 'secondary' },
+      { text: 'Trouver mon point de départ', link: '#orientation', variant: 'primary' },
+      { text: 'Explorer santé et bien-être', link: '#bien-etre', variant: 'secondary' },
     ],
   }}
-  sectionLabel="Accueil"
+  sectionLabel="Santé globale · Relations · Violence"
 >
-  <div class="landing-intro">
+  <section class="welcome" aria-labelledby="welcome-title">
+    <p class="welcome__kicker">Toute ta vie est liée</p>
+    <h2 id="welcome-title">Le corps, les émotions et les relations ne vivent pas séparément</h2>
     <p>
-      Peu importe où tu en es — en pleine crise, en quête de sens, ou simplement en train de
-      chercher mieux — Claiire t'aide à comprendre ce qui se passe en toi pour changer ce que tu
-      vis.
+      Le sommeil influence ton équilibre. Le stress change tes réactions. Tes relations touchent ta
+      santé, ta confiance et ta capacité à choisir. Claiire t'aide à comprendre ces liens avec des
+      ressources concrètes, accessibles et non cliniques.
     </p>
-
     <p>
-      <strong>
-        Tu mérites d'être heureux. Pas "moins malheureux" — vraiment heureux. Ici, tu trouves les
-        clés pour comprendre ce qui te bloque et avancer pour de bon.
-      </strong>
+      Et quand une relation devient inquiétante, le flou ne doit pas t'empêcher de chercher de
+      l'aide. Tu peux commencer ici sans avoir à te définir comme victime ou auteur.
     </p>
-  </div>
+  </section>
 
-  <ParcoursGrid />
+  <section id="orientation" class="orientation" aria-labelledby="orientation-title">
+    <div class="section-heading">
+      <p class="section-heading__eyebrow">Deux situations, deux chemins séparés</p>
+      <h2 id="orientation-title">Qu'est-ce qui t'amène aujourd'hui ?</h2>
+      <p>
+        Choisis la phrase la plus proche de ce que tu ressens. Tu pourras avancer sans étiquette.
+      </p>
+    </div>
 
-  <h2>Ce qu'on fait différemment</h2>
+    <div class="orientation-grid">
+      <a class="orientation-card orientation-card--safe" href="/formations/victimes/">
+        <span class="orientation-card__number" aria-hidden="true">01</span>
+        <span class="orientation-card__title">Ce que je vis dans ma relation m'inquiète</span>
+        <span class="orientation-card__text">
+          Mettre des mots sur les faits, retrouver des repères, penser à ta sécurité et découvrir
+          les aides possibles sans décision imposée.
+        </span>
+        <span class="orientation-card__link">Découvrir ce parcours</span>
+      </a>
 
-  <p>
-    <strong>On part de toi, pas d'un symptôme.</strong> Pas de liste de maladies à éviter. On part
-    de là où tu en es — un objectif à atteindre, une crise à traverser, un bonheur à construire —
-    et on t'aide à avancer pas à pas.
-  </p>
+      <a class="orientation-card orientation-card--change" href="/formations/auteurs/">
+        <span class="orientation-card__number" aria-hidden="true">02</span>
+        <span class="orientation-card__title">Certains de mes comportements m'inquiètent</span>
+        <span class="orientation-card__text">
+          Repérer l'escalade, interrompre un comportement violent, regarder les faits avec honnêteté
+          et trouver un accompagnement spécialisé.
+        </span>
+        <span class="orientation-card__link">Découvrir ce parcours</span>
+      </a>
+    </div>
 
-  <p>
-    <strong>On t'explique pourquoi, pas juste quoi.</strong> Comprendre pourquoi ton système
-    nerveux bloque sous le stress, pourquoi certaines émotions reviennent en boucle, pourquoi tes
-    habitudes résistent : quand tu saisis le mécanisme, tu reprends la main.
-  </p>
+    <aside class="safety-note">
+      <strong>Tu es en danger maintenant ?</strong>
+      <span
+        >La priorité n'est pas de finir une page. Consulte les ressources immédiates adaptées à ta
+        situation.</span
+      >
+      <a href="/violence/victimes/">Voir les ressources de sécurité</a>
+    </aside>
+  </section>
 
-  <p>
-    <strong>On ne te laisse pas seul.</strong> Des parcours guidés, étape par étape. Tu coches, tu
-    progresses, tu vois le chemin parcouru. Un pas à la fois suffit — c'est comme ça qu'on change
-    vraiment.
-  </p>
+  <section id="bien-etre" class="wellbeing" aria-labelledby="wellbeing-title">
+    <div class="section-heading section-heading--centered">
+      <p class="section-heading__eyebrow">Prendre soin de l'ensemble</p>
+      <h2 id="wellbeing-title">Ta santé et ton bien-être comptent aussi</h2>
+      <p>
+        Tu peux venir pour mieux dormir, comprendre ton stress, retrouver de l'énergie, explorer tes
+        émotions ou construire des relations plus saines. Ces dimensions ont de la valeur en
+        elles-mêmes et peuvent aussi soutenir un changement plus profond.
+      </p>
+    </div>
 
-  <p>
-    <strong>On s'appuie sur la science, pas sur les modes.</strong> Psychologie, neurosciences,
-    biologie : chaque contenu est ancré dans la recherche. Pas de gourous, pas de promesses
-    magiques — des outils qui marchent.
-  </p>
+    <ParcoursGrid />
+  </section>
 
-  <a href="#app" class="app-download-btn" id="app">Télécharge l'app compagnon</a>
+  <section class="approach" aria-labelledby="approach-title">
+    <p class="section-heading__eyebrow">L'approche Claiire</p>
+    <h2 id="approach-title">Comprendre avant de proposer</h2>
+    <div class="approach-grid">
+      <div>
+        <h3>Claire, pas simpliste</h3>
+        <p>Des mots accessibles, des mécanismes expliqués et aucune promesse miracle.</p>
+      </div>
+      <div>
+        <h3>Bienveillante, pas naïve</h3>
+        <p>Pas de jugement sur la personne, pas de minimisation des comportements violents.</p>
+      </div>
+      <div>
+        <h3>Concrète, pas autoritaire</h3>
+        <p>
+          Des options et de petits pas utiles, avec ton autonomie et ta sécurité au premier plan.
+        </p>
+      </div>
+    </div>
+  </section>
 
-  <aside class="callout callout--tip">
-    <p class="callout__title">Bientôt disponible</p>
-    <p>L'app qui te suit au quotidien :</p>
-    <ul>
-      <li>Tes parcours accessibles hors ligne</li>
-      <li>Des rappels doux pour garder le cap</li>
-      <li>Ta progression visible en un coup d'oeil</li>
-      <li>Une communauté qui avance avec toi</li>
-    </ul>
-    <p>
-      <strong>Inscris-toi</strong> pour être prévenu du lancement.
-    </p>
+  <aside class="app-note" id="app">
+    <div>
+      <p class="app-note__eyebrow">Bientôt dans l'app Claiire</p>
+      <h2>Un accompagnement quotidien, discret et progressif</h2>
+      <p>
+        L'application prolongera les ressources du site avec des parcours guidés. Elle ne remplacera
+        ni un professionnel, ni les services d'urgence.
+      </p>
+    </div>
   </aside>
 </StaticPageLayout>
+
+<style>
+  .welcome,
+  .orientation,
+  .wellbeing,
+  .approach,
+  .app-note {
+    margin-block: clamp(3rem, 8vw, 6rem);
+  }
+
+  .welcome {
+    max-width: 48rem;
+    padding-left: clamp(1rem, 4vw, 3rem);
+    border-left: 3px solid var(--sl-color-accent);
+  }
+
+  .welcome__kicker,
+  .section-heading__eyebrow,
+  .app-note__eyebrow {
+    margin: 0 0 0.65rem;
+    color: var(--sl-color-accent-high);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .section-heading {
+    max-width: 46rem;
+    margin-bottom: 2rem;
+  }
+
+  .section-heading--centered {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .orientation-grid,
+  .approach-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .orientation-card {
+    position: relative;
+    display: flex;
+    min-height: 19rem;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    overflow: hidden;
+    color: var(--sl-color-white);
+    text-decoration: none;
+    border: 1px solid color-mix(in srgb, var(--sl-color-white) 18%, transparent);
+    border-radius: 1.5rem 0.35rem 1.5rem 0.35rem;
+    flex-direction: column;
+  }
+
+  .orientation-card--safe {
+    background: linear-gradient(145deg, #164e63, #0f766e);
+  }
+
+  .orientation-card--change {
+    background: linear-gradient(145deg, #713f12, #b45309);
+  }
+
+  .orientation-card::after {
+    position: absolute;
+    right: -3rem;
+    bottom: -4rem;
+    width: 11rem;
+    height: 11rem;
+    content: '';
+    border: 1px solid color-mix(in srgb, var(--sl-color-white) 20%, transparent);
+    border-radius: 50%;
+  }
+
+  .orientation-card__number {
+    margin-bottom: auto;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    opacity: 0.75;
+  }
+
+  .orientation-card__title {
+    max-width: 24rem;
+    margin-top: 3rem;
+    font-family: var(--sl-font-heading);
+    font-size: clamp(1.45rem, 3vw, 2rem);
+    font-weight: 800;
+    line-height: 1.12;
+  }
+
+  .orientation-card__text {
+    max-width: 32rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+  }
+
+  .orientation-card__link {
+    margin-top: 1.5rem;
+    font-weight: 800;
+  }
+
+  .orientation-card:hover,
+  .orientation-card:focus-visible {
+    color: var(--sl-color-white);
+    transform: translateY(-3px);
+  }
+
+  .safety-note {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--sl-color-orange);
+    border-radius: 0.75rem;
+    background: var(--sl-color-orange-low);
+  }
+
+  .safety-note a {
+    font-weight: 800;
+  }
+
+  .safety-note strong {
+    grid-column: 1 / -1;
+  }
+
+  .approach {
+    padding: clamp(1.5rem, 5vw, 3rem);
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 1rem;
+    background: linear-gradient(135deg, var(--sl-color-gray-7), transparent);
+  }
+
+  .approach-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .approach-grid > div {
+    padding-top: 1rem;
+    border-top: 2px solid var(--sl-color-accent);
+  }
+
+  .app-note {
+    padding: clamp(1.5rem, 5vw, 3rem);
+    border-radius: 0.35rem 1.5rem 0.35rem 1.5rem;
+    background: var(--sl-color-accent-low);
+  }
+
+  .app-note > div {
+    max-width: 48rem;
+  }
+
+  @media (max-width: 48rem) {
+    .orientation-grid,
+    .approach-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .orientation-card {
+      min-height: 17rem;
+    }
+
+    .safety-note {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

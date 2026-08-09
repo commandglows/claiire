@@ -1,20 +1,27 @@
 ---
-title: "Faire tenir le changement dans la durée"
-description: "Construis un plan de prévention personnel, repère les premiers glissements et ancre une forme de changement qui ne dépend pas seulement de la motivation."
+title: 'Faire tenir le changement dans la durée'
+description:
+  'Construis un plan de prévention personnel, repère les premiers glissements et ancre une forme de
+  changement qui ne dépend pas seulement de la motivation.'
 template: splash
 hero:
-  title: "Faire tenir le changement dans la durée"
-  tagline: "Ce dernier module t'aide à préparer la suite réelle : les moments de fatigue, les reprises de vieux réflexes, les glissements apparemment anodins, et la nécessité d'un plan de prévention concret."
+  title: 'Faire tenir le changement dans la durée'
+  tagline:
+    "Ce dernier module t'aide à préparer la suite réelle : les moments de fatigue, les reprises de
+    vieux réflexes, les glissements apparemment anodins, et la nécessité d'un plan de prévention
+    concret."
   actions:
-    - text: "Débloquer le module complet"
-      link: "/membres/formations/auteurs/6-prevention/"
-      variant: "primary"
-    - text: "Voir le parcours auteurs"
-      link: "/formations/auteurs/"
-      variant: "secondary"
+    - text: 'Débloquer le module complet'
+      link: '/membres/formations/auteurs/6-prevention/'
+      variant: 'primary'
+    - text: 'Voir le parcours auteurs'
+      link: '/formations/auteurs/'
+      variant: 'secondary'
 ---
 
-Tu arrives au dernier module du parcours auteurs. Le travail n'est pas terminé parce que la page s'arrête. Il devient simplement plus réel : moins dépendant de l'élan du moment, plus lié à ce que tu maintiens dans la durée.
+Tu arrives au dernier module du parcours auteurs. Le travail n'est pas terminé parce que la page
+s'arrête. Il devient simplement plus réel : moins dépendant de l'élan du moment, plus lié à ce que
+tu maintiens dans la durée.
 
 Ce module t'aide à préparer cette suite.
 
@@ -27,7 +34,8 @@ Le changement n'est pas une bascule définitive. Il traverse :
 - des lapses
 - des reprises partielles d'anciens réflexes
 
-Le sujet n'est pas de devenir parfait. Le sujet est de ne pas laisser un moment difficile se transformer en abandon complet.
+Le sujet n'est pas de devenir parfait. Le sujet est de ne pas laisser un moment difficile se
+transformer en abandon complet.
 
 ## Le plan de prévention change tout
 
@@ -74,6 +82,10 @@ Dans la version complète, on va plus loin sur :
 
 [Débloquer le module complet](/membres/formations/auteurs/6-prevention/)
 
+Un plan de prévention n'est pas une ressource à réserver au premium. Les premières actions restent
+publiques : reconnaître le risque, interrompre la situation, créer une distance sûre et contacter
+[une aide spécialisée](/violence/auteurs/).
+
 ## FAQ
 
 ### Est-ce qu'un lapse veut dire que tout est foutu ?
@@ -101,6 +113,7 @@ Tu gardes ta carte visible, tes appuis activables, et tu continues dans le réel
 
 ## Tu veux le module complet ?
 
-Débloque la version intégrale pour accéder au contenu complet, à la checklist, au protocole, aux ressources premium et au passage guidé entre lucidité, responsabilité et changement concret.
+Débloque l'approfondissement pour travailler le suivi dans la durée et les exercices hors crise. Les
+premières actions de prévention et l'orientation humaine restent gratuites.
 
 [Débloquer le module complet](/membres/formations/auteurs/6-prevention/)

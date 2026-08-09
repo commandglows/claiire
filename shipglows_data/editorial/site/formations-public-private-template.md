@@ -34,6 +34,12 @@ Pour les contenus lies a la violence, au trauma et aux parcours victimes / auteu
 - ne jamais juger
 - etre ferme sur les actes, doux sur la personne
 - ne pas ajouter de honte ou de panique a une situation deja lourde
+- ne jamais proposer un parcours partage, une mediation ou une responsabilite symetrique
+- adapter tout exercice au parcours concerne, meme lorsqu'un theme existe dans les deux parcours
+- laisser en acces public les informations critiques de securite, les ressources d'urgence et l'orientation humaine
+- ne jamais faire de la peur, du danger ou de la culpabilite un argument de vente
+
+Le premium peut financer la profondeur pedagogique, le suivi et les outils de progression. Il ne peut pas conditionner l'acces a une action necessaire pour se mettre en securite ou interrompre un passage a l'acte imminent.
 
 ## Templates Astro disponibles
 
@@ -242,7 +248,7 @@ Format recommande :
 ```md
 ## Tu veux le module complet ?
 
-Debloque la version integrale pour acceder aux exercices, checklists, protocoles et ressources premium.
+Debloque la version approfondie pour acceder aux exercices de progression, au suivi et aux outils premium. Les ressources de securite et d'urgence restent accessibles gratuitement.
 
 [Debloquer ce module]
 ```
@@ -273,7 +279,7 @@ Contenu :
 - ce qu'il vaut mieux ne pas faire
 - combien de temps prevoir
 
-### 3. Contenu integral
+### 3. Contenu approfondi
 
 Ici, tu peux livrer le vrai module.
 
@@ -467,6 +473,6 @@ Le bon schema pour Claiire est :
 
 Autrement dit :
 
-**Public = teaser + valeur + CTA**
+**Public = valeur autonome + securite + orientation + CTA non pressant**
 
-**Prive = promesse + contenu integral + outils**
+**Prive = approfondissement + exercices de progression + suivi**

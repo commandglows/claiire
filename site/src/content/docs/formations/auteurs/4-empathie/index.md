@@ -1,20 +1,26 @@
 ---
 title: "Voir l'autre sans t'effacer"
-description: "Comprends l'impact réel sur l'autre, développe une empathie plus stable et fais aussi de la place à ta propre histoire sans en faire une excuse."
+description:
+  "Comprends l'impact réel sur l'autre, développe une empathie plus stable et fais aussi de la place
+  à ta propre histoire sans en faire une excuse."
 template: splash
 hero:
   title: "Voir l'autre sans t'effacer"
-  tagline: "Ce module t'aide à tenir ensemble deux réalités : l'impact de tes actes sur l'autre, et le fait que toi aussi tu as peut-être une histoire à traverser. Les deux comptent. Les deux peuvent coexister."
+  tagline:
+    "Ce module t'aide à tenir ensemble deux réalités : l'impact de tes actes sur l'autre, et le fait
+    que toi aussi tu as peut-être une histoire à traverser. Les deux comptent. Les deux peuvent
+    coexister."
   actions:
-    - text: "Débloquer le module complet"
-      link: "/membres/formations/auteurs/4-empathie/"
-      variant: "primary"
-    - text: "Voir le parcours auteurs"
-      link: "/formations/auteurs/"
-      variant: "secondary"
+    - text: 'Débloquer le module complet'
+      link: '/membres/formations/auteurs/4-empathie/'
+      variant: 'primary'
+    - text: 'Voir le parcours auteurs'
+      link: '/formations/auteurs/'
+      variant: 'secondary'
 ---
 
-Ce module est l'un des plus délicats du parcours auteurs. Il demande de regarder ce que l'autre a vécu, sans retourner trop vite vers tes justifications, et sans effacer non plus ta propre histoire.
+Ce module est l'un des plus délicats du parcours auteurs. Il demande de regarder ce que l'autre a
+vécu, sans retourner trop vite vers tes justifications, et sans effacer non plus ta propre histoire.
 
 Le but n'est pas de t'écraser. Le but est de rendre l'empathie plus réelle et moins sélective.
 
@@ -22,15 +28,19 @@ Le but n'est pas de t'écraser. Le but est de rendre l'empathie plus réelle et 
 
 L'empathie n'est pas forcément absente. Elle peut devenir sélective.
 
-Dans certains contextes, surtout quand la honte, la peur, la tension ou le besoin de se protéger prennent toute la place, l'accès à l'expérience de l'autre se réduit brutalement. On ne voit plus que sa propre douleur ou sa propre version.
+Dans certains contextes, surtout quand la honte, la peur, la tension ou le besoin de se protéger
+prennent toute la place, l'accès à l'expérience de l'autre se réduit brutalement. On ne voit plus
+que sa propre douleur ou sa propre version.
 
 Ce module sert à rouvrir cet accès.
 
 ## Regarder l'impact réel
 
-La violence et le contrôle ne laissent pas seulement des souvenirs. Ils changent la façon dont l'autre habite son corps, la maison, la relation, le lien, la sécurité.
+La violence et le contrôle ne laissent pas seulement des souvenirs. Ils changent la façon dont
+l'autre habite son corps, la maison, la relation, le lien, la sécurité.
 
-Voir ça n'a pas pour but d'ajouter de la honte. Ça a pour but de donner un ancrage réel aux raisons de changer.
+Voir ça n'a pas pour but d'ajouter de la honte. Ça a pour but de donner un ancrage réel aux raisons
+de changer.
 
 ## Dans ce module, tu vas comprendre
 
@@ -93,6 +103,7 @@ Continuer avec [Des relations qui te ressemblent](/formations/auteurs/5-relation
 
 ## Tu veux le module complet ?
 
-Débloque la version intégrale pour accéder au contenu complet, à la checklist, au protocole, aux ressources premium et au passage guidé entre lucidité, responsabilité et changement concret.
+Débloque l’approfondissement pour accéder aux exercices de réflexion, au suivi et aux outils premium
+hors crise. Les ressources d’interruption immédiate restent gratuites.
 
 [Débloquer le module complet](/membres/formations/auteurs/4-empathie/)

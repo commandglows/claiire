@@ -1,26 +1,34 @@
 ---
-title: "Construire des relations sans contrôle"
-description: "Travaille la roue de l'égalité, la communication non violente et une façon d'être en relation qui ne passe plus par la domination."
+title: 'Construire des relations sans contrôle'
+description:
+  "Travaille la roue de l'égalité, la communication non violente et une façon d'être en relation qui
+  ne passe plus par la domination."
 template: splash
 hero:
-  title: "Construire des relations sans contrôle"
-  tagline: "Ce module t'aide à regarder vers l'avant : à quoi ressemble une relation où tu n'as plus besoin de dominer pour te sentir exister, et comment la construire dans des gestes très concrets."
+  title: 'Construire des relations sans contrôle'
+  tagline:
+    "Ce module t'aide à regarder vers l'avant : à quoi ressemble une relation où tu n'as plus besoin
+    de dominer pour te sentir exister, et comment la construire dans des gestes très concrets."
   actions:
-    - text: "Débloquer le module complet"
-      link: "/membres/formations/auteurs/5-relations/"
-      variant: "primary"
-    - text: "Voir le parcours auteurs"
-      link: "/formations/auteurs/"
-      variant: "secondary"
+    - text: 'Débloquer le module complet'
+      link: '/membres/formations/auteurs/5-relations/'
+      variant: 'primary'
+    - text: 'Voir le parcours auteurs'
+      link: '/formations/auteurs/'
+      variant: 'secondary'
 ---
 
-Après avoir regardé la responsabilité, le cycle, les émotions et l'impact sur l'autre, il faut répondre à une question simple et difficile : à quoi ressemble une relation où tu n'as plus besoin de contrôler ?
+Après avoir regardé la responsabilité, le cycle, les émotions et l'impact sur l'autre, il faut
+répondre à une question simple et difficile : à quoi ressemble une relation où tu n'as plus besoin
+de contrôler ?
 
-Ce module t'aide à passer d'une logique de domination à une logique de lien, d'égalité et de responsabilité partagée.
+Ce module t'aide à passer d'une logique de domination à une logique de lien, d'égalité et de
+responsabilité partagée.
 
 ## La roue de l'égalité
 
-Le programme Duluth ne s'est pas contenté de décrire le pouvoir et le contrôle. Il a aussi proposé une autre carte : la roue de l'égalité.
+Le programme Duluth ne s'est pas contenté de décrire le pouvoir et le contrôle. Il a aussi proposé
+une autre carte : la roue de l'égalité.
 
 On y retrouve notamment :
 
@@ -31,7 +39,8 @@ On y retrouve notamment :
 - responsabilité partagée
 - indépendance économique
 
-Le sujet n'est pas d'avoir l'air gentil. Le sujet est de créer une relation où personne n'a besoin de survivre à l'autre.
+Le sujet n'est pas d'avoir l'air gentil. Le sujet est de créer une relation où personne n'a besoin
+de survivre à l'autre.
 
 ## La CNV comme pratique
 
@@ -42,7 +51,8 @@ La communication non violente ne sert pas à parler joliment. Elle sert à :
 - nommer un besoin
 - faire une demande qui accepte un vrai non
 
-C'est précisément cette différence entre demande et exigence qui change beaucoup de choses dans une dynamique relationnelle.
+C'est précisément cette différence entre demande et exigence qui change beaucoup de choses dans une
+dynamique relationnelle.
 
 ## Dans ce module, tu vas comprendre
 
@@ -105,6 +115,7 @@ Continuer avec [Sur la durée](/formations/auteurs/6-prevention/).
 
 ## Tu veux le module complet ?
 
-Débloque la version intégrale pour accéder au contenu complet, à la checklist, au protocole, aux ressources premium et au passage guidé entre lucidité, responsabilité et changement concret.
+Débloque l’approfondissement pour accéder aux exercices de réflexion, au suivi et aux outils premium
+hors crise. Les ressources d’interruption immédiate restent gratuites.
 
 [Débloquer le module complet](/membres/formations/auteurs/5-relations/)

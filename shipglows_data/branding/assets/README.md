@@ -6,7 +6,7 @@ project: "claiire"
 created: "2026-06-30"
 updated: "2026-06-30"
 status: draft
-source_skill: 300-sf-docs
+source_skill: 300-sg-docs
 scope: branding
 owner: Diane
 confidence: medium
@@ -21,7 +21,7 @@ supersedes: []
 evidence:
   - "Asset inventory started from files already present in the repository."
 next_review: "2026-07-30"
-next_step: "/300-sf-docs update branding bundle"
+next_step: "/300-sg-docs update branding bundle"
 ---
 
 # Brand Assets

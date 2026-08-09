@@ -1,12 +1,12 @@
 ---
 artifact: brand_contract
 metadata_schema_version: "1.0"
-artifact_version: "1.0.0"
+artifact_version: "1.2.0"
 project: "claiire"
 created: "2026-06-30"
-updated: "2026-06-30"
+updated: "2026-08-09"
 status: reviewed
-source_skill: 300-sf-docs
+source_skill: 300-sg-docs
 scope: branding
 owner: Diane
 confidence: high
@@ -21,8 +21,10 @@ supersedes: []
 evidence:
   - "Existing Claiire branding doc already mixed identity, tone, visual direction, and rules in one source."
   - "Operator decision 2026-06-30: branding must be treated as a richer governed bundle, not a lone markdown file."
-next_review: "2026-07-30"
-next_step: "/300-sf-docs update branding bundle"
+  - "Operator decision 2026-08-09: violence is the primary mission, with separate journeys for people subjected to violence and people exercising violence."
+  - "Operator decision 2026-08-09: health and holistic wellbeing remain a complementary mission and softer public entry territory."
+next_review: "2026-09-09"
+next_step: "/300-sg-docs update branding bundle"
 ---
 
 # Branding
@@ -53,6 +55,12 @@ Claiire est une marque partagee entre le site et l'app. Le branding doit donc re
 - la direction visuelle
 - les garde-fous de marque
 - les assets de reference
+
+## Positionnement faisant autorite
+
+Claiire porte une double mission complementaire : soutenir la sante, le bien-etre et l'evolution personnelle ; aider a reconnaitre, interrompre et sortir des violences relationnelles. Le territoire holistique accueille sans brusquer, tandis que l'expertise violence reste visible et differenciante. Les deux publics concernes par la violence disposent de parcours separes ; cette separation ne doit jamais etre effacee par une campagne, une page ou une interface.
+
+Le contrat produit complet fait autorite dans `shipglows_data/product/shared/coach-operating-model.md`. Le titre public et les deux formulations d'entree valides le 2026-08-09 y sont consignes.
 
 ## Autorite et frontieres
 

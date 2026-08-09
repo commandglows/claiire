@@ -103,6 +103,6 @@ Continuer avec [Ancrage durable](/formations/victimes/6-ancrage/).
 
 ## Tu veux le module complet ?
 
-Débloque la version intégrale pour accéder au contenu complet, à la checklist, au protocole, aux ressources premium et au passage guidé entre sécurité, compréhension et reconstruction.
+Débloque l’approfondissement pour accéder aux exercices de progression, au suivi et aux outils premium hors urgence. Les ressources de sécurité restent gratuites.
 
 [Débloquer le module complet](/membres/formations/victimes/5-autonomie/)

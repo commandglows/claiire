@@ -13,25 +13,23 @@ Cette structure s'appuie sur trois cadres théoriques validés :
 ## Principe de la formation
 
 ```
-                    SOCLE COMMUN (4 modules)
-                    ┌────────────────────────┐
-                    │  Comprendre            │
-                    │  Neurobiologie         │
-                    │  Régulation émotionnelle│
-                    │  Schémas cognitifs     │
-                    └────────────┬───────────┘
-                                 │
-               ┌─────────────────┴──────────────────┐
-               ▼                                    ▼
-    PARCOURS VICTIMES (6 modules)       PARCOURS AUTEURS (6 modules)
-    Modèle Herman 3 phases              Modèle Duluth + TCC + trauma
+                    ORIENTATION SANS ETIQUETTE FORCEE
+                    ┌───────────────────────────────┐
+                    │ Ce que je subis m'inquiete    │
+                    │ Mes comportements m'inquietent│
+                    └──────────────┬────────────────┘
+                                   │
+                  ┌────────────────┴────────────────┐
+                  ▼                                 ▼
+       PARCOURS PERSONNE EXPOSEE       PARCOURS PERSONNE EXERCANT
+       securite et autonomie           interruption et responsabilite
 ```
 
 ---
 
-## Socle Commun
+## Connaissances reutilisables, parcours separes
 
-> Identique pour les deux profils. Positionné AVANT la bifurcation.
+> Les themes ci-dessous peuvent etre reutilises dans les deux parcours, mais ne constituent plus un socle commun suivi avant orientation. Chaque parcours possede sa propre version, son propre ordre, ses exercices et ses garde-fous. Aucune donnee ni progression n'est partagee.
 
 | # | Module | Contenu clé | Cadre clinique |
 |---|--------|-------------|----------------|
@@ -183,16 +181,8 @@ formations/
   label: 'Formations',
   items: [
     { label: 'Présentation', link: '/formations/' },
-    {
-      label: 'Socle Commun',
-      collapsed: true,
-      items: [
-        { label: '1 · Comprendre la violence', link: '/formations/socle/1-comprendre/' },
-        { label: '2 · Corps et cerveau', link: '/formations/socle/2-neurobiologie/' },
-        { label: '3 · Réguler ses émotions', link: '/formations/socle/3-stabilisation/' },
-        { label: '4 · Schémas cognitifs', link: '/formations/socle/4-cognition/' },
-      ]
-    },
+    // Les anciennes routes /formations/socle/* deviennent des pages d'orientation
+    // ou des redirections. Elles ne constituent plus une progression partagee.
     {
       label: 'Parcours Victimes',
       collapsed: true,
@@ -227,8 +217,8 @@ formations/
 
 ## Décisions prises (et pourquoi)
 
-**Socle à 4 modules (pas 3, pas 6)**
-La recherche clinique (s-CAPE, van der Kolk, Herman) montre que comprendre/neurobiologie/régulation/cognition sont universels aux deux profils. Un socle plus court risquerait de manquer des fondations, un socle plus long diluerait la bifurcation.
+**Quatre themes reutilisables, sans socle partage**
+Comprendre, neurobiologie, regulation et cognition restent utiles aux deux publics. Ils doivent etre adaptes des l'entree : securite et autonomie pour la personne exposee ; interruption et responsabilite pour la personne exercant la violence. L'ancienne obligation de suivre un socle commun avant bifurcation est abandonnee.
 
 **6 modules par parcours**
 Aligné sur les programmes validés (Herman 3 phases × 2 sous-étapes pour victimes ; Duluth 3 phases × 2 sous-étapes pour auteurs). Ni trop court (superficiel), ni trop long (abandons).
@@ -236,8 +226,8 @@ Aligné sur les programmes validés (Herman 3 phases × 2 sous-étapes pour vict
 **Parcours auteurs à recréer entièrement**
 L'actuel `sortir-violence-auteurs/` est une page d'une vingtaine de lignes. Les recherches montrent que les programmes efficaces pour auteurs sont structurés, séquencés, et incluent un volet trauma de leur propre histoire (Voith et al., BWJP 2018). C'est un travail de création.
 
-**Navigation minimaliste mais complète**
-Chaque module est listé dans la sidebar pour permettre la navigation libre, mais les sections sont collapsées par défaut — on voit l'architecture sans être submergé.
+**Navigation minimaliste mais separee**
+Chaque module est liste dans la sidebar de son propre parcours. Les anciennes routes du socle ne doivent plus apparaitre comme une etape commune ni conserver de progression partagee.
 
 **Sous-pages pratiques limitées**
 Seuls les modules qui nécessitent une plongée technique ont des sous-pages (ex: `ancrage-corporel.md`, `dialogue-interieur.md`, `progression-echelonnee.md`). Les autres restent des pages uniques.

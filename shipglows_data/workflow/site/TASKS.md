@@ -28,8 +28,8 @@
 - [x] Liens croisés Sommeil ↔ Stress ↔ Système nerveux — section "Connexions Essentielles" dans sommeil/index.md
 - [x] Liens croisés Système nerveux/nutrition-nerveuse → Nutrition
 
-### Repositionnement éditorial (coaching, pas santé)
-> Le site n'est pas un site de santé. C'est un site de coaching pour être heureux, atteindre ses objectifs et surmonter les crises. La santé et la psycho y participent comme leviers, pas comme finalité.
+### Repositionnement éditorial historique (supersédé le 2026-08-09)
+> Cette doctrine « coaching bonheur/objectifs/crises » est supersédée par la mission canonique : reconnaître, interrompre et sortir des violences relationnelles. La santé, la psycho et le coaching restent des méthodes et leviers. Voir `shipglows_data/product/shared/coach-operating-model.md`.
 
 - [x] 🔴 **Réécrire la homepage** (`src/content/docs/index.mdx`) — reformulé en angle coaching/bonheur/objectifs/crises ✅
 - [x] 🔴 **Retravailler la page a-propos** — réécrite en voix "je/tu", ton coaching personnel, 350 mots ✅
@@ -113,7 +113,7 @@
 - [x] Lancer le premier module pilote : `victimes/2-guerison` en duo public/privé
 - [x] Migrer les hubs : `/formations/`, `/formations/socle/`, `/formations/victimes/`, `/formations/auteurs/`
 - [x] Exécuter le lot pilote : `socle/1-comprendre`, `victimes/2-guerison`, `auteurs/1-responsabilite`
-- [x] Migrer tout le socle commun
+- [x] Migrer l'ancien socle commun (architecture supersedee le 2026-08-09 ; variantes separees a produire)
 - [x] Migrer tout le parcours victimes
 - [x] Migrer tout le parcours auteurs
 - [x] Couvrir tout le catalogue formation en duo `public + privé` : `4` hubs publics, `16` modules publics, `16` pages membres correspondantes
@@ -143,7 +143,7 @@
 
 ## Refonte Formation "Sortir de la Violence" ✅ COMPLÉTÉ (2026-03-13 → 2026-03-15)
 
-> Structure : socle commun (4 modules) → bifurcation victimes (6 modules) / auteurs (6 modules)
+> Structure historique corrigée le 2026-08-09 : deux parcours séparés dès l'orientation ; les quatre thèmes communs sont réutilisés avec des variantes propres à chaque parcours, sans état ni progression partagés.
 > Cadres cliniques : Judith Herman (victimes), Duluth + TCC + trauma-informé (auteurs)
 > **Build vérifié : 419 pages, 0 erreur**
 
@@ -194,7 +194,7 @@
 - [ ] Aligner le runtime Node réel avec `engines.node >=24.0.0`
 - [ ] Ajouter un pin explicite du gestionnaire de paquets et du runtime (`packageManager`, `.nvmrc`)
 - [ ] Configurer Dependabot ou Renovate pour les mises à jour automatiques
-- [ ] Ouvrir un chantier `/404-sf-migrate` pour les migrations majeures (`@clerk/astro`, `@astrojs/vercel`, `@astrojs/vue`, `astro`, `@types/node`, `glob`, `nanoid`, `typescript`)
+- [ ] Ouvrir un chantier `/404-sg-migrate` pour les migrations majeures (`@clerk/astro`, `@astrojs/vercel`, `@astrojs/vue`, `astro`, `@types/node`, `glob`, `nanoid`, `typescript`)
 
 🟢 [site] task: Unify package manager and lockfile for site installs and audits | status: done | area: dependencies | id: site-deps-package-manager
 🟠 [site] task: Validate esbuild override on the effective package manager and prove runtime mitigation | status: todo | area: security | id: site-deps-esbuild-mitigation

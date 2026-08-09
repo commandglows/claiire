@@ -1,28 +1,35 @@
 ---
 title: "Travailler tes émotions avant qu'elles débordent"
-description: "Apprends à reconnaître ce qui se cache sous la colère, à repérer les signaux physiques et à élargir l'espace entre impulsion et acte."
+description:
+  "Apprends à reconnaître ce qui se cache sous la colère, à repérer les signaux physiques et à
+  élargir l'espace entre impulsion et acte."
 template: splash
 hero:
   title: "Travailler tes émotions avant qu'elles débordent"
-  tagline: "Ce module t'aide à regarder la colère autrement : non comme ta seule langue, mais comme la surface de quelque chose de plus profond qu'il faut apprendre à lire et à réguler."
+  tagline:
+    "Ce module t'aide à regarder la colère autrement : non comme ta seule langue, mais comme la
+    surface de quelque chose de plus profond qu'il faut apprendre à lire et à réguler."
   actions:
-    - text: "Débloquer le module complet"
-      link: "/membres/formations/auteurs/3-emotions/"
-      variant: "primary"
-    - text: "Voir le parcours auteurs"
-      link: "/formations/auteurs/"
-      variant: "secondary"
+    - text: 'Débloquer le module complet'
+      link: '/membres/formations/auteurs/3-emotions/'
+      variant: 'primary'
+    - text: 'Voir le parcours auteurs'
+      link: '/formations/auteurs/'
+      variant: 'secondary'
 ---
 
 Ce module parle de la colère, mais pas seulement d'elle.
 
-Très souvent, ce qu'on appelle "colère" contient aussi de la peur, de la honte, de la frustration, un sentiment d'injustice, un besoin mal formulé ou une vulnérabilité qu'on n'a pas appris à montrer autrement.
+Très souvent, ce qu'on appelle "colère" contient aussi de la peur, de la honte, de la frustration,
+un sentiment d'injustice, un besoin mal formulé ou une vulnérabilité qu'on n'a pas appris à montrer
+autrement.
 
 Le travail ici consiste à voir plus finement ce qui monte avant que ça ne déborde.
 
 ## Pourquoi regarder sous la colère
 
-La colère n'est pas forcément le problème principal. Elle est souvent le langage qui a pris toute la place.
+La colère n'est pas forcément le problème principal. Elle est souvent le langage qui a pris toute la
+place.
 
 Quand elle devient le seul canal disponible :
 
@@ -44,7 +51,8 @@ La colère peut signaler :
 - une blessure touchée
 - une peur de perdre quelque chose
 
-Le problème n'est pas qu'elle existe. Le problème est ce qui se passe quand elle prend toute la place et s'écrase sur l'autre.
+Le problème n'est pas qu'elle existe. Le problème est ce qui se passe quand elle prend toute la
+place et s'écrase sur l'autre.
 
 ## Dans ce module, tu vas comprendre
 
@@ -91,6 +99,10 @@ Dans la version complète, on va plus loin sur :
 
 [Débloquer le module complet](/membres/formations/auteurs/3-emotions/)
 
+Si tu crains de devenir violent maintenant, la priorité n'est pas de terminer ce module. Crée une
+distance sûre sans demander à l'autre de te calmer, puis consulte
+[les ressources d'interruption](/violence/auteurs/).
+
 ## FAQ
 
 ### Est-ce que ce module veut dire qu'il ne faut plus ressentir de colère ?
@@ -113,11 +125,12 @@ Continuer avec [Voir l'autre](/formations/auteurs/4-empathie/).
 
 - [Revenir au parcours auteurs](/formations/auteurs/)
 - [Voir les ressources auteurs](/violence/auteurs/)
-- [Revoir la régulation du socle](/formations/socle/3-stabilisation/)
+- [Explorer les ressources sur le stress](/stress/)
 - [Continuer avec le module 4](/formations/auteurs/4-empathie/)
 
 ## Tu veux le module complet ?
 
-Débloque la version intégrale pour accéder au contenu complet, à la checklist, au protocole, aux ressources premium et au passage guidé entre lucidité, responsabilité et changement concret.
+Débloque l'approfondissement pour accéder aux exercices de réflexion, au suivi et aux outils de
+progression hors crise. Les ressources d'interruption immédiate restent gratuites.
 
 [Débloquer le module complet](/membres/formations/auteurs/3-emotions/)

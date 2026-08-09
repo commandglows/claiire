@@ -1,12 +1,12 @@
 ---
 artifact: brand_voice
 metadata_schema_version: "1.0"
-artifact_version: "1.0.0"
+artifact_version: "1.1.0"
 project: "claiire"
 created: "2026-06-30"
-updated: "2026-06-30"
+updated: "2026-08-09"
 status: reviewed
-source_skill: 300-sf-docs
+source_skill: 300-sg-docs
 scope: branding
 owner: Diane
 confidence: high
@@ -20,8 +20,9 @@ depends_on:
 supersedes: []
 evidence:
   - "Extracted from the previous single-file Claiire branding source."
-next_review: "2026-07-30"
-next_step: "/300-sf-docs update branding bundle"
+  - "Operator decision 2026-08-09: adapt tone by violence journey without blame, excuse, mediation, or false symmetry."
+next_review: "2026-09-09"
+next_step: "/300-sg-docs update branding bundle"
 ---
 
 # Voice And Tone
@@ -87,12 +88,26 @@ Claiire parle comme une amie bien informee : chaleureuse, precise, encourageante
 
 > Quand tu respires lentement, ton nerf vague envoie un signal a ton cerveau : tout va bien. Ton rythme cardiaque ralentit, ton cortisol baisse, et ton corps passe en mode reparation.
 
-## Adaptation aux sujets sensibles
+## Adaptation a la violence
 
-Sur la violence, l'addiction et les contenus de reconstruction :
+### Personne exposee a la violence
 
-- ton encore plus doux
-- accueil explicite de la personne qui lit
-- aucune mise en accusation
-- aucune minimisation de la souffrance
-- renvoi vers des professionnels ou ressources d'urgence quand necessaire
+- valider le ressenti et decrire les faits sans exiger que la personne se dise « victime »
+- ne jamais suggerer qu'elle a provoque, merite ou doit reparer ce qu'elle subit
+- ne pas ordonner « pars » : proposer des options, respecter le rythme et tenir compte du danger
+- etre concrete et calme, sans dramatisation commerciale
+
+### Personne exercant de la violence
+
+- accueillir la possibilite de changer sans flatter, humilier ni absoudre
+- nommer clairement les comportements et leur impact
+- ramener les explications vers la responsabilite et les prochains actes observables
+- refuser les formulations qui accusent la victime ou transforment un facteur de contexte en excuse
+- orienter vers une aide specialisee sans promettre que Claiire suffit
+
+### Regles communes
+
+- ne jamais parler au nom d'un couple ou inviter les deux personnes dans un meme parcours
+- ne jamais employer « vous avez chacun votre part » face a des actes violents
+- indiquer les limites de l'IA et les ressources humaines ou d'urgence quand necessaire
+- preferer une phrase de securite claire a une relance engageante

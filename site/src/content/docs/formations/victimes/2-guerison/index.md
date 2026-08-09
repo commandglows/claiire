@@ -117,6 +117,6 @@ Si tu te sens souvent débordé(e), dissocié(e), en danger, ou incapable de fai
 
 ## Tu veux le module complet ?
 
-Débloque la version intégrale pour accéder au contenu complet, à la checklist, au protocole, aux ressources premium et au passage guidé entre compréhension et mise en pratique.
+Débloque l’approfondissement pour accéder aux exercices de progression, au suivi et aux outils premium hors urgence.
 
 [Débloquer le module complet](/membres/formations/victimes/2-guerison/)

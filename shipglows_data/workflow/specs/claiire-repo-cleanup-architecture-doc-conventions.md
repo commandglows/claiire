@@ -8,7 +8,7 @@ created_at: "2026-06-29 13:35:19 UTC"
 updated: "2026-06-29"
 updated_at: "2026-06-30 16:50:37 UTC"
 status: active
-source_skill: 100-sf-spec
+source_skill: 100-sg-spec
 source_model: "GPT-5 Codex"
 scope: "migration"
 owner: "Diane"
@@ -54,7 +54,7 @@ evidence:
   - "Audit 2026-06-29: pnpm workspace sees /home/claude/claiire/app as tmv-app and /home/claude/claiire/site as claiire; the real Expo app package under app/app is not a workspace package."
   - "Audit 2026-06-29: pnpm --filter claiire build fails on virtual:@clerk/astro/config from @clerk/astro."
   - "Audit 2026-06-29: site layouts load Shipglows debug scripts globally and public inspector files contain an ImgBB API key."
-next_step: "/103-sf-verify claiire-repo-cleanup-architecture-doc-conventions"
+next_step: "/103-sg-verify claiire-repo-cleanup-architecture-doc-conventions"
 ---
 
 # Title
@@ -63,7 +63,7 @@ Claiire Repo Cleanup And Architecture/Documentation Conventions
 
 # Status
 
-In progress. This spec defines a high-risk repository cleanup and governance migration. It passed `/101-sf-ready`, was implemented in `/102-sf-start`, and is now held at partial verification pending build/test/index proof closure.
+In progress. This spec defines a high-risk repository cleanup and governance migration. It passed `/101-sg-ready`, was implemented in `/102-sg-start`, and is now held at partial verification pending build/test/index proof closure.
 
 # User Story
 
@@ -197,10 +197,10 @@ exception_without_proof: none
   - `site/package.json` pins `packageManager: pnpm@11.8.0` and `engines.node: 24.x`.
   - `app/app/package.json` defines the real Expo package named `app`.
 - Shipglows governance:
-  - `$SHIPGLOWZ_ROOT/skills/references/canonical-paths.md`
-  - `$SHIPGLOWZ_ROOT/skills/references/decision-quality-contract.md`
-  - `$SHIPGLOWZ_ROOT/skills/references/chantier-tracking.md`
-  - `$SHIPGLOWZ_ROOT/skills/references/reporting-contract.md`
+  - `$SHIPGLOWS_ROOT/skills/references/canonical-paths.md`
+  - `$SHIPGLOWS_ROOT/skills/references/decision-quality-contract.md`
+  - `$SHIPGLOWS_ROOT/skills/references/chantier-tracking.md`
+  - `$SHIPGLOWS_ROOT/skills/references/reporting-contract.md`
 - External docs:
   - `fresh-docs checked`: pnpm official docs confirm recursive/package listing on workspace packages and package selection through `--filter`, which is enough to anchor workspace validation commands for this chantier.
   - `fresh-docs checked`: Clerk Astro official docs confirm that Clerk must be added as an Astro integration and SSR requires an SSR-capable adapter with `output: 'server'`.
@@ -407,26 +407,26 @@ None. Review-gated decisions were converted into explicit implementation constra
 - App validation proof now passes: the real mobile package is targeted from `app/`, and local Jest now resolves a coherent Jest 30 runtime so all 59 tests pass.
 - Migration-removal proof is clarified: the old `git ls-files app/_bmad app/Inspiration app/app` command was structurally ambiguous because the remaining `app/app/` path is the Expo Router routes directory, not a nested package. The canonical proof now checks that legacy `Inspiration`/`_bmad` directories and nested package metadata files are absent while route files remain allowed.
 - Owner routes:
-  - `/103-sf-verify claiire-repo-cleanup-architecture-doc-conventions` to rerun the formal verification pass with the corrected tracked-path proof
+  - `/103-sg-verify claiire-repo-cleanup-architecture-doc-conventions` to rerun the formal verification pass with the corrected tracked-path proof
 
 # Skill Run History
 
 | Date UTC | Skill | Model | Action | Result | Next step |
 |----------|-------|-------|--------|--------|-----------|
-| 2026-06-29 13:35:19 UTC | 100-sf-spec | GPT-5 Codex | Created spec from audit findings and operator corrections | Draft spec created | /101-sf-ready claiire-repo-cleanup-architecture-doc-conventions |
-| 2026-06-29 13:35:19 UTC | 101-sf-ready | GPT-5 Codex | Reviewed structure, proof contract, ambiguity, and freshness gates | Ready after tightening test contract, removing open questions, and recording official-doc checks | /102-sf-start claiire-repo-cleanup-architecture-doc-conventions |
-| 2026-06-29 19:13:53 UTC | 102-sf-start | GPT-5 Codex | Flattened the app package root, migrated docs into canonical Shipglows surfaces, moved BMAD out of repo, reclassified Inspiration into research, and removed public inspector assets | Implemented with remaining proof issues: site build still fails on the pre-existing Clerk Astro Vite resolution error, and app tests fail on a Jest runtime mismatch surfaced after the package-root cleanup | /103-sf-verify claiire-repo-cleanup-architecture-doc-conventions |
-| 2026-06-29 19:58:47 UTC | 103-sf-verify | GPT-5 Codex | Verified workspace discovery, canonical-doc relocation, public debug/script removal, site checks/build, app test targeting, and tracked-path cleanup proof | Partial. The cleanup itself is materially in place, but the final proof set is blocked by the pre-existing Clerk Astro build failure, a Jest runtime mismatch in the app package, and unstaged tracked-path deletions that still appear in `git ls-files` | /106-sf-fix claiire-post-cleanup-proof-gaps |
-| 2026-06-30 14:59:32 UTC | 300-sf-docs + 307-sf-skills-refresh | GPT-5 Codex | Normalized the Claiire branding bundle under `shipglows_data/branding/` and refreshed Shipglows governance references, bootstrap rules, and metadata linting to recognize the richer branding architecture | Implemented. Claiire now has a governed brand bundle with dedicated files for voice, messaging, visual identity, rules, and assets; Shipglows active references now resolve the canonical branding path and bundle shape | /106-sf-fix claiire-post-cleanup-proof-gaps |
-| 2026-06-30 16:50:37 UTC | 106-sf-fix | GPT-5 Codex | Fixed the post-cleanup proof chain by resolving the pnpm allow-builds policy blocker, restoring the required Clerk Astro integration for builds, forcing the unit Jest project onto a coherent Jest 30 environment, and correcting the tracked-path proof so it no longer mistakes Expo Router route files for a nested package | Implemented. `pnpm --filter claiire check` and `pnpm --filter claiire build` now pass locally, direct `site` Astro build passes, app Jest runs 59 passing tests, and the remaining follow-through is a formal `/103-sf-verify` rerun with the corrected structure proof | /103-sf-verify claiire-repo-cleanup-architecture-doc-conventions |
+| 2026-06-29 13:35:19 UTC | 100-sg-spec | GPT-5 Codex | Created spec from audit findings and operator corrections | Draft spec created | /101-sg-ready claiire-repo-cleanup-architecture-doc-conventions |
+| 2026-06-29 13:35:19 UTC | 101-sg-ready | GPT-5 Codex | Reviewed structure, proof contract, ambiguity, and freshness gates | Ready after tightening test contract, removing open questions, and recording official-doc checks | /102-sg-start claiire-repo-cleanup-architecture-doc-conventions |
+| 2026-06-29 19:13:53 UTC | 102-sg-start | GPT-5 Codex | Flattened the app package root, migrated docs into canonical Shipglows surfaces, moved BMAD out of repo, reclassified Inspiration into research, and removed public inspector assets | Implemented with remaining proof issues: site build still fails on the pre-existing Clerk Astro Vite resolution error, and app tests fail on a Jest runtime mismatch surfaced after the package-root cleanup | /103-sg-verify claiire-repo-cleanup-architecture-doc-conventions |
+| 2026-06-29 19:58:47 UTC | 103-sg-verify | GPT-5 Codex | Verified workspace discovery, canonical-doc relocation, public debug/script removal, site checks/build, app test targeting, and tracked-path cleanup proof | Partial. The cleanup itself is materially in place, but the final proof set is blocked by the pre-existing Clerk Astro build failure, a Jest runtime mismatch in the app package, and unstaged tracked-path deletions that still appear in `git ls-files` | /106-sg-fix claiire-post-cleanup-proof-gaps |
+| 2026-06-30 14:59:32 UTC | 300-sg-docs + 307-sg-skills-refresh | GPT-5 Codex | Normalized the Claiire branding bundle under `shipglows_data/branding/` and refreshed Shipglows governance references, bootstrap rules, and metadata linting to recognize the richer branding architecture | Implemented. Claiire now has a governed brand bundle with dedicated files for voice, messaging, visual identity, rules, and assets; Shipglows active references now resolve the canonical branding path and bundle shape | /106-sg-fix claiire-post-cleanup-proof-gaps |
+| 2026-06-30 16:50:37 UTC | 106-sg-fix | GPT-5 Codex | Fixed the post-cleanup proof chain by resolving the pnpm allow-builds policy blocker, restoring the required Clerk Astro integration for builds, forcing the unit Jest project onto a coherent Jest 30 environment, and correcting the tracked-path proof so it no longer mistakes Expo Router route files for a nested package | Implemented. `pnpm --filter claiire check` and `pnpm --filter claiire build` now pass locally, direct `site` Astro build passes, app Jest runs 59 passing tests, and the remaining follow-through is a formal `/103-sg-verify` rerun with the corrected structure proof | /103-sg-verify claiire-repo-cleanup-architecture-doc-conventions |
 
 # Current Chantier Flow
 
 | Step | Status | Notes |
 |------|--------|-------|
-| 100-sf-spec | done | Draft spec created and chantier initialized. |
-| 101-sf-ready | ready | Structure, ambiguity, test contract, and freshness gates reviewed. |
-| 102-sf-start | implemented | Repo structure and documentation migration applied; remaining issues are proof/build-test follow-through rather than unfinished migration slices. |
-| 103-sf-verify | partial | Workspace and documentation cleanup proof now passes locally; rerun formal verification with the corrected tracked-path proof command to clear the chantier. |
-| 104-sf-end | pending | Update closure docs/tasks/changelog if appropriate. |
-| 005-sf-ship | pending | Commit/push only after proof and operator approval. |
+| 100-sg-spec | done | Draft spec created and chantier initialized. |
+| 101-sg-ready | ready | Structure, ambiguity, test contract, and freshness gates reviewed. |
+| 102-sg-start | implemented | Repo structure and documentation migration applied; remaining issues are proof/build-test follow-through rather than unfinished migration slices. |
+| 103-sg-verify | partial | Workspace and documentation cleanup proof now passes locally; rerun formal verification with the corrected tracked-path proof command to clear the chantier. |
+| 104-sg-end | pending | Update closure docs/tasks/changelog if appropriate. |
+| 005-sg-ship | pending | Commit/push only after proof and operator approval. |

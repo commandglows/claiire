@@ -2,6 +2,17 @@
 
 Date de reference : `2026-03-17`
 
+## Contrainte produit violence — 2026-08-09
+
+Le premium finance l'accompagnement approfondi, les outils de suivi et les contenus complets. Il ne peut jamais bloquer :
+
+- les ressources d'urgence et d'aide humaine
+- les informations essentielles de mise en securite
+- une action d'interruption immediate destinee a prevenir un passage a l'acte
+- l'explication des limites de l'IA et la sortie d'un parcours dangereux
+
+Les ecrans sensibles ne doivent pas utiliser peur, urgence, honte, reconciliation ou risque de recidive pour pousser un achat. Cette contrainte prime sur toute recommandation de gating ci-dessous.
+
 ## Decision rapide
 
 Claiire construit deja une suite mobile.

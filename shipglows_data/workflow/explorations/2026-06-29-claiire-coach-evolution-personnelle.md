@@ -6,7 +6,7 @@ project: "claiire"
 created: "2026-06-29"
 updated: "2026-06-29"
 status: draft
-source_skill: "700-sf-explore"
+source_skill: "700-sg-explore"
 scope: "Regles produit et relationnelles pour faire evoluer Claiire vers un vrai coach en evolution personnelle"
 owner: "operator"
 confidence: medium
@@ -31,7 +31,7 @@ evidence:
   - "France Travail MetierScope / formation references accessed 2026-06-29"
 depends_on: []
 supersedes: []
-next_step: "/100-sf-spec claiire-coach-operating-model"
+next_step: "/100-sg-spec claiire-coach-operating-model"
 ---
 
 # Exploration Report: Claiire comme coach en evolution personnelle
@@ -281,11 +281,11 @@ Le but n'est pas d'attacher l'utilisateur au produit, mais de le rendre plus luc
 
 ## Handoff
 
-- Recommended next command: `/100-sf-spec claiire-coach-operating-model`
+- Recommended next command: `/100-sg-spec claiire-coach-operating-model`
 - Why this next step: L'exploration a deja produit un modele operationnel clair, des invariants et des risques. Le bon mouvement suivant est de formaliser une spec produit/transverse, pas de coder tout de suite.
 
 ## Exploration Run History
 
 | Date UTC | Prompt/Focus | Action | Result | Next step |
 |----------|--------------|--------|--------|-----------|
-| 2026-06-29 00:00:00 UTC | Metier de coach en evolution personnelle et regles pour Claiire | Lecture du contexte projet, recherche web sur referentiels coaching et coaching IA, synthese en regles produit | Modele de coach de progression hybride recommande | `/100-sf-spec claiire-coach-operating-model` |
+| 2026-06-29 00:00:00 UTC | Metier de coach en evolution personnelle et regles pour Claiire | Lecture du contexte projet, recherche web sur referentiels coaching et coaching IA, synthese en regles produit | Modele de coach de progression hybride recommande | `/100-sg-spec claiire-coach-operating-model` |

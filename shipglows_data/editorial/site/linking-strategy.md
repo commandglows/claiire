@@ -3,6 +3,13 @@
 ## Objectifs
 1. **SEO** : construire l'autorité thématique par clusters, faciliter le crawl
 2. **Tunnel** : guider vers les parcours et formations (pages à valeur)
+3. **Mission** : faire des contenus sur la violence les entrees principales vers deux parcours separes et surs
+
+## Autorite de positionnement
+
+Depuis la decision du 2026-08-09, les clusters sante, psycho, relations et bien-etre sont des portes contextuelles vers la mission violence, pas des positionnements concurrents. Le maillage ne doit jamais envoyer une personne exposee vers le parcours auteur, ni inversement. Les pages ambigues orientent d'abord par faits et besoins, sans etiquette forcee.
+
+Les ressources de securite et d'urgence doivent etre accessibles directement, sans detour SEO, connexion ou paywall. Les CTA commerciaux restent secondaires sur toute page signalant un danger actuel.
 
 ---
 
