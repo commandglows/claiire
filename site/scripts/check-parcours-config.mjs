@@ -59,6 +59,13 @@ for (const entry of parcours) {
     }
   }
 
+  if (
+    entry.metaDescription !== undefined &&
+    (typeof entry.metaDescription !== 'string' || entry.metaDescription.trim() === '')
+  ) {
+    fail(`Parcours "${entry.id}" has an invalid metaDescription.`);
+  }
+
   if (!Array.isArray(entry.modules) || entry.modules.length !== 6) {
     fail(`Parcours "${entry.id}" must contain exactly 6 modules.`);
     continue;
@@ -117,6 +124,18 @@ for (const entry of parcours) {
     }
     if (!page.includes('link: getFirstModuleRoute(parcours)')) {
       fail(`Page "${entry.id}.astro" does not consume the derived first module route.`);
+    }
+    if (/description\s*=\s*["']/.test(page)) {
+      fail(`Page "${entry.id}.astro" redeclares description as a literal.`);
+    }
+
+    const canonicalDescriptionExpression = entry.metaDescription
+      ? 'description={parcours.metaDescription ?? parcours.description}'
+      : 'description={parcours.description}';
+    if (!page.includes(canonicalDescriptionExpression)) {
+      fail(
+        `Page "${entry.id}.astro" must use canonical description expression: ${canonicalDescriptionExpression}.`
+      );
     }
   }
 }

@@ -1,0 +1,179 @@
+- generic [active] [ref=f9e1]:
+  - link "Aller au contenu" [ref=f9e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f9e3]:
+    - generic [ref=f9e4]:
+      - link "Claiire Claiire Comprendre. Réguler. Transformer." [ref=f9e5] [cursor=pointer]:
+        - /url: /
+        - img "Claiire" [ref=f9e6]
+        - generic [ref=f9e7]:
+          - strong [ref=f9e8]: Claiire
+          - generic [ref=f9e9]: Comprendre. Réguler. Transformer.
+      - navigation "Navigation principale" [ref=f9e11]:
+        - link "Accueil" [ref=f9e12] [cursor=pointer]:
+          - /url: /
+        - link "Parcours" [ref=f9e13] [cursor=pointer]:
+          - /url: /parcours/bonheur
+        - link "Corps & santé" [ref=f9e14] [cursor=pointer]:
+          - /url: /systeme-nerveux/
+        - link "Esprit" [ref=f9e15] [cursor=pointer]:
+          - /url: /psy/
+        - link "Émotions" [ref=f9e16] [cursor=pointer]:
+          - /url: /psy/emotions/
+        - link "Bonheur" [ref=f9e17] [cursor=pointer]:
+          - /url: /bonheur/
+        - link "Violence" [ref=f9e18] [cursor=pointer]:
+          - /url: /violence/
+        - link "Formations" [ref=f9e19] [cursor=pointer]:
+          - /url: /formations/
+  - generic [ref=f9e20]:
+    - generic [ref=f9e22]:
+      - paragraph [ref=f9e23]: Parcours thématiques
+      - heading "😊 Être plus heureux" [level=1] [ref=f9e24]
+      - paragraph [ref=f9e25]: Découvre les clés scientifiques du bonheur et apprends à cultiver le bien-être au quotidien
+      - link "Commencer le premier module" [ref=f9e27] [cursor=pointer]:
+        - /url: /bonheur/les-hormones-du-bonheur
+    - main [ref=f9e28]:
+      - article [ref=f9e29]:
+        - generic [ref=f9e30]:
+          - complementary "Progression du parcours" [ref=f9e31]:
+            - generic [ref=f9e32]:
+              - generic [ref=f9e33]:
+                - heading "Ta progression" [level=3] [ref=f9e34]
+                - generic [ref=f9e35]: 0%
+              - progressbar "Progression du parcours" [ref=f9e36]
+              - list [ref=f9e37]:
+                - listitem [ref=f9e38]:
+                  - checkbox "Les hormones du bonheur" [ref=f9e39] [cursor=pointer]
+                  - generic [ref=f9e40] [cursor=pointer]: Les hormones du bonheur
+                  - link "Accéder à Les hormones du bonheur" [ref=f9e43] [cursor=pointer]:
+                    - /url: /bonheur/les-hormones-du-bonheur
+                - listitem [ref=f9e46]:
+                  - checkbox "Cultiver la gratitude" [ref=f9e47] [cursor=pointer]
+                  - generic [ref=f9e48] [cursor=pointer]: Cultiver la gratitude
+                  - link "Accéder à Cultiver la gratitude" [ref=f9e51] [cursor=pointer]:
+                    - /url: /psy/emotions/gratitude
+                - listitem [ref=f9e54]:
+                  - checkbox "Le moment présent" [ref=f9e55] [cursor=pointer]
+                  - generic [ref=f9e56] [cursor=pointer]: Le moment présent
+                  - link "Accéder à Le moment présent" [ref=f9e59] [cursor=pointer]:
+                    - /url: /bonheur/choyer-le-moment-present
+                - listitem [ref=f9e62]:
+                  - checkbox "Équilibre mental" [ref=f9e63] [cursor=pointer]
+                  - generic [ref=f9e64] [cursor=pointer]: Équilibre mental
+                  - link "Accéder à Équilibre mental" [ref=f9e67] [cursor=pointer]:
+                    - /url: /psy/equilibre/equilibre-mental
+                - listitem [ref=f9e70]:
+                  - checkbox "Cultiver le bonheur" [ref=f9e71] [cursor=pointer]
+                  - generic [ref=f9e72] [cursor=pointer]: Cultiver le bonheur
+                  - link "Accéder à Cultiver le bonheur" [ref=f9e75] [cursor=pointer]:
+                    - /url: /bonheur/cultiver-le-bonheur
+                - listitem [ref=f9e78]:
+                  - checkbox "Bonheur durable" [ref=f9e79] [cursor=pointer]
+                  - generic [ref=f9e80] [cursor=pointer]: Bonheur durable
+                  - link "Accéder à Bonheur durable" [ref=f9e83] [cursor=pointer]:
+                    - /url: /bonheur/bonheur-durable
+              - button "Réinitialiser la progression" [ref=f9e86] [cursor=pointer]
+          - generic [ref=f9e87]:
+            - paragraph [ref=f9e88]:
+              - strong [ref=f9e89]: "À l'issue de ce parcours, tu comprendras pourquoi le bonheur se construit — et tu auras des outils concrets pour le faire. Pas de promesses magiques : de la science, des pratiques testées, et un chemin qui te ressemble."
+            - separator [ref=f9e90]
+            - heading "Étape 1 — Comprendre le bonheur (la science derrière)" [level=2] [ref=f9e91]
+            - paragraph [ref=f9e92]: Le bonheur n'est pas un hasard. Dopamine, sérotonine, ocytocine, endorphines — quatre molécules qui jouent un rôle clé dans ton bien-être. Comprendre leur fonctionnement, c'est apprendre à les activer volontairement.
+            - paragraph [ref=f9e93]:
+              - text: →
+              - link "Les hormones du bonheur" [ref=f9e94] [cursor=pointer]:
+                - /url: /bonheur/les-hormones-du-bonheur
+            - paragraph [ref=f9e95]:
+              - text: →
+              - link "La science du bonheur durable" [ref=f9e96] [cursor=pointer]:
+                - /url: /bonheur/bonheur-durable
+            - separator [ref=f9e97]
+            - heading "Étape 2 — Cultiver les émotions positives" [level=2] [ref=f9e98]
+            - paragraph [ref=f9e99]: La gratitude, la joie, la sérénité ne sont pas des états réservés à quelques chanceux. Ce sont des muscles que tu peux entraîner. Cette étape t'apprend à reconnaître et amplifier les émotions qui nourrissent ton bonheur.
+            - paragraph [ref=f9e100]:
+              - text: →
+              - 'link "La gratitude : comment la cultiver" [ref=f9e101] [cursor=pointer]':
+                - /url: /psy/emotions/gratitude
+            - paragraph [ref=f9e102]:
+              - text: →
+              - link "La joie, une émotion à apprivoiser" [ref=f9e103] [cursor=pointer]:
+                - /url: /psy/emotions/joie
+            - paragraph [ref=f9e104]:
+              - text: →
+              - link "La sérénité au quotidien" [ref=f9e105] [cursor=pointer]:
+                - /url: /psy/emotions/serenite
+            - separator [ref=f9e106]
+            - heading "Étape 3 — Construire des habitudes qui durent" [level=2] [ref=f9e107]
+            - paragraph [ref=f9e108]: Le bonheur s'ancre dans le quotidien, pas dans les grands événements. Cette étape te guide pour créer des habitudes simples, cohérentes et alignées avec ce qui compte vraiment pour toi.
+            - paragraph [ref=f9e109]:
+              - text: →
+              - link "Cultiver le bonheur au jour le jour" [ref=f9e110] [cursor=pointer]:
+                - /url: /bonheur/cultiver-le-bonheur
+            - paragraph [ref=f9e111]:
+              - text: →
+              - link "Changer ses habitudes durablement" [ref=f9e112] [cursor=pointer]:
+                - /url: /objectifs/changer-ses-habitudes
+            - separator [ref=f9e113]
+            - heading "Étape 4 — Trouver ton équilibre intérieur" [level=2] [ref=f9e114]
+            - paragraph [ref=f9e115]: L'harmonie entre tes besoins physiques, émotionnels et mentaux est le socle d'un bien-être profond. Cette étape t'aide à identifier ce qui te déséquilibre — et à y remédier.
+            - paragraph [ref=f9e116]:
+              - text: →
+              - link "L'homéostasie ou l'art de l'équilibre" [ref=f9e117] [cursor=pointer]:
+                - /url: /harmonie/homeostasie
+            - paragraph [ref=f9e118]:
+              - text: →
+              - link "Équilibre vie pro / vie perso" [ref=f9e119] [cursor=pointer]:
+                - /url: /harmonie/equilibre-vie
+            - separator [ref=f9e120]
+            - heading "Étape 5 — Vivre pleinement le présent" [level=2] [ref=f9e121]
+            - paragraph [ref=f9e122]: Le bonheur existe maintenant, pas "quand j'aurai réussi". Apprends à savourer l'instant, à réduire le bruit mental et à te reconnecter à ce qui est là.
+            - paragraph [ref=f9e123]:
+              - text: →
+              - link "Choyer le moment présent" [ref=f9e124] [cursor=pointer]:
+                - /url: /bonheur/choyer-le-moment-present
+            - paragraph [ref=f9e125]:
+              - text: →
+              - link "La pleine conscience (mindfulness)" [ref=f9e126] [cursor=pointer]:
+                - /url: /psy/solution/mindfulness
+            - separator [ref=f9e127]
+            - heading "Pour aller plus loin" [level=2] [ref=f9e128]
+            - list [ref=f9e129]:
+              - listitem [ref=f9e130]:
+                - link "Explorer tout le cluster bonheur" [ref=f9e131] [cursor=pointer]:
+                  - /url: /bonheur/
+              - listitem [ref=f9e132]:
+                - link "Cultiver le bonheur au quotidien" [ref=f9e133] [cursor=pointer]:
+                  - /url: /bonheur/cultiver-le-bonheur
+              - listitem [ref=f9e134]:
+                - link "La pratique de la gratitude" [ref=f9e135] [cursor=pointer]:
+                  - /url: /psy/emotions/gratitude
+              - listitem [ref=f9e136]:
+                - link "Comprendre les hormones du bonheur" [ref=f9e137] [cursor=pointer]:
+                  - /url: /bonheur/les-hormones-du-bonheur
+              - listitem [ref=f9e138]:
+                - link "Le kit SOS émotions" [ref=f9e139] [cursor=pointer]:
+                  - /url: /psy/emotions/kit-sos-emotions
+              - listitem [ref=f9e140]:
+                - link "La méditation, par où commencer" [ref=f9e141] [cursor=pointer]:
+                  - /url: /harmonie/meditation
+              - listitem [ref=f9e142]:
+                - 'link "La résilience : rebondir après les épreuves" [ref=f9e143] [cursor=pointer]':
+                  - /url: /psy/solution/resilience
+            - separator [ref=f9e144]
+            - paragraph [ref=f9e145]:
+              - strong [ref=f9e146]: Tu as tout ce qu'il faut pour être heureux. Ce parcours t'aide juste à le retrouver.
+  - contentinfo [ref=f9e147]:
+    - generic [ref=f9e148]:
+      - generic [ref=f9e149]:
+        - paragraph [ref=f9e150]: Claiire
+        - paragraph [ref=f9e151]: Un site éditorial pensé pour aider à comprendre ce que tu vis, retrouver des repères fiables, et avancer avec des contenus structurés.
+      - navigation "Liens utiles" [ref=f9e152]:
+        - link "Notre approche" [ref=f9e153] [cursor=pointer]:
+          - /url: /a-propos
+        - link "Formations" [ref=f9e154] [cursor=pointer]:
+          - /url: /formations/
+        - link "Contact" [ref=f9e155] [cursor=pointer]:
+          - /url: /contact
+        - link "Confidentialité" [ref=f9e156] [cursor=pointer]:
+          - /url: /confidentialite

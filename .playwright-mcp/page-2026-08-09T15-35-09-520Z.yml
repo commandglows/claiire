@@ -1,0 +1,183 @@
+- generic [active] [ref=f14e1]:
+  - link "Aller au contenu" [ref=f14e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f14e3]:
+    - generic [ref=f14e4]:
+      - link "Claiire Claiire Comprendre. Réguler. Transformer." [ref=f14e5] [cursor=pointer]:
+        - /url: /
+        - img "Claiire" [ref=f14e6]
+        - generic [ref=f14e7]:
+          - strong [ref=f14e8]: Claiire
+          - generic [ref=f14e9]: Comprendre. Réguler. Transformer.
+      - navigation "Navigation principale" [ref=f14e11]:
+        - link "Accueil" [ref=f14e12] [cursor=pointer]:
+          - /url: /
+        - link "Parcours" [ref=f14e13] [cursor=pointer]:
+          - /url: /parcours/bonheur
+        - link "Corps & santé" [ref=f14e14] [cursor=pointer]:
+          - /url: /systeme-nerveux/
+        - link "Esprit" [ref=f14e15] [cursor=pointer]:
+          - /url: /psy/
+        - link "Émotions" [ref=f14e16] [cursor=pointer]:
+          - /url: /psy/emotions/
+        - link "Bonheur" [ref=f14e17] [cursor=pointer]:
+          - /url: /bonheur/
+        - link "Violence" [ref=f14e18] [cursor=pointer]:
+          - /url: /violence/
+        - link "Formations" [ref=f14e19] [cursor=pointer]:
+          - /url: /formations/
+  - generic [ref=f14e20]:
+    - generic [ref=f14e22]:
+      - paragraph [ref=f14e23]: Parcours thématiques
+      - heading "🧠 Comprendre ton esprit" [level=1] [ref=f14e24]
+      - paragraph [ref=f14e25]: Explore le fonctionnement de ton psychisme et développe ton intelligence émotionnelle
+      - link "Commencer le premier module" [ref=f14e27] [cursor=pointer]:
+        - /url: /psy/
+    - main [ref=f14e28]:
+      - article [ref=f14e29]:
+        - generic [ref=f14e30]:
+          - complementary "Progression du parcours" [ref=f14e31]:
+            - generic [ref=f14e32]:
+              - generic [ref=f14e33]:
+                - heading "Ta progression" [level=3] [ref=f14e34]
+                - generic [ref=f14e35]: 0%
+              - progressbar "Progression du parcours" [ref=f14e36]
+              - list [ref=f14e37]:
+                - listitem [ref=f14e38]:
+                  - checkbox "Introduction psychologie" [ref=f14e39] [cursor=pointer]
+                  - generic [ref=f14e40] [cursor=pointer]: Introduction psychologie
+                  - link "Accéder à Introduction psychologie" [ref=f14e43] [cursor=pointer]:
+                    - /url: /psy/
+                - listitem [ref=f14e46]:
+                  - checkbox "Émotions" [ref=f14e47] [cursor=pointer]
+                  - generic [ref=f14e48] [cursor=pointer]: Émotions
+                  - link "Accéder à Émotions" [ref=f14e51] [cursor=pointer]:
+                    - /url: /psy/emotions/
+                - listitem [ref=f14e54]:
+                  - checkbox "Approches cognitives" [ref=f14e55] [cursor=pointer]
+                  - generic [ref=f14e56] [cursor=pointer]: Approches cognitives
+                  - link "Accéder à Approches cognitives" [ref=f14e59] [cursor=pointer]:
+                    - /url: /psy/approche/cognitive
+                - listitem [ref=f14e62]:
+                  - checkbox "Résilience" [ref=f14e63] [cursor=pointer]
+                  - generic [ref=f14e64] [cursor=pointer]: Résilience
+                  - link "Accéder à Résilience" [ref=f14e67] [cursor=pointer]:
+                    - /url: /psy/solution/resilience
+                - listitem [ref=f14e70]:
+                  - checkbox "Mindfulness" [ref=f14e71] [cursor=pointer]
+                  - generic [ref=f14e72] [cursor=pointer]: Mindfulness
+                  - link "Accéder à Mindfulness" [ref=f14e75] [cursor=pointer]:
+                    - /url: /psy/solution/mindfulness
+                - listitem [ref=f14e78]:
+                  - checkbox "Biais cognitifs" [ref=f14e79] [cursor=pointer]
+                  - generic [ref=f14e80] [cursor=pointer]: Biais cognitifs
+                  - link "Accéder à Biais cognitifs" [ref=f14e83] [cursor=pointer]:
+                    - /url: /psy/biais/
+              - button "Réinitialiser la progression" [ref=f14e86] [cursor=pointer]
+          - generic [ref=f14e87]:
+            - paragraph [ref=f14e88]:
+              - strong [ref=f14e89]: Ce parcours te donne les outils pour te comprendre toi-même — tes pensées, tes émotions, tes schémas. Pas pour t'analyser à l'infini, mais pour agir avec plus de clarté, de liberté et d'alignement.
+            - separator [ref=f14e90]
+            - heading "Étape 1 — Connaître tes biais cognitifs" [level=2] [ref=f14e91]
+            - paragraph [ref=f14e92]: Ton cerveau prend des raccourcis. Certains t'aident, d'autres te piègent. Les biais cognitifs colorent ta perception de la réalité sans que tu t'en rendes compte. Les identifier, c'est déjà s'en affranchir partiellement.
+            - paragraph [ref=f14e93]:
+              - text: →
+              - 'link "Les biais cognitifs : le guide" [ref=f14e94] [cursor=pointer]':
+                - /url: /psy/biais/
+            - paragraph [ref=f14e95]:
+              - text: →
+              - link "L'approche cognitive en psychologie" [ref=f14e96] [cursor=pointer]:
+                - /url: /psy/approche/cognitive
+            - separator [ref=f14e97]
+            - heading "Étape 2 — Comprendre tes émotions" [level=2] [ref=f14e98]
+            - paragraph [ref=f14e99]: Les émotions ne sont pas des ennemies à réprimer. Ce sont des informations. Cette étape t'apprend à les nommer, les accueillir et les comprendre — pour ne plus les subir mais les traverser.
+            - paragraph [ref=f14e100]:
+              - text: →
+              - link "Comprendre ses émotions" [ref=f14e101] [cursor=pointer]:
+                - /url: /psy/emotions/
+            - paragraph [ref=f14e102]:
+              - text: →
+              - link "La joie" [ref=f14e103] [cursor=pointer]:
+                - /url: /psy/emotions/joie
+            - paragraph [ref=f14e104]:
+              - text: →
+              - link "La honte" [ref=f14e105] [cursor=pointer]:
+                - /url: /psy/emotions/honte
+            - paragraph [ref=f14e106]:
+              - text: →
+              - link "Le kit SOS émotions" [ref=f14e107] [cursor=pointer]:
+                - /url: /psy/emotions/kit-sos-emotions
+            - separator [ref=f14e108]
+            - heading "Étape 3 — Travailler ta confiance" [level=2] [ref=f14e109]
+            - paragraph [ref=f14e110]: La confiance en soi n'est pas une qualité innée — c'est une compétence qui se développe. Cette étape démantèle les croyances limitantes et te donne des pratiques concrètes pour te faire davantage confiance.
+            - paragraph [ref=f14e111]:
+              - text: →
+              - link "La confiance en soi" [ref=f14e112] [cursor=pointer]:
+                - /url: /confiance/confiance-en-soi
+            - paragraph [ref=f14e113]:
+              - text: →
+              - link "La confiance en la vie" [ref=f14e114] [cursor=pointer]:
+                - /url: /confiance/confiance-en-la-vie
+            - paragraph [ref=f14e115]:
+              - text: →
+              - link "Reconstruire sa confiance" [ref=f14e116] [cursor=pointer]:
+                - /url: /confiance/reconstruire
+            - separator [ref=f14e117]
+            - heading "Étape 4 — Fixer des objectifs clairs" [level=2] [ref=f14e118]
+            - paragraph [ref=f14e119]: "Vouloir changer sans savoir vers quoi, c'est naviguer sans cap. Cette étape t'enseigne la science de la définition d'objectifs : comment les formuler pour qu'ils motivent vraiment, et comment rester sur la trajectoire quand ça coince."
+            - paragraph [ref=f14e120]:
+              - text: →
+              - link "Définir ses objectifs" [ref=f14e121] [cursor=pointer]:
+                - /url: /objectifs/definir-ses-objectifs
+            - separator [ref=f14e122]
+            - heading "Étape 5 — Changer ses habitudes durablement" [level=2] [ref=f14e123]
+            - paragraph [ref=f14e124]: La transformation ne vient pas de la volonté seule — elle vient de la conception intelligente de tes habitudes. Cette dernière étape t'apprend à créer des automatismes qui te servent, et à défaire ceux qui t'entravent.
+            - paragraph [ref=f14e125]:
+              - text: →
+              - link "Changer ses habitudes durablement" [ref=f14e126] [cursor=pointer]:
+                - /url: /objectifs/changer-ses-habitudes
+            - paragraph [ref=f14e127]:
+              - text: →
+              - 'link "La résilience : rebondir après les épreuves" [ref=f14e128] [cursor=pointer]':
+                - /url: /psy/solution/resilience
+            - separator [ref=f14e129]
+            - heading "Pour aller plus loin" [level=2] [ref=f14e130]
+            - list [ref=f14e131]:
+              - listitem [ref=f14e132]:
+                - link "Explorer la psychologie" [ref=f14e133] [cursor=pointer]:
+                  - /url: /psy/
+              - listitem [ref=f14e134]:
+                - link "Développer ta confiance en toi" [ref=f14e135] [cursor=pointer]:
+                  - /url: /confiance/confiance-en-soi
+              - listitem [ref=f14e136]:
+                - link "Clarifier tes objectifs" [ref=f14e137] [cursor=pointer]:
+                  - /url: /objectifs/
+              - listitem [ref=f14e138]:
+                - link "Ton bien-être mental" [ref=f14e139] [cursor=pointer]:
+                  - /url: /bonheur/mental
+              - listitem [ref=f14e140]:
+                - 'link "La psychothérapie : quel type te convient ?" [ref=f14e141] [cursor=pointer]':
+                  - /url: /psy/solution/psychotherapie
+              - listitem [ref=f14e142]:
+                - link "Les traumatismes psychologiques" [ref=f14e143] [cursor=pointer]:
+                  - /url: /psy/trauma/
+              - listitem [ref=f14e144]:
+                - link "La pleine conscience pour observer son esprit" [ref=f14e145] [cursor=pointer]:
+                  - /url: /psy/solution/mindfulness
+            - separator [ref=f14e146]
+            - paragraph [ref=f14e147]:
+              - strong [ref=f14e148]: Mieux te connaître, c'est le début de tout le reste.
+  - contentinfo [ref=f14e149]:
+    - generic [ref=f14e150]:
+      - generic [ref=f14e151]:
+        - paragraph [ref=f14e152]: Claiire
+        - paragraph [ref=f14e153]: Un site éditorial pensé pour aider à comprendre ce que tu vis, retrouver des repères fiables, et avancer avec des contenus structurés.
+      - navigation "Liens utiles" [ref=f14e154]:
+        - link "Notre approche" [ref=f14e155] [cursor=pointer]:
+          - /url: /a-propos
+        - link "Formations" [ref=f14e156] [cursor=pointer]:
+          - /url: /formations/
+        - link "Contact" [ref=f14e157] [cursor=pointer]:
+          - /url: /contact
+        - link "Confidentialité" [ref=f14e158] [cursor=pointer]:
+          - /url: /confidentialite

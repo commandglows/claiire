@@ -8,7 +8,7 @@ const parcours = getParcours('bonheur');
 <ParcoursPage
   currentPath={`/parcours/${parcours.id}`}
   title={getParcoursPageTitle(parcours)}
-  description="Ton parcours guidé vers un bonheur durable et authentique"
+  description={parcours.metaDescription ?? parcours.description}
   hero={{
     title: `${parcours.icon} ${parcours.title}`,
     tagline: parcours.description,

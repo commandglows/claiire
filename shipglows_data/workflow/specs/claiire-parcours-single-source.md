@@ -5,7 +5,7 @@ artifact_version: "1.0.0"
 project: "claiire"
 created: "2026-08-09"
 updated: "2026-08-09"
-status: implemented
+status: complete
 source_skill: 001-sg-build
 scope: "single-source refactor for public site parcours metadata and module routing"
 owner: Diane
@@ -22,7 +22,7 @@ evidence:
   - "The six parcours duplicate shared metadata and module definitions between site/src/config/parcours.js, site/src/pages/parcours/*.astro, homepage cards, and navigation."
   - "Operator requested a bounded single-source refactor while preserving public rendering, URLs, copy, and progress identity on 2026-08-09."
 next_review: "2026-09-09"
-next_step: "Run the homepage and six-route browser smoke matrix, then verify and close the chantier."
+next_step: "none"
 ---
 
 # Claiire — parcours as a single source of truth
@@ -157,7 +157,15 @@ No concurrent write batch is authorized for this chantier.
 | --- | --- | --- |
 | 2026-08-09 | 001-sg-build | Ready: bounded single-source outcome, invariants, sequential mutation batches, ZOMBIES, and proof matrix defined. |
 | 2026-08-09 | 001-sg-build | Implemented: canonical config, six page consumers, derived navigation, and offline contract check complete; targeted check, Astro check, build, and diff check pass. Browser smoke remains with the orchestrator. |
+| 2026-08-09 | 103-sg-verify | Complete: canonical `metaDescription` preserves the bonheur page copy exactly; all six pages consume canonical descriptions without literals; targeted check, diff check, and browser evidence pass. |
+
+## Completion evidence
+
+- The bonheur meta-description remains exactly `Ton parcours guidé vers un bonheur durable et authentique`, now owned by the canonical parcours configuration.
+- All six parcours pages consume canonical descriptions and contain no literal `description` attribute.
+- `pnpm run check:parcours` passes with 6 parcours, 36 unique modules, and all routes resolved; `git diff --check` passes.
+- Previously acquired browser proof covers the ordered six-card homepage and all six parcours routes: correct title/H1, six modules, first-module CTA, exact `parcoursId`, no overflow, and no parcours-specific console error. The local missing-Clerk-key and Vite dev-toolbar messages remain pre-existing and outside this refactor.
 
 ## Current Chantier Flow
 
-`001-sg-build ready -> sequential implementation complete -> targeted contract check passed -> pnpm check passed -> build passed -> browser smoke homepage + six parcours routes pending orchestrator -> verify -> complete`
+`001-sg-build ready -> sequential implementation complete -> targeted contract check passed -> pnpm check passed -> build passed -> browser smoke homepage + six parcours routes passed -> 103-sg-verify complete -> complete`

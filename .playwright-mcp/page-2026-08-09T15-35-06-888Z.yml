@@ -1,0 +1,186 @@
+- generic [active] [ref=f11e1]:
+  - link "Aller au contenu" [ref=f11e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f11e3]:
+    - generic [ref=f11e4]:
+      - link "Claiire Claiire Comprendre. Réguler. Transformer." [ref=f11e5] [cursor=pointer]:
+        - /url: /
+        - img "Claiire" [ref=f11e6]
+        - generic [ref=f11e7]:
+          - strong [ref=f11e8]: Claiire
+          - generic [ref=f11e9]: Comprendre. Réguler. Transformer.
+      - navigation "Navigation principale" [ref=f11e11]:
+        - link "Accueil" [ref=f11e12] [cursor=pointer]:
+          - /url: /
+        - link "Parcours" [ref=f11e13] [cursor=pointer]:
+          - /url: /parcours/bonheur
+        - link "Corps & santé" [ref=f11e14] [cursor=pointer]:
+          - /url: /systeme-nerveux/
+        - link "Esprit" [ref=f11e15] [cursor=pointer]:
+          - /url: /psy/
+        - link "Émotions" [ref=f11e16] [cursor=pointer]:
+          - /url: /psy/emotions/
+        - link "Bonheur" [ref=f11e17] [cursor=pointer]:
+          - /url: /bonheur/
+        - link "Violence" [ref=f11e18] [cursor=pointer]:
+          - /url: /violence/
+        - link "Formations" [ref=f11e19] [cursor=pointer]:
+          - /url: /formations/
+  - generic [ref=f11e20]:
+    - generic [ref=f11e22]:
+      - paragraph [ref=f11e23]: Parcours thématiques
+      - heading "😴 Améliorer ton sommeil" [level=1] [ref=f11e24]
+      - paragraph [ref=f11e25]: Restaure un sommeil réparateur pour une vie plus énergique
+      - link "Commencer le premier module" [ref=f11e27] [cursor=pointer]:
+        - /url: /sommeil/
+    - main [ref=f11e28]:
+      - article [ref=f11e29]:
+        - generic [ref=f11e30]:
+          - complementary "Progression du parcours" [ref=f11e31]:
+            - generic [ref=f11e32]:
+              - generic [ref=f11e33]:
+                - heading "Ta progression" [level=3] [ref=f11e34]
+                - generic [ref=f11e35]: 0%
+              - progressbar "Progression du parcours" [ref=f11e36]
+              - list [ref=f11e37]:
+                - listitem [ref=f11e38]:
+                  - checkbox "Comprendre le sommeil" [ref=f11e39] [cursor=pointer]
+                  - generic [ref=f11e40] [cursor=pointer]: Comprendre le sommeil
+                  - link "Accéder à Comprendre le sommeil" [ref=f11e43] [cursor=pointer]:
+                    - /url: /sommeil/
+                - listitem [ref=f11e46]:
+                  - checkbox "Les cycles du sommeil" [ref=f11e47] [cursor=pointer]
+                  - generic [ref=f11e48] [cursor=pointer]: Les cycles du sommeil
+                  - link "Accéder à Les cycles du sommeil" [ref=f11e51] [cursor=pointer]:
+                    - /url: /sommeil/cycles
+                - listitem [ref=f11e54]:
+                  - checkbox "Hygiène du sommeil" [ref=f11e55] [cursor=pointer]
+                  - generic [ref=f11e56] [cursor=pointer]: Hygiène du sommeil
+                  - link "Accéder à Hygiène du sommeil" [ref=f11e59] [cursor=pointer]:
+                    - /url: /sommeil/hygiene
+                - listitem [ref=f11e62]:
+                  - checkbox "Dette de sommeil" [ref=f11e63] [cursor=pointer]
+                  - generic [ref=f11e64] [cursor=pointer]: Dette de sommeil
+                  - link "Accéder à Dette de sommeil" [ref=f11e67] [cursor=pointer]:
+                    - /url: /sommeil/dette
+                - listitem [ref=f11e70]:
+                  - checkbox "Nutrition et sommeil" [ref=f11e71] [cursor=pointer]
+                  - generic [ref=f11e72] [cursor=pointer]: Nutrition et sommeil
+                  - link "Accéder à Nutrition et sommeil" [ref=f11e75] [cursor=pointer]:
+                    - /url: /systeme-digestif/nutrition/sommeil-nutriments
+                - listitem [ref=f11e78]:
+                  - checkbox "Lumière et mélatonine" [ref=f11e79] [cursor=pointer]
+                  - generic [ref=f11e80] [cursor=pointer]: Lumière et mélatonine
+                  - link "Accéder à Lumière et mélatonine" [ref=f11e83] [cursor=pointer]:
+                    - /url: /systeme-hormonal/melatonine
+              - button "Réinitialiser la progression" [ref=f11e86] [cursor=pointer]
+          - generic [ref=f11e87]:
+            - paragraph [ref=f11e88]:
+              - strong [ref=f11e89]: "Ce parcours te donne les clés pour comprendre ton sommeil, identifier ce qui le perturbe et retrouver des nuits vraiment réparatrices. Fini de te réveiller épuisé : on reconstruit tout, étape par étape."
+            - separator [ref=f11e90]
+            - heading "Étape 1 — Comprendre les cycles du sommeil" [level=2] [ref=f11e91]
+            - paragraph [ref=f11e92]: Le sommeil n'est pas uniforme. Chaque nuit, ton cerveau traverse des cycles de 90 minutes — sommeil léger, profond, paradoxal. Comprendre cette architecture, c'est arrêter de se battre contre sa biologie.
+            - paragraph [ref=f11e93]:
+              - text: →
+              - link "Tout comprendre sur le sommeil" [ref=f11e94] [cursor=pointer]:
+                - /url: /sommeil/
+            - paragraph [ref=f11e95]:
+              - text: →
+              - link "Les cycles du sommeil expliqués" [ref=f11e96] [cursor=pointer]:
+                - /url: /sommeil/cycles
+            - paragraph [ref=f11e97]:
+              - text: →
+              - link "Le sommeil en bref" [ref=f11e98] [cursor=pointer]:
+                - /url: /sommeil/en-bref
+            - separator [ref=f11e99]
+            - heading "Étape 2 — Identifier tes freins" [level=2] [ref=f11e100]
+            - paragraph [ref=f11e101]: Stress, écrans, horaires décalés, caféine... Les ennemis du sommeil sont nombreux et souvent invisibles. Cette étape t'aide à faire le diagnostic de ce qui sabote tes nuits.
+            - paragraph [ref=f11e102]:
+              - text: →
+              - link "Le stress et le sommeil" [ref=f11e103] [cursor=pointer]:
+                - /url: /sommeil/
+            - paragraph [ref=f11e104]:
+              - text: →
+              - link "L'impact du cortisol sur le sommeil" [ref=f11e105] [cursor=pointer]:
+                - /url: /systeme-hormonal/
+            - separator [ref=f11e106]
+            - heading "Étape 3 — L'hygiène du sommeil (les vraies règles)" [level=2] [ref=f11e107]
+            - paragraph [ref=f11e108]: L'hygiène du sommeil, ce n'est pas juste éviter les écrans. C'est un ensemble de pratiques cohérentes qui préparent ton cerveau et ton corps à basculer en mode récupération. On démonte les mythes, on garde ce qui marche.
+            - paragraph [ref=f11e109]:
+              - text: →
+              - 'link "L''hygiène du sommeil : le guide complet" [ref=f11e110] [cursor=pointer]':
+                - /url: /sommeil/hygiene
+            - separator [ref=f11e111]
+            - heading "Étape 4 — Gérer la dette de sommeil" [level=2] [ref=f11e112]
+            - paragraph [ref=f11e113]: Tu peux pas rattraper une semaine de mauvais sommeil avec une grasse matinée du dimanche. Mais tu peux apprendre à gérer intelligemment ta dette et à récupérer progressivement sans dérégler ton rythme circadien.
+            - paragraph [ref=f11e114]:
+              - text: →
+              - 'link "La dette de sommeil : comprendre et rembourser" [ref=f11e115] [cursor=pointer]':
+                - /url: /sommeil/dette
+            - separator [ref=f11e116]
+            - heading "Étape 5 — Connecter sommeil, stress et hormones" [level=2] [ref=f11e117]
+            - paragraph [ref=f11e118]: Le sommeil n'est pas isolé. Il interagit profondément avec ton niveau de stress, tes hormones (mélatonine, cortisol, insuline) et ta nutrition. Cette étape boucle la boucle pour que tu voies le tableau complet.
+            - paragraph [ref=f11e119]:
+              - text: →
+              - link "La mélatonine et la lumière" [ref=f11e120] [cursor=pointer]:
+                - /url: /systeme-hormonal/melatonine
+            - paragraph [ref=f11e121]:
+              - text: →
+              - link "La nutrition qui favorise le sommeil" [ref=f11e122] [cursor=pointer]:
+                - /url: /systeme-digestif/nutrition/sommeil-nutriments
+            - paragraph [ref=f11e123]:
+              - text: →
+              - link "Le nerf vague pour s'endormir plus vite" [ref=f11e124] [cursor=pointer]:
+                - /url: /systeme-nerveux/nerf-vague
+            - separator [ref=f11e125]
+            - heading "Pour aller plus loin" [level=2] [ref=f11e126]
+            - list [ref=f11e127]:
+              - listitem [ref=f11e128]:
+                - link "Tout comprendre sur ton sommeil" [ref=f11e129] [cursor=pointer]:
+                  - /url: /sommeil/
+              - listitem [ref=f11e130]:
+                - link "Les cycles du sommeil en détail" [ref=f11e131] [cursor=pointer]:
+                  - /url: /sommeil/cycles
+              - listitem [ref=f11e132]:
+                - 'link "La mélatonine : hormone du sommeil" [ref=f11e133] [cursor=pointer]':
+                  - /url: /systeme-hormonal/melatonine
+              - listitem [ref=f11e134]:
+                - link "Réduire le stress pour mieux dormir" [ref=f11e135] [cursor=pointer]:
+                  - /url: /stress/solutions-naturelles
+              - listitem [ref=f11e136]:
+                - link "La gestion du stress" [ref=f11e137] [cursor=pointer]:
+                  - /url: /parcours/stress
+              - listitem [ref=f11e138]:
+                - link "Le système hormonal" [ref=f11e139] [cursor=pointer]:
+                  - /url: /systeme-hormonal/
+              - listitem [ref=f11e140]:
+                - link "L'activité physique et le sommeil" [ref=f11e141] [cursor=pointer]:
+                  - /url: /activite/physique/bienfaits
+            - separator [ref=f11e142]
+            - paragraph [ref=f11e143]:
+              - strong [ref=f11e144]: Une bonne nuit, ça se prépare le matin. Ce parcours t'apprend comment.
+  - contentinfo [ref=f11e145]:
+    - generic [ref=f11e146]:
+      - generic [ref=f11e147]:
+        - paragraph [ref=f11e148]: Claiire
+        - paragraph [ref=f11e149]: Un site éditorial pensé pour aider à comprendre ce que tu vis, retrouver des repères fiables, et avancer avec des contenus structurés.
+      - navigation "Liens utiles" [ref=f11e150]:
+        - link "Notre approche" [ref=f11e151] [cursor=pointer]:
+          - /url: /a-propos
+        - link "Formations" [ref=f11e152] [cursor=pointer]:
+          - /url: /formations/
+        - link "Contact" [ref=f11e153] [cursor=pointer]:
+          - /url: /contact
+        - link "Confidentialité" [ref=f11e154] [cursor=pointer]:
+          - /url: /confidentialite
+  - button "Ouvrir le tableau de bord — Curieux" [ref=f11e155] [cursor=pointer]:
+    - generic [ref=f11e156]:
+      - generic [ref=f11e157]:
+        - generic [ref=f11e161]: "1"
+        - generic [ref=f11e162]: jour
+      - generic [ref=f11e164]:
+        - generic [ref=f11e165]: "3"
+        - generic [ref=f11e166]: lus
+      - generic [ref=f11e168]:
+        - generic [ref=f11e173]: Curieux
+        - generic "Première Consultation" [ref=f11e174]

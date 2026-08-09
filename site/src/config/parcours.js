@@ -5,6 +5,7 @@ export const parcours = [
     icon: '😊',
     description:
       'Découvre les clés scientifiques du bonheur et apprends à cultiver le bien-être au quotidien',
+    metaDescription: 'Ton parcours guidé vers un bonheur durable et authentique',
     color: 'var(--site-parcours-bonheur)',
     modules: [
       { title: 'Les hormones du bonheur', link: '/bonheur/les-hormones-du-bonheur' },

@@ -1,0 +1,202 @@
+- generic [active] [ref=f13e1]:
+  - link "Aller au contenu" [ref=f13e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f13e3]:
+    - generic [ref=f13e4]:
+      - link "Claiire Claiire Comprendre. Réguler. Transformer." [ref=f13e5] [cursor=pointer]:
+        - /url: /
+        - img "Claiire" [ref=f13e6]
+        - generic [ref=f13e7]:
+          - strong [ref=f13e8]: Claiire
+          - generic [ref=f13e9]: Comprendre. Réguler. Transformer.
+      - navigation "Navigation principale" [ref=f13e11]:
+        - link "Accueil" [ref=f13e12] [cursor=pointer]:
+          - /url: /
+        - link "Parcours" [ref=f13e13] [cursor=pointer]:
+          - /url: /parcours/bonheur
+        - link "Corps & santé" [ref=f13e14] [cursor=pointer]:
+          - /url: /systeme-nerveux/
+        - link "Esprit" [ref=f13e15] [cursor=pointer]:
+          - /url: /psy/
+        - link "Émotions" [ref=f13e16] [cursor=pointer]:
+          - /url: /psy/emotions/
+        - link "Bonheur" [ref=f13e17] [cursor=pointer]:
+          - /url: /bonheur/
+        - link "Violence" [ref=f13e18] [cursor=pointer]:
+          - /url: /violence/
+        - link "Formations" [ref=f13e19] [cursor=pointer]:
+          - /url: /formations/
+  - generic [ref=f13e20]:
+    - generic [ref=f13e22]:
+      - paragraph [ref=f13e23]: Parcours thématiques
+      - heading "💪 Renforcer ta santé" [level=1] [ref=f13e24]
+      - paragraph [ref=f13e25]: Optimise ton corps et ton énergie vitale
+      - link "Commencer le premier module" [ref=f13e27] [cursor=pointer]:
+        - /url: /harmonie/
+    - main [ref=f13e28]:
+      - article [ref=f13e29]:
+        - generic [ref=f13e30]:
+          - complementary "Progression du parcours" [ref=f13e31]:
+            - generic [ref=f13e32]:
+              - generic [ref=f13e33]:
+                - heading "Ta progression" [level=3] [ref=f13e34]
+                - generic [ref=f13e35]: 0%
+              - progressbar "Progression du parcours" [ref=f13e36]
+              - list [ref=f13e37]:
+                - listitem [ref=f13e38]:
+                  - checkbox "Vue d'ensemble santé" [ref=f13e39] [cursor=pointer]
+                  - generic [ref=f13e40] [cursor=pointer]: Vue d'ensemble santé
+                  - link "Accéder à Vue d'ensemble santé" [ref=f13e43] [cursor=pointer]:
+                    - /url: /harmonie/
+                - listitem [ref=f13e46]:
+                  - checkbox "Nutrition essentielle" [ref=f13e47] [cursor=pointer]
+                  - generic [ref=f13e48] [cursor=pointer]: Nutrition essentielle
+                  - link "Accéder à Nutrition essentielle" [ref=f13e51] [cursor=pointer]:
+                    - /url: /systeme-digestif/nutrition/
+                - listitem [ref=f13e54]:
+                  - checkbox "Activité physique" [ref=f13e55] [cursor=pointer]
+                  - generic [ref=f13e56] [cursor=pointer]: Activité physique
+                  - link "Accéder à Activité physique" [ref=f13e59] [cursor=pointer]:
+                    - /url: /activite/physique/
+                - listitem [ref=f13e62]:
+                  - checkbox "Système immunitaire" [ref=f13e63] [cursor=pointer]
+                  - generic [ref=f13e64] [cursor=pointer]: Système immunitaire
+                  - link "Accéder à Système immunitaire" [ref=f13e67] [cursor=pointer]:
+                    - /url: /systeme-immunitaire/
+                - listitem [ref=f13e70]:
+                  - checkbox "Métabolisme" [ref=f13e71] [cursor=pointer]
+                  - generic [ref=f13e72] [cursor=pointer]: Métabolisme
+                  - link "Accéder à Métabolisme" [ref=f13e75] [cursor=pointer]:
+                    - /url: /harmonie/metabolisme
+                - listitem [ref=f13e78]:
+                  - checkbox "Inflammation" [ref=f13e79] [cursor=pointer]
+                  - generic [ref=f13e80] [cursor=pointer]: Inflammation
+                  - link "Accéder à Inflammation" [ref=f13e83] [cursor=pointer]:
+                    - /url: /systeme-immunitaire/inflammation
+              - button "Réinitialiser la progression" [ref=f13e86] [cursor=pointer]
+          - generic [ref=f13e87]:
+            - paragraph [ref=f13e88]:
+              - strong [ref=f13e89]: Ce parcours te donne une vision globale et cohérente de ta santé — pas un régime, pas un programme miracle. Une compréhension profonde de ton corps et des leviers concrets pour te sentir vraiment bien dans ta peau.
+            - separator [ref=f13e90]
+            - heading "Étape 1 — Comprendre ton corps comme un système" [level=2] [ref=f13e91]
+            - paragraph [ref=f13e92]: Ton corps ne fonctionne pas en silos. Système nerveux, hormonal, immunitaire, digestif — tout est interconnecté. Cette étape pose la vision d'ensemble pour que tu comprennes pourquoi un problème de digestion peut affecter ton humeur, et vice versa.
+            - paragraph [ref=f13e93]:
+              - text: →
+              - link "L'harmonie des systèmes biologiques" [ref=f13e94] [cursor=pointer]:
+                - /url: /harmonie/
+            - paragraph [ref=f13e95]:
+              - text: →
+              - 'link "L''homéostasie : l''équilibre naturel du corps" [ref=f13e96] [cursor=pointer]':
+                - /url: /harmonie/homeostasie
+            - paragraph [ref=f13e97]:
+              - text: →
+              - link "La cellule, unité de base de ta santé" [ref=f13e98] [cursor=pointer]:
+                - /url: /cellules/
+            - separator [ref=f13e99]
+            - heading "Étape 2 — Bouger (activité physique et intellectuelle)" [level=2] [ref=f13e100]
+            - paragraph [ref=f13e101]: L'exercice physique n'est pas juste une question d'esthétique — c'est de la médecine préventive. Et l'activité intellectuelle entretient ton cerveau au même titre que le sport entretient tes muscles.
+            - paragraph [ref=f13e102]:
+              - text: →
+              - link "Les bienfaits de l'activité physique" [ref=f13e103] [cursor=pointer]:
+                - /url: /activite/physique/bienfaits
+            - paragraph [ref=f13e104]:
+              - text: →
+              - 'link "L''activité physique : tout savoir" [ref=f13e105] [cursor=pointer]':
+                - /url: /activite/physique/
+            - paragraph [ref=f13e106]:
+              - text: →
+              - link "L'activité intellectuelle" [ref=f13e107] [cursor=pointer]:
+                - /url: /activite/intellectuelle/
+            - separator [ref=f13e108]
+            - heading "Étape 3 — Nourrir son corps (nutrition, cellules, microbiote)" [level=2] [ref=f13e109]
+            - paragraph [ref=f13e110]: Tu es littéralement ce que tu manges. Cette étape explore les bases d'une nutrition qui nourrit vraiment tes cellules, soutient ton cerveau et renforce tes défenses naturelles. Pas de dogme alimentaire — de la science appliquée.
+            - paragraph [ref=f13e111]:
+              - text: →
+              - link "La nutrition essentielle" [ref=f13e112] [cursor=pointer]:
+                - /url: /systeme-digestif/nutrition/
+            - paragraph [ref=f13e113]:
+              - text: →
+              - link "Le système digestif" [ref=f13e114] [cursor=pointer]:
+                - /url: /systeme-digestif/
+            - separator [ref=f13e115]
+            - heading "Étape 4 — Récupérer (sommeil, stress, régénération)" [level=2] [ref=f13e116]
+            - paragraph [ref=f13e117]: La récupération est souvent le maillon faible des gens qui veulent être en bonne santé. Pas de performance durable sans repos de qualité. Cette étape connecte sommeil, gestion du stress et régénération cellulaire.
+            - paragraph [ref=f13e118]:
+              - text: →
+              - link "Améliorer son sommeil" [ref=f13e119] [cursor=pointer]:
+                - /url: /parcours/sommeil
+            - paragraph [ref=f13e120]:
+              - text: →
+              - link "Gérer le stress" [ref=f13e121] [cursor=pointer]:
+                - /url: /parcours/stress
+            - paragraph [ref=f13e122]:
+              - text: →
+              - link "Le système nerveux et la récupération" [ref=f13e123] [cursor=pointer]:
+                - /url: /systeme-nerveux/
+            - separator [ref=f13e124]
+            - heading "Étape 5 — Santé hormonale et immunité" [level=2] [ref=f13e125]
+            - paragraph [ref=f13e126]: "Les hormones orchestrent presque tout : énergie, humeur, métabolisme, reproduction, inflammation. Et le système immunitaire est ta première ligne de défense. Comprendre ces deux systèmes, c'est maîtriser les leviers les plus puissants de ta santé."
+            - paragraph [ref=f13e127]:
+              - text: →
+              - link "Le système hormonal" [ref=f13e128] [cursor=pointer]:
+                - /url: /systeme-hormonal/
+            - paragraph [ref=f13e129]:
+              - text: →
+              - link "Le système immunitaire" [ref=f13e130] [cursor=pointer]:
+                - /url: /systeme-immunitaire/
+            - paragraph [ref=f13e131]:
+              - text: →
+              - link "La nutrition nerveuse" [ref=f13e132] [cursor=pointer]:
+                - /url: /systeme-nerveux/nutrition-nerveuse
+            - separator [ref=f13e133]
+            - heading "Pour aller plus loin" [level=2] [ref=f13e134]
+            - list [ref=f13e135]:
+              - listitem [ref=f13e136]:
+                - link "Comprendre ton système nerveux" [ref=f13e137] [cursor=pointer]:
+                  - /url: /systeme-nerveux/
+              - listitem [ref=f13e138]:
+                - link "Prendre soin de ton système digestif" [ref=f13e139] [cursor=pointer]:
+                  - /url: /systeme-digestif/
+              - listitem [ref=f13e140]:
+                - link "Les hormones du bonheur et de la santé" [ref=f13e141] [cursor=pointer]:
+                  - /url: /bonheur/les-hormones-du-bonheur
+              - listitem [ref=f13e142]:
+                - link "Les bienfaits de l'activité physique" [ref=f13e143] [cursor=pointer]:
+                  - /url: /activite/physique/bienfaits
+              - listitem [ref=f13e144]:
+                - link "L'épigénétique" [ref=f13e145] [cursor=pointer]:
+                  - /url: /epigenetique
+              - listitem [ref=f13e146]:
+                - link "La médecine préventive" [ref=f13e147] [cursor=pointer]:
+                  - /url: /medecine/
+              - listitem [ref=f13e148]:
+                - link "Le système cardiovasculaire" [ref=f13e149] [cursor=pointer]:
+                  - /url: /systeme-cardio/
+            - separator [ref=f13e150]
+            - paragraph [ref=f13e151]:
+              - strong [ref=f13e152]: Prendre soin de ton corps, c'est le meilleur investissement de ta vie.
+  - contentinfo [ref=f13e153]:
+    - generic [ref=f13e154]:
+      - generic [ref=f13e155]:
+        - paragraph [ref=f13e156]: Claiire
+        - paragraph [ref=f13e157]: Un site éditorial pensé pour aider à comprendre ce que tu vis, retrouver des repères fiables, et avancer avec des contenus structurés.
+      - navigation "Liens utiles" [ref=f13e158]:
+        - link "Notre approche" [ref=f13e159] [cursor=pointer]:
+          - /url: /a-propos
+        - link "Formations" [ref=f13e160] [cursor=pointer]:
+          - /url: /formations/
+        - link "Contact" [ref=f13e161] [cursor=pointer]:
+          - /url: /contact
+        - link "Confidentialité" [ref=f13e162] [cursor=pointer]:
+          - /url: /confidentialite
+  - button "Ouvrir le tableau de bord — Explorateur" [ref=f13e163] [cursor=pointer]:
+    - generic [ref=f13e164]:
+      - generic [ref=f13e165]:
+        - generic [ref=f13e169]: "1"
+        - generic [ref=f13e170]: jour
+      - generic [ref=f13e172]:
+        - generic [ref=f13e173]: "5"
+        - generic [ref=f13e174]: lus
+      - generic [ref=f13e176]:
+        - generic [ref=f13e181]: Explorateur
+        - generic "Première Consultation" [ref=f13e182]
