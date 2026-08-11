@@ -229,6 +229,17 @@ export default function ProfilScreen() {
         {/* Signature Move */}
         <SignatureMove />
 
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Repères personnels</Text>
+          <View style={styles.menuGroup}>
+            <MenuItem
+              label="Ma situation"
+              sub="Comprendre ce qui évolue, à ton rythme"
+              onPress={() => router.push("/modal/situation" as never)}
+            />
+          </View>
+        </View>
+
         {/* Settings */}
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Compte</Text>

@@ -61,6 +61,13 @@ export const AppDesignTokens = {
     sizeXl: 48,
     sizeHero: 56,
   },
+  typography: {
+    regular: "400",
+    medium: "500",
+    semibold: "600",
+    bold: "700",
+    heavy: "800",
+  },
   layout: {
     vMinus14: -14,
     vMinus8: -8,

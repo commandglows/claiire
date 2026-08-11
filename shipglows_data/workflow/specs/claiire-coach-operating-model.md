@@ -1,12 +1,12 @@
 ---
 artifact: spec
 metadata_schema_version: "1.0"
-artifact_version: "0.3.0"
+artifact_version: "0.5.0"
 project: "claiire"
 created: "2026-06-29"
 created_at: "2026-06-29 15:10:00 UTC"
-updated: "2026-08-09"
-updated_at: "2026-08-09 11:19:08 UTC"
+updated: "2026-08-11"
+updated_at: "2026-08-11 13:48:33 UTC"
 status: draft
 source_skill: 100-sg-spec
 source_model: "GPT-5 Codex"
@@ -21,6 +21,8 @@ linked_systems:
   - "app/"
   - "site/"
   - "shipglows_data/product/shared/coach-operating-model.md"
+  - "shipglows_data/product/shared/subjected-person-profile-matrix.md"
+  - "shipglows_data/product/shared/subjected-person-situation-questionnaire.md"
   - "shipglows_data/business/business.md"
   - "shipglows_data/branding/"
 depends_on:
@@ -39,6 +41,8 @@ evidence:
   - "shipglows_data/workflow/repurpose-packs/2026-08-09-verbatim-claiire-positionnement-violences.md"
   - "shipglows_data/workflow/explorations/2026-06-29-claiire-coach-evolution-personnelle.md"
   - "Operator confirmation 2026-08-09: public title, two neutral journey-entry labels, and complementary health/wellbeing mission approved."
+  - "Operator direction 2026-08-11: personalize the subjected-person journey through a multidimensional, evolving profile matrix covering danger, recognition, attachment, readiness, constraints, support, agency, privacy, dependants, and impact."
+  - "Operator decision 2026-08-11: expose the evolving dimensions through a user-controlled Ma situation state and a progressive questionnaire with targeted updates."
 next_step: "/101-sg-ready claiire-coach-operating-model"
 ---
 
@@ -61,6 +65,8 @@ Claiire must disclose its AI nature and limits, allow entry without forcing a st
 - One brand and app implement two separate journeys with no shared couple state.
 - Entry language supports uncertainty: a person can describe facts before choosing an identity label.
 - The subjected-person journey validates without blame, preserves autonomy, and prioritizes practical safety.
+- The subjected-person journey adapts from separate, evolving dimensions rather than a fixed victim type or one compensating global score.
+- `Ma situation` makes every dimension explainable, dated and correctable; conversation-derived changes require explicit confirmation.
 - The author journey is respectful but direct: it names acts, rejects excuses, and produces accountable next steps.
 - Health, nutrition, sleep, regulation, addiction, and habits are contextual supports, not an alternative positioning or explanation that excuses violence.
 - Outside immediate danger, interactions follow `clarifier -> reformuler -> verifier -> proposer -> revisiter`.
@@ -82,6 +88,8 @@ The implementation is invalid if it:
 ## Scope In
 
 - journey selection and safe uncertainty handling
+- subjected-person profile matrix, progressive questionnaire inputs, adaptation rules, and safety overrides
+- versioned `Ma situation` state, initial questionnaire, targeted update flow, safe resume, privacy and abuse-resistance rules
 - behavior, tone, information separation, and escalation rules for both journeys
 - non-clinical coaching loop and non-punitive progression
 - role of holistic wellbeing modules within the violence mission
@@ -107,6 +115,7 @@ The implementation is invalid if it:
 - Violence enters a specialized journey; only danger/crisis/clinical need exits normal coaching toward appropriate human help.
 - General wellbeing supports the mission and cannot dilute it.
 - Public promises cannot exceed implemented capability.
+- Profile scores never diagnose, predict another person's intentions, or compensate for a critical danger signal.
 
 ## Acceptance Scenarios
 
@@ -150,6 +159,38 @@ Given a trust-forming or high-risk interaction, when guidance begins, then the p
 
 Given a site claim about recognition, interruption, safety, or author support, when audited against the app, then a corresponding implemented and testable behavior exists before publication.
 
+### SC-11 - Multidimensional profile
+
+Given a subjected person completes only part of orientation, when Claiire adapts the journey, then it preserves separate values for danger, control, recognition, attachment, protective readiness, constraints, support, agency, digital safety, dependants, and impact, with unknown values left unknown.
+
+### SC-12 - No compensating global score
+
+Given protective factors and a critical danger signal coexist, when the profile is interpreted, then the protective factors do not lower or hide the danger response and no global average is shown as reassurance.
+
+### SC-13 - Intention to remain
+
+Given a person wants to preserve the relationship or cannot leave, when Claiire responds, then it respects that position, avoids blame or departure pressure, and still proposes proportionate safety and human-support options.
+
+### SC-14 - Family and structural constraint
+
+Given the violence occurs in a family or dependency relationship where distance is not currently feasible, when Claiire adapts the journey, then it prioritizes realistic margins of safety, practical supports, dependants, and autonomy rather than a couple-only separation script.
+
+### SC-15 - Supporter entry
+
+Given a person wants to help someone else, when orientation begins, then Claiire uses a distinct supporter path and does not infer or expose a victim profile for the other person.
+
+### SC-16 - User-controlled situation update
+
+Given a conversation or new event suggests that one dimension changed, when Claiire proposes an update, then the person sees the proposed before/after value and confirms, corrects, or rejects it before mutation.
+
+### SC-17 - Coerced or unsafe update
+
+Given the person cannot answer privately or a later response conflicts with a critical event, when `Ma situation` is opened or updated, then Claiire avoids revealing the conflict, preserves critical history, uses a neutral recovery surface, and requests a private recheck later.
+
+### SC-18 - Safe partial state
+
+Given the questionnaire is skipped or interrupted, when the person returns, then unknown dimensions remain unknown, critical resources remain available, and no reassuring global score is inferred.
+
 ## Test Contract
 
 surface: app + site + product documentation + conversational behavior
@@ -160,7 +201,7 @@ proof_order:
 3. Safety and escalation scenarios
 4. Tone and accountability scenarios
 5. Site/app claim alignment
-required_scenario_ids: SC-01, SC-02, SC-03, SC-04, SC-05, SC-06, SC-07, SC-08, SC-09, SC-10
+required_scenario_ids: SC-01, SC-02, SC-03, SC-04, SC-05, SC-06, SC-07, SC-08, SC-09, SC-10, SC-11, SC-12, SC-13, SC-14, SC-15, SC-16, SC-17, SC-18
 required_results:
 - each scenario has a deterministic expected behavior and failure condition
 - no shared data model or conversational state exists between victim and author journeys
@@ -175,6 +216,12 @@ exception_without_proof: none
 - [x] Define neutral, safe journey-entry language and final public labels.
 - [ ] Specify privacy and data-isolation architecture between journeys.
 - [ ] Define subjected-person recognition, danger, safety, and resource flows.
+- [x] Define the first draft of the multidimensional subjected-person profile matrix.
+- [ ] Review matrix dimensions and safety overrides with violence specialists and people with lived experience.
+- [ ] Specify and validate progressive questionnaire wording, scoring calibration, data minimization, and recheck behavior.
+- [x] Draft the progressive questionnaire, `Ma situation` state contract, targeted update logic, restitution, and abuse-resistance scenarios.
+- [ ] Complete specialist, lived-experience, legal/privacy, security and scoring review before implementation readiness.
+- [ ] Resolve the future interaction/pairing doctrine through a separate explicit product and safety decision before any shared flow.
 - [ ] Define author interruption, accountability, and specialized-help flows.
 - [ ] Define locale-specific emergency and human-orientation protocol.
 - [ ] Audit holistic modules against the no-excuse rule.
@@ -203,6 +250,8 @@ exception_without_proof: none
 | 2026-08-09 10:43:00 UTC | 300-sg-docs | Confirmed violence positioning and two-path safety contract implemented in canonical docs | 101-sg-ready |
 | 2026-08-09 10:55:16 UTC | 300-sg-docs | Audited and aligned editorial, training, linking, billing, and historical tracker governance with the two-path safety contract | 101-sg-ready |
 | 2026-08-09 11:19:08 UTC | 007-sg-content | Implemented and verified: public homepage and training entry system aligned; safety claims corrected; dependency manifest repaired; build, sitemap, formatting, links, and desktop/mobile rendering passed | 101-sg-ready |
+| 2026-08-11 13:32:19 UTC | 008-sg-customer (GPT-5) | Drafted the multidimensional subjected-person profile matrix and attached its safety, adaptation, questionnaire, and proof contract | Specialist review, then questionnaire specification |
+| 2026-08-11 13:48:33 UTC | 008-sg-customer + 011-sg-pilotage (GPT-5) | Drafted the Ma situation state and progressive questionnaire; recorded Miroir then pairing as dependent future work | Specialist and privacy review before implementation |
 
 ## Lifecycle
 
@@ -212,3 +261,11 @@ exception_without_proof: none
 | 300-sg-docs | done |
 | 007-sg-content | done |
 | 101-sg-ready | next |
+## Implementation and documentation update — 2026-08-11
+
+- `Ma situation` initial questionnaire and per-dimension dashboard are implemented in the Expo app.
+- Targeted updates select what changed, route to a bounded question subset, build a candidate, compare before/now, and require explicit confirmation.
+- Confirmed device persistence uses Expo SecureStore; session-only confirmation removes a previous persisted copy.
+- Private-context and immediate-safety signals interrupt before new answer persistence and clear the draft while preserving the last confirmed state.
+- Pairing remains out of runtime scope and behind a forced solo interaction gate.
+- Status remains `implemented, not yet verified`; focused app proof and recent-app privacy protection remain open.

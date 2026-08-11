@@ -133,6 +133,18 @@ function RootLayoutNav() {
           name="modal/battle-report"
           options={{ presentation: "modal", title: "Battle Report", headerShown: false }}
         />
+        <Stack.Screen
+          name="modal/situation"
+          options={{ presentation: "modal", title: "Ma situation", headerShown: false }}
+        />
+        <Stack.Screen
+          name="modal/situation-questionnaire"
+          options={{ presentation: "modal", title: "Claiire", headerShown: false, gestureEnabled: false }}
+        />
+        <Stack.Screen
+          name="modal/situation-help"
+          options={{ presentation: "modal", title: "Claiire", headerShown: false, gestureEnabled: false }}
+        />
       </Stack>
     </ThemeProvider>
   );

@@ -114,11 +114,12 @@ L'utilisateur choisit son mode. Jamais de mode forcé.
 
 ## Confidentialité
 
-**Mettre en avant le 100% on-device à chaque occasion.** C'est LE différenciateur.
+**Ne jamais promettre un stockage globalement « 100% on-device » sans preuve par flux.** Documenter la destination réelle de chaque catégorie de données.
 
-- Le LLM tourne sur le téléphone — aucune conversation n'est envoyée à un serveur
-- Les données sensibles restent en local (MMKV)
-- Convex stocke uniquement les données de progression (XP, streaks, badges)
+- Le state et les réponses confirmées de `Ma situation` restent localement dans Expo SecureStore lorsque la personne choisit de les conserver.
+- Un parcours limité à la session ne laisse pas de copie persistante et supprime une éventuelle ancienne copie SecureStore lors de la confirmation.
+- Les brouillons abandonnés sont supprimés sans altérer le dernier état confirmé.
+- Convex reste utilisé par d'autres fonctions de l'application ; aucune promesse globale de stockage local ne doit être déduite du comportement de `Ma situation`.
 - `deleteAllUserData()` disponible dès le jour 1
 - Pas de tracking invasif, jamais
 - Conformité RGPD native
