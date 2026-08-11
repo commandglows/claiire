@@ -16,6 +16,12 @@ import { api } from "@/convex/_generated/api";
 import type { Id } from "@/convex/_generated/dataModel";
 import { useCompanion } from "@/features/companion/hooks/useCompanion";
 import { AppIcon, type AppIconName } from "@/components/AppIcon";
+import {
+  getBreathingPhase,
+  isRelationshipReflectionAction,
+  RELATIONSHIP_REFLECTION_ACTIONS,
+} from "@/features/routines/engine/relationshipReflection";
+import { AppState } from "react-native";
 
 // ─── Pre-defined actions ─────────────────────────────────────────────────────
 
@@ -120,6 +126,41 @@ function Timer({ seconds, onDone }: { seconds: number; onDone: () => void }) {
   );
 }
 
+function PacedBreathing({ seconds, onDone }: { seconds: number; onDone: () => void }) {
+  const [remaining, setRemaining] = useState(seconds);
+  const [running, setRunning] = useState(false);
+  const elapsed = seconds - remaining;
+  const phase = getBreathingPhase(elapsed);
+
+  useEffect(() => {
+    if (!running || remaining <= 0) return;
+    const interval = setInterval(() => {
+      setRemaining((value) => {
+        if (value <= 1) {
+          setRunning(false);
+          onDone();
+          return 0;
+        }
+        return value - 1;
+      });
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [onDone, remaining, running]);
+
+  return (
+    <View style={guided.section}>
+      <Text style={guided.phase} accessibilityLiveRegion="polite">
+        {phase === "inhale" ? "Inspire doucement" : "Expire doucement"}
+      </Text>
+      <Text style={guided.timer}>{Math.floor(remaining / 60)}:{(remaining % 60).toString().padStart(2, "0")}</Text>
+      <Text style={guided.hint}>Sans forcer. Fais une pause ou arrête si tu ressens une gêne ou un vertige.</Text>
+      <TouchableOpacity style={guided.primaryButton} onPress={() => setRunning((value) => !value)}>
+        <Text style={guided.primaryButtonText}>{running ? "Pause" : remaining === seconds ? "Commencer" : "Reprendre"}</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
 // ─── Create Routine View ─────────────────────────────────────────────────────
 
 function CreateRoutine({
@@ -138,6 +179,11 @@ function CreateRoutine({
       if (exists) return prev.filter((a) => a.id !== action.id);
       return [...prev, action];
     });
+  }
+
+  function selectRelationshipReflectionTemplate() {
+    setName("Relation & réflexion");
+    setSelected(RELATIONSHIP_REFLECTION_ACTIONS.map((action) => ({ ...action })));
   }
 
   async function handleCreate() {
@@ -190,6 +236,17 @@ function CreateRoutine({
         value={name}
         onChangeText={setName}
       />
+
+      <TouchableOpacity style={create.featuredTemplate} onPress={selectRelationshipReflectionTemplate}>
+        <View style={create.featuredTemplateIcon}>
+          <AppIcon name="heart" color={AppDesignTokens.colors.accentSoft} size={AppDesignTokens.icons.sizeMd} />
+        </View>
+        <View style={create.featuredTemplateCopy}>
+          <Text style={create.featuredTemplateTitle}>Relation & réflexion</Text>
+          <Text style={create.featuredTemplateText}>Respiration, écriture privée, visualisation douce et prochain pas · tout est facultatif</Text>
+        </View>
+        <AppIcon name="chevron-right" color={AppDesignTokens.colors.textMuted} size={AppDesignTokens.icons.sizeSm} />
+      </TouchableOpacity>
 
       {/* Actions grid */}
       <Text style={create.sectionTitle}>Choisis tes actions</Text>
@@ -254,13 +311,40 @@ type Routine = {
 };
 
 function ExecuteRoutine({ routine, onDone }: { routine: Routine; onDone: () => void }) {
+  const router = useRouter();
+  const isRelationshipRoutine = routine.actions.some((item) => isRelationshipReflectionAction(item.id));
   const [currentIdx, setCurrentIdx] = useState(0);
   const [completed, setCompleted] = useState<Set<string>>(new Set());
-  const [companionMsg, setCompanionMsg] = useState(getEncouragement("start"));
+  const [companionMsg, setCompanionMsg] = useState(
+    isRelationshipRoutine ? "Ici, rien n’est obligatoire. Prends seulement ce qui t’aide." : getEncouragement("start"),
+  );
   const [result, setResult] = useState<{ xpAwarded: number; bonusXP: number } | null>(null);
+  const [reflection, setReflection] = useState("");
+  const [nextStep, setNextStep] = useState("");
   const completeRoutine = useMutation(api.routines.complete);
   const { personality } = useCompanion();
   const fadeAnim = useRef(new Animated.Value(1)).current;
+
+  useEffect(() => {
+    const subscription = AppState.addEventListener("change", (state) => {
+      if (state !== "active") {
+        setReflection("");
+        setNextStep("");
+      }
+    });
+    return () => {
+      subscription.remove();
+      setReflection("");
+      setNextStep("");
+    };
+  }, []);
+
+  useEffect(() => {
+    if (result) {
+      setReflection("");
+      setNextStep("");
+    }
+  }, [result]);
 
   const action = routine.actions[currentIdx];
   const isLast = currentIdx === routine.actions.length - 1;
@@ -271,7 +355,9 @@ function ExecuteRoutine({ routine, onDone }: { routine: Routine; onDone: () => v
     setCompleted(newCompleted);
 
     // Companion message
-    if (newCompleted.size === routine.actions.length) {
+    if (isRelationshipRoutine) {
+      setCompanionMsg("Tu peux t’arrêter ici ou continuer, sans pression.");
+    } else if (newCompleted.size === routine.actions.length) {
       setCompanionMsg(getEncouragement("complete"));
     } else {
       setCompanionMsg(getEncouragement("progress"));
@@ -291,7 +377,9 @@ function ExecuteRoutine({ routine, onDone }: { routine: Routine; onDone: () => v
   function skip() {
     if (!isLast) {
       setCurrentIdx((i) => i + 1);
-      setCompanionMsg(getEncouragement("progress"));
+      setCompanionMsg(isRelationshipRoutine ? "Tu peux avancer à ton rythme." : getEncouragement("progress"));
+    } else if (isRelationshipRoutine) {
+      void finish();
     }
   }
 
@@ -312,18 +400,16 @@ function ExecuteRoutine({ routine, onDone }: { routine: Routine; onDone: () => v
       <View style={exec.resultContainer}>
         <Text style={exec.resultEmoji}>{result.bonusXP > 0 ? "🏆" : "👏"}</Text>
         <Text style={exec.resultTitle}>
-          {result.bonusXP > 0 ? "Routine complète !" : "Bien joué !"}
+          {isRelationshipRoutine ? "Pause terminée" : result.bonusXP > 0 ? "Routine complète !" : "Bien joué !"}
         </Text>
-        <Text style={exec.resultXP}>+{result.xpAwarded} XP</Text>
-        {result.bonusXP > 0 && (
+        {!isRelationshipRoutine && <Text style={exec.resultXP}>+{result.xpAwarded} XP</Text>}
+        {!isRelationshipRoutine && result.bonusXP > 0 && (
           <Text style={exec.resultBonus}>dont +{result.bonusXP} XP bonus (100%)</Text>
         )}
         <Text style={exec.resultStats}>
           {completed.size}/{routine.actions.length} actions terminées
         </Text>
-        <Text style={exec.companionResult}>
-          {personality?.name ?? "Ton compagnon"} : "{companionMsg}"
-        </Text>
+        <Text style={exec.companionResult}>{isRelationshipRoutine ? "Tes notes de session ont été effacées." : `${personality?.name ?? "Ton compagnon"} : "${companionMsg}"`}</Text>
         <TouchableOpacity style={exec.doneButton} onPress={onDone}>
           <Text style={exec.doneButtonText}>Fermer</Text>
         </TouchableOpacity>
@@ -332,7 +418,13 @@ function ExecuteRoutine({ routine, onDone }: { routine: Routine; onDone: () => v
   }
 
   return (
-    <View style={exec.container}>
+      <View style={exec.container}>
+      {isRelationshipRoutine && (
+        <TouchableOpacity style={guided.helpButton} onPress={() => router.push("/modal/situation-help" as never)}>
+          <AppIcon name="shield-alert" color={AppDesignTokens.colors.dangerSoft} size={AppDesignTokens.icons.sizeXs} />
+          <Text style={guided.helpText}>Besoin d’aide maintenant ?</Text>
+        </TouchableOpacity>
+      )}
       {/* Progress bar */}
       <View style={exec.progressBar}>
         {routine.actions.map((a, i) => (
@@ -362,7 +454,35 @@ function ExecuteRoutine({ routine, onDone }: { routine: Routine; onDone: () => v
         <AppIcon name={action.icon} color={AppDesignTokens.colors.accentSoft} size={AppDesignTokens.icons.sizeHero} />
         <Text style={exec.actionLabel}>{action.label}</Text>
 
-        {action.durationSeconds && !completed.has(action.id) ? (
+        {action.id === "relationship-reflection-arrival" ? (
+          <View style={guided.section}>
+            <Text style={guided.prompt}>Prends un instant pour remarquer comment tu te sens, sans te juger ni devoir décider quoi que ce soit.</Text>
+            <Text style={guided.hint}>Tu peux garder les yeux ouverts et passer cette étape.</Text>
+            <TouchableOpacity style={guided.primaryButton} onPress={markDone}><Text style={guided.primaryButtonText}>Continuer</Text></TouchableOpacity>
+          </View>
+        ) : action.id === "relationship-reflection-breathing" ? (
+          <PacedBreathing seconds={action.durationSeconds ?? 180} onDone={markDone} />
+        ) : action.id === "relationship-reflection-journal" ? (
+          <View style={guided.section}>
+            <Text style={guided.prompt}>Qu’est-ce qui s’est passé, factuellement ? Qu’as-tu ressenti ? De quoi as-tu besoin ou quelle limite compte pour toi ?</Text>
+            <TextInput style={guided.input} multiline value={reflection} onChangeText={setReflection} placeholder="Écris seulement ce qui t’aide…" placeholderTextColor={AppDesignTokens.colors.textSubtle} />
+            <Text style={guided.privacy}>Cette note reste uniquement dans cette session et sera effacée à la fermeture.</Text>
+            <TouchableOpacity style={guided.primaryButton} onPress={markDone}><Text style={guided.primaryButtonText}>Continuer</Text></TouchableOpacity>
+          </View>
+        ) : action.id === "relationship-reflection-visualization" ? (
+          <View style={guided.section}>
+            <Text style={guided.prompt}>Si c’est confortable, imagine une couleur, une lumière ou un lieu neutre qui t’aide à relâcher un peu la tension.</Text>
+            <Text style={guided.hint}>Garde les yeux ouverts si tu préfères. Arrête ou passe si une image te met mal à l’aise.</Text>
+            <Timer seconds={action.durationSeconds ?? 120} onDone={markDone} />
+          </View>
+        ) : action.id === "relationship-reflection-next-step" ? (
+          <View style={guided.section}>
+            <Text style={guided.prompt}>Quel petit pas sûr, réaliste et réversible veux-tu garder en tête ? Il ne doit pas impliquer de confrontation.</Text>
+            <TextInput style={guided.input} multiline value={nextStep} onChangeText={setNextStep} placeholder="Par exemple : prendre du recul, noter un fait, contacter une personne de confiance…" placeholderTextColor={AppDesignTokens.colors.textSubtle} />
+            <Text style={guided.privacy}>Cette note n’est pas enregistrée.</Text>
+            <TouchableOpacity style={guided.primaryButton} onPress={markDone}><Text style={guided.primaryButtonText}>Terminer cette étape</Text></TouchableOpacity>
+          </View>
+        ) : action.durationSeconds && !completed.has(action.id) ? (
           <Timer seconds={action.durationSeconds} onDone={markDone} />
         ) : (
           <TouchableOpacity
@@ -379,9 +499,9 @@ function ExecuteRoutine({ routine, onDone }: { routine: Routine; onDone: () => v
 
       {/* Bottom buttons */}
       <View style={exec.bottomRow}>
-        {!isLast && !completed.has(action.id) && (
+        {!completed.has(action.id) && (isRelationshipRoutine || !isLast) && (
           <TouchableOpacity style={exec.skipButton} onPress={skip}>
-            <Text style={exec.skipText}>Passer ›</Text>
+            <Text style={exec.skipText}>{isLast ? "Passer et terminer" : "Passer ›"}</Text>
           </TouchableOpacity>
         )}
         {(isLast || allDone) && (
@@ -624,6 +744,27 @@ const create = StyleSheet.create({
     borderWidth: 1,
     borderColor: AppDesignTokens.colors.border,
   },
+  featuredTemplate: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: AppDesignTokens.layout.v12,
+    padding: AppDesignTokens.layout.v14,
+    borderRadius: AppDesignTokens.layout.v14,
+    borderWidth: AppDesignTokens.layout.v1,
+    borderColor: AppDesignTokens.colors.accent40,
+    backgroundColor: AppDesignTokens.colors.surfaceAccent,
+  },
+  featuredTemplateIcon: {
+    width: AppDesignTokens.layout.v44,
+    height: AppDesignTokens.layout.v44,
+    borderRadius: AppDesignTokens.layout.v22,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: AppDesignTokens.colors.accent30,
+  },
+  featuredTemplateCopy: { flex: AppDesignTokens.layout.v1, gap: AppDesignTokens.layout.v4 },
+  featuredTemplateTitle: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v15, fontWeight: AppDesignTokens.typography.bold },
+  featuredTemplateText: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v12, lineHeight: AppDesignTokens.layout.v17 },
   sectionTitle: { fontSize: AppDesignTokens.layout.v15, fontWeight: "600", color: AppDesignTokens.colors.text },
   actionsGrid: { flexDirection: "row", flexWrap: "wrap", gap: AppDesignTokens.layout.v8 },
   actionChip: {
@@ -761,4 +902,45 @@ const timer = StyleSheet.create({
   },
   buttonStop: { backgroundColor: AppDesignTokens.colors.warning },
   buttonText: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v14, fontWeight: "700" },
+});
+
+const guided = StyleSheet.create({
+  helpButton: {
+    alignSelf: "center",
+    flexDirection: "row",
+    alignItems: "center",
+    gap: AppDesignTokens.layout.v6,
+    paddingVertical: AppDesignTokens.layout.v8,
+    paddingHorizontal: AppDesignTokens.layout.v12,
+    minHeight: AppDesignTokens.layout.v44,
+  },
+  helpText: { color: AppDesignTokens.colors.dangerSoft, fontSize: AppDesignTokens.layout.v13, fontWeight: AppDesignTokens.typography.semibold },
+  section: { width: "100%", alignItems: "center", gap: AppDesignTokens.layout.v12 },
+  phase: { color: AppDesignTokens.colors.accentSoft2, fontSize: AppDesignTokens.layout.v22, fontWeight: AppDesignTokens.typography.bold, textAlign: "center" },
+  timer: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v36, fontWeight: AppDesignTokens.typography.bold, fontVariant: ["tabular-nums"] },
+  prompt: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v15, lineHeight: AppDesignTokens.layout.v22, textAlign: "center" },
+  hint: { color: AppDesignTokens.colors.textMuted, fontSize: AppDesignTokens.layout.v13, lineHeight: AppDesignTokens.layout.v18, textAlign: "center" },
+  privacy: { color: AppDesignTokens.colors.textSubtle, fontSize: AppDesignTokens.layout.v12, lineHeight: AppDesignTokens.layout.v17, textAlign: "center" },
+  input: {
+    width: "100%",
+    minHeight: AppDesignTokens.layout.v120,
+    padding: AppDesignTokens.layout.v14,
+    borderRadius: AppDesignTokens.layout.v12,
+    borderWidth: AppDesignTokens.layout.v1,
+    borderColor: AppDesignTokens.colors.borderSoft,
+    backgroundColor: AppDesignTokens.colors.background,
+    color: AppDesignTokens.colors.text,
+    fontSize: AppDesignTokens.layout.v14,
+    lineHeight: AppDesignTokens.layout.v20,
+    textAlignVertical: "top",
+  },
+  primaryButton: {
+    minHeight: AppDesignTokens.layout.v44,
+    justifyContent: "center",
+    paddingVertical: AppDesignTokens.layout.v10,
+    paddingHorizontal: AppDesignTokens.layout.v24,
+    borderRadius: AppDesignTokens.layout.v10,
+    backgroundColor: AppDesignTokens.colors.accent,
+  },
+  primaryButtonText: { color: AppDesignTokens.colors.text, fontSize: AppDesignTokens.layout.v14, fontWeight: AppDesignTokens.typography.bold },
 });

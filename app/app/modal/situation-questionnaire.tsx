@@ -144,40 +144,41 @@ export default function SituationQuestionnaireScreen() {
 
   if (!question) return null;
 
-  const selected = draft[question.id];
+  const activeQuestion = question;
+  const selected = draft[activeQuestion.id];
   const hasAnswer = Array.isArray(selected) ? selected.length > 0 : typeof selected === "string";
 
   function choose(value: string) {
-    if (question.id === "A1" && value !== "yes") {
+    if (activeQuestion.id === "A1" && value !== "yes") {
       discardDraft();
       setInterruption("privacy");
       return;
     }
-    if (question.id === "S1" && (value === "yes" || value === "maybe")) {
+    if (activeQuestion.id === "S1" && (value === "yes" || value === "maybe")) {
       discardDraft();
       setInterruption("danger");
       return;
     }
-    if (question.id === "S3" && CRITICAL_S3_VALUES.has(value)) {
+    if (activeQuestion.id === "S3" && CRITICAL_S3_VALUES.has(value)) {
       discardDraft();
       setInterruption("critical");
       return;
     }
-    if (!question.multiple) {
-      answer(question.id, value);
+    if (!activeQuestion.multiple) {
+      answer(activeQuestion.id, value);
       return;
     }
     const current = Array.isArray(selected) ? selected : [];
     if (value === "none" || value === "skip") {
-      answer(question.id, [value]);
+      answer(activeQuestion.id, [value]);
       return;
     }
     const withoutExclusive = current.filter((item) => item !== "none" && item !== "skip");
-    answer(question.id, withoutExclusive.includes(value) ? withoutExclusive.filter((item) => item !== value) : [...withoutExclusive, value]);
+    answer(activeQuestion.id, withoutExclusive.includes(value) ? withoutExclusive.filter((item) => item !== value) : [...withoutExclusive, value]);
   }
 
   function handleNext() {
-    if (mode === "update" && question.id === "A1" && questionIds.length === 1) {
+    if (mode === "update" && activeQuestion.id === "A1" && questionIds.length === 1) {
       showChangeSelection();
       return;
     }

@@ -124,11 +124,10 @@ export const complete = mutation({
 
     const totalActions = routine.actions.length;
     const completedCount = args.completedActions.length;
-
-    // XP: 10 per action + 20 bonus if all completed
-    const actionXP = completedCount * 10;
-    const bonusXP = completedCount === totalActions ? 20 : 0;
-    const xpAwarded = actionXP + bonusXP;
+    const { bonusXP, xpAwarded } = getRoutineRewards(
+      routine.actions.map((action) => action.id),
+      completedCount,
+    );
 
     const today = todayISO();
 
@@ -142,15 +141,17 @@ export const complete = mutation({
       date: today,
     });
 
-    await ctx.runMutation(internal.gamification.awardXP, {
-      userId: user._id,
-      xp: xpAwarded,
-      activityDate: today,
-    });
+    if (xpAwarded > 0) {
+      await ctx.runMutation(internal.gamification.awardXP, {
+        userId: user._id,
+        xp: xpAwarded,
+        activityDate: today,
+      });
 
-    await ctx.runMutation(internal.achievements.checkMilestones, {
-      userId: user._id,
-    });
+      await ctx.runMutation(internal.achievements.checkMilestones, {
+        userId: user._id,
+      });
+    }
 
     return { xpAwarded, completedCount, totalActions, bonusXP };
   },
@@ -170,3 +171,4 @@ export const remove = mutation({
     await ctx.db.patch(args.routineId, { isActive: false });
   },
 });
+import { getRoutineRewards } from "../features/routines/engine/rewards";
