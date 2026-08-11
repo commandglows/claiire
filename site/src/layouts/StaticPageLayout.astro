@@ -76,32 +76,65 @@ const showGamification = !currentPath.startsWith('/violence') && !currentPath.st
     <a class="skip-link" href="#main-content">Aller au contenu</a>
     <SiteHeader currentPath={currentPath} />
 
-    <div class="site-page">
-      {hero && (
-        <section class="page-hero page-hero--landing">
-          <div class="page-hero__inner">
-            {sectionLabel && <p class="page-hero__eyebrow">{sectionLabel}</p>}
-            <h1>{hero.title}</h1>
-            {hero.tagline && <p class="page-hero__tagline">{hero.tagline}</p>}
+    <div class:list={['site-page', isHomepage && 'site-page--homepage']}>
+      {isHomepage ? (
+        <main id="main-content" class="page-main page-main--homepage" tabindex="-1">
+          {hero && (
+            <section class="page-hero page-hero--homepage" aria-labelledby="homepage-title">
+              <div class="page-hero__inner">
+                <div class="page-hero__copy">
+                  {sectionLabel && <p class="page-hero__eyebrow">{sectionLabel}</p>}
+                  <h1 id="homepage-title">{hero.title}</h1>
+                  {hero.tagline && <p class="page-hero__tagline">{hero.tagline}</p>}
 
-            {hero.actions && hero.actions.length > 0 && (
-              <div class="page-hero__actions">
-                {hero.actions.map((action) => (
-                  <a class:list={['button', `button--${action.variant ?? 'primary'}`]} href={action.link}>
-                    {action.text}
-                  </a>
-                ))}
+                  {hero.actions && hero.actions.length > 0 && (
+                    <div class="page-hero__actions">
+                      {hero.actions.map((action) => (
+                        <a class:list={['button', `button--${action.variant ?? 'primary'}`]} href={action.link}>
+                          {action.text}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <div class="page-hero__passage" aria-hidden="true"><span></span></div>
               </div>
-            )}
-          </div>
-        </section>
-      )}
+            </section>
+          )}
 
-      <main id="main-content" class="page-main">
-        <article class:list={['prose', 'prose--landing', isHomepage && 'prose--homepage', articleClass]}>
-          <slot />
-        </article>
-      </main>
+          <article class:list={['prose', 'prose--landing', 'prose--homepage', articleClass]}>
+            <slot />
+          </article>
+        </main>
+      ) : (
+        <>
+          {hero && (
+            <section class="page-hero page-hero--landing">
+              <div class="page-hero__inner">
+                {sectionLabel && <p class="page-hero__eyebrow">{sectionLabel}</p>}
+                <h1>{hero.title}</h1>
+                {hero.tagline && <p class="page-hero__tagline">{hero.tagline}</p>}
+
+                {hero.actions && hero.actions.length > 0 && (
+                  <div class="page-hero__actions">
+                    {hero.actions.map((action) => (
+                      <a class:list={['button', `button--${action.variant ?? 'primary'}`]} href={action.link}>
+                        {action.text}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </section>
+          )}
+
+          <main id="main-content" class="page-main">
+            <article class:list={['prose', 'prose--landing', articleClass]}>
+              <slot />
+            </article>
+          </main>
+        </>
+      )}
     </div>
 
     <SiteFooter />

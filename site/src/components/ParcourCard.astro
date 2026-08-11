@@ -31,7 +31,14 @@ const { id, title, icon, description, color, moduleCount } = Astro.props;
       <p>{description}</p>
     </div>
     <div class="parcour-footer">
-      <div class="parcour-progress-mini">
+      <div
+        class="parcour-progress-mini"
+        role="progressbar"
+        aria-label={`Progression du parcours ${title}`}
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="0"
+      >
         <div class="progress-bar-bg">
           <div class="progress-bar-fill"></div>
         </div>
@@ -50,10 +57,11 @@ const { id, title, icon, description, color, moduleCount } = Astro.props;
     display: block;
     text-decoration: none;
     color: inherit;
-    background: var(--site-surface);
-    border: 1px solid var(--site-border);
-    border-radius: var(--radius-md);
-    padding: var(--site-space-6);
+    height: var(--site-size-100pct);
+    background: var(--site-parcours-card-surface);
+    border: var(--site-parcours-card-border-width) solid var(--site-parcours-card-border);
+    border-radius: var(--site-parcours-card-radius);
+    padding: var(--site-parcours-card-padding);
     transition: transform var(--site-motion-standard) var(--site-ease-emphasis),
                 box-shadow var(--site-motion-standard) var(--site-ease-emphasis),
                 border-color var(--site-motion-standard) var(--site-ease-standard);
@@ -68,24 +76,24 @@ const { id, title, icon, description, color, moduleCount } = Astro.props;
     left: 0;
     right: 0;
     height: var(--site-size-3px);
-    background: linear-gradient(90deg, var(--parcour-color), color-mix(in srgb, var(--parcour-color) 60%, white));
-    opacity: 0.8;
+    background: var(--site-parcours-card-accent-gradient);
+    opacity: var(--site-parcours-card-accent-opacity);
     transition: opacity var(--site-motion-0p24) var(--site-ease-standard);
   }
 
   .parcour-card:hover {
     transform: translateY(calc(-1 * var(--site-size-6px)));
-    box-shadow: var(--shadow-strong);
+    box-shadow: var(--site-parcours-card-shadow-hover);
     border-color: var(--parcour-color);
   }
 
   .parcour-card:focus-visible {
     border-color: var(--parcour-color);
-    box-shadow: var(--shadow-strong);
+    box-shadow: var(--site-parcours-card-shadow-hover);
   }
 
   .parcour-card:hover::before {
-    opacity: 1;
+    opacity: var(--site-parcours-card-accent-opacity-active);
   }
 
   .parcour-card-inner {
@@ -119,13 +127,13 @@ const { id, title, icon, description, color, moduleCount } = Astro.props;
   }
 
   .parcour-icon-wrapper {
-    width: var(--site-size-42px);
-    height: var(--site-size-42px);
+    width: var(--site-parcours-icon-size);
+    height: var(--site-parcours-icon-size);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: var(--site-size-12px);
-    background: color-mix(in srgb, var(--parcour-color) 12%, transparent);
+    border-radius: var(--site-parcours-icon-radius);
+    background: var(--site-parcours-icon-surface);
     flex-shrink: 0;
     transition:
       transform var(--site-motion-standard) var(--site-ease-emphasis),
@@ -133,8 +141,8 @@ const { id, title, icon, description, color, moduleCount } = Astro.props;
   }
 
   .parcour-card:hover .parcour-icon-wrapper {
-    transform: scale(1.08);
-    background: color-mix(in srgb, var(--parcour-color) 20%, transparent);
+    transform: scale(var(--site-parcours-icon-scale-active));
+    background: var(--site-parcours-icon-surface-active);
   }
 
   .parcour-icon {
@@ -146,12 +154,12 @@ const { id, title, icon, description, color, moduleCount } = Astro.props;
     display: flex;
     align-items: center;
     gap: var(--site-space-0p35);
-    font-size: var(--site-font-xs);
+    font-size: var(--site-parcours-meta-size);
     font-weight: 500;
     color: var(--site-neutral-300);
-    background: var(--site-neutral-600);
+    background: var(--site-parcours-meta-surface);
     padding: var(--site-space-0p3) var(--site-space-0p6);
-    border-radius: var(--radius-sm);
+    border-radius: var(--site-parcours-meta-radius);
     min-height: var(--site-control-min-height);
   }
 
@@ -166,7 +174,7 @@ const { id, title, icon, description, color, moduleCount } = Astro.props;
   .parcour-card p {
     margin: 0;
     color: var(--site-neutral-200);
-    font-size: var(--site-font-sm);
+    font-size: var(--site-parcours-body-size);
     line-height: var(--site-leading-1p55);
   }
 
@@ -175,7 +183,7 @@ const { id, title, icon, description, color, moduleCount } = Astro.props;
     align-items: center;
     justify-content: space-between;
     padding-top: var(--site-space-0p75);
-    border-top: 1px solid var(--site-neutral-600);
+    border-top: var(--site-parcours-card-border-width) solid var(--site-parcours-separator);
     gap: var(--site-space-4);
   }
 
@@ -188,33 +196,34 @@ const { id, title, icon, description, color, moduleCount } = Astro.props;
 
   .progress-bar-bg {
     flex: 1;
-    height: var(--site-size-4px);
-    background: var(--site-neutral-500);
-    border-radius: var(--site-size-4px);
+    height: var(--site-parcours-progress-height);
+    background: var(--site-parcours-progress-track);
+    border-radius: var(--site-parcours-progress-radius);
     overflow: hidden;
-    max-width: var(--site-size-80px);
+    max-width: var(--site-parcours-progress-width);
   }
 
   .progress-bar-fill {
     height: var(--site-size-100pct);
     width: var(--site-size-0pct);
     background: var(--parcour-color);
-    border-radius: var(--site-size-4px);
+    border-radius: var(--site-parcours-progress-radius);
     transition: width var(--site-motion-0p4) var(--site-ease-standard);
   }
 
   .progress-text {
-    font-size: var(--site-font-0p7);
+    font-size: var(--site-parcours-meta-size);
     font-weight: 600;
     color: var(--site-neutral-300);
-    min-width: var(--site-space-2);
+    min-width: var(--site-parcours-percent-width);
   }
 
   .parcour-cta {
     display: inline-flex;
     align-items: center;
     gap: var(--site-space-0p4);
-    font-size: var(--site-font-0p8);
+    min-height: var(--site-control-min-height);
+    font-size: var(--site-parcours-cta-size);
     font-weight: 600;
     color: var(--parcour-color);
     transition: gap var(--site-motion-0p2) var(--site-ease-standard);
@@ -227,29 +236,26 @@ const { id, title, icon, description, color, moduleCount } = Astro.props;
 
   @media (max-width: 45rem) {
     .parcour-card {
-      padding: var(--site-space-5);
-    }
-
-    .parcour-header,
-    .parcour-footer {
-      align-items: flex-start;
-    }
-
-    .parcour-header {
-      flex-direction: column;
+      padding: var(--site-parcours-card-padding-compact);
     }
 
     .parcour-module-badge {
       padding-inline: var(--site-space-0p75);
     }
 
-    .parcour-footer {
-      flex-direction: column;
+    .parcour-header {
+      flex-wrap: wrap;
     }
 
-    .parcour-progress-mini,
+    .parcour-footer {
+      align-items: center;
+    }
+
     .progress-bar-bg {
-      max-width: none;
+      max-width: var(--site-parcours-progress-width-compact);
+    }
+
+    .parcour-progress-mini {
       width: 100%;
     }
   }

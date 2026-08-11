@@ -155,6 +155,7 @@ function updateParcourCards() {
     const parcourId = card.dataset.parcourId;
     const progressBarFill = card.querySelector('.progress-bar-fill');
     const progressText = card.querySelector('.progress-text');
+    const progressIndicator = card.querySelector('.parcour-progress-mini[role="progressbar"]');
     const moduleCount = parseInt(card.dataset.moduleCount) || 0;
 
     if (allProgress[parcourId] && moduleCount > 0) {
@@ -166,6 +167,9 @@ function updateParcourCards() {
       }
       if (progressText) {
         progressText.textContent = `${percentage}%`;
+      }
+      if (progressIndicator) {
+        progressIndicator.setAttribute('aria-valuenow', String(percentage));
       }
 
       // Update CTA text if progress exists

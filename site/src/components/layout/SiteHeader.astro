@@ -11,6 +11,7 @@ const activeSidebar = findSidebarForPath(currentPath);
 const isClerkEnabled = Boolean(import.meta.env.PUBLIC_CLERK_PUBLISHABLE_KEY);
 const authState = Astro.locals.auth?.();
 const isSignedIn = Boolean(authState?.userId);
+const isNavigationItemActive = (sidebarId: string) => activeSidebar?.id === sidebarId;
 ---
 
 <header class="site-header">
@@ -27,8 +28,9 @@ const isSignedIn = Boolean(authState?.userId);
       <nav class="site-nav" aria-label="Navigation principale">
         {headerNavigation.map((item) => (
           <a
-            class:list={['site-nav__link', activeSidebar?.id === item.sidebarId && 'is-active']}
+            class:list={['site-nav__link', isNavigationItemActive(item.sidebarId) && 'is-active']}
             href={item.href}
+            aria-current={isNavigationItemActive(item.sidebarId) ? 'page' : undefined}
           >
             {item.label}
           </a>
@@ -62,8 +64,9 @@ const isSignedIn = Boolean(authState?.userId);
         <div class="mobile-nav__panel">
           {headerNavigation.map((item) => (
             <a
-              class:list={['mobile-nav__link', activeSidebar?.id === item.sidebarId && 'is-active']}
+              class:list={['mobile-nav__link', isNavigationItemActive(item.sidebarId) && 'is-active']}
               href={item.href}
+              aria-current={isNavigationItemActive(item.sidebarId) ? 'page' : undefined}
             >
               {item.label}
             </a>

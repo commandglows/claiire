@@ -1,5 +1,6 @@
 ---
 import ParcoursGrid from '../components/ParcoursGrid.astro';
+import ClaiireIcon from '../components/ClaiireIcon.astro';
 import StaticPageLayout from '../layouts/StaticPageLayout.astro';
 ---
 
@@ -19,24 +20,13 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
   sectionLabel="Santé globale · Relations · Violence"
 >
   <aside class="safety-note safety-note--priority" aria-label="Ressources de sécurité immédiates">
-    <strong>Danger immédiat ? 17 / 114</strong>
-    <span>La priorité n'est pas de finir une page. Consulte les ressources immédiates adaptées à ta situation.</span>
+    <span class="safety-note__icon" aria-hidden="true"><ClaiireIcon name="shield" /></span>
+    <div class="safety-note__copy">
+      <strong>Danger immédiat ? 17 / 114</strong>
+      <span>La priorité n'est pas de finir une page. Consulte les ressources immédiates adaptées à ta situation.</span>
+    </div>
     <a href="/violence/victimes/">Voir les ressources de sécurité</a>
   </aside>
-
-  <section class="welcome" aria-labelledby="welcome-title">
-    <p class="welcome__kicker">Toute ta vie est liée</p>
-    <h2 id="welcome-title">Le corps, les émotions et les relations ne vivent pas séparément</h2>
-    <p>
-      Le sommeil influence ton équilibre. Le stress change tes réactions. Tes relations touchent ta
-      santé, ta confiance et ta capacité à choisir. Claiire t'aide à comprendre ces liens avec des
-      ressources concrètes, accessibles et non cliniques.
-    </p>
-    <p>
-      Et quand une relation devient inquiétante, le flou ne doit pas t'empêcher de chercher de
-      l'aide. Tu peux commencer ici sans avoir à te définir comme victime ou auteur.
-    </p>
-  </section>
 
   <section id="orientation" class="orientation" aria-labelledby="orientation-title">
     <div class="section-heading">
@@ -49,7 +39,10 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
 
     <div class="orientation-grid">
       <a class="orientation-card orientation-card--safe" href="/formations/victimes/">
-        <span class="orientation-card__number" aria-hidden="true">01</span>
+        <span class="orientation-card__topline">
+          <span class="orientation-card__icon" aria-hidden="true"><ClaiireIcon name="shield" /></span>
+          <span class="orientation-card__number" aria-hidden="true">01</span>
+        </span>
         <span class="orientation-card__title">Ce que je vis dans ma relation m'inquiète</span>
         <span class="orientation-card__text">
           Mettre des mots sur les faits, retrouver des repères, penser à ta sécurité et découvrir
@@ -59,7 +52,10 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
       </a>
 
       <a class="orientation-card orientation-card--change" href="/formations/auteurs/">
-        <span class="orientation-card__number" aria-hidden="true">02</span>
+        <span class="orientation-card__topline">
+          <span class="orientation-card__icon" aria-hidden="true"><ClaiireIcon name="target" /></span>
+          <span class="orientation-card__number" aria-hidden="true">02</span>
+        </span>
         <span class="orientation-card__title">Certains de mes comportements m'inquiètent</span>
         <span class="orientation-card__text">
           Repérer l'escalade, interrompre un comportement violent, regarder les faits avec honnêteté
@@ -69,6 +65,24 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
       </a>
     </div>
 
+  </section>
+
+  <section class="welcome" aria-labelledby="welcome-title">
+    <div class="welcome__heading">
+      <p class="welcome__kicker">Toute ta vie est liée</p>
+      <h2 id="welcome-title">Le corps, les émotions et les relations ne vivent pas séparément</h2>
+    </div>
+    <div class="welcome__copy">
+      <p>
+        Le sommeil influence ton équilibre. Le stress change tes réactions. Tes relations touchent ta
+        santé, ta confiance et ta capacité à choisir. Claiire t'aide à comprendre ces liens avec des
+        ressources concrètes, accessibles et non cliniques.
+      </p>
+      <p>
+        Et quand une relation devient inquiétante, le flou ne doit pas t'empêcher de chercher de
+        l'aide. Tu peux commencer ici sans avoir à te définir comme victime ou auteur.
+      </p>
+    </div>
   </section>
 
   <section id="bien-etre" class="wellbeing" aria-labelledby="wellbeing-title">
@@ -90,14 +104,17 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
     <h2 id="approach-title">Comprendre avant de proposer</h2>
     <div class="approach-grid">
       <div>
+        <span class="approach-grid__number" aria-hidden="true">01</span>
         <h3>Claire, pas simpliste</h3>
         <p>Des mots accessibles, des mécanismes expliqués et aucune promesse miracle.</p>
       </div>
       <div>
+        <span class="approach-grid__number" aria-hidden="true">02</span>
         <h3>Bienveillante, pas naïve</h3>
         <p>Pas de jugement sur la personne, pas de minimisation des comportements violents.</p>
       </div>
       <div>
+        <span class="approach-grid__number" aria-hidden="true">03</span>
         <h3>Concrète, pas autoritaire</h3>
         <p>
           Des options et de petits pas utiles, avec ton autonomie et ta sécurité au premier plan.
@@ -115,6 +132,12 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
         ni un professionnel, ni les services d'urgence.
       </p>
     </div>
+    <div class="app-note__preview" aria-hidden="true">
+      <span class="app-note__preview-bar"></span>
+      <span class="app-note__preview-card app-note__preview-card--primary"></span>
+      <span class="app-note__preview-card"></span>
+      <span class="app-note__preview-line"></span>
+    </div>
   </aside>
 </StaticPageLayout>
 
@@ -124,29 +147,53 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
   .wellbeing,
   .approach,
   .app-note {
-    margin-block: clamp(3rem, 8vw, 6rem);
+    margin-block: var(--site-home-section-space);
   }
 
   .welcome {
-    max-width: var(--site-width-48);
-    padding-left: clamp(1rem, 4vw, 3rem);
-    border-left: 3px solid var(--site-accent);
+    display: grid;
+    grid-template-columns: var(--site-home-intro-columns);
+    gap: var(--site-home-intro-gap);
+    align-items: start;
   }
 
   .welcome__kicker,
   .section-heading__eyebrow,
   .app-note__eyebrow {
-    margin: 0 0 0.65rem;
-    color: var(--site-accent-strong);
-    font-size: var(--site-font-0p78);
+    margin: 0 0 var(--site-home-eyebrow-gap);
+    color: var(--site-home-eyebrow);
+    font-size: var(--site-home-eyebrow-size);
     font-weight: 800;
     letter-spacing: var(--site-letter-0p12);
     text-transform: uppercase;
   }
 
+  .welcome__heading h2,
+  .section-heading h2,
+  .approach h2,
+  .app-note h2 {
+    margin: 0;
+  }
+
+  .welcome__copy {
+    padding-left: var(--site-home-intro-copy-padding);
+    border-left: var(--site-home-rule-width) solid var(--site-home-rule-strong);
+  }
+
+  .welcome__copy p {
+    margin: 0;
+    color: var(--site-home-body-muted);
+    font-size: var(--site-home-body-size);
+    line-height: var(--site-leading-readable);
+  }
+
+  .welcome__copy p + p {
+    margin-top: var(--site-space-5);
+  }
+
   .section-heading {
-    max-width: var(--site-width-46);
-    margin-bottom: var(--site-space-8);
+    max-width: var(--site-home-heading-width);
+    margin-bottom: var(--site-home-heading-gap);
   }
 
   .section-heading--centered {
@@ -154,23 +201,29 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
     text-align: center;
   }
 
+  .section-heading > p:last-child {
+    color: var(--site-home-body-muted);
+    font-size: var(--site-home-body-size);
+    line-height: var(--site-leading-readable);
+  }
+
   .orientation-grid,
   .approach-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--site-space-4);
+    gap: var(--site-home-grid-gap);
   }
 
   .orientation-card {
     position: relative;
     display: flex;
-    min-height: var(--site-size-19rem);
-    padding: clamp(1.5rem, 4vw, 2.5rem);
+    min-height: var(--site-home-orientation-min-height);
+    padding: var(--site-home-orientation-padding);
     overflow: hidden;
     color: var(--site-text);
     text-decoration: none;
-    border: 1px solid var(--orientation-card-border);
-    border-radius: var(--site-radius-1p5-0p35);
+    border: var(--site-home-rule-width) solid var(--orientation-card-border);
+    border-radius: var(--orientation-card-radius);
     flex-direction: column;
     background: var(--orientation-card-surface);
     transition:
@@ -183,51 +236,75 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
     --orientation-card-surface: var(--site-orientation-safe-surface);
     --orientation-card-border: var(--site-orientation-safe-border);
     --orientation-card-accent: var(--site-orientation-safe-accent);
+    --orientation-card-radius: var(--site-home-safe-radius);
   }
 
   .orientation-card--change {
     --orientation-card-surface: var(--site-orientation-change-surface);
     --orientation-card-border: var(--site-orientation-change-border);
     --orientation-card-accent: var(--site-orientation-change-accent);
+    --orientation-card-radius: var(--site-home-change-radius);
   }
 
   .orientation-card::after {
     position: absolute;
-    right: var(--site-size--3rem);
-    bottom: var(--site-size--4rem);
-    width: var(--site-size-11rem);
-    height: var(--site-size-11rem);
+    right: var(--site-home-orientation-orb-offset-inline);
+    bottom: var(--site-home-orientation-orb-offset-block);
+    width: var(--site-home-orientation-orb-size);
+    height: var(--site-home-orientation-orb-size);
     content: '';
-    border: 1px solid var(--orientation-card-border);
+    border: var(--site-home-rule-width) solid var(--orientation-card-border);
     border-radius: var(--site-radius-circle);
+    pointer-events: none;
+  }
+
+  .orientation-card__topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--orientation-card-accent);
+  }
+
+  .orientation-card__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--site-home-orientation-icon-size);
+    height: var(--site-home-orientation-icon-size);
+    border: var(--site-home-rule-width) solid var(--orientation-card-border);
+    border-radius: var(--site-radius-circle);
+    background: var(--site-home-icon-surface);
   }
 
   .orientation-card__number {
-    margin-bottom: auto;
-    font-size: var(--site-font-0p78);
+    font-size: var(--site-home-eyebrow-size);
     font-weight: 800;
     letter-spacing: var(--site-letter-0p14);
-    opacity: 0.75;
   }
 
   .orientation-card__title {
-    max-width: var(--site-width-24);
-    margin-top: var(--site-space-12);
+    max-width: var(--site-home-orientation-title-width);
+    margin-top: auto;
+    padding-top: var(--site-home-orientation-title-gap);
     font-family: var(--site-font-heading);
-    font-size: clamp(1.45rem, 3vw, 2rem);
+    font-size: var(--site-home-orientation-title-size);
     font-weight: 800;
     line-height: var(--site-leading-tight);
   }
 
   .orientation-card__text {
-    max-width: var(--site-width-32);
+    max-width: var(--site-home-orientation-copy-width);
     margin-top: var(--site-space-4);
+    font-size: var(--site-home-body-size);
     line-height: var(--site-leading-readable);
-    opacity: 0.9;
+    color: var(--site-home-body-muted);
   }
 
   .orientation-card__link {
-    margin-top: var(--site-space-6);
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--site-control-min-height);
+    margin-top: var(--site-space-5);
     font-weight: 800;
     color: var(--orientation-card-accent);
   }
@@ -235,21 +312,50 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
   .orientation-card:hover,
   .orientation-card:focus-visible {
     color: var(--site-text);
-    transform: translateY(-3px);
+    transform: translateY(var(--site-home-lift-distance));
     border-color: var(--orientation-card-accent);
-    box-shadow: var(--shadow-strong);
+    box-shadow: var(--site-home-orientation-shadow);
   }
 
   .safety-note {
     display: grid;
-    grid-template-columns: 1fr auto;
-    gap: var(--site-space-4);
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: var(--site-home-safety-gap);
     align-items: center;
-    margin-top: var(--site-space-4);
-    padding: var(--site-space-4) var(--site-space-5);
-    border: 1px solid var(--site-safety-border);
-    border-radius: var(--radius-sm);
+    margin-top: var(--site-home-safety-overlap);
+    padding: var(--site-home-safety-padding);
+    border: var(--site-home-rule-width) solid var(--site-safety-border);
+    border-radius: var(--site-home-safety-radius);
     background: var(--site-safety-surface);
+    box-shadow: var(--site-home-safety-shadow);
+  }
+
+  .safety-note__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--site-home-safety-icon-size);
+    height: var(--site-home-safety-icon-size);
+    border-radius: var(--site-radius-circle);
+    color: var(--site-safety-accent);
+    background: var(--site-safety-icon-surface);
+  }
+
+  .safety-note__copy {
+    display: grid;
+    gap: var(--site-space-1);
+  }
+
+  .safety-note__copy strong {
+    color: var(--site-safety-accent);
+    font-family: var(--site-font-heading);
+    font-size: var(--site-home-safety-title-size);
+  }
+
+  .safety-note__copy span {
+    color: var(--site-home-body-muted);
+    font-size: var(--site-home-body-size);
+    line-height: var(--site-leading-normal);
   }
 
   .safety-note a {
@@ -258,58 +364,187 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
     justify-content: center;
     min-height: var(--site-control-min-height);
     padding: var(--site-space-0p6) var(--site-control-padding-inline);
-    border: 1px solid var(--site-safety-border);
+    border: var(--site-home-rule-width) solid var(--site-safety-border);
     border-radius: var(--site-radius-pill);
     font-weight: 800;
     text-decoration: none;
-  }
-
-  .safety-note strong {
-    grid-column: 1 / -1;
+    color: var(--site-text);
+    background: var(--site-safety-action-surface);
   }
 
   .approach {
-    padding: clamp(1.5rem, 5vw, 3rem);
-    border: 1px solid var(--site-neutral-500);
-    border-radius: var(--radius-md);
-    background: linear-gradient(135deg, var(--site-neutral-700), transparent);
+    padding-block: var(--site-home-approach-padding-block);
+    border-block: var(--site-home-rule-width) solid var(--site-home-rule);
+  }
+
+  .approach > h2 {
+    max-width: var(--site-home-heading-width);
+    margin-bottom: var(--site-home-heading-gap);
   }
 
   .approach-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
   }
 
   .approach-grid > div {
-    padding-top: var(--site-space-4);
-    border-top: 2px solid var(--site-accent);
+    padding: var(--site-home-approach-item-padding);
+    border-left: var(--site-home-rule-width) solid var(--site-home-rule);
+  }
+
+  .approach-grid > div:first-child {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .approach-grid__number {
+    color: var(--site-home-eyebrow);
+    font-size: var(--site-home-eyebrow-size);
+    font-weight: 800;
+    letter-spacing: var(--site-letter-0p14);
+  }
+
+  .approach-grid h3 {
+    margin: var(--site-space-4) 0 0;
+  }
+
+  .approach-grid p {
+    color: var(--site-home-body-muted);
+    font-size: var(--site-home-body-size);
+    line-height: var(--site-leading-readable);
   }
 
   .app-note {
-    padding: clamp(1.5rem, 5vw, 3rem);
-    border-radius: var(--site-radius-0p35-1p5);
-    background: var(--site-accent-soft);
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--site-home-app-gap);
+    align-items: center;
+    min-height: var(--site-home-app-min-height);
+    padding: var(--site-home-app-padding);
+    overflow: hidden;
+    border: var(--site-home-rule-width) solid var(--site-home-app-border);
+    border-radius: var(--site-home-app-radius);
+    background: var(--site-home-app-surface);
+    box-shadow: var(--site-home-app-shadow);
+    isolation: isolate;
   }
 
-  .app-note > div {
-    max-width: var(--site-width-48);
+  .app-note::before {
+    position: absolute;
+    inset: var(--site-home-app-halo-inset);
+    z-index: var(--site-home-decoration-layer);
+    content: '';
+    background: var(--site-home-app-halo);
+    pointer-events: none;
   }
 
-  @media (max-width: 48rem) {
+  .app-note > div:first-child {
+    position: relative;
+    z-index: var(--site-z-content);
+    max-width: var(--site-home-app-copy-width);
+  }
+
+  .app-note > div:first-child > p:last-child {
+    color: var(--site-home-body-muted);
+    font-size: var(--site-home-body-size);
+    line-height: var(--site-leading-readable);
+  }
+
+  .app-note__preview {
+    position: relative;
+    z-index: var(--site-z-content);
+    display: grid;
+    gap: var(--site-space-3);
+    width: var(--site-home-app-preview-width);
+    padding: var(--site-home-app-preview-padding);
+    border: var(--site-home-rule-width) solid var(--site-home-app-preview-border);
+    border-radius: var(--site-home-app-preview-radius);
+    background: var(--site-home-app-preview-surface);
+    box-shadow: var(--site-home-app-preview-shadow);
+    transform: rotate(var(--site-home-app-preview-rotation));
+  }
+
+  .app-note__preview-bar,
+  .app-note__preview-card,
+  .app-note__preview-line {
+    display: block;
+    border-radius: var(--site-radius-pill);
+    background: var(--site-home-app-preview-detail);
+  }
+
+  .app-note__preview-bar {
+    width: var(--site-home-app-preview-bar-width);
+    height: var(--site-home-app-preview-bar-height);
+  }
+
+  .app-note__preview-card {
+    height: var(--site-home-app-preview-card-height);
+    border-radius: var(--site-home-app-preview-card-radius);
+  }
+
+  .app-note__preview-card--primary {
+    background: var(--site-home-app-preview-primary);
+  }
+
+  .app-note__preview-line {
+    width: var(--site-home-app-preview-line-width);
+    height: var(--site-home-app-preview-line-height);
+  }
+
+  @media (max-width: 60rem) {
+    .welcome {
+      grid-template-columns: 1fr;
+    }
+
+    .welcome__copy {
+      padding-top: var(--site-home-intro-copy-padding);
+      padding-left: 0;
+      border-top: var(--site-home-rule-width) solid var(--site-home-rule-strong);
+      border-left: 0;
+    }
+  }
+
+  @media (max-width: 45rem) {
+    .safety-note {
+      grid-template-columns: auto minmax(0, 1fr);
+      margin-top: var(--site-home-safety-overlap-compact);
+    }
+
+    .safety-note a {
+      grid-column: 1 / -1;
+      width: 100%;
+    }
+
     .orientation-grid,
-    .approach-grid {
+    .approach-grid,
+    .app-note {
       grid-template-columns: 1fr;
     }
 
     .orientation-card {
-    min-height: var(--site-size-17rem);
+      min-height: var(--site-home-orientation-min-height-compact);
+      padding: var(--site-home-orientation-padding-compact);
     }
 
-    .safety-note {
-      grid-template-columns: 1fr;
+    .approach-grid > div,
+    .approach-grid > div:first-child {
+      padding: var(--site-home-approach-item-padding-compact);
+      border-top: var(--site-home-rule-width) solid var(--site-home-rule);
+      border-left: 0;
     }
 
-    .safety-note a {
-      width: 100%;
+    .approach-grid > div:first-child {
+      border-top: 0;
+    }
+
+    .app-note {
+      min-height: auto;
+    }
+
+    .app-note__preview {
+      justify-self: end;
+      width: var(--site-home-app-preview-width-compact);
     }
   }
 </style>
