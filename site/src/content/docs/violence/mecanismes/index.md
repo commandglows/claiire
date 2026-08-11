@@ -131,5 +131,5 @@ La compréhension des mécanismes de la violence ne vise pas à l'excuser mais �
 ---
 
 :::tip[De la compréhension à l'action]
-Comprendre les mécanismes de la violence est une chose. Savoir quoi en faire en est une autre. La [formation pour comprendre et sortir de la violence](/formations) t'accompagne dans cette transition, avec des outils concrets et un espace sécurisé pour avancer.
-::: 
+Comprendre les mécanismes de la violence est une chose. Savoir quoi en faire en est une autre. Le [chemin guidé pour comprendre et sortir de la violence](/formations) t'accompagne dans cette transition, avec des outils concrets et un espace sécurisé pour avancer.
+:::

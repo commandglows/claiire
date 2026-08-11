@@ -89,6 +89,6 @@ Ces œuvres peuvent contenir des descriptions détaillées de violence. Il est i
 
 ---
 
-Ces œuvres témoignent — et après le témoignage, vient la transformation. Si tu es prête à passer de la compréhension à l'action, [la formation pour sortir de la violence](/formations) t'accompagne avec des outils concrets et un cadre bienveillant.
+Ces œuvres témoignent — et après le témoignage, vient la transformation. Si tu es prête à passer de la compréhension à l'action, [le chemin guidé pour sortir de la violence](/formations) t'accompagne avec des outils concrets et un cadre bienveillant.
 
-**[Accéder à la formation →](/formations)**
+**[Accéder au chemin guidé →](/formations)**

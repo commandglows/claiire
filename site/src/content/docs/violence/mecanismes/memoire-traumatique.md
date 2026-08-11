@@ -160,5 +160,5 @@ La mémoire traumatique n'est pas une fatalité. Avec de l'aide et des outils ad
 ---
 
 :::tip[Travailler sur la mémoire traumatique avec un soutien]
-La mémoire traumatique ne se guérit pas par la seule compréhension intellectuelle — elle demande un travail au niveau du corps et du système nerveux. La [formation pour les victimes de violence](/formations/victimes) intègre des approches adaptées à ce type de travail, dans un cadre bienveillant. La [formation générale](/formations) peut aussi être un premier pas utile.
-::: 
+La mémoire traumatique ne se guérit pas par la seule compréhension intellectuelle — elle demande un travail au niveau du corps et du système nerveux. Le [chemin guidé pour les victimes de violence](/formations/victimes) intègre des approches adaptées à ce type de travail, dans un cadre bienveillant. Le [chemin guidé général](/formations) peut aussi être un premier pas utile.
+:::

@@ -8,7 +8,7 @@ const recapItems = [
   },
   {
     title: 'Temps',
-    body: "Prévois 20 à 30 minutes si tu lis tout le module et quelques minutes de plus pour noter ton plan minimal.",
+    body: "Prévois 20 à 30 minutes si tu lis tout le palier et quelques minutes de plus pour noter ton plan minimal.",
   },
   {
     title: 'Repère',
@@ -58,14 +58,14 @@ const resourceItems = [
     href: '/violence/victimes/',
   },
   {
-    label: 'Module suivant',
+    label: 'Palier suivant',
     detail: 'Passer de la sécurité à la compréhension du trauma.',
     href: '/formations/victimes/2-guerison/',
   },
 ];
 
 const warningItems = [
-  "Ne laisse pas ce module ouvert sur un appareil potentiellement surveillé si ce n'est pas sûr.",
+  "Ne laisse pas ce palier ouvert sur un appareil potentiellement surveillé si ce n'est pas sûr.",
   "Ne minimise pas des signaux comme l'étranglement, les menaces de mort ou l'accès à des armes.",
   "Si tu es en danger immédiat, bascule vers les ressources d'urgence avant toute autre chose.",
 ];
@@ -73,14 +73,14 @@ const warningItems = [
 
 <FormationModulePrivateLayout
   currentPath="/membres/formations/victimes/1-securite/"
-  title="Module V1 — Ton plan de sécurité"
-  description="Version complète du premier module victimes : évaluation du risque, plan de sécurité, kit d'urgence, sécurité numérique et réseau de soutien."
-  heroTitle="Module V1 — Ton plan de sécurité"
-  heroTagline="Ce module t'aide à préparer l'essentiel avant une crise : repères, relais, documents, sécurité numérique et marge de manoeuvre."
-  moduleLabel="Version complète"
-  progressLabel="Parcours victimes · Module 1 sur 6"
+  title="Palier V1 — Ton plan de sécurité"
+  description="Lecture complète du premier palier victimes : évaluation du risque, plan de sécurité, kit d'urgence, sécurité numérique et réseau de soutien."
+  heroTitle="Palier V1 — Ton plan de sécurité"
+  heroTagline="Ce palier t'aide à préparer l'essentiel avant une crise : repères, relais, documents, sécurité numérique et marge de manoeuvre."
+  moduleLabel="Lecture complète"
+  progressLabel="Chemin des personnes exposées · Palier 1 sur 6"
   backAction={{ text: 'Revenir à la page publique', link: '/formations/victimes/1-securite/', variant: 'secondary' }}
-  nextAction={{ text: 'Continuer vers le module 2', link: '/formations/victimes/2-guerison/', variant: 'primary' }}
+  nextAction={{ text: 'Continuer vers le palier 2', link: '/formations/victimes/2-guerison/', variant: 'primary' }}
   recapItems={recapItems}
   checklistItems={checklistItems}
   protocolItems={protocolItems}
@@ -88,7 +88,7 @@ const warningItems = [
   warningItems={warningItems}
 >
   <p>
-    Merci d'être là. Ce module est peut-être le plus concret du parcours victimes. Il ne te demande pas de fouiller
+    Merci d'être là. Ce palier est peut-être le plus concret du chemin des personnes exposées. Il ne te demande pas de fouiller
     tout de suite ton histoire. Il te demande de poser quelque chose de plus immédiat : un peu plus de sécurité.
   </p>
 
@@ -170,10 +170,10 @@ const warningItems = [
     C'est peu, mais c'est déjà un vrai plan.
   </p>
 
-  <h3>Ce que tu peux retenir de ce module</h3>
+  <h3>Ce que tu peux retenir de ce palier</h3>
   <p>
     La sécurité n'est pas une décision binaire. C'est une accumulation de gestes préparés. Si aujourd'hui tu sais
     un peu mieux qui appeler, quoi protéger, où aller, ou comment réduire la part d'improvisation dans une crise,
-    alors ce module t'a déjà fait gagner quelque chose de réel.
+    alors cette lecture t'a déjà apporté un repère concret.
   </p>
 </FormationModulePrivateLayout>

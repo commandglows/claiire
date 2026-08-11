@@ -84,6 +84,6 @@ La Communication Non Violente (CNV) n'est pas qu'une théorie : c'est un outil p
 
 ---
 
-Appliquer la CNV en milieu professionnel peut transformer radicalement les dynamiques d'équipe et prévenir les situations de violence au travail. Pour aller plus loin, [la formation CNV et violence en milieu professionnel](/formations) intègre ces outils dans un contexte de prévention et de résolution des conflits professionnels.
+Appliquer la CNV en milieu professionnel peut transformer radicalement les dynamiques d'équipe et prévenir les situations de violence au travail. Pour aller plus loin, [le chemin guidé CNV et violence en milieu professionnel](/formations) intègre ces outils dans un contexte de prévention et de résolution des conflits professionnels.
 
-**[Accéder à la formation →](/formations)**
+**[Accéder au chemin guidé →](/formations)**

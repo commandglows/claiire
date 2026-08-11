@@ -125,6 +125,6 @@ La sécurité est la première étape pour sortir d'une situation de violence. C
 
 ---
 
-Se protéger de la violence ne s'arrête pas aux mesures physiques et juridiques : la reconstruction intérieure est tout aussi fondamentale. [La formation pour te protéger et te reconstruire après la violence](/formations/victimes) t'accompagne à chaque étape, de la mise en sécurité à la reconquête de toi-même.
+Se protéger de la violence ne s'arrête pas aux mesures physiques et juridiques : la reconstruction intérieure est tout aussi fondamentale. [Le chemin guidé pour te protéger et te reconstruire après la violence](/formations/victimes) t'accompagne à chaque étape, de la mise en sécurité à la reconquête de toi-même.
 
-**[Découvrir la formation pour les victimes →](/formations/victimes)**
+**[Découvrir le chemin guidé pour les victimes →](/formations/victimes)**

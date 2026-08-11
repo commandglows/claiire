@@ -43,14 +43,14 @@ export function initParcourTracker() {
           setTimeout(() => {
             if (awaitingConfirm) {
               awaitingConfirm = false;
-              resetButton.textContent = 'Réinitialiser la progression';
+              resetButton.textContent = 'Recommencer ce chemin';
               resetButton.style.borderColor = '';
               resetButton.style.color = '';
             }
           }, 3000);
         } else {
           awaitingConfirm = false;
-          resetButton.textContent = 'Réinitialiser la progression';
+          resetButton.textContent = 'Recommencer ce chemin';
           resetButton.style.borderColor = '';
           resetButton.style.color = '';
           resetProgress(parcourId);

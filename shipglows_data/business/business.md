@@ -1,10 +1,10 @@
 ---
 artifact: business_contract
 metadata_schema_version: "1.0"
-artifact_version: "1.2.0"
+artifact_version: "1.3.0"
 project: "claiire"
 created: "2026-06-30"
-updated: "2026-08-09"
+updated: "2026-08-11"
 status: reviewed
 source_skill: 300-sg-docs
 scope: business
@@ -21,6 +21,7 @@ supersedes: []
 evidence:
   - "Operator decision 2026-08-09: one product focused on violence, serving both people subjected to violence and people exercising violence through strictly separate journeys."
   - "Operator decision 2026-08-09: preserve health and holistic wellbeing as a complementary public mission and a softer entry territory."
+  - "Product decision 2026-08-11: all current Claiire learning and resources are free to read in full; neither an account, entitlement, purchase nor subscription authorizes reading."
 next_review: "2026-09-09"
 next_step: "/101-sg-ready claiire-coach-operating-model"
 ---
@@ -62,19 +63,23 @@ L'application prolonge la mission dans un usage quotidien, discret et non cliniq
 
 ## Modele economique
 
-- une app freemium et un abonnement premium peuvent soutenir le produit
-- les ressources critiques de securite et d'urgence ne doivent jamais etre bloquees par un paywall
+- toutes les ressources et formations actuellement proposees par Claiire sont gratuites à la lecture complète, sans compte, entitlement, achat ni abonnement
+- les comptes, l'authentification, les entitlements, les achats et l'historique de facturation peuvent être conservés pour leurs usages propres, mais ne font pas autorité pour la lecture
+- un modèle économique futur ne peut pas réintroduire un gate de lecture sans une nouvelle décision produit explicite et une mise à jour des contrats dépendants
 - aucune situation de violence ne doit servir de levier de pression commerciale
 - des accompagnements, formations ou partenariats peuvent completer l'app s'ils respectent la separation des parcours
+
+> **Note de supersession — 2026-08-11.** La possibilité antérieure d'une app freemium ou d'un abonnement premium comme condition d'accès aux contenus est remplacée pour les ressources et formations actuelles : leur lecture complète est libre. Les données de compte et de facturation historiques sont préservées, mais ne constituent pas une autorisation de lecture.
 
 ## Indicateurs
 
 - acces effectif aux ressources de securite et d'aide specialisee
+- part des lectures complètes de formation réussies sans compte ni étape d'autorisation
+- disponibilité des introductions publiques et des pages complètes libres, suivie sans confondre lecture et conversion
 - activation et retention mesurees separement par parcours
 - interruptions d'escalade et retours vers un comportement non violent, sans promesse causale excessive
 - comprehension des limites de l'IA et orientation humaine reussie
 - alignement entre les claims du site et le comportement de l'app
-- conversion premium, sans optimisation au detriment de la securite
 
 ## Contraintes
 

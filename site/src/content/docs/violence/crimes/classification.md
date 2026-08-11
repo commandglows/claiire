@@ -172,6 +172,6 @@ Un réseau d'aide est disponible :
 
 ---
 
-Comprendre la classification des crimes, c'est une étape essentielle — mais pour agir vraiment face à la violence, il faut des outils concrets. Si tu es concernée par une situation de violence, [la formation pour comprendre et agir face à ces réalités](/formations) t'accompagne pas à pas.
+Comprendre la classification des crimes, c'est une étape essentielle — mais pour agir vraiment face à la violence, il faut des outils concrets. Si tu es concernée par une situation de violence, [le chemin guidé pour comprendre et agir face à ces réalités](/formations) t'accompagne pas à pas.
 
-**[Accéder à la formation →](/formations)**
+**[Accéder au chemin guidé →](/formations)**

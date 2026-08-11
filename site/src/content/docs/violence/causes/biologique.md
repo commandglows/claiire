@@ -15,7 +15,7 @@ Notre cerveau est équipé d'un système d'alarme — l'amygdale — qui réagit
 
 Des facteurs biologiques comme les taux de cortisol, la régulation de la sérotonine ou la sensibilité du système nerveux autonome influencent la manière dont une personne gère les frustrations, les conflits et le danger perçu. Ces facteurs ne déterminent pas le destin — mais ils expliquent pourquoi certaines personnes ont des seuils de tolérance différents.
 
-Ces mécanismes peuvent être compris, travaillés et modifiés. Comprendre pour changer est une démarche que soutient la [formation pour les auteurs de violence](/formations/auteurs), qui aborde le comportement violent sous cet angle neurobiologique et psychologique.
+Ces mécanismes peuvent être compris, travaillés et modifiés. Comprendre pour changer est une démarche que soutient le [chemin guidé pour les auteurs de violence](/formations/auteurs), qui aborde le comportement violent sous cet angle neurobiologique et psychologique.
 
 ## La neuroplasticité : source d'espoir
 
@@ -24,5 +24,5 @@ Le cerveau n'est pas figé. La neuroplasticité — la capacité du cerveau à c
 ---
 
 :::tip[Envie de comprendre pour changer ?]
-Si tu es une personne qui reconnaît des comportements violents dans ta vie et que tu veux agir, la [formation pour sortir de la violence](/formations) t'accompagne avec bienveillance vers des modes de relation plus sains.
+Si tu es une personne qui reconnaît des comportements violents dans ta vie et que tu veux agir, le [chemin guidé pour sortir de la violence](/formations) t'accompagne avec bienveillance vers des modes de relation plus sains.
 :::

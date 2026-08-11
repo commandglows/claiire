@@ -161,9 +161,9 @@ Pour découvrir la vérité derrière les idées reçues les plus dangereuses su
 ## Pour aller plus loin
 - [Profils d'agresseurs et dynamiques de pouvoir](/violence/profils/agresseurs)
 - [Ressources pour les victimes de violence](/formations/victimes)
-- [Formation : comprendre et sortir de la violence](/formations)
+- [chemin guidé : comprendre et sortir de la violence](/formations)
 
-Comprendre la psychopathie, c'est aussi mieux comprendre [les profils d'agresseurs](/violence/profils/agresseurs) que certaines personnes croisent dans leur vie. Si tu es dans ce cas, la [formation pour les victimes de violence](/formations/victimes) offre un accompagnement concret pour reprendre le pouvoir sur ta situation.
+Comprendre la psychopathie, c'est aussi mieux comprendre [les profils d'agresseurs](/violence/profils/agresseurs) que certaines personnes croisent dans leur vie. Si tu es dans ce cas, le [chemin guidé pour les victimes de violence](/formations/victimes) offre un accompagnement concret pour reprendre le pouvoir sur ta situation.
 
 ## Études de cas et observations
 
@@ -248,4 +248,4 @@ Pour se prémunir contre ces risques, les organisations peuvent :
 
 ---
 
-**Tu as été victime d'une personne manipulatrice ?** La [formation pour sortir de la violence](/formations) te donne les clés pour comprendre ce que tu as vécu et retrouver ta liberté.
+**Tu as été victime d'une personne manipulatrice ?** Le [chemin guidé pour sortir de la violence](/formations) te donne les clés pour comprendre ce que tu as vécu et retrouver ta liberté.

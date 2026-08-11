@@ -127,6 +127,6 @@ La résolution non-violente des conflits est un art qui s'apprend et se perfecti
 
 ---
 
-Ces 5 étapes sont un excellent point de départ — mais les mettre en pratique dans un contexte de violence nécessite souvent un accompagnement. [La formation pour incarner la non-violence et résoudre les conflits](/formations) te permet de t'exercer dans un cadre sécurisé et bienveillant.
+Ces 5 étapes sont un excellent point de départ — mais les mettre en pratique dans un contexte de violence nécessite souvent un accompagnement. [Le chemin guidé pour incarner la non-violence et résoudre les conflits](/formations) te permet de t'exercer dans un cadre sécurisé et bienveillant.
 
-**[Accéder à la formation →](/formations)**
+**[Accéder au chemin guidé →](/formations)**

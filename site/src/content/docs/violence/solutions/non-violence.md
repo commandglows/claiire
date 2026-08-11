@@ -96,6 +96,6 @@ La non-violence n'est pas simplement l'absence de violence, mais une philosophie
 
 ---
 
-Incarner la non-violence, ce n'est pas effacer tes besoins — c'est apprendre à les exprimer avec force et clarté, sans recourir à la violence. Si tu veux aller plus loin dans cette pratique, [la formation pour incarner la non-violence au quotidien](/formations) t'accompagne avec des outils concrets et un cadre bienveillant.
+Incarner la non-violence, ce n'est pas effacer tes besoins — c'est apprendre à les exprimer avec force et clarté, sans recourir à la violence. Si tu veux aller plus loin dans cette pratique, [le chemin guidé pour incarner la non-violence au quotidien](/formations) t'accompagne avec des outils concrets et un cadre bienveillant.
 
-**[Découvrir la formation →](/formations)**
+**[Découvrir le chemin guidé →](/formations)**

@@ -125,6 +125,6 @@ L'assertivité est la capacité à exprimer ses opinions, besoins et sentiments 
 
 ---
 
-S'affirmer face à la violence, ça s'apprend — et ça se pratique. Si tu veux travailler ton assertivité dans un cadre bienveillant et structuré, [la formation pour t'affirmer face à la violence](/formations) t'accompagne pas à pas.
+S'affirmer face à la violence, ça s'apprend — et ça se pratique. Si tu veux travailler ton assertivité dans un cadre bienveillant et structuré, [le chemin guidé pour t'affirmer face à la violence](/formations) t'accompagne pas à pas.
 
-**[Découvrir la formation →](/formations)**
+**[Découvrir le chemin guidé →](/formations)**

@@ -118,6 +118,6 @@ Maîtriser ses émotions est essentiel :
 
 ---
 
-La CNV est un outil qui se vit autant qu'il se comprend. Pour l'intégrer dans le contexte de la violence — que tu sois victime, auteur ou témoin — [la formation CNV et violence](/formations) t'offre un cadre pratique et un accompagnement bienveillant.
+La CNV est un outil qui se vit autant qu'il se comprend. Pour l'intégrer dans le contexte de la violence — que tu sois victime, auteur ou témoin — [le chemin guidé CNV et violence](/formations) t'offre un cadre pratique et un accompagnement bienveillant.
 
-**[Accéder à la formation →](/formations)**
+**[Accéder au chemin guidé →](/formations)**

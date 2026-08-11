@@ -89,6 +89,6 @@ La tradition tibétaine nous enseigne que toute expérience, même douloureuse, 
 
 ---
 
-La résilience n'est pas une qualité qu'on a ou qu'on n'a pas — c'est une capacité qui se développe, avec les bons outils et le bon soutien. [La formation pour construire ta résilience et sortir de la violence](/formations/victimes) t'accompagne dans ce processus de transformation.
+La résilience n'est pas une qualité qu'on a ou qu'on n'a pas — c'est une capacité qui se développe, avec les bons outils et le bon soutien. [Le chemin guidé pour construire ta résilience et sortir de la violence](/formations/victimes) t'accompagne dans ce processus de transformation.
 
-**[Découvrir la formation pour les victimes →](/formations/victimes)**
+**[Découvrir le chemin guidé pour les victimes →](/formations/victimes)**

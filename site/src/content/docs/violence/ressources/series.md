@@ -126,6 +126,6 @@ Les séries, par leur format long, permettent d'explorer en profondeur les méca
 
 ---
 
-Après avoir regardé, après avoir compris — il est temps d'agir. Si tu es touchée par une situation de violence, [la formation pour sortir de la violence](/formations) te donne les outils pour passer du constat à la transformation.
+Après avoir regardé, après avoir compris — il est temps d'agir. Si tu es touchée par une situation de violence, [le chemin guidé pour sortir de la violence](/formations) te donne les outils pour passer du constat à la transformation.
 
-**[Accéder à la formation →](/formations)**
+**[Accéder au chemin guidé →](/formations)**

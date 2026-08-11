@@ -17,10 +17,10 @@ Les dynamiques de groupe jouent un rôle central. La pression des pairs, la loya
 
 ## Des leviers sociaux pour changer
 
-Comprendre les facteurs sociaux de la violence, c'est aussi identifier les leviers de changement : éducation, solidarité, normes collectives plus saines. La [formation pour comprendre et agir face à la violence](/formations) aborde ces dimensions systémiques pour te donner une vision complète des causes — et des solutions.
+Comprendre les facteurs sociaux de la violence, c'est aussi identifier les leviers de changement : éducation, solidarité, normes collectives plus saines. Le [chemin guidé pour comprendre et agir face à la violence](/formations) aborde ces dimensions systémiques pour te donner une vision complète des causes — et des solutions.
 
 ---
 
 :::tip[Comprendre le contexte pour mieux agir]
-La violence a des causes sociales, mais la sortie est individuelle et collective. La [formation pour sortir de la violence](/formations) t'aide à naviguer entre ces deux niveaux avec clarté.
+La violence a des causes sociales, mais la sortie est individuelle et collective. Le [chemin guidé pour sortir de la violence](/formations) t'aide à naviguer entre ces deux niveaux avec clarté.
 :::

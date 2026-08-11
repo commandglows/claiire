@@ -201,5 +201,5 @@ Et surtout, rappelle-toi ceci : si ta fenêtre est étroite aujourd'hui, ce n'es
 ---
 
 :::tip[Élargir ta fenêtre avec un accompagnement adapté]
-Les exercices de cette page sont utiles au quotidien. Mais élargir une fenêtre de tolérance significativement rétrécie par des expériences traumatiques demande souvent un accompagnement thérapeutique adapté. La [formation pour sortir de la violence](/formations) intègre des approches qui travaillent directement avec le système nerveux, pour t'aider à retrouver durablement un espace de stabilité intérieure.
+Les exercices de cette page sont utiles au quotidien. Mais élargir une fenêtre de tolérance significativement rétrécie par des expériences traumatiques demande souvent un accompagnement thérapeutique adapté. Le [chemin guidé pour sortir de la violence](/formations) intègre des approches qui travaillent directement avec le système nerveux, pour t'aider à retrouver durablement un espace de stabilité intérieure.
 :::

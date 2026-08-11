@@ -10,6 +10,6 @@ Les violences homophobes s'attaquent à l'identité et à la dignité des person
 
 Pour [reconstruire sa confiance face à la discrimination](/confiance/reconstruire), des ressources et des outils concrets sont disponibles pour t'accompagner dans ce chemin de reconstruction.
 
-Si tu as été victime de violence homophobe, [la formation pour comprendre et combattre la discrimination et te reconstruire](/formations/victimes) t'offre un espace bienveillant et sécurisé.
+Si tu as été victime de violence homophobe, [le chemin guidé pour comprendre et combattre la discrimination et te reconstruire](/formations/victimes) t'offre un espace bienveillant et sécurisé.
 
-**[Accéder à la formation pour les victimes →](/formations/victimes)**
+**[Accéder au chemin guidé pour les victimes →](/formations/victimes)**

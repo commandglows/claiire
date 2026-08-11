@@ -17,10 +17,10 @@ Le trauma non résolu se transmet. Les enfants qui grandissent avec un parent tr
 
 ## Un chemin de guérison existe
 
-Comprendre que tes comportements d'aujourd'hui sont souvent les cicatrices d'hier est une première étape de libération. La [formation accompagnée pour les victimes de violence](/formations/victimes) est un espace pour faire ce travail en sécurité, avec des outils adaptés au trauma.
+Comprendre que tes comportements d'aujourd'hui sont souvent les cicatrices d'hier est une première étape de libération. Le [chemin guidé accompagné pour les victimes de violence](/formations/victimes) est un espace pour faire ce travail en sécurité, avec des outils adaptés au trauma.
 
 ---
 
 :::tip[Briser le cycle est possible]
-Que tu sois victime ou que tu reconnaîsses des comportements violents dans ta propre vie, la [formation pour sortir de la violence](/formations) t'accompagne avec bienveillance pour comprendre l'origine de ces dynamiques et construire autre chose.
+Que tu sois victime ou que tu reconnaîsses des comportements violents dans ta propre vie, le [chemin guidé pour sortir de la violence](/formations) t'accompagne avec bienveillance pour comprendre l'origine de ces dynamiques et construire autre chose.
 :::

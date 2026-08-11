@@ -111,6 +111,6 @@ Le cinéma, par sa puissance narrative et visuelle, nous permet d'appréhender l
 
 ---
 
-Ces films peuvent t'aider à comprendre — et après la compréhension, vient l'action. Si tu es touchée par une situation de violence, [la formation pour sortir de la violence et te reconstruire](/formations) t'offre un accompagnement concret et bienveillant pour passer de la prise de conscience à la transformation.
+Ces films peuvent t'aider à comprendre — et après la compréhension, vient l'action. Si tu es touchée par une situation de violence, [le chemin guidé pour sortir de la violence et te reconstruire](/formations) t'offre un accompagnement concret et bienveillant pour passer de la prise de conscience à la transformation.
 
-**[Accéder à la formation →](/formations)**
+**[Accéder au chemin guidé →](/formations)**

@@ -133,7 +133,7 @@ L'inceste émotionnel est une forme subtile mais profondément destructrice de t
 - EMDR
 - Approches corps-esprit
 
-[La formation pour comprendre et guérir l'inceste émotionnel](/formations/victimes) t'accompagne avec des outils concrets pour traverser ce processus. En parallèle, [reconstruire ta confiance](/confiance/reconstruire) — en toi et en tes propres perceptions — est souvent au cœur du travail de guérison.
+[Le chemin guidé pour comprendre et guérir l'inceste émotionnel](/formations/victimes) t'accompagne avec des outils concrets pour traverser ce processus. En parallèle, [reconstruire ta confiance](/confiance/reconstruire) — en toi et en tes propres perceptions — est souvent au cœur du travail de guérison.
 
 ## Les Frontières Saines
 
@@ -157,7 +157,7 @@ La guérison de l'inceste émotionnel est possible. Elle demande :
 - Un soutien adapté
 - Une reconstruction progressive
 
-→ [Découvrir la formation pour sortir de la violence](/formations)
+→ [Découvrir le chemin guidé pour sortir de la violence](/formations)
 
 ## Ressources et Soutien
 
@@ -176,4 +176,4 @@ La guérison de l'inceste émotionnel est possible. Elle demande :
 - Numéros d'urgence nationaux
 - Associations spécialisées
 - Forums de soutien
-- Communautés de survivants 
+- Communautés de survivants

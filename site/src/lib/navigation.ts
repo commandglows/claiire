@@ -68,7 +68,7 @@ export const headerNavigation = [
   { label: 'Émotions', href: '/psy/emotions/', sidebarId: 'emotions' },
   { label: 'Bonheur', href: '/bonheur/', sidebarId: 'bonheur' },
   { label: 'Violence', href: '/violence/', sidebarId: 'violence' },
-  { label: 'Formations', href: '/formations/', sidebarId: 'formations' },
+  { label: 'Chemins guidés', href: '/formations/', sidebarId: 'formations' },
 ];
 
 function trimTrailingSlash(path: string) {

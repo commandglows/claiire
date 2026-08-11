@@ -98,7 +98,7 @@ De nombreux outils peuvent soutenir le processus de guérison :
 - Exercices de reconnexion corporelle
 - [Méditation](/harmonie/meditation) adaptée au trauma
 
-Si tu traverses un trauma, tu n'as pas à avancer seul(e). [La formation accompagnée pour les victimes de trauma](/formations/victimes) offre un cadre structuré pour te reconstruire pas à pas. Une étape essentielle dans ce chemin est de [reconstruire ta confiance après le trauma](/confiance/reconstruire) — cette confiance en toi qui a pu être brisée. Et au bout de ce chemin, il est possible de [retrouver un bonheur durable](/bonheur/bonheur-durable), même après les épreuves les plus difficiles.
+Si tu traverses un trauma, tu n'as pas à avancer seul(e). [Le chemin guidé accompagné pour les victimes de trauma](/formations/victimes) offre un cadre structuré pour te reconstruire pas à pas. Une étape essentielle dans ce chemin est de [reconstruire ta confiance après le trauma](/confiance/reconstruire) — cette confiance en toi qui a pu être brisée. Et au bout de ce chemin, il est possible de [retrouver un bonheur durable](/bonheur/bonheur-durable), même après les épreuves les plus difficiles.
 
 ## Ressources et soutien
 
@@ -127,4 +127,4 @@ Le chemin de la guérison est unique pour chacun. Il demande du temps, de la pat
 
 *Tu n'es pas seul(e) dans ce voyage. [Découvrez nos ressources](/psy) ou [contactez nos experts](/contact#experts) pour un accompagnement personnalisé.*
 
-→ [Découvrir la formation pour sortir de la violence](/formations)
+→ [Découvrir le chemin guidé pour sortir de la violence](/formations)

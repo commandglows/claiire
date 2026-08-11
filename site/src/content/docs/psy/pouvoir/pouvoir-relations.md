@@ -146,7 +146,7 @@ Les relations humaines sont traversées par des dynamiques de pouvoir subtiles m
 - [Mécanismes psychologiques du leadership](/psy/pouvoir/mecanismes-leadership)
 - [Les dynamiques de pouvoir dans les relations toxiques](/relations/relations-toxiques)
 - [Confiance en soi pour équilibrer le pouvoir](/confiance/confiance-en-soi)
-- [La formation sur les dynamiques de pouvoir](/formations)
+- [Le chemin guidé sur les dynamiques de pouvoir](/formations)
 
 ### Lectures recommandées
 - "Les jeux de pouvoir" - Claude Steiner

@@ -261,6 +261,6 @@ Ces données et analyses s'appuient sur des sources officielles et reconnues :
 
 ---
 
-Ces chiffres racontent une réalité sociale — et derrière chaque statistique, il y a des personnes qui ont besoin de soutien. Si tu es concernée par une situation de violence, [la formation pour comprendre et agir face à ces réalités](/formations) t'offre des outils concrets pour passer de la compréhension à l'action.
+Ces chiffres racontent une réalité sociale — et derrière chaque statistique, il y a des personnes qui ont besoin de soutien. Si tu es concernée par une situation de violence, [le chemin guidé pour comprendre et agir face à ces réalités](/formations) t'offre des outils concrets pour passer de la compréhension à l'action.
 
-**[Accéder à la formation →](/formations)** 
+**[Accéder au chemin guidé →](/formations)**

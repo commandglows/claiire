@@ -46,7 +46,7 @@ Identifier lesquels font partie de l'une ou l'autre catégorie, et s'autoriser �
 ## Ce Qui Aide et Ce Qui Retarde
 
 **Ce qui aide :**
-- Un accompagnement professionnel (thérapie, coaching) — et pour les personnes sorties d'une situation de violence, [la formation accompagnée pour les victimes](/formations/victimes) peut être un point de départ concret
+- Un accompagnement professionnel (thérapie, coaching) — et pour les personnes sorties d'une situation de violence, [le chemin guidé accompagné pour les victimes](/formations/victimes) peut être un point de départ concret
 - Des petites actions quotidiennes qui génèrent de la compétence
 - Des relations qui respectent et encouragent, sans minimiser
 - Prendre soin du corps (sommeil, mouvement) — la confiance passe aussi par le physique
@@ -63,7 +63,7 @@ Identifier lesquels font partie de l'une ou l'autre catégorie, et s'autoriser �
 → [Traverser le deuil pour se reconstruire](/deuil/traverser-le-deuil)
 → [La vulnérabilité comme porte d'entrée de la reconstruction](/psy/emotions/qualite/vulnerabilite)
 → [Reconstruire pour retrouver un bonheur durable](/bonheur/bonheur-durable)
-→ [La formation accompagnée pour les victimes de violence](/formations/victimes)
+→ [Le chemin guidé accompagné pour les victimes de violence](/formations/victimes)
 → [Comprendre le trauma — et commencer à guérir](/psy/trauma)
 → [La résilience — transformer les blessures](/psy/solution/resilience)
 → [Les relations toxiques — les reconnaître et s'en libérer](/relations/relations-toxiques)

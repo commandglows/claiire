@@ -7,6 +7,6 @@ La médiation est un processus qui permet de résoudre les conflits avec l'aide 
 
 Pour mieux comprendre les dynamiques de [gestion des conflits](/systeme-social/gestion-des-conflits) et les approches non-violentes qui les soutiennent, explore les ressources sur le lien entre communication et violence.
 
-Si tu veux apprendre à résoudre les conflits par la non-violence dans le contexte de la violence relationnelle ou professionnelle, [la formation pour résoudre les conflits par la non-violence](/formations) t'accompagne avec des méthodes concrètes.
+Si tu veux apprendre à résoudre les conflits par la non-violence dans le contexte de la violence relationnelle ou professionnelle, [le chemin guidé pour résoudre les conflits par la non-violence](/formations) t'accompagne avec des méthodes concrètes.
 
-**[Accéder à la formation →](/formations)**
+**[Accéder au chemin guidé →](/formations)**

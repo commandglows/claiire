@@ -102,6 +102,6 @@ Ces ouvrages peuvent contenir des descriptions détaillées de violence. Nous re
 
 ---
 
-La lecture est une première étape précieuse pour comprendre. Pour aller plus loin et transformer cette compréhension en action, [la formation pour sortir de la violence](/formations) t'accompagne avec des outils pratiques et un soutien structuré.
+La lecture est une première étape précieuse pour comprendre. Pour aller plus loin et transformer cette compréhension en action, [le chemin guidé pour sortir de la violence](/formations) t'accompagne avec des outils pratiques et un soutien structuré.
 
-**[Accéder à la formation →](/formations)**
+**[Accéder au chemin guidé →](/formations)**

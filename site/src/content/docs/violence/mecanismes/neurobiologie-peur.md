@@ -156,5 +156,5 @@ La compréhension des mécanismes neurologiques de la peur permet de normaliser 
 ---
 
 :::tip[Comprendre la neurobiologie pour mieux guérir]
-Savoir ce qui se passe dans ton cerveau face à la peur et à la violence, c'est commencer à reprendre le contrôle. La [formation pour comprendre et sortir de la violence](/formations) intègre ces connaissances pour t'aider à comprendre tes réactions et à construire un sentiment de sécurité durable. Si le stress et l'hypervigilance sont au premier plan, le [parcours stress](/parcours/stress) peut être un bon complément.
-::: 
+Savoir ce qui se passe dans ton cerveau face à la peur et à la violence, c'est commencer à reprendre le contrôle. Le [chemin guidé pour comprendre et sortir de la violence](/formations) intègre ces connaissances pour t'aider à comprendre tes réactions et à construire un sentiment de sécurité durable. Si le stress et l'hypervigilance sont au premier plan, le [parcours stress](/parcours/stress) peut être un bon complément.
+:::

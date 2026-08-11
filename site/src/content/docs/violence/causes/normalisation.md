@@ -15,11 +15,10 @@ La normalisation opère aussi à des niveaux structurels : des normes sociales q
 
 ## Briser le cycle de la normalisation
 
-Le premier acte de résistance est de nommer. Quand tu mets des mots sur ce qui se passe — "ça, c'est de la violence" — tu romps le mécanisme de normalisation. C'est souvent difficile à faire seul·e, parce que la normalisation a érodé les repères. La [formation pour comprendre et sortir de la violence](/formations) aide à retrouver ces repères et à briser le cycle, avec bienveillance et sans jugement.
+Le premier acte de résistance est de nommer. Quand tu mets des mots sur ce qui se passe — "ça, c'est de la violence" — tu romps le mécanisme de normalisation. C'est souvent difficile à faire seul·e, parce que la normalisation a érodé les repères. Le [chemin guidé pour comprendre et sortir de la violence](/formations) aide à retrouver ces repères et à briser le cycle, avec bienveillance et sans jugement.
 
 ---
 
 :::tip[Retrouver ses repères]
-Si tu doutes de ce que tu vis — "est-ce vraiment de la violence ?" — c'est souvent un signe que la normalisation a fait son travail. La [formation pour sortir de la violence](/formations) commence précisément par là : t'aider à voir clairement.
+Si tu doutes de ce que tu vis — "est-ce vraiment de la violence ?" — c'est souvent un signe que la normalisation a fait son travail. Le [chemin guidé pour sortir de la violence](/formations) commence précisément par là : t'aider à voir clairement.
 :::
- 

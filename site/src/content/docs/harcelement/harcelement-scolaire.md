@@ -57,7 +57,7 @@ Les témoins qui interviennent — même simplement en ne riant pas, en allant v
 
 Quand les démarches s'étirent et que la situation perdure, avoir [une aide concrète pour sortir du harcèlement](/formations/victimes) peut faire la différence — un cadre structuré pour comprendre ce qui se passe, reprendre confiance, et retrouver une trajectoire positive.
 
-→ **Passer à l'action : [la formation Sortir de la violence](/formations)**
+→ **Passer à l'action : [le chemin guidé Sortir de la violence](/formations)**
 
 ## Connexions
 

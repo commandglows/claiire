@@ -52,9 +52,9 @@ Pour connaître tes droits précis, évaluer les preuves disponibles, et envisag
 ### 5. Se faire arrêter si nécessaire
 Un arrêt de travail n'est pas une capitulation. C'est protéger ta santé — et tu ne peux pas te battre si tu t'effondres en cours de route.
 
-Si les démarches s'avèrent longues ou épuisantes, [la formation pour sortir de la violence](/formations/victimes) peut t'aider à remettre de l'ordre dans ce que tu vis — comprendre les mécanismes, reconnaître ce qui t'appartient et ce qui appartient à l'autre, et trouver l'énergie pour agir.
+Si les démarches s'avèrent longues ou épuisantes, [le chemin guidé pour sortir de la violence](/formations/victimes) peut t'aider à remettre de l'ordre dans ce que tu vis — comprendre les mécanismes, reconnaître ce qui t'appartient et ce qui appartient à l'autre, et trouver l'énergie pour agir.
 
-→ **Aller plus loin : [la formation Sortir de la violence](/formations)**
+→ **Aller plus loin : [le chemin guidé Sortir de la violence](/formations)**
 
 ## Connexions
 

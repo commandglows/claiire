@@ -22,5 +22,5 @@ Chaque euro investi dans la prévention et l'accompagnement des victimes économ
 ---
 
 :::tip[Sortir de la violence, c'est aussi un investissement]
-Sortir de la violence — que tu sois victime ou auteur — change ta trajectoire de vie sur tous les plans, y compris économique. La [formation pour sortir de la violence](/formations) t'accompagne dans ce changement.
+Sortir de la violence — que tu sois victime ou auteur — change ta trajectoire de vie sur tous les plans, y compris économique. Le [chemin guidé pour sortir de la violence](/formations) t'accompagne dans ce changement.
 :::

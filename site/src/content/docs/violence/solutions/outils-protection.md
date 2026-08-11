@@ -163,6 +163,6 @@ La protection contre la violence nécessite une approche multidimensionnelle com
 
 ---
 
-Les outils de protection sont indispensables — et ils fonctionnent encore mieux quand tu sais aussi comment les utiliser et comment te reconstruire en parallèle. [La formation avec tous les outils de protection contre la violence](/formations/victimes) t'offre un accompagnement complet, pratique et bienveillant.
+Les outils de protection sont indispensables — et ils fonctionnent encore mieux quand tu sais aussi comment les utiliser et comment te reconstruire en parallèle. [Le chemin guidé avec tous les outils de protection contre la violence](/formations/victimes) t'offre un accompagnement complet, pratique et bienveillant.
 
-**[Accéder à la formation pour les victimes →](/formations/victimes)**
+**[Accéder au chemin guidé pour les victimes →](/formations/victimes)**

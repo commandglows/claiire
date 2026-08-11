@@ -119,7 +119,7 @@ description: Analyse approfondie de l'inceste, ses impacts traumatiques et les v
 - Associations d'entraide
 - Accompagnement spécialisé
 
-La reconstruction après l'inceste est possible, même si le chemin est long. [La formation accompagnée pour sortir du trauma](/formations/victimes) offre un espace sécurisé pour avancer. Une partie essentielle de ce chemin consiste à [reconstruire ta confiance](/confiance/reconstruire) — en toi, en ton corps, en ta valeur propre.
+La reconstruction après l'inceste est possible, même si le chemin est long. [Le chemin guidé accompagné pour sortir du trauma](/formations/victimes) offre un espace sécurisé pour avancer. Une partie essentielle de ce chemin consiste à [reconstruire ta confiance](/confiance/reconstruire) — en toi, en ton corps, en ta valeur propre.
 
 ## La Prévention Sociétale
 
@@ -167,7 +167,7 @@ La reconstruction après l'inceste est possible, même si le chemin est long. [L
 
 La lutte contre l'inceste nécessite une mobilisation collective. La prévention, le repérage et l'accompagnement des victimes sont l'affaire de tous. La guérison est possible avec un soutien adapté et des ressources appropriées.
 
-→ [Découvrir la formation pour sortir de la violence](/formations)
+→ [Découvrir le chemin guidé pour sortir de la violence](/formations)
 
 ## Ressources Complémentaires
 
@@ -181,4 +181,4 @@ La lutte contre l'inceste nécessite une mobilisation collective. La prévention
 - Réseaux de professionnels
 - Associations de soutien
 - Services spécialisés
-- Groupes d'entraide 
+- Groupes d'entraide

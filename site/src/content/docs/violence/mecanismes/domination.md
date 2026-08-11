@@ -105,5 +105,5 @@ La domination est un système de relations où une personne ou un groupe exerce 
 ---
 
 :::tip[Sortir des dynamiques de domination]
-Que tu sois dans la position du dominé·e ou que tu reconnaîsses des comportements de domination dans ta propre façon d'agir, la [formation pour sortir des dynamiques de domination](/formations/auteurs) t'offre un espace sans jugement pour comprendre l'origine de ces comportements et apprendre à construire des relations basées sur le respect mutuel. La [formation générale](/formations) s'adresse à toutes les situations.
-::: 
+Que tu sois dans la position du dominé·e ou que tu reconnaîsses des comportements de domination dans ta propre façon d'agir, le [chemin guidé pour sortir des dynamiques de domination](/formations/auteurs) t'offre un espace sans jugement pour comprendre l'origine de ces comportements et apprendre à construire des relations basées sur le respect mutuel. Le [chemin guidé général](/formations) s'adresse à toutes les situations.
+:::

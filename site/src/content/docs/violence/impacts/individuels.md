@@ -134,5 +134,5 @@ La reconstruction de la confiance en soi est souvent l'un des défis les plus pr
 ---
 
 :::tip[Tu mérites un accompagnement adapté]
-Les impacts de la violence ne disparaissent pas seuls. La [formation dédiée aux victimes](/formations/victimes) t'offre un cadre bienveillant pour comprendre ce que tu as traversé et commencer à te reconstruire à ton rythme.
-::: 
+Les impacts de la violence ne disparaissent pas seuls. Le [chemin guidé dédié aux victimes](/formations/victimes) t'offre un cadre bienveillant pour comprendre ce que tu as traversé et commencer à te reconstruire à ton rythme.
+:::

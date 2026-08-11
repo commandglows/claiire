@@ -131,6 +131,6 @@ Le conflit fait partie intégrante des relations humaines. Ce n'est pas sa prés
 
 ---
 
-Résoudre les conflits sans violence, ça s'apprend — et c'est une compétence qui transforme toutes tes relations. Pour aller plus loin, [la formation complète sur la résolution non-violente des conflits](/formations) t'accompagne avec des méthodes éprouvées et un cadre bienveillant.
+Résoudre les conflits sans violence, ça s'apprend — et c'est une compétence qui transforme toutes tes relations. Pour aller plus loin, [le chemin guidé complet sur la résolution non-violente des conflits](/formations) t'accompagne avec des méthodes éprouvées et un cadre bienveillant.
 
-**[Accéder à la formation →](/formations)**
+**[Accéder au chemin guidé →](/formations)**

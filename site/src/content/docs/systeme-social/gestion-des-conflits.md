@@ -86,7 +86,7 @@ Certains désaccords coexistent pendant des années dans des relations saines. C
 - [Poser ses limites](/systeme-social/poser-ses-limites) — exprimer tes besoins avant que la tension ne monte
 - [Des relations saines](/relations) — construire des bases relationnelles solides
 - [La confiance dans les conflits](/confiance) — retrouver la confiance après une tension
-- [La formation sur la violence et les conflits](/formations) — aller bien plus loin dans la pratique
+- [Le chemin guidé sur la violence et les conflits](/formations) — aller bien plus loin dans la pratique
 - [Le système social : tes connexions vitales](/systeme-social) — le contexte général
 - [Les relations toxiques](/relations/relations-toxiques) — quand le conflit devient destructeur
 - [La violence](/violence) — quand les limites du conflit sain sont dépassées

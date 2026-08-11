@@ -93,7 +93,7 @@ Si tu suspectes travailler avec un psychopathe en entreprise, ne le confronte pa
 - [Comprendre la psychopathie](/psy/developpement/trouble/psychopathie)
 - [Le harcèlement professionnel](/harcelement/harcelement-professionnel)
 - [Violence psychologique au travail](/violence/types/violence-psychologique)
-- [Comprendre et se protéger au travail : la formation](/formations)
+- [Comprendre et se protéger au travail : le chemin guidé](/formations)
 
 Si tu vis ou as vécu une relation professionnelle toxique avec un manager ou collègue manipulateur, [le harcèlement professionnel](/harcelement/harcelement-professionnel) est peut-être ce que tu as subi. Tu n'es pas seul·e — et des ressources existent pour t'en sortir.
 
@@ -255,4 +255,4 @@ Une grande banque d'investissement découvrit qu'un de ses traders stars présen
 
 ---
 
-**Tu es victime de harcèlement ou de manipulation au travail ?** La [formation pour les victimes de violence](/formations/victimes) te donne les clés pour comprendre ce que tu vis, poser des limites et reconstruire ta vie professionnelle.
+**Tu es victime de harcèlement ou de manipulation au travail ?** Le [chemin guidé pour les victimes de violence](/formations/victimes) te donne les clés pour comprendre ce que tu vis, poser des limites et reconstruire ta vie professionnelle.

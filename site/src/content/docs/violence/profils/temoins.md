@@ -127,5 +127,5 @@ Les témoins de violence jouent un rôle déterminant dans la prévention et l'a
 ---
 
 :::tip[Agir, ça s'apprend]
-Être témoin de violence et ne pas savoir quoi faire est une situation courante. La [formation pour comprendre et agir face à la violence](/formations) t'outille pour reconnaître les situations, surmonter l'effet spectateur et intervenir de façon adaptée — sans mettre ta sécurité en danger.
-::: 
+Être témoin de violence et ne pas savoir quoi faire est une situation courante. Le [chemin guidé pour comprendre et agir face à la violence](/formations) t'outille pour reconnaître les situations, surmonter l'effet spectateur et intervenir de façon adaptée — sans mettre ta sécurité en danger.
+:::

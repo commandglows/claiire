@@ -84,5 +84,5 @@ Le cycle de la violence est un modèle qui décrit les différentes phases par l
 ---
 
 :::tip[Sortir du cycle, pas seul·e]
-Comprendre le cycle de la violence est une chose. Le quitter en est une autre. La [formation dédiée aux victimes](/formations/victimes) t'accompagne avec des outils concrets pour sortir du cycle et construire un avenir différent. La [formation pour sortir de la violence](/formations) s'adresse aussi aux auteurs qui veulent changer.
-::: 
+Comprendre le cycle de la violence est une chose. Le quitter en est une autre. Le [chemin guidé dédié aux victimes](/formations/victimes) t'accompagne avec des outils concrets pour sortir du cycle et construire un avenir différent. Le [chemin guidé pour sortir de la violence](/formations) s'adresse aussi aux auteurs qui veulent changer.
+:::

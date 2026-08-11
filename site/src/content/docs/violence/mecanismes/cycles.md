@@ -136,7 +136,7 @@ Le travail de reconstruction est essentiel :
 [Se reconstruire en dehors du cycle](/confiance/reconstruire) demande de retrouver une relation de confiance avec soi-même — souvent la plus abîmée après une longue exposition à la violence cyclique.
 
 :::tip[Il n'est jamais trop tard]
-Il n'est jamais trop tard pour briser un cycle de violence. Chaque étape vers la sortie compte, même les plus petites. La [formation pour comprendre et sortir de la violence](/formations) t'accompagne à ton rythme dans ce chemin.
+Il n'est jamais trop tard pour briser un cycle de violence. Chaque étape vers la sortie compte, même les plus petites. Le [chemin guidé pour comprendre et sortir de la violence](/formations) t'accompagne à ton rythme dans ce chemin.
 :::
 
 ## Pour aller plus loin
@@ -144,4 +144,4 @@ Il n'est jamais trop tard pour briser un cycle de violence. Chaque étape vers l
 - [Mécanismes de la violence](/violence/mecanismes)
 - [Impact sur les victimes](/violence/impacts/individuels)
 - [Ressources d'aide](/violence/solutions/ressources-locales)
-- [Stratégies de protection](/violence/solutions/outils-protection) 
+- [Stratégies de protection](/violence/solutions/outils-protection)

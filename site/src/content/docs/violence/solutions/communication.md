@@ -119,6 +119,6 @@ La communication constructive est une approche qui vise à créer des échanges 
 
 ---
 
-Transformer ta communication face à la violence demande de la pratique et parfois un regard extérieur bienveillant. [La formation pour transformer ta communication et sortir de la violence](/formations) te donne les clés pour t'exprimer avec clarté et force.
+Transformer ta communication face à la violence demande de la pratique et parfois un regard extérieur bienveillant. [Le chemin guidé pour transformer ta communication et sortir de la violence](/formations) te donne les clés pour t'exprimer avec clarté et force.
 
-**[Accéder à la formation →](/formations)**
+**[Accéder au chemin guidé →](/formations)**

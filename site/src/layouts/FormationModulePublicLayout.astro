@@ -49,20 +49,20 @@ const {
   currentPath,
   title,
   description,
-  sectionLabel = 'Formation',
+  sectionLabel = 'Chemin guidé',
   robots = 'index, follow',
   eyebrow = 'Version publique',
   heroTitle = title,
   heroTagline = description,
   primaryAction,
   secondaryAction,
-  summaryTitle = 'Dans ce module, tu vas comprendre',
+  summaryTitle = 'Dans ce palier, tu vas comprendre',
   summaryItems = [],
-  audienceTitle = 'Ce module est pour toi si...',
+  audienceTitle = 'Ce palier est pour toi si...',
   audienceItems = [],
-  premiumTitle = 'Ce que tu débloques dans le module complet',
+  premiumTitle = 'Ce que comprend la suite guidée',
   premiumItems = [],
-  teaserTitle = 'Extrait du module complet',
+  teaserTitle = 'Poursuivre la lecture',
   teaserBody,
   faqs = [],
   relatedLinks = [],
@@ -87,10 +87,10 @@ const hero = {
   <section class="formation-shell formation-shell--public">
     <header class="formation-shell__intro">
       <p class="formation-shell__eyebrow">{eyebrow}</p>
-      <h2>Version publique du module</h2>
+      <h2>Lecture ouverte</h2>
       <p>
         Tu trouves ici le cadre, les repères essentiels et un premier niveau d'aide concret.
-        La version complète ajoute la partie guidée, les exercices, les protocoles et les ressources premium.
+        La suite de la lecture, les exercices, les protocoles et les ressources sont accessibles librement.
       </p>
     </header>
 
@@ -146,9 +146,9 @@ const hero = {
     {(teaserBody || primaryAction) && (
       <section class="formation-block formation-block--locked">
         <div class="formation-lockup">
-          <p class="formation-lockup__label">Contenu verrouillé</p>
           <h3>{teaserTitle}</h3>
           {teaserBody && <p>{teaserBody}</p>}
+          <p>La lecture complète est accessible librement.</p>
           <div class="formation-lockup__actions">
             <a class:list={['button', `button--${primaryAction.variant ?? 'primary'}`]} href={primaryAction.link}>
               {primaryAction.text}

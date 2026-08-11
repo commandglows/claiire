@@ -7,20 +7,20 @@ pageType: landing
 hero:
   title: 'Comprendre ton cycle de violence'
   tagline:
-    "Ce module t'aide à voir la mécanique qui revient : tension, déclencheurs, contrôle, explosion,
+    "Ce palier t'aide à voir la mécanique qui revient : tension, déclencheurs, contrôle, explosion,
     accalmie, répétition. Le but n'est pas de l'excuser. Le but est de pouvoir l'interrompre plus
     tôt."
   actions:
-    - text: 'Débloquer le module complet'
+    - text: 'Accéder à la suite de la lecture'
       link: '/membres/formations/auteurs/2-cycle/'
       variant: 'primary'
-    - text: 'Voir le parcours auteurs'
+    - text: 'Voir le chemin de responsabilisation'
       link: '/formations/auteurs/'
       variant: 'secondary'
 ---
 
 Si tu es arrivé(e) jusqu'ici, tu as déjà commencé à voir les mécanismes qui te protègent de la
-réalité. Ce deuxième module va plus loin : il te demande de regarder la mécanique précise qui fait
+réalité. Ce deuxième palier va plus loin : il te demande de regarder la mécanique précise qui fait
 monter la tension, puis la violence ou le contrôle.
 
 Un cycle n'est pas une fatalité. C'est une structure. Et une structure peut se cartographier.
@@ -51,9 +51,9 @@ Elle peut aussi passer par :
 - l'abus économique
 - les menaces
 
-Ce module sert justement à rapprocher ces formes générales de ton fonctionnement concret.
+Ce palier sert justement à rapprocher ces formes générales de ton fonctionnement concret.
 
-## Dans ce module, tu vas comprendre
+## Dans ce palier, tu vas comprendre
 
 - les grandes phases du cycle
 - comment repérer tes déclencheurs personnels
@@ -61,7 +61,7 @@ Ce module sert justement à rapprocher ces formes générales de ton fonctionnem
 - pourquoi le contrôle peut être diffus et pourtant central
 - où se trouvent les premiers points d'interruption possibles
 
-## Ce module est pour toi si...
+## Ce palier est pour toi si...
 
 - tu as l'impression que "ça part tout seul"
 - tu reconnais des disputes ou escalades qui se ressemblent
@@ -70,7 +70,7 @@ Ce module sert justement à rapprocher ces formes générales de ton fonctionnem
 
 ## Quelques repères de fond
 
-Ce module s'appuie notamment sur :
+Ce palier s'appuie notamment sur :
 
 - **Lenore Walker** pour le cycle de la violence
 - **Ellen Pence** et **Michael Paymar** pour la roue du pouvoir et du contrôle
@@ -79,24 +79,24 @@ Ce module s'appuie notamment sur :
 Le but est simple : rendre observable ce que tu vivais jusque-là comme une succession d'épisodes
 flous.
 
-## Ce que tu débloques dans le module complet
+## Ce que comprend la suite guidée
 
-- la version intégrale du module, plus détaillée
+- la lecture complète du palier, plus détaillée
 - un exercice complet de cartographie à partir d'un épisode réel
 - une checklist de déclencheurs et de formes de contrôle
 - un exercice guidé pour cartographier les premiers signes d'escalade hors situation de crise
-- un passage plus propre vers le travail émotionnel du module 3
+- un passage plus propre vers le travail émotionnel du palier 3
 
-## Extrait du module complet
+## Un aperçu de la suite
 
-Dans la version complète, on va plus loin sur :
+Dans la suite de la lecture, on va plus loin sur :
 
 - la lecture de ton propre cycle au lieu du cycle théorique
 - les sujets qui t'enflamment le plus vite
 - les signes corporels de la montée de tension
 - les points précis où tu pourrais nommer, ralentir ou sortir plus tôt
 
-[Débloquer le module complet](/membres/formations/auteurs/2-cycle/)
+[Accéder à la suite de la lecture](/membres/formations/auteurs/2-cycle/)
 
 Si la tension monte maintenant et que tu crains de passer à l'acte, ne poursuis pas l'exercice :
 éloigne-toi de la situation et consulte
@@ -108,7 +108,7 @@ Si la tension monte maintenant et que tu crains de passer à l'acte, ne poursuis
 
 Non. Ça veut dire qu'il y a une répétition, donc des points où travailler.
 
-### Est-ce que ce module parle seulement de violence physique ?
+### Est-ce que ce palier parle seulement de violence physique ?
 
 Non. Il parle aussi de contrôle, de menaces, d'humiliation, d'isolement et d'autres formes de
 violence.
@@ -117,20 +117,20 @@ violence.
 
 Parce que comprendre ce qui déclenche aide à intervenir plus tôt.
 
-### Que faire après ce module ?
+### Que faire après ce palier ?
 
 Continuer avec [Tes émotions, tes alliées](/formations/auteurs/3-emotions/).
 
 ## Aller plus loin
 
-- [Revenir au parcours auteurs](/formations/auteurs/)
+- [Revenir au chemin de responsabilisation](/formations/auteurs/)
 - [Voir les ressources auteurs](/violence/auteurs/)
 - [Comprendre les relations](/relations/)
-- [Continuer avec le module 3](/formations/auteurs/3-emotions/)
+- [Continuer avec le palier 3](/formations/auteurs/3-emotions/)
 
-## Tu veux le module complet ?
+## Tu veux poursuivre la lecture ?
 
-Débloque l'approfondissement pour accéder aux exercices de réflexion, au suivi et aux outils de
-progression hors crise. Les ressources d'interruption immédiate restent gratuites.
+La suite guidée est librement accessible et donne accès aux exercices de réflexion, au suivi et aux
+outils de cheminement hors crise. Les ressources d'interruption immédiate restent gratuites.
 
-[Débloquer le module complet](/membres/formations/auteurs/2-cycle/)
+[Accéder à la suite de la lecture](/membres/formations/auteurs/2-cycle/)

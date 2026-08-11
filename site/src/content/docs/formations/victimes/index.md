@@ -10,7 +10,7 @@ hero:
     "Tu n'as pas besoin de te définir comme victime pour commencer. Ce parcours part des faits, de
     ta sécurité et de ton rythme."
   actions:
-    - text: 'Commencer le module 1'
+    - text: 'Commencer le palier 1'
       link: '/formations/victimes/1-securite/'
       variant: 'primary'
     - text: 'Voir les ressources immédiates'
@@ -28,7 +28,7 @@ C'est le rôle de ce parcours.
 
 ## Ce parcours sert à quoi ?
 
-Le parcours victimes t'aide à avancer sur six axes :
+Le chemin des personnes exposées t'aide à avancer sur six axes :
 
 - retrouver de la sécurité
 - comprendre le trauma
@@ -39,42 +39,42 @@ Le parcours victimes t'aide à avancer sur six axes :
 
 Il ne te demande pas d'aller bien tout de suite. Il te donne des étapes.
 
-## Les 6 modules du parcours victimes
+## Les 6 paliers du chemin des personnes exposées
 
 ### 1. Ton plan de sécurité
 
-[Accéder au module 1](/formations/victimes/1-securite/)
+[Accéder au palier 1](/formations/victimes/1-securite/)
 
 Tu poses les bases les plus concrètes : sécurité immédiate, personnes relais, repères, priorités.
 
 ### 2. Guérir du trauma
 
-[Accéder au module 2](/formations/victimes/2-guerison/)
+[Accéder au palier 2](/formations/victimes/2-guerison/)
 
 Tu comprends pourquoi la guérison n'est pas linéaire, ce que le trauma fait au corps, et comment
 avancer sans te brusquer.
 
 ### 3. Poser tes limites
 
-[Accéder au module 3](/formations/victimes/3-limites/)
+[Accéder au palier 3](/formations/victimes/3-limites/)
 
 Tu retrouves peu à peu le droit de dire oui, non, stop, plus tard, autrement.
 
 ### 4. Reconstruction relationnelle
 
-[Accéder au module 4](/formations/victimes/4-relations/)
+[Accéder au palier 4](/formations/victimes/4-relations/)
 
 Tu travailles les repères relationnels, la confiance et la capacité à reconnaître ce qui est sain.
 
 ### 5. Ton autonomie
 
-[Accéder au module 5](/formations/victimes/5-autonomie/)
+[Accéder au palier 5](/formations/victimes/5-autonomie/)
 
 Tu renforces ta capacité à décider, agir, choisir et te remettre au centre de ta propre vie.
 
 ### 6. Ancrage durable
 
-[Accéder au module 6](/formations/victimes/6-ancrage/)
+[Accéder au palier 6](/formations/victimes/6-ancrage/)
 
 Tu apprends à consolider ce que tu reconstruis pour ne pas perdre pied dès qu'un moment difficile
 revient.
@@ -105,20 +105,20 @@ Pour renforcer ce parcours, va voir aussi :
 - [reconstruire ta confiance](/confiance/reconstruire/)
 - [notre dossier sur les relations](/relations/)
 
-## Ce que tu débloques en allant plus loin
+## Ce que comprend la suite guidée
 
 Les pages publiques te donnent le cadre et les bases.
 
-La logique premium de la formation ajoute la partie la plus guidée :
+La suite de la lecture, librement accessible, apporte un accompagnement plus détaillé :
 
 - exercices
 - checklists
 - protocoles
-- repères de progression
+- repères de cheminement
 - ressources pratiques plus profondes
 
-L'idée n'est pas de te frustrer. L'idée est de garder l'essentiel visible, puis de réserver la
-partie la plus accompagnante à la version complète.
+L'idée est de garder l'essentiel visible tout en proposant, dans la suite de la lecture, des repères
+plus détaillés à explorer librement.
 
 ## Quelques mots importants
 
@@ -145,14 +145,14 @@ Non. Ce parcours est justement conçu pour être suivi étape par étape.
 
 ## Comment utiliser ce parcours
 
-Commence par la page publique du module qui correspond à ton étape actuelle.
+Commence par la page publique du palier qui correspond à ton étape actuelle.
 
-Quand tu sens que tu as besoin d'un cadre plus guidé, tu peux débloquer la version complète pour
-accéder au contenu intégral, à la checklist, au protocole et aux ressources premium sans perdre le
-fil.
+Quand tu sens que tu as besoin d'un cadre plus guidé, tu peux accéder librement à la suite de la
+lecture pour consulter le contenu intégral, la checklist, le protocole et les ressources
+complémentaires sans perdre le fil.
 
 Le meilleur point d'entrée reste :
 
-- [module 1 : ton plan de sécurité](/formations/victimes/1-securite/)
+- [palier 1 : ton plan de sécurité](/formations/victimes/1-securite/)
 - [explorer la santé et le bien-être](/parcours/sante)
 - [voir les ressources victimes](/violence/victimes/)

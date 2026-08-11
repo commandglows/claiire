@@ -13,7 +13,7 @@ La précarité économique, le surpeuplement, l'insécurité du logement ou le c
 
 ## Environnements violents et apprentissage social
 
-Grandir dans un environnement où la violence est normalisée — que ce soit dans la famille, dans le quartier ou dans les médias consommés — programme des réponses automatiques. Les enfants exposés à la violence apprennent que c'est ainsi qu'on résout les conflits. Ce n'est pas une fatalité : comprendre les facteurs environnementaux pour en sortir est au cœur de la [formation pour sortir de la violence](/formations).
+Grandir dans un environnement où la violence est normalisée — que ce soit dans la famille, dans le quartier ou dans les médias consommés — programme des réponses automatiques. Les enfants exposés à la violence apprennent que c'est ainsi qu'on résout les conflits. Ce n'est pas une fatalité : comprendre les facteurs environnementaux pour en sortir est au cœur du [chemin guidé pour sortir de la violence](/formations).
 
 ## Réseaux de soutien et protection
 
@@ -22,5 +22,5 @@ Grandir dans un environnement où la violence est normalisée — que ce soit da
 ---
 
 :::tip[Agir sur son environnement]
-Si tu vis dans un contexte difficile et que tu cherches à en sortir, la [formation pour comprendre et sortir de la violence](/formations) t'aide à identifier les leviers sur lesquels tu peux agir, même quand l'environnement semble hors de contrôle.
+Si tu vis dans un contexte difficile et que tu cherches à en sortir, le [chemin guidé pour comprendre et sortir de la violence](/formations) t'aide à identifier les leviers sur lesquels tu peux agir, même quand l'environnement semble hors de contrôle.
 :::

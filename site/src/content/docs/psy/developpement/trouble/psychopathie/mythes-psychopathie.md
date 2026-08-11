@@ -133,11 +133,11 @@ Les psychopathes sont souvent plus actifs sur les réseaux sociaux que la moyenn
 
 ---
 
-**Tu as été victime de manipulation ?** La [formation pour sortir de la violence](/formations) t'aide à comprendre ce que tu as vécu et à reprendre le contrôle de ta vie.
+**Tu as été victime de manipulation ?** Le [chemin guidé pour sortir de la violence](/formations) t'aide à comprendre ce que tu as vécu et à reprendre le contrôle de ta vie.
 
 ## Sources et références
 - "The Psychopath Test" - Jon Ronson
 - "Without Conscience" - Robert D. Hare
 - "Snakes in Suits" - Paul Babiak & Robert Hare
 - Études cliniques en psychopathologie
-- Témoignages de survivants (noms changés pour protection) 
+- Témoignages de survivants (noms changés pour protection)

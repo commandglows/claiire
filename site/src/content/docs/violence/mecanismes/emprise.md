@@ -71,5 +71,5 @@ L'emprise psychologique est un processus par lequel une personne exerce un contr
 ---
 
 :::tip[Sortir de l'emprise, ça s'accompagne]
-L'emprise déforme la perception de la réalité — c'est pour ça qu'il est si difficile d'en sortir seul·e. La [formation pour sortir de l'emprise](/formations/victimes) t'offre un espace structuré pour retrouver tes repères, ton autonomie et ta confiance, à ton rythme.
-::: 
+L'emprise déforme la perception de la réalité — c'est pour ça qu'il est si difficile d'en sortir seul·e. Le [chemin guidé pour sortir de l'emprise](/formations/victimes) t'offre un espace structuré pour retrouver tes repères, ton autonomie et ta confiance, à ton rythme.
+:::

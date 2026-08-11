@@ -11,15 +11,28 @@ function hasClerkKeys() {
 const isMemberRoute = createRouteMatcher(['/membres(.*)']);
 const isAccountRoute = createRouteMatcher(['/compte(.*)']);
 const isMemberAccessApiRoute = createRouteMatcher(['/api/member-access(.*)']);
-const isClerkProtectedRoute = createRouteMatcher(['/membres(.*)', '/compte(.*)', '/api/member-access(.*)']);
+const isClerkProtectedRoute = createRouteMatcher([
+  '/membres(.*)',
+  '/compte(.*)',
+  '/api/member-access(.*)',
+]);
 const isMemberAwareRoute = createRouteMatcher([
   '/membres(.*)',
   '/compte(.*)',
   '/api/member-access(.*)',
 ]);
 
+function isMemberFormationPath(pathname: string) {
+  return pathname === '/membres/formations' || pathname.startsWith('/membres/formations/');
+}
+
 const cookieOnlyMiddleware = defineMiddleware(async (context, next) => {
   const pathname = context.url.pathname;
+
+  if (isMemberFormationPath(pathname)) {
+    return next();
+  }
+
   const memberSession = getMemberSession(context.cookies);
   const shouldResolveMemberAccess = isMemberAwareRoute(context.request);
 
@@ -44,6 +57,10 @@ const cookieOnlyMiddleware = defineMiddleware(async (context, next) => {
 });
 
 const clerkProtectedMiddleware = clerkMiddleware(async (auth, context, next) => {
+  if (isMemberFormationPath(context.url.pathname)) {
+    return next();
+  }
+
   const authState = auth();
   const memberSession = getMemberSession(context.cookies, {
     userId: authState.userId ?? null,

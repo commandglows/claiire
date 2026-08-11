@@ -136,9 +136,9 @@ description: "Guide complet des ressources et services d'aide disponibles pour l
 
 ---
 
-Si tu traverses une situation de violence et que tu as besoin d'un accompagnement structuré au-delà de ces ressources ponctuelles, deux formations sont disponibles pour t'aider concrètement :
+Si tu traverses une situation de violence et que tu as besoin d'un accompagnement structuré au-delà de ces ressources ponctuelles, deux chemins guidés sont disponibles pour t'aider concrètement :
 
-- [La formation accompagnée pour les victimes](/formations/victimes) — un parcours complet pour comprendre, te protéger et te reconstruire
-- [Notre formation complète pour sortir de la violence](/formations) — pour toutes les personnes concernées par la violence, quelle que soit leur situation
+- [Le chemin guidé pour les personnes exposées](/formations/victimes) — pour comprendre, te protéger et te reconstruire
+- [Le chemin guidé pour sortir de la violence](/formations) — pour toutes les personnes concernées par la violence, quelle que soit leur situation
 
-**[Voir toutes nos formations →](/formations)**
+**[Voir tous nos chemins guidés →](/formations)**

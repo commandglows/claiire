@@ -95,5 +95,5 @@ La tradition tibétaine reconnaît la capacité innée du cerveau à se guérir 
 ---
 
 :::tip[Tu n'as pas à porter ça seul·e]
-Si tu as vécu un trauma dans l'enfance ou dans une relation, et que tu veux comprendre son impact pour avancer, la [formation pour les victimes de trauma et de violence](/formations/victimes) t'accompagne avec douceur. Elle est conçue pour aller à ton rythme, sans te forcer à revivre ce que tu n'es pas prêt·e à affronter.
-::: 
+Si tu as vécu un trauma dans l'enfance ou dans une relation, et que tu veux comprendre son impact pour avancer, le [chemin guidé pour les victimes de trauma et de violence](/formations/victimes) t'accompagne avec douceur. Il est conçu pour respecter ton rythme, sans te forcer à revivre ce que tu n'es pas prêt·e à affronter.
+:::

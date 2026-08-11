@@ -95,5 +95,5 @@ Le trauma psychologique est une blessure émotionnelle profonde causée par un �
 ---
 
 :::tip[Guérir du trauma, c'est possible]
-Le trauma n'est pas une condamnation. Avec un accompagnement adapté, il est possible de traverser, intégrer et aller au-delà. La [formation pour les victimes de violence](/formations/victimes) propose un cadre sécurisé et bienveillant pour ce travail. Et si tu veux comprendre pour aider quelqu'un, la [formation générale pour sortir de la violence](/formations) te donnera les clés nécessaires.
-::: 
+Le trauma n'est pas une condamnation. Avec un accompagnement adapté, il est possible de traverser, intégrer et aller au-delà. Le [chemin guidé pour les victimes de violence](/formations/victimes) propose un cadre sécurisé et bienveillant pour ce travail. Et si tu veux comprendre pour aider quelqu'un, le [chemin guidé général pour sortir de la violence](/formations) te donnera les clés nécessaires.
+:::

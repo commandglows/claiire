@@ -7,13 +7,13 @@ pageType: landing
 hero:
   title: 'Construire des relations sans contrôle'
   tagline:
-    "Ce module t'aide à regarder vers l'avant : à quoi ressemble une relation où tu n'as plus besoin
+    "Ce palier t'aide à regarder vers l'avant : à quoi ressemble une relation où tu n'as plus besoin
     de dominer pour te sentir exister, et comment la construire dans des gestes très concrets."
   actions:
-    - text: 'Débloquer le module complet'
+    - text: 'Accéder à la suite de la lecture'
       link: '/membres/formations/auteurs/5-relations/'
       variant: 'primary'
-    - text: 'Voir le parcours auteurs'
+    - text: 'Voir le chemin de responsabilisation'
       link: '/formations/auteurs/'
       variant: 'secondary'
 ---
@@ -22,7 +22,7 @@ Après avoir regardé la responsabilité, le cycle, les émotions et l'impact su
 répondre à une question simple et difficile : à quoi ressemble une relation où tu n'as plus besoin
 de contrôler ?
 
-Ce module t'aide à passer d'une logique de domination à une logique de lien, d'égalité et de
+Ce palier t'aide à passer d'une logique de domination à une logique de lien, d'égalité et de
 responsabilité partagée.
 
 ## La roue de l'égalité
@@ -54,7 +54,7 @@ La communication non violente ne sert pas à parler joliment. Elle sert à :
 C'est précisément cette différence entre demande et exigence qui change beaucoup de choses dans une
 dynamique relationnelle.
 
-## Dans ce module, tu vas comprendre
+## Dans ce palier, tu vas comprendre
 
 - ce qui distingue contrôle et égalité
 - pourquoi certaines disputes sont vécues comme des rapports de force
@@ -62,31 +62,31 @@ dynamique relationnelle.
 - pourquoi les petits moments de connexion comptent autant
 - comment la vulnérabilité peut remplacer une partie du contrôle
 
-## Ce module est pour toi si...
+## Ce palier est pour toi si...
 
 - tu gères encore les désaccords comme des rapports de force
 - tu confonds parfois demande et exigence
 - tu veux construire une autre qualité de lien, pas seulement "faire moins de mal"
 - tu veux des repères concrets pour les relations à venir
 
-## Ce que tu débloques dans le module complet
+## Ce que comprend la suite guidée
 
-- la version intégrale du module, plus détaillée
+- la lecture complète du palier, plus détaillée
 - une lecture plus complète de la roue de l'égalité
 - un exercice CNV sur un conflit de niveau 1
 - des repères Gottman sur les relations qui tiennent
 - une transition vers le maintien du changement dans la durée
 
-## Extrait du module complet
+## Un aperçu de la suite
 
-Dans la version complète, on va plus loin sur :
+Dans la suite de la lecture, on va plus loin sur :
 
 - les huit dimensions de la roue de l'égalité
 - la structure Observation-Sentiment-Besoin-Demande
 - la différence entre réparation, négociation et contrôle
 - les petits gestes de connexion qui changent la texture réelle d'une relation
 
-[Débloquer le module complet](/membres/formations/auteurs/5-relations/)
+[Accéder à la suite de la lecture](/membres/formations/auteurs/5-relations/)
 
 ## FAQ
 
@@ -102,20 +102,20 @@ Parce qu'elle force à sortir de l'attaque et à assumer ce qu'on ressent et ce 
 
 Elle peut l'être dans certains contextes, mais sans elle il reste souvent surtout le contrôle.
 
-### Que faire après ce module ?
+### Que faire après ce palier ?
 
 Continuer avec [Sur la durée](/formations/auteurs/6-prevention/).
 
 ## Aller plus loin
 
-- [Revenir au parcours auteurs](/formations/auteurs/)
+- [Revenir au chemin de responsabilisation](/formations/auteurs/)
 - [Voir les ressources auteurs](/violence/auteurs/)
 - [Comprendre les relations](/relations/)
-- [Continuer avec le module 6](/formations/auteurs/6-prevention/)
+- [Continuer avec le palier 6](/formations/auteurs/6-prevention/)
 
-## Tu veux le module complet ?
+## Tu veux poursuivre la lecture ?
 
-Débloque l’approfondissement pour accéder aux exercices de réflexion, au suivi et aux outils premium
-hors crise. Les ressources d’interruption immédiate restent gratuites.
+La suite guidée est librement accessible et donne accès aux exercices de réflexion, au suivi et aux
+outils de cheminement hors crise. Les ressources d’interruption immédiate restent gratuites.
 
-[Débloquer le module complet](/membres/formations/auteurs/5-relations/)
+[Accéder à la suite de la lecture](/membres/formations/auteurs/5-relations/)

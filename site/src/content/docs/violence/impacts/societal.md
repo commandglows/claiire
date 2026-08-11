@@ -15,10 +15,10 @@ Les traumatismes non traités se transmettent de génération en génération. L
 
 ## Changer les dynamiques
 
-Chaque personne qui sort de la violence, qui choisit des modes de relation plus sains, qui comprend et nomme ce qui se passe, contribue au changement collectif. La [formation pour changer les dynamiques de violence](/formations) s'inscrit dans cette logique : un changement individuel qui rayonne vers l'extérieur.
+Chaque personne qui sort de la violence, qui choisit des modes de relation plus sains, qui comprend et nomme ce qui se passe, contribue au changement collectif. Le [chemin guidé pour changer les dynamiques de violence](/formations) s'inscrit dans cette logique : un changement individuel qui rayonne vers l'extérieur.
 
 ---
 
 :::tip[Tu peux être un agent de changement]
-En comprenant la violence et en travaillant sur tes propres comportements et réactions, tu deviens une force de changement dans ton entourage. La [formation pour sortir de la violence](/formations) t'accompagne dans cette transformation.
+En comprenant la violence et en travaillant sur tes propres comportements et réactions, tu deviens une force de changement dans ton entourage. Le [chemin guidé pour sortir de la violence](/formations) t'accompagne dans cette transformation.
 :::

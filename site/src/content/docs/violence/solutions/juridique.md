@@ -142,6 +142,6 @@ La protection juridique est un droit fondamental pour les victimes de violence. 
 
 ---
 
-Connaître tes droits, c'est essentiel — mais après les démarches juridiques, la reconstruction personnelle est tout aussi importante. [La formation pour comprendre tes droits et te reconstruire après la violence](/formations/victimes) accompagne les victimes de manière globale : juridique, psychologique et pratique.
+Connaître tes droits, c'est essentiel — mais après les démarches juridiques, la reconstruction personnelle est tout aussi importante. [Le chemin guidé pour comprendre tes droits et te reconstruire après la violence](/formations/victimes) accompagne les victimes de manière globale : juridique, psychologique et pratique.
 
-**[Découvrir la formation pour les victimes →](/formations/victimes)**
+**[Découvrir le chemin guidé pour les victimes →](/formations/victimes)**

@@ -130,5 +130,5 @@ La violence ne touche pas que les individus isolément. Elle a des répercussion
 ---
 
 :::tip[Comprendre pour agir collectivement]
-La violence collective se transforme par la prise de conscience individuelle et collective. La [formation pour comprendre et agir face à la violence](/formations) donne des outils pour comprendre ces dynamiques et contribuer à les changer, à ton niveau.
-::: 
+La violence collective se transforme par la prise de conscience individuelle et collective. Le [chemin guidé pour comprendre et agir face à la violence](/formations) donne des outils pour comprendre ces dynamiques et contribuer à les changer, à ton niveau.
+:::

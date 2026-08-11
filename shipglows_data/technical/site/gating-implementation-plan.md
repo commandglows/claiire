@@ -1,8 +1,29 @@
-# Plan d'implementation — gating premium web + mobile
+# Référence historique — plan de gating premium web + mobile
 
-Date de reference : `2026-03-17`
+Date de référence historique : `2026-03-17`
+Statut : **déprécié pour l'accès en lecture** — remplacé par le contrat d'accès ci-dessous le `2026-08-11`.
 
-## Objectif
+## Contrat d'accès actuel
+
+Toutes les ressources et formations Claiire actuellement proposées sont gratuites à lire intégralement. Aucun compte, authentification, entitlement, achat ou abonnement n'est requis pour lire les pages complètes de formation.
+
+- `/formations/**` conserve les introductions publiques des formations ; ce contrat ne prétend pas que toutes ces routes servent le contenu complet.
+- `/membres/formations/**` conserve les pages complètes de formation et celles-ci doivent rester librement accessibles, sans contrôle d'authentification ou d'entitlement pour la lecture.
+- Aucun engagement de redirection, y compris HTTP 301, n'est déduit entre ces deux familles de routes.
+- Les comptes, l'authentification et les historiques d'achats, d'abonnements et d'entitlements peuvent être maintenus pour leurs fonctions propres ; ils ne sont pas une source d'autorité pour autoriser la lecture.
+- Les parcours sécurité et urgence restent ouverts, et la séparation entre les contenus destinés aux victimes et aux auteurs reste une contrainte de sécurité.
+
+La remédiation du comportement RevenueCat fail-open reste un chantier de sécurité distinct : la gratuité de lecture ne le clôt pas et ne le requalifie pas.
+
+## Architecture fournisseurs historique à préserver
+
+L'architecture décrite ci-dessous documente les intégrations historiques, et non un mécanisme actif de gating de lecture : Apple et Google pour la facturation mobile, RevenueCat pour son orchestration mobile, Polar pour la facturation web, et le backend Claiire pour l'identité, les données et les rapprochements éventuels. Les identifiants, webhooks, données de compte et historiques de facturation peuvent être conservés. Ils ne doivent pas décider si une personne peut lire une formation complète.
+
+---
+
+## Plan historique déprécié
+
+## Objectif historique
 
 Mettre en place un vrai acces premium qui fonctionne dans les trois contextes :
 
@@ -26,7 +47,7 @@ Avant toute implementation, il faut figer :
 3. l'URL de retour apres achat
 4. la logique de liaison compte web <-> compte app
 
-## Decision de base
+## Décision de base historique
 
 ### Identite
 
@@ -229,7 +250,7 @@ La page compte devra afficher :
 6. relier site et app au meme `user_id`
 7. seulement apres : onboarding, upsells, grace period, restoration flows
 
-## Ce qu'il ne faut pas faire
+## Ce qu'il ne faut pas faire dans l'architecture historique
 
 - cacher du premium seulement en front
 - compter uniquement sur JavaScript pour proteger `/membres/`
@@ -237,7 +258,7 @@ La page compte devra afficher :
 - traiter Polar comme s'il remplacait Apple / Google dans les apps
 - traiter RevenueCat comme s'il supprimait le besoin d'un backend Claiire
 
-## Definition de termine
+## Définition historique de terminé
 
 Le chantier est considere termine quand :
 

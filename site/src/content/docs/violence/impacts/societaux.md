@@ -128,5 +128,5 @@ La violence a des répercussions qui dépassent largement les individus et les g
 ---
 
 :::tip[Contribuer à un monde sans violence]
-Le changement sociétal commence par des choix individuels. La [formation pour sortir de la violence](/formations) t'aide à comprendre les dynamiques systémiques et à agir à ton niveau pour contribuer à une société plus saine.
-::: 
+Le changement sociétal commence par des choix individuels. Le [chemin guidé pour sortir de la violence](/formations) t'aide à comprendre les dynamiques systémiques et à agir à ton niveau pour contribuer à une société plus saine.
+:::

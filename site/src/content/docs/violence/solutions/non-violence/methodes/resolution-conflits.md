@@ -505,6 +505,6 @@ communication)
 
 ---
 
-Résoudre les conflits par la non-violence, c'est une compétence — et comme toute compétence, elle se développe avec la pratique et le bon soutien. [La formation pour incarner la non-violence dans ta vie](/formations) t'accompagne avec des outils concrets et des mises en situation adaptées à ton contexte.
+Résoudre les conflits par la non-violence, c'est une compétence — et comme toute compétence, elle se développe avec la pratique et le bon soutien. [Le chemin guidé pour incarner la non-violence dans ta vie](/formations) t'accompagne avec des outils concrets et des mises en situation adaptées à ton contexte.
 
-**[Accéder à la formation →](/formations)**
+**[Accéder au chemin guidé →](/formations)**

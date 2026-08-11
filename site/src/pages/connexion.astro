@@ -13,24 +13,24 @@ if (authState?.userId) {
 
 <StaticPageLayout
   currentPath="/connexion/"
-  title="Connexion membre"
-  description="La connexion membre Claiire vit ici. Cette route sert de point d'entree a l'auth web et mobile."
-  sectionLabel="Espace membre"
+  title="Connexion Claiire"
+  description="La connexion Claiire sert de point d'entree a ta session. Les ressources sont ouvertes et gratuites."
+  sectionLabel="Compte"
   articleClass="prose--account"
   hero={{
-    title: 'Connexion membre',
+    title: 'Connexion Claiire',
     tagline:
       isClerkEnabled
-        ? "Connecte-toi ici pour retrouver ton compte Claiire, ton statut premium et tes acces membres."
-        : "Clerk n'est pas encore configure dans cet environnement. Cette page est prete pour le futur flux de connexion web et app.",
-    actions: [{ text: 'Revenir aux formations', link: '/formations/', variant: 'primary' }],
+        ? 'Connecte-toi ici pour retrouver ta session Claiire. Toutes les ressources restent ouvertes et gratuites.'
+        : "Clerk n'est pas encore configure dans cet environnement. Les ressources Claiire restent ouvertes et gratuites.",
+    actions: [{ text: 'Revenir aux chemins guidés', link: '/formations/', variant: 'primary' }],
   }}
 >
   {isClerkEnabled ? (
     <>
       <p>
-        Une fois connecte(e), tu pourras retrouver ton compte Claiire, relier ton acces web et mobile, puis
-        recuperer tes contenus premium.
+        Une fois connecte(e), tu pourras retrouver ta session Claiire et tes réglages. Les ressources sont
+        accessibles librement.
       </p>
 
       <SignIn fallbackRedirectUrl={redirectUrl} signUpUrl="/connexion/" />
@@ -40,8 +40,8 @@ if (authState?.userId) {
       <h2>Ce qui est pret</h2>
       <ul>
         <li>route de connexion</li>
-        <li>protection serveur de <code>/membres/</code></li>
-        <li>point d'entree vers le futur compte membre</li>
+        <li>accès à ton compte Claiire</li>
+        <li>ressources ouvertes et gratuites</li>
       </ul>
 
       <h2>Ce qu'il manque encore</h2>

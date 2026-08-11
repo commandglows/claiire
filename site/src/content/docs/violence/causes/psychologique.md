@@ -19,10 +19,10 @@ L'incapacité à réguler ses émotions est souvent au cœur des passages à l'a
 
 Traumatismes d'enfance, attachement insécure, exposition à la violence dans le milieu familial : les facteurs psychologiques de la violence s'enracinent presque toujours dans une histoire personnelle douloureuse. Ce n'est pas une excuse, mais c'est le point de départ de tout changement réel.
 
-La [formation pour comprendre les mécanismes psychologiques de la violence](/formations) t'aide à explorer cette histoire avec bienveillance et à identifier les leviers concrets du changement.
+Le [chemin guidé pour comprendre les mécanismes psychologiques de la violence](/formations) t'aide à explorer cette histoire avec bienveillance et à identifier les leviers concrets du changement.
 
 ---
 
 :::tip[Le changement est possible]
-Comprendre les mécanismes psychologiques de tes comportements est le premier pas. La [formation pour sortir de la violence](/formations) t'accompagne dans ce travail avec des outils concrets et un regard bienveillant.
+Comprendre les mécanismes psychologiques de tes comportements est le premier pas. Le [chemin guidé pour sortir de la violence](/formations) t'accompagne dans ce travail avec des outils concrets et un regard bienveillant.
 :::

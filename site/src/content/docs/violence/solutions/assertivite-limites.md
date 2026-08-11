@@ -92,6 +92,6 @@ La tradition tibétaine, comme expliqué dans "Le Livre Tibétain de la Vie et d
 
 ---
 
-Apprendre à poser ses limites face à la violence demande souvent plus qu'un guide : il faut un espace pour pratiquer et être accompagné. [La formation pour développer ton assertivité et sortir de la violence](/formations) te donne les outils pour t'affirmer en toute situation.
+Apprendre à poser ses limites face à la violence demande souvent plus qu'un guide : il faut un espace pour pratiquer et être accompagné. [Le chemin guidé pour développer ton assertivité et sortir de la violence](/formations) te donne les outils pour t'affirmer en toute situation.
 
-**[Accéder à la formation →](/formations)**
+**[Accéder au chemin guidé →](/formations)**

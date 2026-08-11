@@ -61,6 +61,6 @@ La tradition tibétaine nous enseigne que notre pouvoir réside dans notre capac
 
 ---
 
-Reprendre son pouvoir après la violence, c'est un processus — pas un déclic. Si tu veux être accompagnée dans cette reconquête de toi-même, [la formation pour reprendre ton pouvoir après la violence](/formations/victimes) t'offre un espace sécurisé pour avancer.
+Reprendre son pouvoir après la violence, c'est un processus — pas un déclic. Si tu veux être accompagnée dans cette reconquête de toi-même, [le chemin guidé pour reprendre ton pouvoir après la violence](/formations/victimes) t'offre un espace sécurisé pour avancer.
 
-**[Accéder à la formation pour les victimes →](/formations/victimes)**
+**[Accéder au chemin guidé pour les victimes →](/formations/victimes)**

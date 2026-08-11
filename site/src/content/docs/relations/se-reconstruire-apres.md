@@ -65,7 +65,7 @@ Consulte un professionnel si :
 
 Ce n'est pas un échec. C'est reconnaître que certaines blessures ont besoin d'un accompagnement.
 
-Si ta rupture est liée à une relation toxique ou violente, [la formation accompagnée pour sortir de la violence](/formations/victimes) peut t'apporter un cadre plus structuré pour comprendre ce que tu as vécu et repartir sur des bases solides. La reconstruction, c'est aussi [reconstruire ta confiance pas à pas](/confiance/reconstruire) — la confiance en toi, en ta valeur, en ta capacité à créer quelque chose de sain. Et de l'autre côté de tout ça, il y a [un bonheur durable après la tempête](/bonheur/bonheur-durable) — pas le bonheur d'avant, quelque chose de nouveau et de plus solide.
+Si ta rupture est liée à une relation toxique ou violente, [le chemin guidé accompagné pour sortir de la violence](/formations/victimes) peut t'apporter un cadre plus structuré pour comprendre ce que tu as vécu et repartir sur des bases solides. La reconstruction, c'est aussi [reconstruire ta confiance pas à pas](/confiance/reconstruire) — la confiance en toi, en ta valeur, en ta capacité à créer quelque chose de sain. Et de l'autre côté de tout ça, il y a [un bonheur durable après la tempête](/bonheur/bonheur-durable) — pas le bonheur d'avant, quelque chose de nouveau et de plus solide.
 
 → **Reprendre le fil : [le parcours bonheur](/parcours/bonheur)**
 

@@ -69,6 +69,6 @@ Développée par l'association Marion La Main Tendue, Kolibri représente une av
 
 Le cyberharcèlement laisse des traces profondes — numériques, mais aussi psychologiques. Si tu en es victime, tu n'as pas à traverser ça seule. Pour comprendre [le harcèlement sous toutes ses formes](/harcelement) et trouver des outils concrets, explore nos ressources dédiées.
 
-Pour un accompagnement structuré, [la formation pour les victimes de cyberharcèlement et de violence](/formations/victimes) t'offre un espace sécurisé pour te reconstruire et reprendre le contrôle.
+Pour un accompagnement structuré, [le chemin guidé pour les victimes de cyberharcèlement et de violence](/formations/victimes) t'offre un espace sécurisé pour te reconstruire et reprendre le contrôle.
 
-**[Accéder à la formation pour les victimes →](/formations/victimes)** 
+**[Accéder au chemin guidé pour les victimes →](/formations/victimes)**

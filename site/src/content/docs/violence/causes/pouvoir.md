@@ -15,7 +15,7 @@ Le pouvoir peut être exercé de multiples façons : contrôle économique, mani
 
 L'emprise est la forme la plus subtile de domination : elle rend la victime complice de sa propre soumission en agissant sur ses croyances, son estime de soi et sa perception de la réalité. Comprendre ces mécanismes est indispensable pour s'en libérer.
 
-Si tu reconnais ces dynamiques dans ta propre façon de te comporter, la [formation pour les auteurs de violence](/formations/auteurs) t'offre un espace sans jugement pour comprendre l'origine de ces comportements et construire des relations basées sur le respect mutuel.
+Si tu reconnais ces dynamiques dans ta propre façon de te comporter, le [chemin guidé pour les auteurs de violence](/formations/auteurs) t'offre un espace sans jugement pour comprendre l'origine de ces comportements et construire des relations basées sur le respect mutuel.
 
 ## Résistance et émancipation
 
@@ -24,6 +24,5 @@ Sortir des dynamiques de domination — que tu sois celui qui domine ou celui qu
 ---
 
 :::tip[Vers des relations plus équilibrées]
-La [formation pour sortir de la violence](/formations) s'adresse aussi bien aux victimes qu'aux auteurs. Elle pose un cadre bienveillant pour comprendre les dynamiques de pouvoir et apprendre à construire des relations saines.
+Le [chemin guidé pour sortir de la violence](/formations) s'adresse aussi bien aux personnes exposées qu'aux auteurs. Il propose un cadre clair pour comprendre les dynamiques de pouvoir et apprendre à construire des relations sans violence.
 :::
- 

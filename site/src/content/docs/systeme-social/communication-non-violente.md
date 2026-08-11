@@ -77,7 +77,7 @@ Ce n'est pas naturel. Ça demande de l'entraînement. Mais c'est transformateur.
 - [Poser ses limites](/systeme-social/poser-ses-limites) — dire non sans culpabiliser
 - [Des relations saines et respectueuses](/relations) — comprendre ta façon de te relier aux autres
 - [Affirmer ta confiance](/confiance/confiance-en-soi) — la base qui permet d'exprimer ses besoins avec clarté
-- [La formation sur la communication et la violence](/formations) — aller plus loin dans la pratique
+- [Le chemin guidé sur la communication et la violence](/formations) — aller plus loin dans la pratique
 - [La violence](/violence) — quand la communication dérape complètement
 
 ---

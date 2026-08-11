@@ -76,7 +76,7 @@ const hero = {
     <header class="member-shell__intro">
       <div>
         <p class="member-shell__eyebrow">{moduleLabel}</p>
-        <h2>Version intégrale du module</h2>
+        <h2>Lecture complète du palier</h2>
       </div>
       {progressLabel && <p class="member-shell__progress">{progressLabel}</p>}
     </header>
@@ -96,7 +96,7 @@ const hero = {
     )}
 
     <section class="member-block member-block--content">
-      <h3>Contenu intégral</h3>
+      <h3>Lecture complète</h3>
       <div class="member-richtext">
         <slot />
       </div>
@@ -129,7 +129,7 @@ const hero = {
 
     {resourceItems.length > 0 && (
       <section class="member-block member-block--resources">
-        <h3>Ressources premium</h3>
+        <h3>Outils disponibles en accès libre</h3>
         <div class="member-resources">
           {resourceItems.map((item) => (
             item.href ? (

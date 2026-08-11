@@ -126,6 +126,6 @@ La violence s'installe rarement brutalement. Elle est souvent précédée de sig
 
 ---
 
-Reconnaître les signes, c'est la première étape — la deuxième, c'est savoir quoi faire. Si tu identifies une situation de violence dans ta vie ou autour de toi, [la formation pour reconnaître les signes et demander de l'aide](/formations/victimes) t'accompagne avec des outils concrets et un soutien bienveillant.
+Reconnaître les signes, c'est la première étape — la deuxième, c'est savoir quoi faire. Si tu identifies une situation de violence dans ta vie ou autour de toi, [le chemin guidé pour reconnaître les signes et demander de l'aide](/formations/victimes) t'accompagne avec des outils concrets et un soutien bienveillant.
 
-**[Accéder à la formation pour les victimes →](/formations/victimes)**
+**[Accéder au chemin guidé pour les victimes →](/formations/victimes)**

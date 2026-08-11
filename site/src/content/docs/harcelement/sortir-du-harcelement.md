@@ -86,9 +86,9 @@ Qu'est-ce qui te donnait de la force avant ? Des personnes, des activités, des 
 
 Un thérapeute spécialisé en trauma ou en relations peut accélérer significativement ce processus. Ce n'est pas parce que tu es cassé·e — c'est parce que tu mérites un espace pour déposer ce que tu as vécu et recommencer à te construire sur des bases solides.
 
-[La formation complète pour sortir de la violence](/formations) est une autre ressource concrète : elle t'accompagne pas à pas pour comprendre les mécanismes, nommer ce que tu as vécu, et construire [le parcours accompagné pour les victimes](/formations/victimes) qui souhaitent sortir durablement de ces dynamiques.
+[Le chemin guidé pour sortir de la violence](/formations) est une autre ressource concrète : il t'accompagne pas à pas pour comprendre les mécanismes et nommer ce que tu as vécu. Le [chemin guidé pour les personnes exposées](/formations/victimes) propose une lecture adaptée à celles et ceux qui souhaitent sortir de ces dynamiques.
 
-→ **Commencer maintenant : [le parcours accompagné pour les victimes](/formations/victimes)**
+→ **Commencer maintenant : [le chemin guidé pour les personnes exposées](/formations/victimes)**
 
 ## En Situation d'Urgence
 

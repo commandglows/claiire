@@ -133,5 +133,5 @@ La re-régulation passe par des approches qui s'adressent directement au corps e
 ---
 
 :::tip[Passer de la compréhension à l'action]
-Comprendre ce qui se passe dans ton système nerveux est une première étape puissante. Pour aller plus loin et retrouver un sentiment de sécurité durable, la [formation pour comprendre et agir face à la violence](/formations) t'accompagne avec des outils concrets. Et si le stress est au cœur de ce que tu traverses, le [parcours stress](/parcours/stress) peut être un bon point de départ.
+Comprendre ce qui se passe dans ton système nerveux est une première étape puissante. Pour aller plus loin et retrouver un sentiment de sécurité durable, le [chemin guidé pour comprendre et agir face à la violence](/formations) t'accompagne avec des outils concrets. Et si le stress est au cœur de ce que tu traverses, le [parcours stress](/parcours/stress) peut être un bon point de départ.
 :::

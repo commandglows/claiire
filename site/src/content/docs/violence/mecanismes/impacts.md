@@ -107,5 +107,5 @@ La violence a des répercussions profondes qui touchent tous les aspects de la v
 ---
 
 :::tip[Se reconstruire après la violence]
-Les impacts de la violence ne disparaissent pas seuls, mais ils ne sont pas permanents non plus. La [formation pour se reconstruire après la violence](/formations/victimes) t'accompagne avec des outils concrets et un regard bienveillant pour traverser ce chemin. Si tu es prêt·e à explorer l'ensemble de la démarche, la [formation générale](/formations) est un bon point de départ.
-::: 
+Les impacts de la violence ne disparaissent pas seuls, mais ils ne sont pas permanents non plus. Le [chemin guidé pour se reconstruire après la violence](/formations/victimes) t'accompagne avec des outils concrets et un regard bienveillant pour traverser ce chemin. Si tu es prêt·e à explorer l'ensemble de la démarche, le [chemin guidé général](/formations) est un bon point de départ.
+:::

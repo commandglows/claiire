@@ -131,6 +131,6 @@ Les mécanismes de survie sont des réponses normales à des situations anormale
 
 ---
 
-Passer de la survie à la vie, c'est possible — et tu n'as pas à le faire seule. [La formation pour passer de la survie à la vie après la violence](/formations/victimes) t'accompagne dans ce chemin, avec des outils concrets et un espace bienveillant pour avancer à ton rythme.
+Passer de la survie à la vie, c'est possible — et tu n'as pas à le faire seule. [Le chemin guidé pour passer de la survie à la vie après la violence](/formations/victimes) t'accompagne dans ce chemin, avec des outils concrets et un espace bienveillant pour avancer à ton rythme.
 
-**[Découvrir la formation pour les victimes →](/formations/victimes)**
+**[Découvrir le chemin guidé pour les victimes →](/formations/victimes)**

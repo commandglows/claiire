@@ -19,10 +19,10 @@ Le trauma violent affecte profondément la capacité à faire confiance, à êtr
 
 ## Reconstruction post-violence
 
-La reconstruction est possible. Elle n'efface pas l'histoire — elle intègre l'expérience sans qu'elle dicte l'avenir. La [formation pour se reconstruire après la violence](/formations/victimes) t'accompagne dans ce processus avec des outils validés et un regard bienveillant.
+La reconstruction est possible. Elle n'efface pas l'histoire — elle intègre l'expérience sans qu'elle dicte l'avenir. Le [chemin guidé pour se reconstruire après la violence](/formations/victimes) t'accompagne dans ce processus avec des outils validés et un regard bienveillant.
 
 ---
 
 :::tip[Vers la reconstruction]
-Tu n'as pas à traverser ça seul·e. La [formation pour sortir de la violence](/formations) est un espace structuré et bienveillant pour comprendre ce que tu as vécu et construire une suite différente.
-::: 
+Tu n'as pas à traverser ça seul·e. Le [chemin guidé pour sortir de la violence](/formations) est un espace structuré et bienveillant pour comprendre ce que tu as vécu et construire une suite différente.
+:::

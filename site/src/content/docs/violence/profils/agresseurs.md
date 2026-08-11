@@ -119,5 +119,5 @@ Comprendre les profils d'agresseurs n'est pas une façon de les excuser, mais un
 ---
 
 :::tip[Le changement est possible — et ça demande de l'aide]
-Reconnaître des comportements violents dans sa propre vie est un acte de courage rare. Si tu es dans cette démarche, la [formation pour les auteurs de violence](/formations/auteurs) t'offre un espace sans jugement pour comprendre l'origine de tes comportements et apprendre à agir différemment. Changer, c'est possible. Mais rarement seul·e.
-::: 
+Reconnaître des comportements violents dans sa propre vie est un acte de courage rare. Si tu es dans cette démarche, le [chemin guidé pour les auteurs de violence](/formations/auteurs) t'offre un espace sans jugement pour comprendre l'origine de tes comportements et apprendre à agir différemment. Changer, c'est possible. Mais rarement seul·e.
+:::

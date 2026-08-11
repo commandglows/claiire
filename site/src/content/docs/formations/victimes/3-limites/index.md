@@ -4,21 +4,21 @@ description: "Retrouve peu à peu la capacité à dire non, à sentir ce qui est
 pageType: landing
 hero:
   title: "Poser tes limites après une relation violente"
-  tagline: "Ce module t'aide à retrouver ce qui a été brouillé : ton droit à dire non, à sentir ce qui est acceptable pour toi, et à exister sans te dissoudre dans la peur ou la culpabilité."
+  tagline: "Ce palier t'aide à retrouver ce qui a été brouillé : ton droit à dire non, à sentir ce qui est acceptable pour toi, et à exister sans te dissoudre dans la peur ou la culpabilité."
   actions:
-    - text: "Débloquer le module complet"
+    - text: "Accéder à la suite de la lecture"
       link: "/membres/formations/victimes/3-limites/"
       variant: "primary"
-    - text: "Voir le parcours victimes"
+    - text: "Voir le chemin des personnes exposées"
       link: "/formations/victimes/"
       variant: "secondary"
 ---
 
-Ce module parle de limites. Pas de murs rigides. Pas de contrôle. Pas de dureté. Il parle de ce qui t'aide à savoir où tu commences et où l'autre finit.
+Ce palier parle de limites. Pas de murs rigides. Pas de contrôle. Pas de dureté. Il parle de ce qui t'aide à savoir où tu commences et où l'autre finit.
 
 Après une relation violente, ce repère est souvent brouillé. Dire non peut sembler dangereux. Avoir un besoin peut sembler coupable. Sentir qu'une chose n'est pas acceptable peut sembler flou ou presque interdit.
 
-Ce module t'aide à recommencer petit, clair, concret.
+Ce palier t'aide à recommencer petit, clair, concret.
 
 ## Pourquoi les limites deviennent si difficiles
 
@@ -43,7 +43,7 @@ Une limite peut être :
 
 Elle sert à créer un espace où tu peux exister sans te défendre en permanence.
 
-## Dans ce module, tu vas comprendre
+## Dans ce palier, tu vas comprendre
 
 - pourquoi la culpabilité explose souvent quand tu poses une limite
 - comment retrouver ce qui est acceptable pour toi
@@ -51,7 +51,7 @@ Elle sert à créer un espace où tu peux exister sans te défendre en permanenc
 - comment utiliser une formule simple pour dire quelque chose de clair
 - comment distinguer peur protectrice et peur conditionnée
 
-## Ce module est pour toi si...
+## Ce palier est pour toi si...
 
 - tu dis souvent oui alors que tu voudrais dire non
 - tu te sens coupable dès que tu exprimes un besoin
@@ -60,7 +60,7 @@ Elle sert à créer un espace où tu peux exister sans te défendre en permanenc
 
 ## Quelques repères de fond
 
-Ce module s'appuie notamment sur :
+Ce palier s'appuie notamment sur :
 
 - **Brené Brown** pour la clarté des limites
 - **Marshall Rosenberg** pour la communication non violente
@@ -69,24 +69,24 @@ Ce module s'appuie notamment sur :
 
 Autrement dit : on ne parle pas ici d'un simple "apprends à t'affirmer". On parle d'un vrai travail de reconstruction.
 
-## Ce que tu débloques dans le module complet
+## Ce que comprend la suite guidée
 
-- la version intégrale du module, plus progressive
+- la lecture complète du palier, plus progressive
 - les quatre niveaux de limites
 - l'exercice complet pour poser une petite limite en sécurité
 - une checklist pour distinguer culpabilité-signal et culpabilité-conditionnement
-- des repères pour aller vers le module relationnel suivant
+- des repères pour aller vers le palier relationnel suivant
 
-## Extrait du module complet
+## Un aperçu de la suite
 
-Dans la version complète, on va plus loin sur :
+Dans la suite de la lecture, on va plus loin sur :
 
 - pourquoi dire non peut sembler dangereux même dans une relation saine
 - comment utiliser la CNV pour poser une limite simple
 - comment noter l'appréhension avant et après
 - comment reconstruire ton pouvoir personnel sans te forcer
 
-[Débloquer le module complet](/membres/formations/victimes/3-limites/)
+[Accéder à la suite de la lecture](/membres/formations/victimes/3-limites/)
 
 ## FAQ
 
@@ -96,25 +96,26 @@ Non. Une limite claire aide au contraire à rendre la relation plus saine.
 
 ### Et si je me sens coupable tout de suite ?
 
-C'est fréquent. Le module sert justement à comprendre cette culpabilité et à ne pas lui obéir automatiquement.
+C'est fréquent. Le palier sert justement à comprendre cette culpabilité et à ne pas lui obéir automatiquement.
 
 ### Faut-il commencer par les grandes limites ?
 
 Non. Il vaut souvent mieux commencer par des situations sûres et des limites de niveau 1.
 
-### Que faire après ce module ?
+### Que faire après ce palier ?
 
 Continuer avec [Reconstruction relationnelle](/formations/victimes/4-relations/).
 
 ## Aller plus loin
 
-- [Revenir au parcours victimes](/formations/victimes/)
+- [Revenir au chemin des personnes exposées](/formations/victimes/)
 - [Reconstruire ta confiance](/confiance/reconstruire/)
 - [Voir les ressources victimes](/violence/victimes/)
-- [Continuer avec le module 4](/formations/victimes/4-relations/)
+- [Continuer avec le palier 4](/formations/victimes/4-relations/)
 
-## Tu veux le module complet ?
+## Tu veux poursuivre la lecture ?
 
-Débloque l’approfondissement pour accéder aux exercices de progression, au suivi et aux outils premium hors urgence. Les ressources de sécurité restent gratuites.
+La suite guidée est librement accessible et donne accès aux exercices de cheminement, au suivi et aux
+outils hors urgence. Les ressources de sécurité restent gratuites.
 
-[Débloquer le module complet](/membres/formations/victimes/3-limites/)
+[Accéder à la suite de la lecture](/membres/formations/victimes/3-limites/)

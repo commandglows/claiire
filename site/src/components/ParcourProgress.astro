@@ -11,14 +11,14 @@ const { parcourId, modules } = Astro.props;
 
 <div class="parcour-progress-widget" data-parcour-id={parcourId}>
   <div class="progress-header">
-    <h3>Ta progression</h3>
+    <h3>Ton cheminement</h3>
     <span class="progress-percentage">0%</span>
   </div>
 
   <div
     class="progress-bar"
     role="progressbar"
-    aria-label="Progression du parcours"
+    aria-label="Avancement de lecture du chemin"
     aria-valuemin="0"
     aria-valuemax={modules.length}
     aria-valuenow="0"
@@ -45,7 +45,7 @@ const { parcourId, modules } = Astro.props;
     ))}
   </ul>
 
-  <button class="reset-progress">Réinitialiser la progression</button>
+  <button class="reset-progress">Recommencer ce chemin</button>
 </div>
 
 <script>

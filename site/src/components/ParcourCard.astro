@@ -24,7 +24,7 @@ const { id, title, icon, description, color, moduleCount } = Astro.props;
       </div>
       <div class="parcour-module-badge">
         <ClaiireIcon name="book" size="var(--site-icon-xs)" />
-        <span>{moduleCount} modules</span>
+        <span>{moduleCount} paliers</span>
       </div>
     </div>
     <div class="parcour-content">
@@ -34,7 +34,7 @@ const { id, title, icon, description, color, moduleCount } = Astro.props;
       <div
         class="parcour-progress-mini"
         role="progressbar"
-        aria-label={`Progression du parcours ${title}`}
+        aria-label={`Avancement de lecture du chemin ${title}`}
         aria-valuemin="0"
         aria-valuemax="100"
         aria-valuenow="0"
@@ -45,7 +45,7 @@ const { id, title, icon, description, color, moduleCount } = Astro.props;
         <span class="progress-text">0%</span>
       </div>
       <span class="parcour-cta">
-        Commencer
+        Entrer dans ce chemin
         <ClaiireIcon name="arrowRight" size="var(--site-icon-xs)" />
       </span>
     </div>

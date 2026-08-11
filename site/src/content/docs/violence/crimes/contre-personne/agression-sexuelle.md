@@ -10,6 +10,6 @@ L'agression sexuelle est une violence qui s'attaque à l'intégrité corporelle 
 
 Le chemin vers la reconstruction passe notamment par [reconstruire ta confiance et ton intégrité](/confiance/reconstruire) — un processus qui prend le temps qu'il faut, avec le soutien qu'il faut.
 
-Si tu es survivante d'agression sexuelle, [la formation spécialisée pour les victimes](/formations/victimes) t'offre un espace sécurisé pour commencer ou poursuivre ton processus de guérison.
+Si tu es survivante d'agression sexuelle, [le chemin guidé spécialisé pour les victimes](/formations/victimes) t'offre un espace sécurisé pour commencer ou poursuivre ton processus de guérison.
 
-**[Accéder à la formation pour les victimes →](/formations/victimes)**
+**[Accéder au chemin guidé pour les victimes →](/formations/victimes)**

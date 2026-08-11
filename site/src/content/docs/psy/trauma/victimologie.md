@@ -24,7 +24,7 @@ La guérison n'est pas linéaire. Elle passe souvent par des phases de reconnais
 
 ## Accompagnement professionnel
 
-Un accompagnement adapté fait toute la différence. Thérapeutes spécialisés en trauma, groupes de parole, EMDR, thérapies somatiques : les approches sont nombreuses. [La formation pour les victimes de violence](/formations/victimes) propose un cadre structuré pour traverser ce chemin en étant soutenu(e) à chaque étape.
+Un accompagnement adapté fait toute la différence. Thérapeutes spécialisés en trauma, groupes de parole, EMDR, thérapies somatiques : les approches sont nombreuses. [Le chemin guidé pour les victimes de violence](/formations/victimes) propose un cadre structuré pour traverser ce chemin en étant soutenu(e) à chaque étape.
 
 ## Ressources et soutien
 

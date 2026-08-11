@@ -1,6 +1,6 @@
 ---
 title: "Kit SOS Émotions - Ta bouée de sauvetage émotionnelle"
-description: "Découvrez notre kit gratuit pour gérer tes émotions difficiles, comprenant un spray aux fleurs de Bach et un accès à l'application Pâquerette"
+description: "Découvrez notre kit gratuit pour gérer tes émotions difficiles, comprenant un spray aux fleurs de Bach et des ressources Claiire"
 ---
 
 # 🆘 Kit SOS Émotions : Ton Allié Pour les Moments Difficiles
@@ -20,8 +20,8 @@ Un spray d'urgence élaboré selon la méthode traditionnelle du Dr Bach, combin
 - Base de cognac bio des Charentes
 - Format pocket pour t'accompagner partout
 
-### 2. Un Accès Premium à l'Application Pâquerette
-Une suite complète d'outils audio pour ton bien-être :
+### 2. Des Ressources Claiire Pour Ton Bien-Être
+Une sélection d'outils pour t'accompagner :
 - **Méditations guidées**
 - **Exercices de sophrologie**
 - **Sessions de cohérence cardiaque**
@@ -65,7 +65,7 @@ Le kit SOS t'apporte un soulagement immédiat — mais si tu cherches à [gérer
 2. Répète jusqu'à 4 fois par jour si nécessaire
 3. Garde-le toujours à portée de main
 
-### L'Application Pâquerette
+### Les Ressources Claiire
 1. Choisis l'exercice adapté à ton besoin
 2. Installe-toi dans un endroit calme
 3. Laisse-toi guider par les audios
@@ -97,20 +97,20 @@ En téléchargeant le kit, tu recevras également :
 
 > "Ce kit m'a littéralement sauvée pendant mes périodes d'anxiété. Le spray est devenu mon meilleur allié !" - Sophie, 34 ans
 
-> "L'application Pâquerette est incroyable. Les exercices sont courts mais tellement efficaces." - Marc, 28 ans
+> "Les exercices sont courts mais tellement efficaces." - Marc, 28 ans
 
-> "La combinaison spray + application est géniale. Je me sens enfin équipée pour gérer mes émotions." - Julie, 41 ans
+> "La combinaison du spray et des ressources proposées est géniale. Je me sens enfin équipée pour gérer mes émotions." - Julie, 41 ans
 
 ## ❓ Questions Fréquentes
 
 **Q : Le spray est-il naturel ?**
 R : Oui, 100% naturel et bio, élaboré selon la méthode traditionnelle du Dr Bach.
 
-**Q : Puis-je utiliser l'application hors connexion ?**
-R : Oui, tous les contenus sont téléchargeables pour une utilisation offline.
+**Q : Les ressources sont-elles accessibles hors connexion ?**
+R : Consulte les modalités d'accès indiquées pour chaque ressource.
 
-**Q : Combien de temps dure l'accès ?**
-R : L'accès est illimité dans le temps.
+**Q : Où trouver les ressources Claiire ?**
+R : Elles sont accessibles depuis les pages et parcours Claiire indiqués dans le kit.
 
 **Q : Le kit convient-il aux débutants ?**
 R : Absolument ! Tout est conçu pour être accessible et facile à utiliser.

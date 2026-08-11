@@ -9,10 +9,10 @@ Les traumatismes laissent des empreintes durables sur le psychisme et le corps. 
 
 Le travail de reconstruction passe souvent par [reconstruire sa confiance après le traumatisme](/confiance/reconstruire) : retrouver foi en soi-même, en les autres, et en l'avenir.
 
-La [formation accompagnée pour les victimes de violence](/formations/victimes) est conçue pour t'aider à traverser ce processus avec un soutien adapté au trauma — à ton rythme, sans te forcer.
+Le [chemin guidé accompagné pour les victimes de violence](/formations/victimes) est conçu pour t'aider à traverser ce processus avec un soutien adapté au trauma — à ton rythme, sans te forcer.
 
 ---
 
 :::tip[La guérison est possible]
-Les traumatismes ne sont pas une condamnation. Avec le bon accompagnement, il est possible de se reconstruire et de retrouver une vie pleine de sens. La [formation pour sortir de la violence](/formations) t'accompagne dans ce chemin.
+Les traumatismes ne sont pas une condamnation. Avec le bon accompagnement, il est possible de se reconstruire et de retrouver une vie pleine de sens. Le [chemin guidé pour sortir de la violence](/formations) t'accompagne dans ce chemin.
 :::

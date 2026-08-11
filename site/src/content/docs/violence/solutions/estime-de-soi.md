@@ -154,6 +154,6 @@ Si tu sens que tu as besoin d'aide dans ce processus, un accompagnement [psychol
 
 Reconstruire ton estime de soi après la violence passe aussi par [développer ta confiance en toi](/confiance/confiance-en-soi) — un travail progressif, concret, qui commence dès aujourd'hui.
 
-Si tu veux être accompagnée dans ce processus, [la formation pour reconstruire ton estime et sortir de la violence](/formations/victimes) t'offre un cadre structuré, bienveillant et adapté à ce que tu traverses.
+Si tu veux être accompagnée dans ce processus, [le chemin guidé pour reconstruire ton estime et sortir de la violence](/formations/victimes) t'offre un cadre structuré, bienveillant et adapté à ce que tu traverses.
 
-**[Découvrir la formation pour les victimes →](/formations/victimes)**
+**[Découvrir le chemin guidé pour les victimes →](/formations/victimes)**

@@ -190,5 +190,5 @@ Le consentement n'est pas une formalité, c'est un processus continu qui demande
 ---
 
 :::tip[Apprendre à respecter et poser des limites]
-Comprendre le consentement théoriquement, c'est bien. L'intégrer dans ses comportements quotidiens demande une pratique active et parfois un travail sur soi en profondeur. La [formation pour sortir de la violence](/formations) t'accompagne dans ce travail, que tu sois victime ou auteur de comportements non-consentis.
-::: 
+Comprendre le consentement théoriquement, c'est bien. L'intégrer dans ses comportements quotidiens demande une pratique active et parfois un travail sur soi en profondeur. Le [chemin guidé pour sortir de la violence](/formations) t'accompagne dans ce travail, que tu sois victime ou auteur de comportements non-consentis.
+:::

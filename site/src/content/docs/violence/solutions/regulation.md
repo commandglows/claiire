@@ -216,10 +216,10 @@ Un [accompagnement psychologique](/violence/solutions/psychologique) n'est pas u
 
 Pour aller plus loin dans la compréhension de [la régulation nerveuse](/systeme-nerveux/regulation-nerveuse), tu trouveras des ressources complémentaires sur le fonctionnement de ton système nerveux autonome et les approches qui l'accompagnent.
 
-Si tu veux apprendre à réguler tes émotions dans un cadre d'accompagnement structuré, [la formation pour sortir de la violence](/formations) intègre des outils concrets de régulation adaptés au contexte post-traumatique.
+Si tu veux apprendre à réguler tes émotions dans un cadre d'accompagnement structuré, [le chemin guidé pour sortir de la violence](/formations) intègre des outils concrets de régulation adaptés au contexte post-traumatique.
 
 ---
 
 La régulation émotionnelle n'est pas une destination, c'est un entraînement. Certains jours seront meilleurs que d'autres. Ce qui compte, ce n'est pas de ne jamais être déstabilisé — c'est de raccourcir le temps qu'il te faut pour revenir à toi. Avec la pratique, ce temps se réduit. Ton système nerveux apprend. Et chaque fois que tu utilises une de ces techniques au lieu de subir la vague, tu renforces de nouveaux circuits neuronaux qui deviendront, avec le temps, ta nouvelle manière de répondre au monde.
 
-**[Accéder à la formation complète pour sortir de la violence →](/formations)**
+**[Accéder au chemin guidé complet pour sortir de la violence →](/formations)**

@@ -50,9 +50,9 @@ Selon où tu en es, voici les pages les plus utiles :
 
 → [Harcèlement scolaire — pour les jeunes et leurs parents](/harcelement/harcelement-scolaire) — formes, impact, démarches à l'école et avec le rectorat.
 
-Si tu es en pleine situation et que tu as besoin d'un accompagnement structuré pour comprendre et sortir de ce que tu vis, [notre formation pour comprendre et sortir de la violence](/formations) propose un chemin pas à pas — pour les victimes comme pour ceux qui veulent comprendre leur propre comportement. Une ressource concrète, accessible à ton rythme, conçue pour [la formation dédiée aux victimes](/formations/victimes) qui traversent des situations de harcèlement ou de violence.
+Si tu es en pleine situation et que tu as besoin d'un accompagnement structuré pour comprendre et sortir de ce que tu vis, [notre chemin guidé pour comprendre et sortir de la violence](/formations) propose un chemin pas à pas — pour les victimes comme pour ceux qui veulent comprendre leur propre comportement. Une ressource concrète, accessible à ton rythme, conçue pour [le chemin guidé dédié aux victimes](/formations/victimes) qui traversent des situations de harcèlement ou de violence.
 
-→ **Passer à l'action : [la formation Sortir de la violence](/formations)**
+→ **Passer à l'action : [le chemin guidé Sortir de la violence](/formations)**
 
 ---
 

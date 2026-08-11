@@ -54,9 +54,9 @@ Un thérapeute, un psychologue, ou des lignes d'écoute spécialisées. Pas pour
 **4. Planifier la sortie**
 Si tu es dans une situation à risque physique, ne pars pas impulsivement. Plan sécurité, mise de côté de documents, contact avec des associations spécialisées.
 
-Si tu traverses une relation toxique et que tu as besoin d'un cadre structuré pour sortir de l'emprise, [la formation pour les victimes de violence relationnelle](/formations/victimes) peut t'accompagner à ton rythme — comprendre les mécanismes, reprendre ta lucidité, construire un chemin de sortie. Et une fois dehors, le travail de [reconstruire ta confiance après une relation toxique](/confiance/reconstruire) est la prochaine étape : récupérer la confiance en tes perceptions, en tes choix, en ta valeur.
+Si tu traverses une relation toxique et que tu as besoin d'un cadre structuré pour sortir de l'emprise, [le chemin guidé pour les victimes de violence relationnelle](/formations/victimes) peut t'accompagner à ton rythme — comprendre les mécanismes, reprendre ta lucidité, construire un chemin de sortie. Et une fois dehors, le travail de [reconstruire ta confiance après une relation toxique](/confiance/reconstruire) est la prochaine étape : récupérer la confiance en tes perceptions, en tes choix, en ta valeur.
 
-→ **Sortir et se reconstruire : [la formation Sortir de la violence](/formations)**
+→ **Sortir et se reconstruire : [le chemin guidé Sortir de la violence](/formations)**
 
 ## Connexions
 

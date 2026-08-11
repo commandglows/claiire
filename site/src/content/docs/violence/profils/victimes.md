@@ -3,7 +3,7 @@ title: "Comprendre l'expérience des victimes"
 description: "Comment la violence affecte les victimes et quels sont leurs besoins pour s'en sortir"
 ---
 
-Être victime de violence n'est jamais un choix ou une faiblesse. C'est une expérience traumatique qui peut toucher n'importe qui, indépendamment de son âge, son genre, sa position sociale ou son niveau d'éducation. La [formation dédiée aux victimes de violence](/formations/victimes) a été conçue précisément pour toi : pour comprendre ce que tu as vécu, nommer ce que tu ressens, et avancer à ton rythme vers la reconstruction.
+Être victime de violence n'est jamais un choix ou une faiblesse. C'est une expérience traumatique qui peut toucher n'importe qui, indépendamment de son âge, son genre, sa position sociale ou son niveau d'éducation. Le [chemin guidé dédié aux victimes de violence](/formations/victimes) a été conçu précisément pour toi : pour comprendre ce que tu as vécu, nommer ce que tu ressens, et avancer à ton rythme vers la reconstruction.
 
 ## Mécanismes de survie
 
@@ -126,5 +126,5 @@ description: "Comment la violence affecte les victimes et quels sont leurs besoi
 ---
 
 :::tip[Tu mérites de te reconstruire]
-Quelle que soit ta situation, quelle que soit l'intensité de ce que tu as vécu, tu mérites un accompagnement digne et bienveillant. La [formation dédiée aux victimes de violence](/formations/victimes) est un espace sécurisé pour commencer ou poursuivre ce chemin de reconstruction.
-::: 
+Quelle que soit ta situation, quelle que soit l'intensité de ce que tu as vécu, tu mérites un accompagnement digne et bienveillant. Le [chemin guidé dédié aux victimes de violence](/formations/victimes) est un espace sécurisé pour commencer ou poursuivre ce chemin de reconstruction.
+:::

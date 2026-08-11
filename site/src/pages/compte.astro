@@ -5,7 +5,6 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
 const isClerkEnabled = Boolean(import.meta.env.PUBLIC_CLERK_PUBLISHABLE_KEY);
 const authState = Astro.locals.auth?.();
 const memberSession = Astro.locals.memberSession;
-const memberAccess = Astro.locals.memberAccess;
 
 if (isClerkEnabled && !authState?.userId) {
   return Astro.redirect('/connexion/?redirect_url=/compte/');
@@ -14,23 +13,22 @@ if (isClerkEnabled && !authState?.userId) {
 
 <StaticPageLayout
   currentPath="/compte/"
-  title="Compte membre"
-  description="Le compte membre Claiire centralise l'etat premium, l'origine de l'abonnement et les liens utiles."
-  sectionLabel="Espace membre"
+  title="Compte Claiire"
+  description="Ton compte Claiire centralise ta session et les liens utiles. Les ressources sont ouvertes et gratuites."
+  sectionLabel="Compte"
   articleClass="prose--account"
   hero={{
-    title: 'Compte membre',
+    title: 'Compte Claiire',
     tagline:
-      "Cette page centralise ton acces premium, sa source et la suite du parcours quand le billing sera branche.",
-    actions: [{ text: 'Revenir aux formations', link: '/formations/', variant: 'primary' }],
+      'Cette page centralise ta session. Les ressources Claiire sont ouvertes et accessibles gratuitement.',
+    actions: [{ text: 'Revenir aux chemins guidés', link: '/formations/', variant: 'primary' }],
   }}
 >
   <h2>Objectif de cette page</h2>
   <ul>
-    <li>afficher le statut premium</li>
-    <li>indiquer la source d'acces : Apple, Google, Polar ou manuel</li>
-    <li>renvoyer vers la gestion d'abonnement</li>
-    <li>centraliser l'entree vers les contenus membres</li>
+    <li>retrouver les ressources Claiire, ouvertes et gratuites</li>
+    <li>consulter l'etat de ta session</li>
+    <li>gérer les réglages de ton compte</li>
   </ul>
 
   {isClerkEnabled ? (
@@ -38,20 +36,8 @@ if (isClerkEnabled && !authState?.userId) {
       <h2>Etat de la session</h2>
       <ul>
         <li>connecte(e) : {authState?.userId ? 'oui' : 'non'}</li>
-        <li>entitlement premium : {memberAccess?.isPremium ? 'oui' : 'non'}</li>
-        <li>source d'acces : {memberAccess?.source ?? 'none'}</li>
-        <li>stockage : {memberAccess?.storage ?? 'none'}</li>
-        <li>accorde le : {memberAccess?.grantedAt ?? 'inconnu'}</li>
-        <li>expire le : {memberAccess?.expiresAt ?? 'pas de date'}</li>
         <li>user_id : <code>{memberSession?.userId ?? 'inconnu'}</code></li>
       </ul>
-
-      {memberAccess?.note ? (
-        <>
-          <h2>Note d'acces</h2>
-          <p>{memberAccess.note}</p>
-        </>
-      ) : null}
 
       <h2>Gestion du compte</h2>
       <UserButton />
@@ -60,8 +46,8 @@ if (isClerkEnabled && !authState?.userId) {
     <>
       <h2>Etat actuel</h2>
       <p>
-        La structure de compte est prete a etre reliee a Clerk et aux futurs webhooks billing. La source de
-        verite d'acces membre passe maintenant par le private metadata Clerk.
+        Les ressources Claiire sont ouvertes et accessibles gratuitement. La connexion permettra simplement
+        de retrouver ta session et les réglages de ton compte.
       </p>
     </>
   )}
