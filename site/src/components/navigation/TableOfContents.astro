@@ -7,26 +7,46 @@ interface Heading {
 
 interface Props {
   headings: Heading[];
+  variant?: 'aside' | 'inline';
 }
 
-const { headings } = Astro.props;
+const { headings, variant = 'aside' } = Astro.props;
 const items = headings.filter((heading) => heading.depth >= 2 && heading.depth <= 3);
+const titleId = variant === 'inline' ? 'page-toc-title-inline' : 'page-toc-title-aside';
 ---
 
 {
   items.length > 1 && (
-    <aside class="toc" aria-labelledby="page-toc-title">
-      <div class="toc__card">
-        <p class="toc__eyebrow">Sur cette page</p>
-        <h2 id="page-toc-title">Sommaire</h2>
-        <ol class="toc__list">
-          {items.map((heading) => (
-            <li class:list={['toc__item', `depth-${heading.depth}`]}>
-              <a href={`#${heading.slug}`}>{heading.text}</a>
-            </li>
-          ))}
-        </ol>
-      </div>
+    <aside class:list={['toc', variant === 'inline' && 'toc--inline']} aria-labelledby={titleId}>
+      {variant === 'inline' ? (
+        <details class="toc__card toc__disclosure">
+          <summary>
+            <span>
+              <span class="toc__eyebrow">Sur cette page</span>
+              <span id={titleId} class="toc__summary-title">Sommaire</span>
+            </span>
+          </summary>
+          <ol class="toc__list">
+            {items.map((heading) => (
+              <li class:list={['toc__item', `depth-${heading.depth}`]}>
+                <a href={`#${heading.slug}`}>{heading.text}</a>
+              </li>
+            ))}
+          </ol>
+        </details>
+      ) : (
+        <div class="toc__card">
+          <p class="toc__eyebrow">Sur cette page</p>
+          <h2 id={titleId}>Sommaire</h2>
+          <ol class="toc__list">
+            {items.map((heading) => (
+              <li class:list={['toc__item', `depth-${heading.depth}`]}>
+                <a href={`#${heading.slug}`}>{heading.text}</a>
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
     </aside>
   )
 }

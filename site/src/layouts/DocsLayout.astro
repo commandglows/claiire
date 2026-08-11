@@ -38,6 +38,10 @@ const pageType = entry.data.pageType;
 const sidebarMatch = findSidebarForPath(currentPath);
 const showSidebar = pageType !== 'landing' && currentPath !== '/404';
 const showToc = pageType !== 'landing' && currentPath !== '/404';
+const showGamification =
+  currentPath !== '/404' &&
+  !currentPath.startsWith('/violence') &&
+  !currentPath.startsWith('/formations');
 const hero =
   entry.data.hero ??
   (currentPath === '/'
@@ -127,9 +131,7 @@ const description =
       )}
 
       <div class:list={['page-grid', showSidebar && 'page-grid--with-sidebar', showToc && 'page-grid--with-toc']}>
-        {showSidebar && <DocsSidebar currentPath={currentPath} />}
-
-        <main id="main-content" class="page-main">
+        <main id="main-content" class="page-main" tabindex="-1">
           {showIntro && (
             <header class="page-intro">
               {sectionLabel && <p class="page-intro__eyebrow">{sectionLabel}</p>}
@@ -137,6 +139,8 @@ const description =
               {entry.data.description && <p>{entry.data.description}</p>}
             </header>
           )}
+
+          {showToc && <TableOfContents headings={headings} variant="inline" />}
 
           <article class:list={['prose', pageType === 'landing' && 'prose--landing']}>
             <slot />
@@ -163,13 +167,15 @@ const description =
           )}
         </main>
 
+        {showSidebar && <DocsSidebar currentPath={currentPath} />}
+
         {showToc && <TableOfContents headings={headings} />}
       </div>
     </div>
 
     <SiteFooter />
 
-    {currentPath !== '/404' && (
+    {showGamification && (
       <GamificationBar
         client:load
         slug={gamificationSlug(currentPath)}

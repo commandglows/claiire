@@ -243,7 +243,7 @@ const hero = {
   .member-resources {
     display: grid;
     gap: var(--site-space-0p85);
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--site-member-resource-min-width), 100%), 1fr));
   }
 
   .member-resources a,
@@ -262,10 +262,12 @@ const hero = {
     font-size: var(--site-font-0p95);
   }
 
+  /* CSS media queries cannot resolve custom properties. This breakpoint mirrors
+     the compact breakpoint token defined in global.css. */
   @media (max-width: 45rem) {
     .member-shell__intro,
     .member-block {
-      padding: var(--site-space-5);
+      padding: var(--site-interior-panel-padding-compact);
       border-radius: var(--radius-md);
     }
 
