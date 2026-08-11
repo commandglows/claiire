@@ -3,7 +3,7 @@ title: 'Choisir un parcours adapté à ta situation'
 description:
   "L'ancien socle commun est remplacé par deux parcours séparés pour protéger la sécurité, la
   confidentialité et la clarté des responsabilités."
-template: splash
+pageType: landing
 hero:
   title: 'Les mêmes thèmes, deux chemins différents'
   tagline:

@@ -10,8 +10,9 @@ is genuinely local to that component.
 
 ## Token families
 
-- Color and theme roles: `--site-*` semantic roles and Starlight bridge tokens
-  (`--sl-*`).
+- Color and theme roles: `--site-*` semantic roles only. Neutral colors use the
+  `--site-neutral-200` to `--site-neutral-700` scale; no framework bridge is
+  part of the public site contract.
 - Typography: `--site-font-*`, `--site-text-*`, and `--site-leading-*`.
 - Spacing and layout: `--site-space-*`, `--site-content-*`, and
   `--site-breakpoint-*`.
@@ -37,6 +38,14 @@ interface icons.
 The site supports light and dark themes through the two theme blocks in
 `global.css`. Any new visual role must be defined for both themes when its value
 changes with theme.
+
+## Page layout vocabulary
+
+Documentation frontmatter uses the proprietary `pageType` field. Supported
+values are `article` and `landing`, with `article` as the schema default.
+`landing` pages keep the wide hero treatment and omit the documentation sidebar,
+table of contents, and article introduction. Their layout modifiers use the
+`--landing` suffix.
 
 ## Consumption rule
 

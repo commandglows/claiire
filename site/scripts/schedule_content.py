@@ -7,7 +7,7 @@ Usage:
   python3 scripts/schedule_content.py --cadence 5 --start 2026-03-15 --dry-run
   python3 scripts/schedule_content.py --cadence 5 --start 2026-03-15
 
-Note: claiire utilise Starlight.
+Note: claiire utilise une architecture Astro et des layouts propriétaires.
   - draft: true  → masqué de la nav + noindex (pas indexé par Google)
   - draft: false → visible dans la nav et indexé
   Le scheduling ici = marquer tous les docs comme draft:true avec une pubDate cible.

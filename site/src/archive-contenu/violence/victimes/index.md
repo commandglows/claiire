@@ -1,7 +1,7 @@
 ---
 title: "Ressources Pour Les Victimes De Violence"
 description: "Tu n'es pas seul(e). Trouve ici un espace sûr, des ressources et un parcours de reconstruction."
-template: splash
+pageType: landing
 hero:
   title: "Tu n'es pas seul(e) 💙"
   tagline: "Un espace sûr pour comprendre, te protéger et te reconstruire"

@@ -130,14 +130,14 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
   .welcome {
     max-width: var(--site-width-48);
     padding-left: clamp(1rem, 4vw, 3rem);
-    border-left: 3px solid var(--sl-color-accent);
+    border-left: 3px solid var(--site-accent);
   }
 
   .welcome__kicker,
   .section-heading__eyebrow,
   .app-note__eyebrow {
     margin: 0 0 0.65rem;
-    color: var(--sl-color-accent-high);
+    color: var(--site-accent-strong);
     font-size: var(--site-font-0p78);
     font-weight: 800;
     letter-spacing: var(--site-letter-0p12);
@@ -213,7 +213,7 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
   .orientation-card__title {
     max-width: var(--site-width-24);
     margin-top: var(--site-space-12);
-    font-family: var(--sl-font-heading);
+    font-family: var(--site-font-heading);
     font-size: clamp(1.45rem, 3vw, 2rem);
     font-weight: 800;
     line-height: var(--site-leading-tight);
@@ -270,9 +270,9 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
 
   .approach {
     padding: clamp(1.5rem, 5vw, 3rem);
-    border: 1px solid var(--sl-color-gray-5);
+    border: 1px solid var(--site-neutral-500);
     border-radius: var(--radius-md);
-    background: linear-gradient(135deg, var(--sl-color-gray-7), transparent);
+    background: linear-gradient(135deg, var(--site-neutral-700), transparent);
   }
 
   .approach-grid {
@@ -281,13 +281,13 @@ import StaticPageLayout from '../layouts/StaticPageLayout.astro';
 
   .approach-grid > div {
     padding-top: var(--site-space-4);
-    border-top: 2px solid var(--sl-color-accent);
+    border-top: 2px solid var(--site-accent);
   }
 
   .app-note {
     padding: clamp(1.5rem, 5vw, 3rem);
     border-radius: var(--site-radius-0p35-1p5);
-    background: var(--sl-color-accent-low);
+    background: var(--site-accent-soft);
   }
 
   .app-note > div {

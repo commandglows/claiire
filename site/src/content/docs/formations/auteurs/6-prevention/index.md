@@ -3,7 +3,7 @@ title: 'Faire tenir le changement dans la durée'
 description:
   'Construis un plan de prévention personnel, repère les premiers glissements et ancre une forme de
   changement qui ne dépend pas seulement de la motivation.'
-template: splash
+pageType: landing
 hero:
   title: 'Faire tenir le changement dans la durée'
   tagline:

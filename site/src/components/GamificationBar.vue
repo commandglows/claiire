@@ -247,7 +247,7 @@ watch(
 /* Reading progress bar */
 .read-progress-track {
   position: fixed;
-  top: var(--sl-nav-height, 3.5rem);
+  top: var(--site-header-height);
   left: 0;
   right: 0;
   height: var(--site-size-3px);
@@ -258,7 +258,7 @@ watch(
 
 .read-progress-fill {
   height: var(--site-size-100pct);
-  background: var(--sl-color-accent);
+  background: var(--site-accent);
   transition: width var(--site-motion-fast) linear;
   border-radius: 0 var(--site-size-2px) var(--site-size-2px) 0;
 }
@@ -277,7 +277,7 @@ watch(
 }
 
 .gamification-bar:focus-visible {
-  outline: var(--site-size-2px) solid var(--sl-color-accent);
+  outline: var(--site-size-2px) solid var(--site-accent);
   outline-offset: var(--site-size-3px);
   border-radius: var(--site-radius-pill);
 }
@@ -287,13 +287,13 @@ watch(
   align-items: center;
   gap: var(--site-space-4);
   padding: var(--site-space-2) var(--site-space-6);
-  border: 1px solid var(--sl-color-gray-5);
+  border: 1px solid var(--site-neutral-500);
   border-radius: var(--site-radius-pill);
-  background: var(--sl-color-bg);
+  background: var(--site-surface-strong);
   box-shadow: 0 4px 16px var(--site-shadow-0-12), 0 1px 4px var(--site-shadow-0-08);
   font-size: var(--site-font-sm);
   font-weight: 600;
-  color: var(--sl-color-text);
+  color: var(--site-text);
   white-space: nowrap;
   backdrop-filter: blur(var(--site-size-8px));
   transition: box-shadow var(--site-motion-fast), transform var(--site-motion-fast);
@@ -329,7 +329,7 @@ watch(
 .stat-value {
   font-size: var(--site-font-0p9);
   font-weight: 700;
-  color: var(--sl-color-text);
+  color: var(--site-text);
 }
 
 .stat-label {
@@ -341,7 +341,7 @@ watch(
 .divider {
   width: var(--site-size-1px);
   height: var(--site-font-md);
-  background: var(--sl-color-gray-5);
+  background: var(--site-neutral-500);
 }
 
 .badges-item {
@@ -371,8 +371,8 @@ watch(
   width: min(420px, calc(100vw - 2rem));
   max-height: var(--site-size-70vh);
   overflow-y: auto;
-  background: var(--sl-color-bg);
-  border: 1px solid var(--sl-color-gray-5);
+  background: var(--site-surface-strong);
+  border: 1px solid var(--site-neutral-500);
   border-radius: var(--radius-md);
   padding: var(--site-space-6);
   box-shadow: 0 12px 40px var(--site-shadow-0-25);
@@ -388,18 +388,18 @@ watch(
   width: var(--site-space-1p75);
   height: var(--site-space-1p75);
   border: none;
-  background: var(--sl-color-gray-6);
+  background: var(--site-neutral-600);
   border-radius: var(--site-radius-circle);
   cursor: pointer;
   font-size: var(--site-font-xs);
-  color: var(--sl-color-gray-2);
+  color: var(--site-neutral-200);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .panel-close:hover {
-  background: var(--sl-color-gray-5);
+  background: var(--site-neutral-500);
 }
 
 /* Level section */
@@ -424,24 +424,24 @@ watch(
 .level-name {
   font-size: var(--site-font-1p125);
   font-weight: 700;
-  color: var(--sl-color-text);
+  color: var(--site-text);
 }
 
 .level-sub {
   font-size: var(--site-font-0p8125);
-  color: var(--sl-color-gray-3);
+  color: var(--site-neutral-300);
 }
 
 .level-bar-track {
   height: var(--site-size-6px);
   border-radius: var(--site-radius-9999);
-  background: var(--sl-color-gray-6);
+  background: var(--site-neutral-600);
   overflow: hidden;
 }
 
 .level-bar-fill {
   height: var(--site-size-100pct);
-  background: var(--sl-color-accent);
+  background: var(--site-accent);
   border-radius: var(--site-radius-9999);
   transition: width var(--site-motion-slow) ease;
 }
@@ -459,9 +459,9 @@ watch(
   align-items: center;
   gap: var(--site-space-0p2);
   padding: var(--site-space-3) var(--site-space-1);
-  border: 1px solid var(--sl-color-gray-5);
+  border: 1px solid var(--site-neutral-500);
   border-radius: var(--site-radius-0p625);
-  background: var(--sl-color-accent-low);
+  background: var(--site-accent-soft);
 }
 
 .pstat-icon {
@@ -477,7 +477,7 @@ watch(
 .pstat-val {
   font-size: var(--site-font-1p125);
   font-weight: 700;
-  color: var(--sl-color-accent);
+  color: var(--site-accent);
   line-height: var(--site-leading-1);
 }
 
@@ -485,7 +485,7 @@ watch(
   font-size: var(--site-font-0p6875);
   text-transform: uppercase;
   letter-spacing: var(--site-letter-0p04);
-  color: var(--sl-color-gray-3);
+  color: var(--site-neutral-300);
   text-align: center;
 }
 
@@ -501,7 +501,7 @@ watch(
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: var(--site-letter-0p06);
-  color: var(--sl-color-gray-3);
+  color: var(--site-neutral-300);
 }
 
 /* Category list */
@@ -517,17 +517,17 @@ watch(
   justify-content: space-between;
   padding: var(--site-space-0p4) var(--site-space-0p625);
   border-radius: var(--site-radius-0p375);
-  background: var(--sl-color-gray-7);
+  background: var(--site-neutral-700);
   font-size: var(--site-font-0p875);
 }
 
 .cat-label {
-  color: var(--sl-color-text);
+  color: var(--site-text);
 }
 
 .cat-count {
   font-weight: 700;
-  color: var(--sl-color-accent);
+  color: var(--site-accent);
 }
 
 /* Badges */
@@ -543,15 +543,15 @@ watch(
   align-items: center;
   gap: var(--site-space-1);
   padding: var(--site-space-0p625) var(--site-space-1);
-  border: 1px solid var(--sl-color-gray-5);
+  border: 1px solid var(--site-neutral-500);
   border-radius: var(--site-radius-0p5);
   text-align: center;
   transition: transform var(--site-motion-0p15);
 }
 
 .badge-item.earned {
-  border-color: var(--sl-color-accent);
-  background: var(--sl-color-accent-low);
+  border-color: var(--site-accent);
+  background: var(--site-accent-soft);
 }
 
 .badge-item.locked {
@@ -565,7 +565,7 @@ watch(
 .badge-name {
   font-size: var(--site-font-0p7);
   font-weight: 600;
-  color: var(--sl-color-text);
+  color: var(--site-text);
   line-height: var(--site-leading-1p2);
 }
 
@@ -608,9 +608,9 @@ watch(
   align-items: center;
   gap: var(--site-space-3);
   padding: var(--site-space-4) var(--site-space-6);
-  border: 1px solid var(--sl-color-accent);
+  border: 1px solid var(--site-accent);
   border-radius: var(--site-radius-0p5);
-  background: var(--sl-color-bg);
+  background: var(--site-surface-strong);
   box-shadow: 0 4px 12px var(--site-shadow-0-20);
   cursor: pointer;
   animation: toast-slide-in var(--site-motion-0p4) ease-out;
@@ -627,13 +627,13 @@ watch(
 
 .toast-text strong {
   font-size: var(--site-font-0p875);
-  color: var(--sl-color-accent);
+  color: var(--site-accent);
   text-transform: uppercase;
 }
 
 .toast-text span {
   font-size: var(--site-font-md);
-  color: var(--sl-color-text);
+  color: var(--site-text);
 }
 
 @keyframes toast-slide-in {

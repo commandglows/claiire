@@ -3,7 +3,7 @@ title: "Retrouver du calme quand l'intensité monte"
 description:
   'Des repères généraux sur la régulation émotionnelle, à utiliser dans un parcours adapté à ta
   situation.'
-template: splash
+pageType: landing
 hero:
   title: "Créer un peu d'espace avant la prochaine action"
   tagline:

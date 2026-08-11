@@ -1,7 +1,7 @@
 ---
 title: "Ressources Pour Sortir De La Violence"
 description: "Prendre conscience, assumer la responsabilité, changer. Un parcours pour ceux qui veulent arrêter."
-template: splash
+pageType: landing
 hero:
   title: "Il est temps de changer 🔄"
   tagline: "Reconnaître, comprendre et transformer tes comportements violents"

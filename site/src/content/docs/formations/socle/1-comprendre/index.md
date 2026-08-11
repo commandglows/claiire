@@ -3,7 +3,7 @@ title: 'Comprendre la violence : formes, contrôle et répétition'
 description:
   'Des repères généraux pour reconnaître les formes de violence et comprendre pourquoi la situation
   peut rester confuse.'
-template: splash
+pageType: landing
 hero:
   title: 'Comprendre la violence : retrouver des repères'
   tagline:

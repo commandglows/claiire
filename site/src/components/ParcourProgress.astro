@@ -81,7 +81,7 @@ const { parcourId, modules } = Astro.props;
   .progress-percentage {
     font-size: var(--site-font-1p5);
     font-weight: bold;
-    color: var(--sl-color-accent);
+    color: var(--site-accent);
     padding: var(--site-space-0p2) var(--site-space-0p75);
     border-radius: var(--site-radius-pill);
     background: var(--site-accent-soft);
@@ -89,7 +89,7 @@ const { parcourId, modules } = Astro.props;
 
   .progress-bar {
     height: var(--site-size-8px);
-    background: var(--sl-color-gray-5);
+    background: var(--site-neutral-500);
     border-radius: var(--site-radius-pill);
     overflow: hidden;
     margin-bottom: var(--site-space-6);
@@ -98,7 +98,7 @@ const { parcourId, modules } = Astro.props;
   .progress-fill {
     width: var(--site-size-0pct);
     height: var(--site-size-100pct);
-    background: linear-gradient(90deg, var(--site-highlight) 0%, var(--sl-color-accent) 100%);
+    background: linear-gradient(90deg, var(--site-highlight) 0%, var(--site-accent) 100%);
     border-radius: inherit;
     transition: width var(--site-motion-slow) var(--site-ease-standard);
   }
@@ -133,7 +133,7 @@ const { parcourId, modules } = Astro.props;
     position: absolute;
     inset: 0 auto 0 0;
     width: var(--site-space-0p3);
-    background: linear-gradient(180deg, var(--site-highlight) 0%, var(--sl-color-accent) 100%);
+    background: linear-gradient(180deg, var(--site-highlight) 0%, var(--site-accent) 100%);
     opacity: 0.15;
     transition: opacity var(--site-motion-0p18) var(--site-ease-standard);
   }
@@ -184,7 +184,7 @@ const { parcourId, modules } = Astro.props;
   .checkbox-custom {
     width: var(--site-space-1p35);
     height: var(--site-space-1p35);
-    border: var(--site-size-2px) solid var(--sl-color-gray-4);
+    border: var(--site-size-2px) solid var(--site-neutral-400);
     border-radius: var(--site-radius-0p45);
     position: relative;
     flex-shrink: 0;
@@ -206,8 +206,8 @@ const { parcourId, modules } = Astro.props;
   }
 
   .module-checkbox:checked + label .checkbox-custom {
-    background: linear-gradient(180deg, var(--site-highlight) 0%, var(--sl-color-accent) 100%);
-    border-color: var(--sl-color-accent);
+    background: linear-gradient(180deg, var(--site-highlight) 0%, var(--site-accent) 100%);
+    border-color: var(--site-accent);
     box-shadow: var(--site-primary-shadow);
     transform: scale(1.04);
     animation: checkbox-pop var(--site-motion-0p24) var(--site-ease-standard);
@@ -247,31 +247,31 @@ const { parcourId, modules } = Astro.props;
     width: var(--site-control-min-height);
     min-height: var(--site-control-min-height);
     border-radius: var(--site-radius-pill);
-    color: var(--sl-color-gray-3);
+    color: var(--site-neutral-300);
     transition:
       color var(--site-motion-0p2) var(--site-ease-standard),
       transform var(--site-motion-0p2) var(--site-ease-standard);
   }
 
   .module-arrow:hover {
-    color: var(--sl-color-accent);
+    color: var(--site-accent);
     transform: translateX(2px);
   }
 
   .module-item[data-complete='true'] .module-arrow {
-    color: var(--sl-color-accent);
+    color: var(--site-accent);
   }
 
   .reset-progress {
     margin-top: var(--site-space-4);
     padding: var(--site-space-0p65) var(--site-space-4);
     background: var(--site-surface);
-    border: 1px solid var(--sl-color-gray-4);
+    border: 1px solid var(--site-neutral-400);
     border-radius: var(--site-radius-999);
     cursor: pointer;
     min-height: var(--site-control-min-height);
     font-size: var(--site-font-0p875);
-    color: var(--sl-color-text);
+    color: var(--site-text);
     transition:
       background-color var(--site-motion-0p2) var(--site-ease-standard),
       border-color var(--site-motion-0p2) var(--site-ease-standard),
@@ -279,7 +279,7 @@ const { parcourId, modules } = Astro.props;
   }
 
   .reset-progress:hover {
-    background: var(--sl-color-gray-5);
+    background: var(--site-neutral-500);
     transform: translateY(-1px);
   }
 

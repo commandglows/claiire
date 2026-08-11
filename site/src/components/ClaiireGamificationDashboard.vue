@@ -81,9 +81,9 @@ onMounted(() => {
 
 .dashboard-section {
   padding: var(--site-space-5);
-  border: 1px solid var(--sl-color-gray-5);
+  border: 1px solid var(--site-neutral-500);
   border-radius: var(--site-radius-0p5);
-  background: var(--sl-color-bg);
+  background: var(--site-surface-strong);
 }
 
 .section-title {
@@ -91,8 +91,8 @@ onMounted(() => {
   font-weight: 600;
   margin: 0 0 var(--site-space-4);
   padding-bottom: var(--site-space-2);
-  border-bottom: 1px solid var(--sl-color-gray-6);
-  color: var(--sl-color-text);
+  border-bottom: 1px solid var(--site-neutral-600);
+  color: var(--site-text);
 }
 
 /* Streak */
@@ -120,12 +120,12 @@ onMounted(() => {
 .streak-current {
   font-size: var(--site-font-1p25);
   font-weight: 700;
-  color: var(--sl-color-text);
+  color: var(--site-text);
 }
 
 .streak-best {
   font-size: var(--site-font-0p8125);
-  color: var(--sl-color-gray-3);
+  color: var(--site-neutral-300);
 }
 
 /* Stats */
@@ -140,21 +140,21 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   padding: var(--site-space-3);
-  border: 1px solid var(--sl-color-gray-5);
+  border: 1px solid var(--site-neutral-500);
   border-radius: var(--site-radius-0p375);
-  background: var(--sl-color-accent-low);
+  background: var(--site-accent-soft);
 }
 
 .stat-value {
   font-size: var(--site-font-1p25);
   font-weight: 700;
-  color: var(--sl-color-accent);
+  color: var(--site-accent);
 }
 
 .stat-label {
   font-size: var(--site-font-0p6875);
   text-transform: uppercase;
-  color: var(--sl-color-gray-3);
+  color: var(--site-neutral-300);
 }
 
 /* Badges */

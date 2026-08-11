@@ -3,7 +3,7 @@ title: 'Préparer ta sécurité face à une violence actuelle ou passée'
 description:
   'Des repères publics pour identifier les risques, préparer des relais et protéger aussi ta vie
   numérique.'
-template: splash
+pageType: landing
 hero:
   title: "Préparer ta sécurité, sans attendre d'être sûr(e)"
   tagline:

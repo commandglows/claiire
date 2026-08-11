@@ -1,7 +1,7 @@
 ---
 title: "Ancrer ce que tu as reconstruit"
 description: "Consolide tes acquis, repère les premiers glissements et construis des habitudes et soutiens qui tiennent dans la durée."
-template: splash
+pageType: landing
 hero:
   title: "Ancrer ce que tu as reconstruit"
   tagline: "Ce dernier module t'aide à faire tenir ce que tu as commencé à bâtir : reconnaître les signaux précoces, maintenir des appuis concrets et traiter les moments difficiles comme des informations plutôt que des défaites."

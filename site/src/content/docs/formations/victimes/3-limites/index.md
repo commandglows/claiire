@@ -1,7 +1,7 @@
 ---
 title: "Poser tes limites après une relation violente"
 description: "Retrouve peu à peu la capacité à dire non, à sentir ce qui est acceptable pour toi et à poser des limites sans t'écraser ni exploser."
-template: splash
+pageType: landing
 hero:
   title: "Poser tes limites après une relation violente"
   tagline: "Ce module t'aide à retrouver ce qui a été brouillé : ton droit à dire non, à sentir ce qui est acceptable pour toi, et à exister sans te dissoudre dans la peur ou la culpabilité."

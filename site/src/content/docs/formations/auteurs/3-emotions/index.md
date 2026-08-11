@@ -3,7 +3,7 @@ title: "Travailler tes émotions avant qu'elles débordent"
 description:
   "Apprends à reconnaître ce qui se cache sous la colère, à repérer les signaux physiques et à
   élargir l'espace entre impulsion et acte."
-template: splash
+pageType: landing
 hero:
   title: "Travailler tes émotions avant qu'elles débordent"
   tagline:

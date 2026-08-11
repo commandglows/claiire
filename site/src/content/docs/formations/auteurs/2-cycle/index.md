@@ -3,7 +3,7 @@ title: 'Comprendre ton cycle de violence'
 description:
   "Repère la montée de tension, les déclencheurs, les formes de contrôle et les points
   d'interruption possibles avant l'explosion."
-template: splash
+pageType: landing
 hero:
   title: 'Comprendre ton cycle de violence'
   tagline:

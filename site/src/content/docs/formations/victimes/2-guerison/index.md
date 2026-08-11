@@ -1,7 +1,7 @@
 ---
 title: "Guérir du trauma après la violence"
 description: "Comprends pourquoi la guérison traumatique n'est pas linéaire, ce que le trauma fait au corps, et ce que tu débloques dans le module complet."
-template: splash
+pageType: landing
 hero:
   title: "Guérir du trauma après la violence"
   tagline: "Tu veux comprendre pourquoi tu ne te sens pas encore vraiment sorti(e) de ce que tu as vécu ? Ce module t'aide à remettre de l'ordre dans ce que ton corps, ton système nerveux et ton histoire essayent encore de gérer."

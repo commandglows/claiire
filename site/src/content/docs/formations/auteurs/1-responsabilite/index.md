@@ -3,7 +3,7 @@ title: 'Responsabilité sans honte : sortir du brouillard'
 description:
   'Comprends les mécanismes qui te protègent de la réalité, identifie la honte et commence à
   regarder tes comportements avec plus de clarté.'
-template: splash
+pageType: landing
 hero:
   title: 'Responsabilité sans honte : sortir du brouillard'
   tagline:

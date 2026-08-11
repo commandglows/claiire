@@ -3,7 +3,7 @@ title: 'Violence, stress et système nerveux'
 description:
   'Comprendre comment le stress et le danger influencent le corps, sans transformer la biologie en
   excuse ni en diagnostic.'
-template: splash
+pageType: landing
 hero:
   title: 'Quand le corps reste en alerte'
   tagline:

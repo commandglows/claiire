@@ -1,7 +1,7 @@
 ---
 title: "Reconstruire des relations plus saines"
 description: "Comprends l'attachement, reconnais les signes d'une relation saine et recommence à faire confiance sans te précipiter ni t'effacer."
-template: splash
+pageType: landing
 hero:
   title: "Reconstruire des relations plus saines"
   tagline: "Ce module t'aide à remettre des repères là où la violence les a brouillés : attachement, confiance, signes de sécurité, prudence intelligente et lien à toi-même."

@@ -3,7 +3,7 @@ title: "Ce que tu vis dans ta relation t'inquiète"
 description:
   'Un parcours pour partir des faits, retrouver de la sécurité et reprendre des marges de choix, que
   la violence soit actuelle ou passée.'
-template: splash
+pageType: landing
 hero:
   title: "Ce que tu vis dans ta relation t'inquiète"
   tagline:

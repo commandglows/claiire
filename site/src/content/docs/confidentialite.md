@@ -11,7 +11,7 @@ Claiire utilise des outils d'analyse d'audience (PostHog, onthe.io) pour compren
 
 Vous pouvez désactiver le suivi analytique à tout moment. Ce choix est sauvegardé dans votre navigateur.
 
-<div id="analytics-opt-out-section" style="margin: 2rem 0; padding: 1.5rem; border: 1px solid var(--sl-color-gray-5); border-radius: 8px;">
+<div id="analytics-opt-out-section" style="margin: 2rem 0; padding: 1.5rem; border: 1px solid var(--site-neutral-500); border-radius: 8px;">
   <p id="analytics-status" style="margin: 0 0 1rem;">Chargement...</p>
   <button id="analytics-toggle" style="padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-size: 0.9rem; border: 1px solid currentColor;">
     Chargement...
@@ -29,11 +29,11 @@ Vous pouvez désactiver le suivi analytique à tout moment. Ce choix est sauvega
     if (optedOut) {
       status.textContent = '🟢 Le suivi analytique est actuellement désactivé.';
       btn.textContent = 'Réactiver les analytics';
-      btn.style.color = 'var(--sl-color-green)';
+      btn.style.color = 'var(--site-success)';
     } else {
       status.textContent = '🔵 Le suivi analytique est actuellement activé.';
       btn.textContent = 'Désactiver les analytics';
-      btn.style.color = 'var(--sl-color-text)';
+      btn.style.color = 'var(--site-text)';
     }
   }
 

@@ -10,7 +10,7 @@ const docsSchema = z
   .object({
     title: z.string(),
     description: z.string().optional(),
-    template: z.enum(['default', 'splash']).optional(),
+    pageType: z.enum(['article', 'landing']).default('article'),
     draft: z.boolean().optional(),
     pubDate: z.string().optional(),
     prev: z.union([z.literal(false), navLinkSchema]).optional(),

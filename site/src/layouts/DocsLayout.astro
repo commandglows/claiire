@@ -34,10 +34,10 @@ interface Props {
 }
 
 const { currentPath, entry, headings } = Astro.props;
-const template = entry.data.template ?? 'default';
+const pageType = entry.data.pageType;
 const sidebarMatch = findSidebarForPath(currentPath);
-const showSidebar = template !== 'splash' && currentPath !== '/404';
-const showToc = template !== 'splash' && currentPath !== '/404';
+const showSidebar = pageType !== 'landing' && currentPath !== '/404';
+const showToc = pageType !== 'landing' && currentPath !== '/404';
 const hero =
   entry.data.hero ??
   (currentPath === '/'
@@ -52,7 +52,7 @@ const hero =
       }
     : undefined);
 const shouldHideTitle = shouldHideDocTitle(entry, headings);
-const showIntro = template !== 'splash' && !shouldHideTitle;
+const showIntro = pageType !== 'landing' && !shouldHideTitle;
 const { prev, next } = resolvePrevNext(currentPath, {
   prev: entry.data.prev,
   next: entry.data.next,
@@ -107,7 +107,7 @@ const description =
 
     <div class="site-page">
       {hero && (
-        <section class:list={['page-hero', template === 'splash' && 'page-hero--splash']}>
+        <section class:list={['page-hero', pageType === 'landing' && 'page-hero--landing']}>
           <div class="page-hero__inner">
             {sectionLabel && <p class="page-hero__eyebrow">{sectionLabel}</p>}
             <h1>{hero.title}</h1>
@@ -138,7 +138,7 @@ const description =
             </header>
           )}
 
-          <article class:list={['prose', template === 'splash' && 'prose--splash']}>
+          <article class:list={['prose', pageType === 'landing' && 'prose--landing']}>
             <slot />
           </article>
 

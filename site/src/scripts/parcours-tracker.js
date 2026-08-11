@@ -38,8 +38,8 @@ export function initParcourTracker() {
         if (!awaitingConfirm) {
           awaitingConfirm = true;
           resetButton.textContent = 'Confirmer la réinitialisation ?';
-          resetButton.style.borderColor = 'var(--sl-color-red)';
-          resetButton.style.color = 'var(--sl-color-red)';
+          resetButton.style.borderColor = 'var(--site-danger)';
+          resetButton.style.color = 'var(--site-danger)';
           setTimeout(() => {
             if (awaitingConfirm) {
               awaitingConfirm = false;

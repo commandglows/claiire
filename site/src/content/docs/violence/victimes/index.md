@@ -1,7 +1,7 @@
 ---
 title: "Ressources pour les personnes exposées à la violence"
 description: "Tu n'es pas seul·e. Trouve des repères pour te protéger, demander de l'aide et avancer à ton rythme."
-template: splash
+pageType: landing
 hero:
   title: "Tu n'es pas seul·e"
   tagline: "Des repères pour comprendre, te protéger et te reconstruire"

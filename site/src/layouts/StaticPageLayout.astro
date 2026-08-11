@@ -78,7 +78,7 @@ const showGamification = !currentPath.startsWith('/violence') && !currentPath.st
 
     <div class="site-page">
       {hero && (
-        <section class="page-hero page-hero--splash">
+        <section class="page-hero page-hero--landing">
           <div class="page-hero__inner">
             {sectionLabel && <p class="page-hero__eyebrow">{sectionLabel}</p>}
             <h1>{hero.title}</h1>
@@ -98,7 +98,7 @@ const showGamification = !currentPath.startsWith('/violence') && !currentPath.st
       )}
 
       <main id="main-content" class="page-main">
-        <article class:list={['prose', 'prose--splash', isHomepage && 'prose--landing', articleClass]}>
+        <article class:list={['prose', 'prose--landing', isHomepage && 'prose--homepage', articleClass]}>
           <slot />
         </article>
       </main>

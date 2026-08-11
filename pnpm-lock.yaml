@@ -168,9 +168,6 @@ importers:
       glob:
         specifier: ^11.1.0
         version: 11.1.0
-      nanoid:
-        specifier: ^3.3.15
-        version: 3.3.15
       nodemon:
         specifier: ^3.1.14
         version: 3.1.14

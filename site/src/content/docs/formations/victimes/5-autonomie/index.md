@@ -1,7 +1,7 @@
 ---
 title: "Retrouver ton autonomie"
 description: "Reprends peu à peu la capacité à décider, agir et te faire confiance dans la vie concrète, émotionnelle, sociale et pratique."
-template: splash
+pageType: landing
 hero:
   title: "Retrouver ton autonomie"
   tagline: "Ce module t'aide à redevenir le sujet de ta propre vie : décider, agir, valider ce que tu ressens, reconstruire ton efficacité et reprendre de la place dans le concret."

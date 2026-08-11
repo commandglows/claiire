@@ -3,7 +3,7 @@ title: "Voir l'autre sans t'effacer"
 description:
   "Comprends l'impact réel sur l'autre, développe une empathie plus stable et fais aussi de la place
   à ta propre histoire sans en faire une excuse."
-template: splash
+pageType: landing
 hero:
   title: "Voir l'autre sans t'effacer"
   tagline:

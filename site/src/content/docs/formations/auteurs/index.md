@@ -3,7 +3,7 @@ title: "Certains de tes comportements t'inquiètent"
 description:
   'Six modules pour sortir du brouillard, reconnaître tes mécanismes, travailler tes émotions et
   construire des relations sans violence.'
-template: splash
+pageType: landing
 hero:
   title: "Certains de tes comportements t'inquiètent"
   tagline:

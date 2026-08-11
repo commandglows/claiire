@@ -3,7 +3,7 @@ title: "Quand une relation t'inquiète : trouver ton point de départ"
 description:
   "Deux parcours séparés pour comprendre ce que tu vis ou interrompre des comportements qui
   t'inquiètent, sans étiquette imposée ni confusion des responsabilités."
-template: splash
+pageType: landing
 hero:
   title: "Quand une relation t'inquiète"
   tagline:

@@ -3,7 +3,7 @@ title: 'Construire des relations sans contrôle'
 description:
   "Travaille la roue de l'égalité, la communication non violente et une façon d'être en relation qui
   ne passe plus par la domination."
-template: splash
+pageType: landing
 hero:
   title: 'Construire des relations sans contrôle'
   tagline:

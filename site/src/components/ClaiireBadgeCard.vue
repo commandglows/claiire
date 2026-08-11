@@ -27,9 +27,9 @@ defineProps<{
   align-items: center;
   gap: var(--site-space-3);
   padding: var(--site-space-3) var(--site-space-4);
-  border: 1px solid var(--sl-color-gray-5);
+  border: 1px solid var(--site-neutral-500);
   border-radius: var(--site-radius-0p5);
-  background: var(--sl-color-bg);
+  background: var(--site-surface-strong);
   transition: transform var(--site-motion-0p2), box-shadow var(--site-motion-0p2);
 }
 
@@ -43,8 +43,8 @@ defineProps<{
 }
 
 .badge-card.earned {
-  border-color: var(--sl-color-accent);
-  background: var(--sl-color-accent-low);
+  border-color: var(--site-accent);
+  background: var(--site-accent-soft);
 }
 
 .badge-icon-wrap {
@@ -61,12 +61,12 @@ defineProps<{
 .badge-name {
   font-weight: 600;
   font-size: var(--site-font-0p9375);
-  color: var(--sl-color-text);
+  color: var(--site-text);
 }
 
 .badge-desc {
   font-size: var(--site-font-0p8125);
-  color: var(--sl-color-text);
+  color: var(--site-text);
   opacity: 0.8;
 }
 
@@ -74,6 +74,6 @@ defineProps<{
   font-size: var(--site-font-0p8125);
   opacity: 0.5;
   font-style: italic;
-  color: var(--sl-color-gray-3);
+  color: var(--site-neutral-300);
 }
 </style>

@@ -3,7 +3,7 @@ title: 'Pensées automatiques, confusion et justification'
 description:
   "Repérer les pensées automatiques sans confondre le doute d'une personne exposée et les
   justifications d'une personne violente."
-template: splash
+pageType: landing
 hero:
   title: "Toutes les pensées automatiques n'ont pas la même fonction"
   tagline:
