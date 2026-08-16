@@ -2,8 +2,16 @@ import { useCallback, useEffect, useState } from "react";
 import { BackHandler, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
+
 import { AppDesignTokens } from "@/constants/AppDesignTokens";
-import { CRITICAL_S3_VALUES, DIMENSION_LABELS, DIMENSION_ORDER, getSituationQuestion, UPDATE_CHANGE_OPTIONS } from "@/features/situation/questionnaire";
+import { NeedProfileSummary } from "@/features/situation/NeedProfileSummary";
+import {
+  DIMENSION_LABELS,
+  DIMENSION_ORDER,
+  getSituationQuestion,
+  normalizeMultipleAnswer,
+  UPDATE_CHANGE_OPTIONS,
+} from "@/features/situation/questionnaire";
 import { useSituationStore } from "@/features/situation/store";
 import type { SituationChange } from "@/features/situation/types";
 
@@ -13,10 +21,14 @@ export default function SituationQuestionnaireScreen() {
     situation,
     draft,
     candidate,
+    interruption,
+    confirming,
+    lastError,
     mode,
     stage,
     questionIds,
     currentIndex,
+    touchedQuestionIds,
     begin,
     answer,
     showChangeSelection,
@@ -25,11 +37,10 @@ export default function SituationQuestionnaireScreen() {
     back,
     next,
     confirm,
+    useSessionOnlyCandidate,
     discardDraft,
   } = useSituationStore();
-  const [saving, setSaving] = useState(false);
   const [selectedChanges, setSelectedChanges] = useState<SituationChange[]>([]);
-  const [interruption, setInterruption] = useState<"privacy" | "danger" | "critical" | null>(null);
   const question = getSituationQuestion(questionIds[currentIndex]);
 
   const exitToNeutral = useCallback(() => {
@@ -41,7 +52,7 @@ export default function SituationQuestionnaireScreen() {
   useEffect(() => {
     begin(situation ? "update" : "initial");
     return () => discardDraft();
-  }, [begin, discardDraft]);
+  }, [begin, discardDraft, situation]);
 
   useEffect(() => {
     const subscription = BackHandler.addEventListener("hardwareBackPress", () => {
@@ -52,13 +63,14 @@ export default function SituationQuestionnaireScreen() {
   }, [exitToNeutral]);
 
   async function handleConfirm() {
-    setSaving(true);
-    try {
-      await confirm();
-      router.replace("/modal/situation" as never);
-    } finally {
-      setSaving(false);
-    }
+    const saved = await confirm();
+    if (saved) router.replace("/modal/situation" as never);
+  }
+
+  function correctSource(questionId: string) {
+    const targetIndex = questionIds.indexOf(questionId);
+    if (targetIndex < 0) return;
+    useSituationStore.setState({ stage: "questions", currentIndex: targetIndex, candidate: null });
   }
 
   if (interruption) {
@@ -67,9 +79,15 @@ export default function SituationQuestionnaireScreen() {
         <View style={styles.safetyPause}>
           <Text style={styles.eyebrow}>{interruption === "privacy" ? "TA CONFIDENTIALITÉ D'ABORD" : "ON S'ARRÊTE ICI"}</Text>
           <Text style={styles.title}>{interruption === "privacy" ? "Ce n'est peut-être pas le bon moment." : "Ta sécurité passe avant le questionnaire."}</Text>
-          <Text style={styles.body}>{interruption === "privacy" ? "Claiire ne va pas afficher les questions sensibles ni enregistrer cette réponse. Reviens quand tu peux consulter l'écran tranquillement." : "Si tu peux le faire sans te mettre davantage en danger, tu peux contacter une personne ou un service d'aide. Rien de ce nouveau brouillon n'a été enregistré."}</Text>
-          <TouchableOpacity style={styles.primary} onPress={exitToNeutral} accessibilityRole="button" accessibilityLabel="Quitter le questionnaire"><Text style={styles.primaryText}>Quitter</Text></TouchableOpacity>
-          <TouchableOpacity style={styles.secondary} onPress={() => { discardDraft(); router.replace("/modal/situation-help" as never); }} accessibilityRole="button" accessibilityLabel="Voir les options d'aide humaine"><Text style={styles.secondaryText}>Voir une aide humaine</Text></TouchableOpacity>
+          <Text style={styles.body}>{interruption === "privacy"
+            ? "Claiire ne va pas afficher les questions sensibles ni enregistrer cette réponse. Reviens quand tu peux consulter l'écran tranquillement."
+            : "Si tu peux le faire sans te mettre davantage en danger, tu peux contacter une personne ou un service d'aide. Rien de ce nouveau brouillon n'a été enregistré."}</Text>
+          <TouchableOpacity style={styles.primary} onPress={exitToNeutral} accessibilityRole="button" accessibilityLabel="Quitter le questionnaire">
+            <Text style={styles.primaryText}>Quitter</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.secondary} onPress={() => { discardDraft(); router.replace("/modal/situation-help" as never); }} accessibilityRole="button" accessibilityLabel="Voir les options d'aide humaine">
+            <Text style={styles.secondaryText}>Voir une aide humaine</Text>
+          </TouchableOpacity>
         </View>
       </SafeAreaView>
     );
@@ -106,7 +124,14 @@ export default function SituationQuestionnaireScreen() {
               );
             })}
           </View>
-          <TouchableOpacity disabled={selectedChanges.length === 0} style={[styles.primary, selectedChanges.length === 0 && styles.disabled]} onPress={() => configureUpdate(selectedChanges)} accessibilityRole="button" accessibilityLabel="Continuer avec les changements sélectionnés" accessibilityState={{ disabled: selectedChanges.length === 0 }}>
+          <TouchableOpacity
+            disabled={selectedChanges.length === 0}
+            style={[styles.primary, selectedChanges.length === 0 && styles.disabled]}
+            onPress={() => configureUpdate(selectedChanges)}
+            accessibilityRole="button"
+            accessibilityLabel="Continuer avec les changements sélectionnés"
+            accessibilityState={{ disabled: selectedChanges.length === 0 }}
+          >
             <Text style={styles.primaryText}>Continuer</Text>
           </TouchableOpacity>
         </ScrollView>
@@ -121,7 +146,17 @@ export default function SituationQuestionnaireScreen() {
         <ScrollView contentContainerStyle={styles.content}>
           <Text style={styles.eyebrow}>AVANT D'ENREGISTRER</Text>
           <Text style={styles.title}>{mode === "update" ? "Avant et maintenant" : "C'est bien ta situation aujourd'hui ?"}</Text>
-          <Text style={styles.body}>Rien n'est encore enregistré. Vérifie les repères qui vont changer.</Text>
+          <Text style={styles.body}>Rien n'est encore enregistré. Vérifie ce que Claiire a compris et les options reliées à tes réponses.</Text>
+          <NeedProfileSummary
+            profile={candidate.needProfile}
+            answers={candidate.answers}
+            previousAnswers={mode === "update" ? situation?.answers : undefined}
+            sourceQuestionIds={mode === "update" ? touchedQuestionIds : undefined}
+            onCorrectSource={correctSource}
+            onCorrect={back}
+            onHelp={() => router.push("/modal/situation-help" as never)}
+          />
+          <Text style={styles.sectionTitle}>Repères détaillés qui changent</Text>
           <View style={styles.comparisonList}>
             {(mode === "initial" ? DIMENSION_ORDER : changes).map((dimension) => (
               <View key={dimension} style={styles.comparisonCard}>
@@ -133,9 +168,25 @@ export default function SituationQuestionnaireScreen() {
                 </View>
               </View>
             ))}
-            {mode === "update" && changes.length === 0 ? <Text style={styles.helper}>Tes réponses ne modifient aucun score pour le moment.</Text> : null}
+            {mode === "update" && changes.length === 0 ? <Text style={styles.helper}>Tes réponses ne modifient aucun repère chiffré. Tes besoins et préférences peuvent tout de même avoir changé.</Text> : null}
           </View>
-          <TouchableOpacity disabled={saving} style={styles.primary} onPress={() => void handleConfirm()} accessibilityRole="button" accessibilityLabel={mode === "update" ? "Confirmer cette mise à jour" : "Confirmer ma situation"} accessibilityState={{ disabled: saving, busy: saving }}><Text style={styles.primaryText}>{saving ? "Enregistrement…" : mode === "update" ? "Confirmer cette mise à jour" : "Confirmer ma situation"}</Text></TouchableOpacity>
+          {lastError === "save" ? (
+            <View style={styles.errorCard} accessibilityRole="alert">
+              <Text style={styles.body}>L'enregistrement n'a pas été confirmé. Après un problème de stockage, l'app ne peut pas encore confirmer quelle version sera retrouvée au prochain démarrage. La situation affichée dans cette session n'a pas été remplacée. Tu peux réessayer, garder ce résultat seulement pour cette session ou quitter.</Text>
+              <TouchableOpacity style={styles.secondary} onPress={useSessionOnlyCandidate} accessibilityRole="button" accessibilityLabel="Garder seulement pour cette session"><Text style={styles.secondaryText}>Garder seulement pour cette session</Text></TouchableOpacity>
+              <TouchableOpacity style={styles.secondary} onPress={exitToNeutral} accessibilityRole="button" accessibilityLabel="Quitter sans confirmer cette mise à jour"><Text style={styles.secondaryText}>Quitter sans confirmer</Text></TouchableOpacity>
+            </View>
+          ) : null}
+          <TouchableOpacity
+            disabled={confirming}
+            style={[styles.primary, confirming && styles.disabled]}
+            onPress={() => void handleConfirm()}
+            accessibilityRole="button"
+            accessibilityLabel={mode === "update" ? "Confirmer cette mise à jour" : "Confirmer ma situation"}
+            accessibilityState={{ disabled: confirming, busy: confirming }}
+          >
+            <Text style={styles.primaryText}>{confirming ? "Enregistrement…" : mode === "update" ? "Confirmer cette mise à jour" : "Confirmer ma situation"}</Text>
+          </TouchableOpacity>
           <TouchableOpacity style={styles.secondary} onPress={back} accessibilityRole="button" accessibilityLabel="Revenir à la dernière question"><Text style={styles.secondaryText}>Revenir à la dernière question</Text></TouchableOpacity>
         </ScrollView>
       </SafeAreaView>
@@ -149,32 +200,12 @@ export default function SituationQuestionnaireScreen() {
   const hasAnswer = Array.isArray(selected) ? selected.length > 0 : typeof selected === "string";
 
   function choose(value: string) {
-    if (activeQuestion.id === "A1" && value !== "yes") {
-      discardDraft();
-      setInterruption("privacy");
-      return;
-    }
-    if (activeQuestion.id === "S1" && (value === "yes" || value === "maybe")) {
-      discardDraft();
-      setInterruption("danger");
-      return;
-    }
-    if (activeQuestion.id === "S3" && CRITICAL_S3_VALUES.has(value)) {
-      discardDraft();
-      setInterruption("critical");
-      return;
-    }
     if (!activeQuestion.multiple) {
       answer(activeQuestion.id, value);
       return;
     }
     const current = Array.isArray(selected) ? selected : [];
-    if (value === "none" || value === "skip") {
-      answer(activeQuestion.id, [value]);
-      return;
-    }
-    const withoutExclusive = current.filter((item) => item !== "none" && item !== "skip");
-    answer(activeQuestion.id, withoutExclusive.includes(value) ? withoutExclusive.filter((item) => item !== value) : [...withoutExclusive, value]);
+    answer(activeQuestion.id, normalizeMultipleAnswer(activeQuestion.id, current, value));
   }
 
   function handleNext() {
@@ -182,11 +213,13 @@ export default function SituationQuestionnaireScreen() {
       showChangeSelection();
       return;
     }
-    if (currentIndex === questionIds.length - 1) {
-      prepareReview();
-      return;
-    }
-    useSituationStore.getState().next();
+    if (currentIndex === questionIds.length - 1) prepareReview();
+    else next();
+  }
+
+  function handleSkip() {
+    if (currentIndex === questionIds.length - 1) prepareReview();
+    else next();
   }
 
   return (
@@ -197,22 +230,22 @@ export default function SituationQuestionnaireScreen() {
           <Text style={styles.progress} accessibilityLabel={`Question ${currentIndex + 1} sur ${questionIds.length}`}>{currentIndex + 1} / {questionIds.length}</Text>
         </View>
         <View style={styles.progressTrack}><View style={[styles.progressFill, { flex: currentIndex + 1 }]} /><View style={{ flex: Math.max(0, questionIds.length - currentIndex - 1) }} /></View>
-        <Text style={styles.eyebrow}>{question.phase.toUpperCase()}</Text>
-        <Text style={styles.question}>{question.prompt}</Text>
-        {question.helper ? <Text style={styles.helper}>{question.helper}</Text> : null}
+        <Text style={styles.eyebrow}>{activeQuestion.phase.toUpperCase()}</Text>
+        <Text style={styles.question}>{activeQuestion.prompt}</Text>
+        {activeQuestion.helper ? <Text style={styles.helper}>{activeQuestion.helper}</Text> : null}
         <View style={styles.options}>
-          {question.options.map((option) => {
+          {activeQuestion.options.map((option) => {
             const active = Array.isArray(selected) ? selected.includes(option.value) : selected === option.value;
             return (
-              <TouchableOpacity key={option.value} style={[styles.option, active && styles.optionActive]} onPress={() => choose(option.value)} accessibilityRole={question.multiple ? "checkbox" : "radio"} accessibilityLabel={option.label} accessibilityState={{ checked: active }}>
+              <TouchableOpacity key={option.value} style={[styles.option, active && styles.optionActive]} onPress={() => choose(option.value)} accessibilityRole={activeQuestion.multiple ? "checkbox" : "radio"} accessibilityLabel={option.label} accessibilityState={{ checked: active }}>
                 <View style={[styles.radio, active && styles.radioActive]} />
                 <Text style={[styles.optionText, active && styles.optionTextActive]}>{option.label}</Text>
               </TouchableOpacity>
             );
           })}
         </View>
-        <TouchableOpacity disabled={!hasAnswer} style={[styles.primary, !hasAnswer && styles.disabled]} onPress={handleNext} accessibilityRole="button" accessibilityLabel={currentIndex === questionIds.length - 1 && !(mode === "update" && question.id === "A1") ? "Voir mon résumé" : "Continuer"} accessibilityState={{ disabled: !hasAnswer }}><Text style={styles.primaryText}>{currentIndex === questionIds.length - 1 && !(mode === "update" && question.id === "A1") ? "Voir mon résumé" : "Continuer"}</Text></TouchableOpacity>
-        {question.id !== "A1" ? <TouchableOpacity style={styles.skip} onPress={next} accessibilityRole="button" accessibilityLabel="Ignorer cette question"><Text style={styles.skipText}>Ignorer cette question</Text></TouchableOpacity> : null}
+        <TouchableOpacity disabled={!hasAnswer} style={[styles.primary, !hasAnswer && styles.disabled]} onPress={handleNext} accessibilityRole="button" accessibilityLabel={currentIndex === questionIds.length - 1 && !(mode === "update" && activeQuestion.id === "A1") ? "Voir mon résumé" : "Continuer"} accessibilityState={{ disabled: !hasAnswer }}><Text style={styles.primaryText}>{currentIndex === questionIds.length - 1 && !(mode === "update" && activeQuestion.id === "A1") ? "Voir mon résumé" : "Continuer"}</Text></TouchableOpacity>
+        {activeQuestion.id !== "A1" ? <TouchableOpacity style={styles.skip} onPress={handleSkip} accessibilityRole="button" accessibilityLabel="Ignorer cette question"><Text style={styles.skipText}>Ignorer cette question</Text></TouchableOpacity> : null}
       </ScrollView>
     </SafeAreaView>
   );
@@ -246,8 +279,9 @@ const styles = StyleSheet.create({
   safetyPause: { flex: 1, justifyContent: "center", padding: T.layout.v24, gap: T.layout.v16 },
   title: { color: T.colors.text, fontSize: T.layout.v28, lineHeight: T.layout.v36, fontWeight: T.typography.heavy },
   body: { color: T.colors.textMuted, fontSize: T.layout.v16, lineHeight: T.layout.v24 },
-  secondary: { minHeight: T.layout.v48, borderRadius: T.layout.v14, borderWidth: T.layout.v1, borderColor: T.colors.borderSoft, alignItems: "center", justifyContent: "center" },
-  secondaryText: { color: T.colors.text, fontSize: T.layout.v15, fontWeight: T.typography.semibold },
+  secondary: { minHeight: T.layout.v48, borderRadius: T.layout.v14, borderWidth: T.layout.v1, borderColor: T.colors.borderSoft, alignItems: "center", justifyContent: "center", paddingHorizontal: T.layout.v14 },
+  secondaryText: { color: T.colors.text, fontSize: T.layout.v15, fontWeight: T.typography.semibold, textAlign: "center" },
+  sectionTitle: { color: T.colors.text, fontSize: T.layout.v20, fontWeight: T.typography.bold, marginTop: T.layout.v8 },
   comparisonList: { gap: T.layout.v10 },
   comparisonCard: { backgroundColor: T.colors.surface, borderRadius: T.layout.v14, padding: T.layout.v14, borderWidth: T.layout.v1, borderColor: T.colors.border },
   comparisonLabel: { color: T.colors.textMuted, fontSize: T.layout.v13, marginBottom: T.layout.v10 },
@@ -255,4 +289,5 @@ const styles = StyleSheet.create({
   comparisonCaption: { color: T.colors.textSubtle, fontSize: T.layout.v12 },
   comparisonScore: { color: T.colors.text, fontSize: T.layout.v24, fontWeight: T.typography.heavy },
   comparisonArrow: { color: T.colors.accentSoft, fontSize: T.layout.v22 },
+  errorCard: { backgroundColor: T.colors.surfaceMutedAlt, borderRadius: T.layout.v14, padding: T.layout.v14, gap: T.layout.v10, borderWidth: T.layout.v1, borderColor: T.colors.dangerSoft40 },
 });

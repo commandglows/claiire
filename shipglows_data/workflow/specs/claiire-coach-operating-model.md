@@ -5,8 +5,8 @@ artifact_version: "0.5.0"
 project: "claiire"
 created: "2026-06-29"
 created_at: "2026-06-29 15:10:00 UTC"
-updated: "2026-08-11"
-updated_at: "2026-08-11 13:48:33 UTC"
+updated: "2026-08-16"
+updated_at: "2026-08-16 08:49:20 UTC"
 status: draft
 source_skill: 100-sg-spec
 source_model: "GPT-5 Codex"
@@ -50,7 +50,7 @@ next_step: "/101-sg-ready claiire-coach-operating-model"
 
 ## Status
 
-Draft. This spec translates the confirmed positioning into an implementable cross-surface contract. The homepage title and two neutral journey-entry labels are approved; a locale-specific emergency protocol remains pending.
+Draft. This broad cross-surface spec has not passed its own readiness review. The homepage title and two neutral journey-entry labels are approved; a locale-specific emergency protocol remains pending. Separately, the already-built `Ma situation` dimension slice may be described as implemented but not yet verified, and the bounded local needs-orientation V1 is governed by `claiire-human-orientation-assessment.md`; neither runtime fact promotes this broad spec to `ready` or `active`.
 
 ## User Story
 
@@ -269,3 +269,11 @@ exception_without_proof: none
 - Private-context and immediate-safety signals interrupt before new answer persistence and clear the draft while preserving the last confirmed state.
 - Pairing remains out of runtime scope and behind a forced solo interaction gate.
 - Status remains `implemented, not yet verified`; focused app proof and recent-app privacy protection remain open.
+
+## Bounded needs-orientation update — 2026-08-16
+
+- The local `Ma situation` V1 may add confirmed need, priority and practical-preference questions plus a deterministic `NeedProfileV1` with zero to three explained aid categories.
+- The bounded slice is implemented locally but remains unverified for release while React Native rendered proof, specialist review and supported-device privacy/accessibility checks are pending.
+- This bounded runtime slice remains strictly solo, local-only, non-clinical and without directory, matching, booking, contact, backend or telemetry.
+- Specialist, lived-experience, legal, privacy, threat and supported-device review remain mandatory before production verification or release.
+- This update does not change this broad spec's governed `draft` status.

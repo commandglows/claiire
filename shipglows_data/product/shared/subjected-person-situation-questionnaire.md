@@ -1,10 +1,10 @@
 ---
 artifact: product_design
 metadata_schema_version: "1.0"
-artifact_version: "0.1.0"
+artifact_version: "0.2.0"
 project: "claiire"
 created: "2026-08-11"
-updated: "2026-08-11"
+updated: "2026-08-16"
 status: draft
 source_skill: 008-sg-customer
 scope: "subjected-person-situation-questionnaire"
@@ -27,7 +27,7 @@ evidence:
   - "WHO clinical handbook separates emotional, physical, ongoing safety, and ongoing support needs."
   - "HAS recommendations require fact-based, empathetic recognition, severity assessment, protection of exposed children, and situation-specific orientation."
 next_review: "2026-09-11"
-next_step: "Specialist, lived-experience, privacy, and threat-model review before implementation"
+next_step: "Specialist, lived-experience, legal, privacy, and threat review before production verification or release"
 ---
 
 # Questionnaire progressif - Ma situation
@@ -67,6 +67,34 @@ SituationState
   interaction_gate: solo | specialist-review | duo-eligible-outside-violence
   storage_preference: session-only | retained | undecided
 ```
+
+Le runtime V1 etend cet etat en `SituationState` version 2. Il conserve les dimensions comme contexte explicable et ajoute un `NeedProfileV1` derive atomiquement au moment de la confirmation :
+
+```text
+NeedProfileV1
+  version: 1
+  derivedAt
+  sourceSituationVersion
+  sourceQuestionIds[]
+  requestedNeeds[]
+  userPriorities[]
+  selectedNextStep: value | none | unknown
+  preferredSupportTypes[]
+  preferences
+    languagePreferences[]
+    accessibilityNeeds[]
+    territory: country | broad-region | remote-only | unknown
+    cost: free-only | capped | flexible | unknown
+    availability: immediate | within-days | flexible | unknown
+    modalities[]
+    safeContactChannels[]
+    safeContactWindows[]
+  orientation: null | urgent | specialized | nonUrgent
+  categories[0..3]
+  ignoredCategoryIds[]
+```
+
+Le profil est local, deterministe et corrigeable. Chaque orientation et categorie expose des codes de raison et les identifiants exacts des questions confirmees qui la soutiennent. Il n'existe ni score global, ni moyenne compensatoire, ni inference clinique, ni mise en relation avec un professionnel. Les donnees v1 valides sont migrees en memoire avec des besoins inconnus; la cle v2 n'est ecrite qu'apres confirmation explicite.
 
 ### Mutation rules
 
@@ -144,7 +172,7 @@ Introduction :
 | --- | --- | --- | --- |
 | `I1` | En ce moment, qu'est-ce que cette situation affecte chez toi ? | sommeil / sante physique / peur ou anxiete / concentration / travail ou etudes / alimentation / relations sociales / confiance / soin de soi ou d'un proche / rien de notable / autre | faits `IMP` |
 | `I2` | A quel point cela rend-il ton quotidien difficile aujourd'hui ? | pas ou peu / parfois / souvent / tres / je n'arrive presque plus a fonctionner | `IMP=0..4` |
-| `I3` | Souhaites-tu une aide medicale ou psychologique rapidement, meme si tu ne sais pas encore quoi faire pour la relation ? | non / peut-etre / oui / sans attendre | preference d'orientation; possible `IMP>=3` |
+| `I3` | Souhaites-tu une aide medicale ou psychologique rapidement, meme si tu ne sais pas encore quoi faire pour la relation ? | `no` / `maybe` / `yes` / `without-waiting` / `unknown` | preference d'orientation, jamais un diagnostic |
 
 ### Phase F - Position actuelle et pouvoir d'agir
 
@@ -154,8 +182,23 @@ Introduction :
 | `P2` | Aujourd'hui, quelle place a pour toi l'idee de preserver cette relation ? | ne souhaite pas la preserver / pense plutot m'en eloigner / tres partagee / aimerais la preserver si des changements reels sont possibles / veux clairement essayer | `REL=0..4` |
 | `P3` | Quelle action te parait envisageable maintenant pour te proteger ou retrouver un peu de liberte ? | aucune / observer et comprendre / parler a une personne fiable / preparer une petite action / changements deja commences | `CHG=0..4` |
 | `P4` | Pour les prochains jours, combien de choix te semblent reellement possibles ? | aucun / un tres limite / quelques-uns avec aide / plusieurs / je me sens capable de decider et agir | `AGY=0..4` |
-| `P5` | Qu'aimerais-tu obtenir en priorite de Claiire ? | comprendre / diminuer les risques sans partir / retrouver de l'autonomie / mieux communiquer si c'est sans danger / aider ou proteger un enfant ou proche / preparer une distance / preparer une separation / gerer l'apres-separation / trouver une aide humaine / je ne sais pas | `user_priorities[]` |
-| `P6` | Quel serait aujourd'hui un prochain pas assez petit et assez sur pour toi ? | choix adaptes / aucun maintenant / reponse libre facultative | action choisie, aucun score automatique |
+| `P5` | Qu'aimerais-tu obtenir en priorite de Claiire ? | `understand` / `reduce-risk-stay` / `regain-autonomy` / `communicate-if-safe` / `protect-dependant` / `prepare-distance` / `prepare-separation` / `after-separation` / `find-human-help` / `unknown` | multi-selection `user_priorities[]`; `unknown` est exclusif |
+| `P6` | Quel serait aujourd'hui un prochain pas assez petit et assez sur pour toi ? | `none-now` / `observe-understand` / `open-help-options` / `talk-trusted-person` / `prepare-small-safety-step` / `seek-health-help` / `seek-rights-info` / `seek-practical-help` / `prepare-distance` / `prepare-separation` / `unknown` | action choisie sans texte libre ni score automatique |
+
+### Phase G - Besoins et preferences d'aide V1
+
+| ID | Valeurs persistees | Usage |
+| --- | --- | --- |
+| `N1` | `violence-specialist`, `health-psychological`, `legal-rights`, `social-practical`, `dependant-support`, `trusted-person`, `self-understanding`, `none-now`, `unknown` | Types d'aide que la personne souhaite voir; `none-now` et `unknown` sont exclusifs. |
+| `N2` | `french`, `another-language`, `interpreter-help`, `no-preference`, `unknown` | Preference de langue sans texte libre ni promesse de traduction. |
+| `N3` | `easy-read`, `screen-reader`, `hearing`, `vision`, `mobility`, `attention-memory`, `communication`, `none`, `skip` | Besoins d'accessibilite; `none` et `skip` sont exclusifs. |
+| `N4` | `metropolitan-france`, `overseas-france`, `europe-outside-france`, `outside-europe`, `remote-only`, `unknown` | Territoire large; aucune adresse, geolocalisation ou position precise. |
+| `N5` | `free-only`, `capped`, `flexible`, `unknown` | Contrainte de cout sans montant. |
+| `N6` | `without-waiting`, `within-days`, `flexible`, `unknown` | Preference de disponibilite, distincte d'une evaluation clinique. |
+| `N7` | `phone`, `text-chat`, `video`, `in-person`, `written-information`, `no-preference`, `unknown` | Modalites; `no-preference` et `unknown` sont exclusifs. |
+| `N8` | `in-app-only`, `phone-call`, `text-message`, `email`, `morning`, `afternoon`, `evening`, `no-safe-channel`, `unknown` | Preferences hypothetiques de discretion; aucune coordonnee ni prise de contact. |
+
+`I3` vient apres `I2`; `P5` et `P6` viennent apres `P4`; `N1` vient ensuite. `N2..N8` ne sont poses que si `N1` contient une categorie humaine, si `P5` contient `find-human-help`, ou si `I3` vaut `maybe`, `yes` ou `without-waiting`. Toutes ces questions sont facultatives et un skip laisse la valeur inconnue.
 
 ## Socle initial et branches
 
@@ -200,7 +243,9 @@ Introduction :
 
 > Ce resume reflete tes reponses du jour. Ce n'est ni un diagnostic, ni une verite definitive. Les scores servent seulement a adapter ton parcours. Tu peux modifier chaque element.
 
-Chaque carte montre `score / 4`, un libelle qualitatif, une explication factuelle, la date et `Pourquoi ?`.
+La restitution commence par `Ce que j'ai compris`, `Ce qui compte maintenant`, puis zero a trois categories d'aide expliquees. Elle montre les reponses confirmees utilisees, permet de les corriger, d'ignorer ou restaurer une categorie et d'effacer l'etat. Si les preuves sont insuffisantes, elle dit simplement qu'aucune orientation n'est conclue; l'acces aux ressources reste disponible.
+
+Les dimensions restent disponibles comme details de contexte. Chaque carte montre `score / 4`, un libelle qualitatif, une explication factuelle, la date et `Pourquoi ?`.
 
 Exemples :
 

@@ -10,7 +10,7 @@ Mobile application package for Claiire.
 ## Architecture Decisions
 
 - Mobile runtime: Expo and React Native remain the canonical Claiire app stack. See `shipglows_data/technical/app/decisions/mobile-runtime-expo.md` for rationale, preserved constraints, and reconsideration criteria.
-- Sensitive situation state: `Ma situation` is a solo-only, local-first feature backed by Expo SecureStore and an explicit confirmation boundary. See `shipglows_data/technical/app/situation-state.md`.
+- Sensitive situation state: `Ma situation` uses versioned `SituationState` v2 plus a deterministic `NeedProfileV1`. It remains solo-only, local-only, backed by Expo SecureStore and an explicit confirmation boundary, with no Convex or telemetry path. See `shipglows_data/technical/app/situation-state.md`.
 
 ## Entry Points
 

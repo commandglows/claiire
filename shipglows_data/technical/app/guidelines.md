@@ -56,6 +56,10 @@ Cette règle s'applique partout : code (noms de variables, commentaires), UI (te
 
 Tout est un jeu. Le sérieux est dans le fond, pas dans la forme.
 
+### Exception prioritaire pour les parcours sensibles
+
+`Tout est un jeu` ne s'applique jamais à `Ma situation`, aux interruptions de sécurité, à l'orientation vers une aide humaine, aux préférences de contact discret ni à l'effacement. Dans ces surfaces, la sécurité, l'autonomie et la confidentialité suspendent XP, niveaux, streaks, badges, combat, victoire, quêtes, célébration, rareté, culpabilisation et relances de rétention. Choisir `aucun maintenant`, ignorer une question, quitter ou effacer n'entraîne aucune perte et aucun message de performance.
+
 - **XP** : Chaque action positive rapporte de l'expérience
 - **Niveaux** : Progression visible et gratifiante
 - **Streaks** : Jours consécutifs de victoire — le mécanisme de rétention principal
@@ -117,6 +121,7 @@ L'utilisateur choisit son mode. Jamais de mode forcé.
 **Ne jamais promettre un stockage globalement « 100% on-device » sans preuve par flux.** Documenter la destination réelle de chaque catégorie de données.
 
 - Le state et les réponses confirmées de `Ma situation` restent localement dans Expo SecureStore lorsque la personne choisit de les conserver.
+- Le `NeedProfileV1`, ses raisons et les catégories ignorées suivent exactement cette même frontière locale ; aucune réponse, orientation ou préférence ne va vers Convex, analytics, crash reporting, logs, notifications, prompts ou support.
 - Un parcours limité à la session ne laisse pas de copie persistante et supprime une éventuelle ancienne copie SecureStore lors de la confirmation.
 - Les brouillons abandonnés sont supprimés sans altérer le dernier état confirmé.
 - Convex reste utilisé par d'autres fonctions de l'application ; aucune promesse globale de stockage local ne doit être déduite du comportement de `Ma situation`.

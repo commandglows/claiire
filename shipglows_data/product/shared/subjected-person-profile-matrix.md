@@ -1,10 +1,10 @@
 ---
 artifact: product_design
 metadata_schema_version: "1.0"
-artifact_version: "0.2.0"
+artifact_version: "0.3.0"
 project: "claiire"
 created: "2026-08-11"
-updated: "2026-08-11"
+updated: "2026-08-16"
 status: draft
 source_skill: 008-sg-customer
 scope: "subjected-person-profile-matrix"
@@ -31,7 +31,7 @@ evidence:
   - "Psychosocial Readiness Model: awareness, perceived support, and self-efficacy influence safety-seeking change and do not reduce readiness to leaving alone."
   - "Danger Assessment research: lethality risk needs a validated, separately interpreted instrument and must not be replaced by an invented global score."
 next_review: "2026-09-11"
-next_step: "Review the attached questionnaire, scoring, privacy, and threat model before runtime implementation"
+next_step: "Specialist, lived-experience, legal, privacy, and threat review before production verification or release"
 ---
 
 # Matrice de profil - personne exposee a la violence
@@ -42,7 +42,11 @@ Cette matrice personnalise le parcours d'une personne qui subit, pense subir ou 
 
 Le profil n'est pas une case. Il est un vecteur date, modifiable par la personne et reevalable apres un evenement important. Une valeur inconnue reste `unknown`; elle ne vaut jamais zero.
 
-Le vecteur est expose dans l'app sous le nom `Ma situation`. Chaque dimension conserve son score, un libelle qualitatif, sa provenance, sa date, sa confiance et sa fraicheur. Les conversations peuvent proposer une mise a jour, mais la personne la confirme. L'action `Mettre a jour ma situation` lance un recheck cible ou complet. Le questionnaire et les regles de mutation font autorite dans `shipglows_data/product/shared/subjected-person-situation-questionnaire.md`.
+Le vecteur est expose dans l'app sous le nom `Ma situation`. Chaque dimension conserve son score, un libelle qualitatif, sa provenance, sa date, sa confiance et sa fraicheur. Ces dimensions restent des signaux de contexte : elles ne constituent ni le besoin formule par la personne, ni une orientation globale.
+
+La restitution principale s'appuie sur un `NeedProfileV1` distinct, derive uniquement des reponses confirmees. Il rassemble les besoins demandes, les priorites, le prochain petit pas, les contraintes pratiques, les preferences et jusqu'a trois categories d'aide expliquees. Chaque categorie cite les questions qui l'ont soutenue. Une orientation `urgent | specialized | nonUrgent` reste nullable : un manque d'information ne devient jamais une conclusion rassurante.
+
+Les conversations peuvent proposer une mise a jour, mais la personne la confirme. L'action `Mettre a jour ma situation` lance un recheck cible ou complet. Le questionnaire et les regles de mutation font autorite dans `shipglows_data/product/shared/subjected-person-situation-questionnaire.md`.
 
 ## Principes de calcul
 

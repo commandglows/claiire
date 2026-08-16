@@ -7,6 +7,7 @@ import type {
   SituationState,
 } from "./types";
 import { CRITICAL_S3_VALUES } from "./questionnaire";
+import { buildNeedProfile } from "./needProfile";
 
 const DIMENSIONS: SituationDimension[] = ["SAF", "CTL", "REC", "REL", "CHG", "CON", "SUP", "AGY", "DIG", "DEP", "IMP"];
 
@@ -37,8 +38,9 @@ function setDimension(
 export function buildSituationState(
   answers: Record<string, SituationAnswer>,
   previous?: SituationState | null,
+  derivedAt = new Date().toISOString(),
 ): SituationState {
-  const now = new Date().toISOString();
+  const now = derivedAt;
   const dimensions = Object.fromEntries(DIMENSIONS.map((key) => [key, emptyDimension()])) as Record<SituationDimension, DimensionState>;
 
   const privacy = answers.A1;
@@ -71,8 +73,17 @@ export function buildSituationState(
     .filter((code) => !previousCritical.has(code))
     .map((code) => ({ id: `${now}:${code}`, code, observedAt: now, sourceQuestionId: "S3" }));
 
+  const criticalEventHistory = [...(previous?.criticalEventHistory ?? []), ...additions];
+  const needProfile = buildNeedProfile({
+    answers,
+    criticalEventHistory,
+    derivedAt: now,
+    sourceSituationVersion: 2,
+    ignoredCategoryIds: previous?.needProfile.ignoredCategoryIds,
+  });
+
   return {
-    version: 1,
+    version: 2,
     status: privacy === "yes" ? "completed" : "needs-private-recheck",
     interactionGate: "solo",
     updatedAt: now,
@@ -80,7 +91,8 @@ export function buildSituationState(
     storagePreference: answers.A2 === "device" ? "device" : answers.A2 === "session" ? "session" : "unknown",
     answers,
     dimensions,
-    criticalEventHistory: [...(previous?.criticalEventHistory ?? []), ...additions],
+    criticalEventHistory,
+    needProfile,
   };
 }
 
