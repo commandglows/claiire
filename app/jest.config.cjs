@@ -23,6 +23,7 @@ module.exports = {
       },
       moduleNameMapper: {
         '^@/(.*)$': '<rootDir>/$1',
+        '^lucide-react-native$': '<rootDir>/__mocks__/lucide-react-native.ts',
       },
     },
     {
@@ -32,9 +33,10 @@ module.exports = {
       testMatch: ['**/*.test.tsx', '**/components/**/*.test.ts'],
       moduleNameMapper: {
         '^@/(.*)$': '<rootDir>/$1',
+        '^lucide-react-native$': '<rootDir>/__mocks__/lucide-react-native.ts',
       },
       transformIgnorePatterns: [
-        '/node_modules/(?!(.pnpm|react-native|@react-native|@react-native-community|expo|@expo|react-navigation|@react-navigation|convex|zustand))',
+        '/node_modules/(?!(.pnpm|react-native|@react-native|@react-native-community|expo|@expo|react-navigation|@react-navigation|convex|zustand|lucide-react-native))',
       ],
     },
   ],

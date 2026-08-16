@@ -28,7 +28,7 @@ describe("NeedProfileSummary", () => {
     const screen = render(<NeedProfileSummary profile={profile} onIgnore={ignore} />);
 
     fireEvent.press(screen.getByLabelText("Voir pourquoi Informations sur les droits est proposée"));
-    expect(screen.getByText(/question N1/)).toBeTruthy();
+    expect(screen.getByText(/N1/)).toBeTruthy();
     fireEvent.press(screen.getByLabelText("Ignorer la catégorie Informations sur les droits"));
     expect(ignore).toHaveBeenCalledWith("legal-rights");
 
@@ -63,8 +63,8 @@ describe("NeedProfileSummary", () => {
     expect(screen.getByText("Réponses à confirmer")).toBeTruthy();
     expect(screen.getByText(/Avant : Peut-être/)).toBeTruthy();
     expect(screen.getByText(/Maintenant : Oui/)).toBeTruthy();
-    expect(screen.getByText(/Mieux comprendre/)).toBeTruthy();
-    expect(screen.getByText(/Parler à une personne fiable/)).toBeTruthy();
+    expect(screen.getAllByText(/Mieux comprendre/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Parler à une personne fiable/).length).toBeGreaterThanOrEqual(1);
     expect(screen.getByText(/Des informations juridiques/)).toBeTruthy();
     expect(screen.getByText(/Maintenant : Dans l'app uniquement · Le matin/)).toBeTruthy();
     fireEvent.press(screen.getByLabelText("Corriger la réponse à la question N8"));

@@ -27,18 +27,18 @@ Claiire app is a mobile wellness companion built around:
 
 ## Stack
 
-- Expo 55
+- Expo 56
 - TypeScript
 - Expo Router
 - Clerk Expo
 - Convex
 - Zustand
-- Jest / jest-expo
+- Jest 29.7.0 + jest-expo 56.0.4
 
 ## Constraints
 
 - Expo Go is not enough for the full native surface
-- Convex is the persistent data source of truth
+- Sensitive situation state in Ma situation remains local-only (`SecureStore`) and not persisted to Convex in V1
 - Zustand is UI state only
 - safe vocabulary rules from `shipglows_data/technical/app/guidelines.md` apply everywhere
 

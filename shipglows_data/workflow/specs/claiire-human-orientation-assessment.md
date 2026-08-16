@@ -55,7 +55,7 @@ evidence:
   - "Current app evidence 2026-08-16: app/features/situation/types.ts and scoring.ts expose SituationState v1 with dimensions and raw answers but no explicit need profile."
   - "Current app evidence 2026-08-16: app/app/modal/situation.tsx renders score cards rather than an editable needs summary."
 next_review: "2026-09-16"
-next_step: "Repair the React Native Jest harness, then run rendered and supported-device verification"
+next_step: "Run the jest-expo 56 / Jest 29 compatibility pass, rerun the three blocked RN suites, then complete local proof"
 ---
 
 # Claiire — découverte des besoins et orientation humaine V1
@@ -506,5 +506,5 @@ None. The operator resolved the material V1 decisions: current subjected-person 
 - `101-sg-ready`: complete; ready after one bounded correction pass fixed exact question values/branches and the deterministic category/orientation decision table; migration, accessibility, specialist-review and proof boundaries are explicit.
 - `102-sg-start`: implemented Tasks 1-8 and the bounded P1 repairs; 92 pure/store/storage/routing/security/source-contract tests, TypeScript, metadata, token drift and static data-boundary checks pass. The full Jest run executes 157 passing tests. Task 9 and AC-14 remain partial because three React Native component suites fail during harness initialization and supported-device SecureStore double-failure proof is unavailable.
 - `103-sg-verify`: partial; independent recheck found no remaining P0/P1. AC-13 and the no-false-success contract pass locally; AC-14/15/17 remain partial until real SecureStore behavior is exercised. Three React Native suites remain blocked before test execution by the existing Jest/Expo harness mismatch.
-- `104-sg-end`: pending verification.
+- `104-sg-end`: pending verification; dependency compatibility landed, remaining task is rerunning the three blocked RN suites and completing local evidence capture.
 - `005-sg-ship`: not requested; no commit, push, deployment or publication authorized.
